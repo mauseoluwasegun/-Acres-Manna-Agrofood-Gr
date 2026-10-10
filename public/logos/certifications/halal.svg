@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="HALAL certification seal">
+  <defs>
+    <path id="halal-outer" d="M 100,6 A 94,94 0 1,1 99.9,6" />
+  </defs>
+  <circle cx="100" cy="100" r="96" fill="#0a7d3a" />
+  <path d="M100 8 L108 30 L131 20 L128 42 L150 50 L132 60 L142 80 L120 78 L118 100 L100 88 L82 100 L80 78 L58 80 L68 60 L50 50 L72 42 L69 20 L92 30 Z" fill="#0a7d3a" stroke="#065a28" stroke-width="0" />
+  <circle cx="100" cy="100" r="70" fill="#ffffff" />
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#0a7d3a" stroke-width="2" />
+  <g transform="translate(100,86)">
+    <path d="M12 -22 C4 -26 -6 -24 -12 -16 C-18 -6 -16 6 -8 12 C-4 15 0 16 4 16 C-2 12 -4 6 -2 0 C0 -6 6 -10 12 -10 C16 -10 18 -8 18 -4 C20 -10 18 -18 12 -22 Z" fill="#0a7d3a" />
+  </g>
+  <text x="100" y="122" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="28" font-weight="900" fill="#0a7d3a" letter-spacing="2">HALAL</text>
+  <text x="100" y="140" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#0a6b3a" letter-spacing="1.5">100% HALAL</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="2">
+    <textPath href="#halal-outer" startOffset="50%" text-anchor="middle">FOOD CERTIFIED</textPath>
+  </text>
+</svg>

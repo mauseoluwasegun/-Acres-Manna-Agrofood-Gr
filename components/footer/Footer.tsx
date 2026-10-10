@@ -12,7 +12,6 @@ import {
   IconYoutube,
   IconMail,
   IconPhone,
-  IconMapPin,
 } from "@/components/ui/icons";
 
 import { useTranslations } from "next-intl";
@@ -121,10 +120,6 @@ export function Footer() {
               {t("stayConnected")}
             </p>
             <ul className="space-y-4 font-sans text-body-md text-charcoal-700">
-              <li className="flex items-start gap-3">
-                <IconMapPin size={18} className="mt-0.5 shrink-0 text-terracotta-600" />
-                <span>{t("location")}</span>
-              </li>
               <li className="flex items-center gap-3">
                 <IconMail size={18} className="shrink-0 text-terracotta-600" />
                 <a
@@ -137,10 +132,10 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <IconPhone size={18} className="shrink-0 text-terracotta-600" />
                 <a
-                  href="tel:+233200000000"
+                  href="tel:+234200000000"
                   className="hover:text-terracotta-600 transition-colors"
                 >
-                  +233 20 000 0000
+                  +234 20 000 0000
                 </a>
               </li>
             </ul>

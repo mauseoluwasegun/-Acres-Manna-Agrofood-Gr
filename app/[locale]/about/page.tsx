@@ -21,12 +21,12 @@ const BRANDS = [
 ];
 
 const CERTIFICATIONS = [
-  { key: "cert1", color: "terracotta" as const },
-  { key: "cert2", color: "forest" as const },
-  { key: "cert3", color: "mango" as const },
-  { key: "cert4", color: "indigo" as const },
-  { key: "cert5", color: "terracotta" as const },
-  { key: "cert6", color: "forest" as const },
+  { key: "cert1", color: "terracotta" as const, logo: "/logos/certifications/nafdac.svg" },
+  { key: "cert2", color: "forest" as const, logo: "/logos/certifications/son.svg" },
+  { key: "cert3", color: "mango" as const, logo: "/logos/certifications/man.svg" },
+  { key: "cert4", color: "indigo" as const, logo: "/logos/certifications/haccp.svg" },
+  { key: "cert5", color: "terracotta" as const, logo: "/logos/certifications/non-gmo.svg" },
+  { key: "cert6", color: "forest" as const, logo: "/logos/certifications/halal.svg" },
 ];
 
 const FOCUS_AREAS = [
@@ -261,7 +261,7 @@ export default function AboutPage() {
             </ScrollReveal>
             <ScrollReveal noBlur delay={0.1}>
               <h2 className="font-display font-black text-display-1 leading-[0.98] text-balance">
-                Standards that <em className="not-italic text-forest-700">earn trust.</em>
+                We have the <em className="not-italic text-forest-700">backing.</em>
               </h2>
             </ScrollReveal>
           </div>
@@ -274,14 +274,15 @@ export default function AboutPage() {
                 delay={0.05 * i}
                 className="relative rounded-soft-lg bg-white/60 border border-cream-100 p-6 sm:p-8 text-center shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-1"
               >
-                <div className={cn(
-                  "inline-flex items-center justify-center w-16 h-16 rounded-full mb-4 bg-cream-100",
-                  c.color === "terracotta" && "text-terracotta-600",
-                  c.color === "forest" && "text-forest-700",
-                  c.color === "mango" && "text-mango-500",
-                  c.color === "indigo" && "text-indigo-700",
-                )}>
-                  <HandDrawnIcon name="products" size={32} color={c.color} withFrame={false} />
+                <span className="inline-block font-sans font-bold text-body-sm text-indigo-700 mb-4">
+                  Pending
+                </span>
+                <div className="inline-flex items-center justify-center w-24 h-24 mb-4">
+                  <img
+                    src={c.logo}
+                    alt={t(`${c.key}Name`)}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <h3 className="font-display font-black text-heading-2 leading-tight text-charcoal-900">
                   {t(`${c.key}Name`)}
