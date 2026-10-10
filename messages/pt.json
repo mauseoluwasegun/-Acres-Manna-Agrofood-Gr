@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres X Manna — A Riqueza de África, Transformada em Ótima Comida",
+    "siteTitle": "AcresxManna — A Riqueza de África, Transformada em Ótima Comida",
     "siteDescription": "Enraizados nas terras agrícolas mais ricas de África, transformamos as melhores colheitas do continente em produtos alimentares premium para mesas locais e internacionais.",
     "skipToContent": "Saltar para o conteúdo"
   },
@@ -9,11 +9,12 @@
     "about": "Sobre",
     "products": "Produtos",
     "whatWeDo": "O Que Fazemos",
+    "what-we-do": "O Que Fazemos",
     "impact": "Impacto",
     "contact": "Contacto"
   },
   "hero": {
-    "eyebrow": "Acres X Manna · Agro-Processamento Africano",
+    "eyebrow": "AcresxManna · Agro-Processamento Africano",
     "headline": {
       "africa": "A Riqueza",
       "richness": "de África.",
@@ -81,7 +82,7 @@
     "originHeadlineL1": "Começámos com uma pergunta:",
     "originHeadlineL2": "por que a comida africana não está",
     "originHeadlineL3": "em todo o lado?",
-    "originParagraph1": "A Acres X Manna nasceu em Acra, Gana, a partir de uma observação simples: a África produz mais de 60% do cacau do mundo, mas menos de 5% do seu chocolate. Decidimos fechar essa lacuna de valor.",
+    "originParagraph1": "A AcresxManna nasceu em Acra, Gana, a partir de uma observação simples: a África produz mais de 60% do cacau do mundo, mas menos de 5% do seu chocolate. Decidimos fechar essa lacuna de valor.",
     "originParagraph2": "Hoje, operamos modernas linhas de fabrico de alimentos que combinam um fornecimento centrado na comunidade com certificações internacionais de segurança alimentar.",
     "foundedYear": "2021",
     "foundedLabel": "Fundada",
@@ -102,7 +103,7 @@
     "pillar3Headline": "Impulsionados pela <em>Ambição</em>.",
     "pillar3Description": "A comida de África em todas as grandes prateleiras do mundo.",
     "pullquote": "Não exportamos apenas alimentos — exportamos a dignidade do trabalho africano.",
-    "pullquoteName": "Nana Kwame Asante",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "Fundador e Diretor Executivo"
   },
   "products": {
@@ -162,15 +163,15 @@
     "storiesEyebrow": "Histórias Humanas",
     "storiesHeadline": "Por trás de cada métrica, uma <em>história real.</em>",
     "story1Eyebrow": "HISTÓRIA DE AGRICULTOR",
-    "story1Name": "Ama Kyerewaa",
+    "story1Name": "Maize Farmer, Northern Ghana",
     "story1Text": "\"Recebi formação e um preço mais elevado na colheita.\"",
     "story2Eyebrow": "COMUNIDADE",
     "story2Name": "Cooperativa Osei",
     "story2Text": "\"Preços premium de cacau ano após ano.\"",
     "story3Eyebrow": "HISTÓRIA DA EQUIPA",
-    "story3Name": "Nana Afia",
+    "story3Name": "Production Lead, Ghana Factory",
     "story3Text": "\"Comecei como trabalhadora temporária, hoje lidero uma equipa.\"",
-    "reportEyebrow": "RELATÓRIO DE IMPACTO ACRES X MANNA",
+    "reportEyebrow": "RELATÓRIO DE IMPACTO AcresxManna",
     "reportHeadline": "O nosso <em>relatório de impacto</em> completo.",
     "downloadPdf": "Descarregar PDF",
     "viewAllStories": "Ver todas as histórias"
@@ -181,7 +182,7 @@
     "headlineP1": "Construído em África, ",
     "headlineEmphasis": "enviado para o mundo.",
     "description": "A nossa ambição é simples: fazer da comida africana uma categoria doméstica em todos os continentes.",
-    "hqEyebrow": "SEDE · Gana",
+    "hqEyebrow": "SEDE · Nigéria",
     "hqHeadline": "O nosso <em>mercado interno</em> é onde tudo começa.",
     "hqDescription": "A África Ocidental é o nosso coração.",
     "hqGhana": "Gana · Sede",
@@ -217,8 +218,8 @@
     "headline": "Grandes parcerias começam com uma <em>simples conversa.</em>",
     "description": "A nossa equipa está pronta para construir o próximo passo consigo.",
     "emailLabel": "E-mail: hello@acresxmanna.com",
-    "phoneLabel": "Telefone: +233 20 811 2200",
-    "hqLabel": "Sede: Tema Industrial Area",
+    "phoneLabel": "Telefone: +233 20 000 0000",
+    "hqLabel": "Sede: Accra, Ghana",
     "formEyebrow": "Inquérito Rápido",
     "formHeadline": "Diga-nos o que precisa — <em>responderemos em 48h.</em>",
     "placeholderName": "Nome completo",
@@ -251,11 +252,11 @@
     "mealKits": "Kits de Refeição",
     "viewFullCatalog": "Ver catálogo completo →",
     "stayConnected": "Mantenha-se Conectado",
-    "location": "Acra, Gana",
+    "location": "Acra, Gana — África Ocidental",
     "newsletter": "Boletim Informativo",
     "newsletterDescription": "Receba atualizações.",
     "subscribe": "Subscrever",
-    "copyright": "© {year} Acres X Manna.",
+    "copyright": "© {year} AcresxManna.",
     "privacy": "Privacidade",
     "terms": "Termos",
     "cookies": "Cookies"

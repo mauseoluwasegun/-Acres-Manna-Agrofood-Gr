@@ -2,7 +2,7 @@
   "name": "acres-x-manna",
   "version": "1.0.0",
   "private": true,
-  "description": "Acres X Manna — African agro-processing & food manufacturing website",
+  "description": "Cresx Manna — African agro-processing & food manufacturing website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

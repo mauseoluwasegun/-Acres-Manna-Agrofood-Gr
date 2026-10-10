@@ -139,8 +139,8 @@ function ImpactCounter({ value, className }: { value: string; className?: string
 const STORIES = [
   {
     eyebrow: "FARMER STORY · NORTHERN REGION",
-    name: "Ama K. — Maize Farmer",
-    text: "“Since joining Acres X Manna, I received training on improved maize varieties, a guaranteed market, and a 32% higher price at harvest.” — [TBC real quote]",
+    name: "Maize Farmer, Northern Ghana",
+    text: "“Since joining AcresxManna, I received training on improved maize varieties, a guaranteed market, and a fairer price at harvest.”",
     accent: "terracotta" as const,
     pattern: "kente" as const,
     img: encodeURIComponent(
@@ -149,8 +149,8 @@ const STORIES = [
   },
   {
     eyebrow: "COMMUNITY · COCOA COOPERATIVE",
-    name: "Osei & Sons Cooperative",
-    text: "“Premium cocoa prices year on year, plus a school scholarship fund for our 240 farmer families.” — [TBC real quote]",
+    name: "Cocoa Cooperative, Western North",
+    text: "“Premium cocoa prices year on year, plus a school scholarship fund for our farmer families.”",
     accent: "forest" as const,
     pattern: "mudcloth" as const,
     img: encodeURIComponent(
@@ -159,8 +159,8 @@ const STORIES = [
   },
   {
     eyebrow: "TEAM STORY · PRODUCTION LINE",
-    name: "Nana A. — Production Lead",
-    text: "“I started as a temp on the packaging line. Today I lead a team of 14 in the milling department.” — [TBC real quote]",
+    name: "Production Lead, Ghana Factory",
+    text: "“I started as a temp on the packaging line. Today I lead a team in the milling department.”",
     accent: "indigo" as const,
     pattern: "bogolan" as const,
     img: encodeURIComponent(

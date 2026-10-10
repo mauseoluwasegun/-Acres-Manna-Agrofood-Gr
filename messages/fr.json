@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres X Manna — La richesse de l'Afrique, transformée en grande alimentation",
+    "siteTitle": "AcresxManna — La richesse de l'Afrique, transformée en grande alimentation",
     "siteDescription": "Ancrée dans les terres agricoles les plus riches d'Afrique, nous transformons les meilleures récoltes du continent en produits alimentaires premium pour les tables locales et internationales.",
     "skipToContent": "Aller au contenu principal"
   },
@@ -9,11 +9,12 @@
     "about": "À propos",
     "products": "Produits",
     "whatWeDo": "Nos activités",
+    "what-we-do": "Nos activités",
     "impact": "Impact",
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Acres X Manna · Agro-transformation africaine",
+    "eyebrow": "AcresxManna · Agro-transformation africaine",
     "headline": {
       "africa": "La richesse",
       "richness": "de l'Afrique.",
@@ -81,7 +82,7 @@
     "originHeadlineL1": "Nous avons commencé avec une question :",
     "originHeadlineL2": "pourquoi la cuisine africaine",
     "originHeadlineL3": "n'est-elle pas partout ?",
-    "originParagraph1": "Acres X Manna est née à Accra, au Ghana, d'une simple observation : l'Afrique produit plus de 60 % du cacao mondial, mais moins de 5 % de son chocolat. Nous avons décidé de combler cet écart de valeur — pas seulement pour le cacao, mais aussi pour les céréales, le karité, les fruits et les plats préparés — en construisant des usines de transformation de classe mondiale là où poussent les cultures.",
+    "originParagraph1": "AcresxManna est née à Accra, au Ghana, d'une simple observation : l'Afrique produit plus de 60 % du cacao mondial, mais moins de 5 % de son chocolat. Nous avons décidé de combler cet écart de valeur — pas seulement pour le cacao, mais aussi pour les céréales, le karité, les fruits et les plats préparés — en construisant des usines de transformation de classe mondiale là où poussent les cultures.",
     "originParagraph2": "Aujourd'hui, nous exploitons des lignes de fabrication alimentaire modernes qui allient un approvisionnement communautaire à des certifications internationales de sécurité alimentaire (HACCP, ISO 22000, Ghana FDA). Résultat : des produits premium fabriqués en Afrique, présents sur n'importe quel rayon, n'importe où.",
     "foundedYear": "2021",
     "foundedLabel": "Fondée",
@@ -102,8 +103,8 @@
     "pillar3Headline": "Portés par l'<em>Ambition</em>.",
     "pillar3Description": "La nourriture africaine sur chaque grand rayon du monde. Grâce aux corridors ZLECAf et aux partenariats directs avec les distributeurs européens et nord-américains, nous portons l'histoire du continent toujours plus loin.",
     "pullquote": "Nous n'exportons pas seulement de la nourriture — nous exportons la dignité du travail africain et la joie de nos tables.",
-    "pullquoteName": "Nana Kwame Asante",
-    "pullquoteTitle": "Fondateur et Directeur général, Acres X Manna"
+    "pullquoteName": "AcresxManna",
+    "pullquoteTitle": "Fondateur et Directeur général, AcresxManna"
   },
   "products": {
     "dividerEyebrow": "— PRODUITS SIGNATURE",
@@ -162,15 +163,15 @@
     "storiesEyebrow": "Histoires humaines",
     "storiesHeadline": "Derrière chaque chiffre, une <em>vraie histoire.</em>",
     "story1Eyebrow": "TÉMOIGNAGE · RÉGION DU NORD",
-    "story1Name": "Ama Kyerewaa — Cultivatrice de maïs, Tamale",
-    "story1Text": "« Depuis que j'ai rejoint le programme d'agriculteurs contractuels d'Acres X Manna en 2022, j'ai bénéficié d'une formation sur les variétés de maïs OPV améliorées, d'un contrat d'achat garanti et d'un prix 32 % supérieur à la récolte. Les frais de scolarité de mes enfants sont désormais couverts chaque trimestre. »",
+    "story1Name": "Maize Farmer, Northern Ghana",
+    "story1Text": "« Depuis que j'ai rejoint le programme d'agriculteurs contractuels d'AcresxManna en 2022, j'ai bénéficié d'une formation sur les variétés de maïs OPV améliorées, d'un contrat d'achat garanti et d'un prix 32 % supérieur à la récolte. Les frais de scolarité de mes enfants sont désormais couverts chaque trimestre. »",
     "story2Eyebrow": "COMMUNAUTÉ · COOPÉRATIVE CACAO",
     "story2Name": "Coopérative Osei & Fils, Sefwi Wiawso",
     "story2Text": "« Des prix premium pour le cacao année après année, plus un fonds de bourses scolaires couvrant 240 familles d'agriculteurs. Nous avons investi dans des hangars de fermentation et classons désormais nos fèves selon les normes d'exportation européennes. »",
     "story3Eyebrow": "ÉQUIPE · LIGNE DE PRODUCTION",
-    "story3Name": "Nana Afia — Chef de production, Usine de Tema",
-    "story3Text": "« J'ai commencé comme intérimaire saisonnière sur la ligne d'emballage en 2021. Après avoir suivi le programme interne de compétences d'Acres X Manna, je dirige aujourd'hui une équipe de 14 personnes au département de mouture, travaillant quotidiennement avec les protocoles GMP et HACCP. »",
-    "reportEyebrow": "RAPPORT D'IMPACT ACRES X MANNA · 2024",
+    "story3Name": "Production Lead, Ghana Factory",
+    "story3Text": "« J'ai commencé comme intérimaire saisonnière sur la ligne d'emballage en 2021. Après avoir suivi le programme interne de compétences d'AcresxManna, je dirige aujourd'hui une équipe de 14 personnes au département de mouture, travaillant quotidiennement avec les protocoles GMP et HACCP. »",
+    "reportEyebrow": "RAPPORT D'IMPACT AcresxManna · 2024",
     "reportHeadline": "Notre <em>rapport d'impact</em> complet, avec méthodologie, audits communautaires et notes sur les sources de données.",
     "downloadPdf": "Télécharger le PDF",
     "viewAllStories": "Voir toutes les histoires"
@@ -181,7 +182,7 @@
     "headlineP1": "Fabriqué en Afrique, ",
     "headlineEmphasis": "expédié dans le monde entier.",
     "description": "Notre ambition est simple : faire de l'alimentation africaine une catégorie incontournable sur chaque continent. Voici les marchés que nous servons aujourd'hui et notre feuille de route.",
-    "hqEyebrow": "SIÈGE · Ghana",
+    "hqEyebrow": "SIÈGE · Nigeria",
     "hqHeadline": "Notre <em>marché national</em> est le point de départ.",
     "hqDescription": "L'Afrique de l'Ouest est notre cœur de métier — le Ghana comme siège, le Nigeria comme plus grand marché national, et la ceinture cacaoyère comme source la plus riche de matière première.",
     "hqGhana": "Ghana · Siège + mouture + transformation du cacao",
@@ -217,7 +218,7 @@
     "headline": "Les grands partenariats commencent par une <em>simple conversation.</em>",
     "description": "Que vous soyez agriculteur, distributeur, investisseur ou détaillant prêt à stocker des produits africains — notre équipe est prête à construire la prochaine étape avec vous.",
     "emailLabel": "E-mail : hello@acresxmanna.com",
-    "phoneLabel": "Téléphone : +233 20 811 2200",
+    "phoneLabel": "Téléphone : +233 20 000 0000",
     "hqLabel": "Siège : Zone industrielle de Tema, Grand Accra, Ghana",
     "formEyebrow": "Demande rapide",
     "formHeadline": "Dites-nous ce qu'il vous faut — <em>nous répondons sous 48h.</em>",
@@ -253,9 +254,9 @@
     "stayConnected": "Restez connecté",
     "location": "Accra, Ghana — Afrique de l'Ouest",
     "newsletter": "Newsletter",
-    "newsletterDescription": "Recevez des nouvelles sur les récoltes, les produits et les récits d'impact.",
+    "newsletterDescription": "Rejoignez AcresxManna pour nourrir le monde — actualités de nos fermes, marques et impact sur toute la chaîne de valeur agroalimentaire.",
     "subscribe": "S'abonner",
-    "copyright": "© {year} Acres X Manna. Tous droits réservés.",
+    "copyright": "© {year} AcresxManna. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "cookies": "Cookies"

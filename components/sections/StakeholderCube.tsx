@@ -148,7 +148,7 @@ export function StakeholderCube() {
               Six faces. <em>One ecosystem.</em>
             </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
-              Acres X Manna brings together a whole value chain. Rotate the
+              AcresxManna brings together a whole value chain. Rotate the
               cube to explore a starting point that fits you.
             </p>
           </div>

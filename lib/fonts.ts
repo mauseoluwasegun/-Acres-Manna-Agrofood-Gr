@@ -2,6 +2,7 @@ import {
   Playfair_Display,
   DM_Sans,
   DM_Mono,
+  Oswald,
 } from "next/font/google";
 
 export const fontDisplay = Playfair_Display({
@@ -23,5 +24,12 @@ export const fontMono = DM_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+export const fontLogo = Oswald({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-logo",
   display: "swap",
 });

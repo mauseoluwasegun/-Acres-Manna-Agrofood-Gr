@@ -217,7 +217,7 @@ export function GlobalAmbitionSection() {
                   {/* World map background image */}
                   <Image
                     src="/images/world-map.jpg"
-                    alt="World map showing Acres X Manna global presence"
+                    alt="World map showing AcresxManna global presence"
                     fill
                     className="object-cover object-center opacity-90"
                     sizes="(max-width: 1024px) 100vw, 66vw"

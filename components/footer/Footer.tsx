@@ -48,8 +48,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <div className="mb-5">
               <img
-                src="/logos/cresx-manna-concept2-horizontal.svg"
-                alt="Cresx Manna"
+                src="/logos/acresxmanna-horizontal-dark.svg"
+                alt="AcresxManna"
                 className="h-12 w-auto"
               />
             </div>
@@ -128,10 +128,10 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <IconMail size={18} className="shrink-0 text-terracotta-600" />
                 <a
-                  href="mailto:hello@cresxmanna.com"
+                  href="mailto:hello@acresxmanna.com"
                   className="hover:text-terracotta-600 transition-colors"
                 >
-                  hello@cresxmanna.com
+                  hello@acresxmanna.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -171,7 +171,7 @@ export function Footer() {
 
       <div className="border-t border-charcoal-900/5 bg-cream-100/60">
         <SectionContainer className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-charcoal-700 font-sans">
-          <p>© {new Date().getFullYear()} Cresx Manna. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AcresxManna. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-terracotta-600">{t("privacy")}</a>
             <a href="#" className="hover:text-terracotta-600">{t("terms")}</a>

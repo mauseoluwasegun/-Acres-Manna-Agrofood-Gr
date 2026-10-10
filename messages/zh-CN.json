@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres X Manna — 莱斯非洲的财富，转化为美食",
+    "siteTitle": "AcresxManna — 莱斯非洲的财富，转化为美食",
     "siteDescription": "扎根于非洲最富饶的农田，我们将这片大陆最好的收成转化为供本地和国际餐桌享用的优质食品。",
     "skipToContent": "跳到内容"
   },
@@ -9,11 +9,12 @@
     "about": "关于我们",
     "products": "产品",
     "whatWeDo": "我们做什么",
+    "what-we-do": "我们做什么",
     "impact": "影响",
     "contact": "联系我们"
   },
   "hero": {
-    "eyebrow": "Acres X Manna · 非洲农产品加工",
+    "eyebrow": "AcresxManna · 非洲农产品加工",
     "headline": {
       "africa": "非洲的",
       "richness": "财富.",
@@ -81,7 +82,7 @@
     "originHeadlineL1": "我们从一个问题开始：",
     "originHeadlineL2": "为什么非洲食物没有",
     "originHeadlineL3": "遍及各地？",
-    "originParagraph1": "Acres X Manna诞生于加纳的阿克拉。",
+    "originParagraph1": "AcresxManna诞生于加纳的阿克拉。",
     "originParagraph2": "今天，我们运营着现代化的食品生产线。",
     "foundedYear": "2021",
     "foundedLabel": "成立年份",
@@ -102,7 +103,7 @@
     "pillar3Headline": "由<em>雄心</em>驱动。",
     "pillar3Description": "让非洲的食物摆上世界各地的主要货架。",
     "pullquote": "我们不仅出口食品——我们还出口非洲劳动力的尊严。",
-    "pullquoteName": "Nana Kwame Asante",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "创始人兼首席执行官"
   },
   "products": {
@@ -162,13 +163,13 @@
     "storiesEyebrow": "人类故事",
     "storiesHeadline": "每个指标背后，都有一个<em>真实的故事。</em>",
     "story1Eyebrow": "农民故事",
-    "story1Name": "Ama Kyerewaa",
+    "story1Name": "Maize Farmer, Northern Ghana",
     "story1Text": "\"自从加入计划以来...\"",
     "story2Eyebrow": "社区",
     "story2Name": "Osei合作社",
     "story2Text": "\"优质可可价格...\"",
     "story3Eyebrow": "团队故事",
-    "story3Name": "Nana Afia",
+    "story3Name": "Production Lead, Ghana Factory",
     "story3Text": "\"我从临时工做起...\"",
     "reportEyebrow": "影响报告",
     "reportHeadline": "我们完整的<em>影响报告</em>。",
@@ -181,7 +182,7 @@
     "headlineP1": "在非洲制造， ",
     "headlineEmphasis": "运往世界各地。",
     "description": "我们的雄心很简单：让非洲制造的食品成为各大洲的家庭品类。",
-    "hqEyebrow": "总部 · 加纳",
+    "hqEyebrow": "总部 · 尼日利亚",
     "hqHeadline": "我们的<em>本土市场</em>是一切的起点。",
     "hqDescription": "西非是我们的中心地带。",
     "hqGhana": "加纳 · 总部",
@@ -217,7 +218,7 @@
     "headline": "伟大的合作始于一次<em>简单的对话。</em>",
     "description": "我们的团队随时准备与您一起迈出下一步。",
     "emailLabel": "电子邮件: hello@acresxmanna.com",
-    "phoneLabel": "电话: +233 20 811 2200",
+    "phoneLabel": "电话: +233 20 000 0000",
     "hqLabel": "总部: 特马工业区",
     "formEyebrow": "快速咨询",
     "formHeadline": "告诉我们您的需求 — <em>我们将在48小时内回复。</em>",
@@ -251,11 +252,11 @@
     "mealKits": "代餐包",
     "viewFullCatalog": "查看完整目录 →",
     "stayConnected": "保持联系",
-    "location": "加纳，阿克拉",
+    "location": "加纳，阿克拉 — 西非",
     "newsletter": "时事通讯",
     "newsletterDescription": "获取最新动态。",
     "subscribe": "订阅",
-    "copyright": "© {year} Acres X Manna.",
+    "copyright": "© {year} AcresxManna.",
     "privacy": "隐私政策",
     "terms": "条款",
     "cookies": "Cookies"

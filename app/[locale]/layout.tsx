@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
-import { fontDisplay, fontSans, fontMono } from "@/lib/fonts";
+import { fontDisplay, fontSans, fontMono, fontLogo } from "@/lib/fonts";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { Footer } from "@/components/footer/Footer";
 import { routing } from "@/i18n/routing";
@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   return {
     title: {
-      default: "Acres X Manna — Africa's Richness, Transformed Into Great Food",
-      template: "%s · Acres X Manna",
+      default: "AcresxManna — Africa's Richness, Transformed Into Great Food",
+      template: "%s · AcresxManna",
     },
     description: t('subheadline'),
   } satisfies Metadata;
@@ -49,9 +49,9 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${fontDisplay.variable} ${fontSans.variable} ${fontMono.variable}`}
+      className={`${fontDisplay.variable} ${fontSans.variable} ${fontMono.variable} ${fontLogo.variable}`}
     >
-      <body className="bg-cream-100 text-charcoal-900 antialiased">
+      <body className="bg-cream-100 text-charcoal-900 antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main"

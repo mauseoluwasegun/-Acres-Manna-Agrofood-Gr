@@ -66,27 +66,27 @@ export function AboutSection() {
 
   const pillars = [
     {
-      eyebrow: t("pillar1Eyebrow"),
-      headline: t.raw("pillar1Headline"),
-      description: t("pillar1Description"),
+      eyebrow: t("focus1"),
+      headline: "Empowering <em>African Farmers</em>.",
+      description: t("focus1Desc"),
       iconName: "farmer" as const,
       iconColor: "terracotta" as const,
       pattern: "kente" as const,
       corner: "terracotta" as const,
     },
     {
-      eyebrow: t("pillar2Eyebrow"),
-      headline: t.raw("pillar2Headline"),
-      description: t("pillar2Description"),
+      eyebrow: t("focus2"),
+      headline: "Built on <em>Transformation</em>.",
+      description: t("focus2Desc"),
       iconName: "factory" as const,
       iconColor: "forest" as const,
       pattern: "mudcloth" as const,
       corner: "forest" as const,
     },
     {
-      eyebrow: t("pillar3Eyebrow"),
-      headline: t.raw("pillar3Headline"),
-      description: t("pillar3Description"),
+      eyebrow: t("focus3"),
+      headline: "Driven by <em>Capital</em>.",
+      description: t("focus3Desc"),
       iconName: "globe" as const,
       iconColor: "indigo" as const,
       pattern: "bogolan" as const,
@@ -179,23 +179,22 @@ export function AboutSection() {
                 {t("originParagraph2")}
               </p>
 
-              {/* Meta row */}
-              <div className="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+              {/* Meta row — Vision & Mission */}
+              <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
                 <div>
-                  <p className="font-display font-black text-display-2 leading-none text-terracotta-600">
-                    {t("foundedYear")}
+                  <p className="font-mono text-micro uppercase tracking-[0.12em] text-terracotta-700 mb-2">
+                    {t("visionEyebrow")}
                   </p>
-                  <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80">
-                    {t("foundedLabel")}
+                  <p className="font-sans text-body-md text-charcoal-700 leading-relaxed">
+                    {t("visionText")}
                   </p>
                 </div>
-                <div className="w-px h-14 bg-charcoal-900/10 self-center" />
-                <div>
-                  <p className="font-display font-black text-display-2 leading-none text-terracotta-600">
-                    {t("countriesCount")}
+                <div className="sm:border-l sm:border-charcoal-900/10 sm:pl-6">
+                  <p className="font-mono text-micro uppercase tracking-[0.12em] text-forest-700 mb-2">
+                    {t("missionEyebrow")}
                   </p>
-                  <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80">
-                    {t("countriesLabel")}
+                  <p className="font-sans text-body-md text-charcoal-700 leading-relaxed">
+                    {t("missionText")}
                   </p>
                 </div>
               </div>
@@ -216,14 +215,15 @@ export function AboutSection() {
         <SectionContainer size="wide" className="mt-24 sm:mt-36 relative">
           <div className="text-center mb-14 sm:mb-18 max-w-3xl mx-auto">
             <Eyebrow accent="terracotta" className="mb-5">
-              {t("pillarsEyebrow")}
+              {t("focusEyebrow")}
             </Eyebrow>
             <h2 
               className="font-display font-black text-display-1 leading-[0.98] text-balance"
-              dangerouslySetInnerHTML={{ __html: t.raw("pillarsHeadline") }}
-            />
+            >
+              {t("focusHeadline")}
+            </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
-              {t("pillarsDescription")}
+              {t("originParagraph2")}
             </p>
           </div>
 
@@ -255,7 +255,7 @@ export function AboutSection() {
                       withFrame
                     />
                     <span className="font-mono text-[10px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full bg-cream-100/80 text-charcoal-700/80 border border-charcoal-900/10">
-                      {i === 0 ? "SANKOFA" : i === 1 ? "ASASE YAA" : "NKONSONKONSON"}
+                      {i === 0 ? "FARMING" : i === 1 ? "PROCESSING" : "FINANCING"}
                     </span>
                   </div>
 

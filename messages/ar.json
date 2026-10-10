@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres X Manna — ثروة إفريقيا، تتحول إلى طعام رائع",
+    "siteTitle": "AcresxManna — ثروة إفريقيا، تتحول إلى طعام رائع",
     "siteDescription": "متجذرون في أغنى الأراضي الزراعية في إفريقيا، نحوّل أفضل المحاصيل إلى منتجات غذائية ممتازة.",
     "skipToContent": "تخطي إلى المحتوى"
   },
@@ -9,6 +9,7 @@
     "about": "من نحن",
     "products": "المنتجات",
     "whatWeDo": "ماذا نفعل",
+    "what-we-do": "ماذا نفعل",
     "impact": "التأثير",
     "contact": "اتصل بنا"
   },
@@ -178,7 +179,7 @@
     "headlineP1": "صُنع في إفريقيا، ",
     "headlineEmphasis": "ليُشحن للعالم.",
     "description": "طموحنا بسيط.",
-    "hqEyebrow": "المقر · غانا",
+    "hqEyebrow": "المقر · نيجيريا",
     "hqHeadline": "سوقنا <em>المحلي</em>.",
     "hqDescription": "غرب إفريقيا هي قلبنا.",
     "hqGhana": "غانا",
@@ -214,7 +215,7 @@
     "headline": "الشراكات العظيمة تبدأ <em>بمحادثة بسيطة.</em>",
     "description": "فريقنا جاهز.",
     "emailLabel": "hello@acresxmanna.com",
-    "phoneLabel": "+233 20 811 2200",
+    "phoneLabel": "+233 20 000 0000",
     "hqLabel": "أكرا، غانا",
     "formEyebrow": "استفسار سريع",
     "formHeadline": "ماذا تحتاج؟ <em>نرد خلال 48 ساعة.</em>",
@@ -248,7 +249,7 @@
     "mealKits": "الوجبات",
     "viewFullCatalog": "الكتالوج →",
     "stayConnected": "تواصل معنا",
-    "location": "أكرا، غانا",
+    "location": "أكرا، غانا — غرب أفريقيا",
     "newsletter": "النشرة الإخبارية",
     "newsletterDescription": "احصل على التحديثات.",
     "subscribe": "اشترك",

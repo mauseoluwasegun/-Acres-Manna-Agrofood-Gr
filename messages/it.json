@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres X Manna — La Ricchezza dell'Africa, Trasformata in Ottimo Cibo",
+    "siteTitle": "AcresxManna — La Ricchezza dell'Africa, Trasformata in Ottimo Cibo",
     "siteDescription": "Radicati nelle terre agricole più ricche dell'Africa, trasformiamo i migliori raccolti del continente in prodotti alimentari premium.",
     "skipToContent": "Vai al contenuto"
   },
@@ -9,11 +9,12 @@
     "about": "Chi Siamo",
     "products": "Prodotti",
     "whatWeDo": "Cosa Facciamo",
+    "what-we-do": "Cosa Facciamo",
     "impact": "Impatto",
     "contact": "Contatti"
   },
   "hero": {
-    "eyebrow": "Acres X Manna · Agro-Trasformazione Africana",
+    "eyebrow": "AcresxManna · Agro-Trasformazione Africana",
     "headline": {
       "africa": "La Ricchezza",
       "richness": "dell'Africa.",
@@ -81,7 +82,7 @@
     "originHeadlineL1": "Siamo partiti da una domanda:",
     "originHeadlineL2": "perché il cibo africano non è",
     "originHeadlineL3": "ovunque?",
-    "originParagraph1": "Acres X Manna nasce ad Accra, in Ghana.",
+    "originParagraph1": "AcresxManna nasce ad Accra, in Ghana.",
     "originParagraph2": "Oggi operiamo con moderne linee di produzione alimentare.",
     "foundedYear": "2021",
     "foundedLabel": "Fondata",
@@ -102,7 +103,7 @@
     "pillar3Headline": "Spinti dall'<em>Ambizione</em>.",
     "pillar3Description": "Il cibo dell'Africa su tutti gli scaffali del mondo.",
     "pullquote": "Non esportiamo solo cibo, esportiamo dignità.",
-    "pullquoteName": "Nana Kwame Asante",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "Fondatore & CEO"
   },
   "products": {
@@ -162,13 +163,13 @@
     "storiesEyebrow": "Storie",
     "storiesHeadline": "Dietro ogni metrica, una <em>storia vera.</em>",
     "story1Eyebrow": "AGRICOLTORE",
-    "story1Name": "Ama Kyerewaa",
+    "story1Name": "Maize Farmer, Northern Ghana",
     "story1Text": "\"Ho ricevuto formazione...\"",
     "story2Eyebrow": "COMUNITÀ",
     "story2Name": "Cooperativa Osei",
     "story2Text": "\"Prezzi premium per il cacao...\"",
     "story3Eyebrow": "SQUADRA",
-    "story3Name": "Nana Afia",
+    "story3Name": "Production Lead, Ghana Factory",
     "story3Text": "\"Ho iniziato come stagionale...\"",
     "reportEyebrow": "REPORT",
     "reportHeadline": "Il nostro <em>report d'impatto</em>.",
@@ -181,7 +182,7 @@
     "headlineP1": "Costruito in Africa, ",
     "headlineEmphasis": "spedito nel mondo.",
     "description": "La nostra ambizione è semplice.",
-    "hqEyebrow": "SEDE · Ghana",
+    "hqEyebrow": "SEDE · Nigeria",
     "hqHeadline": "Il nostro <em>mercato</em>.",
     "hqDescription": "L'Africa Occidentale è il nostro cuore.",
     "hqGhana": "Ghana · Sede",
@@ -217,7 +218,7 @@
     "headline": "Grandi partnership iniziano con <em>una conversazione.</em>",
     "description": "Il nostro team è pronto.",
     "emailLabel": "Email: hello@acresxmanna.com",
-    "phoneLabel": "Telefono: +233 20 811 2200",
+    "phoneLabel": "Telefono: +233 20 000 0000",
     "hqLabel": "Sede: Tema",
     "formEyebrow": "Richiesta Veloce",
     "formHeadline": "Cosa ti serve? <em>Rispondiamo in 48h.</em>",
@@ -251,11 +252,11 @@
     "mealKits": "Pasti",
     "viewFullCatalog": "Catalogo →",
     "stayConnected": "Resta Connesso",
-    "location": "Accra, Ghana",
+    "location": "Accra, Ghana — Africa occidentale",
     "newsletter": "Newsletter",
     "newsletterDescription": "Ricevi aggiornamenti.",
     "subscribe": "Iscriviti",
-    "copyright": "© {year} Acres X Manna.",
+    "copyright": "© {year} AcresxManna.",
     "privacy": "Privacy",
     "terms": "Termini",
     "cookies": "Cookie"

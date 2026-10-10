@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429 143" role="img" aria-labelledby="acresxmanna-dark-title acresxmanna-dark-desc">
+  <title id="acresxmanna-dark-title">AcresxManna Logo</title>
+  <desc id="acresxmanna-dark-desc">AcresxManna wordmark — ACRES on top line, &amp; MANNA on bottom line in bold condensed display type</desc>
+
+  <g id="wordmark" fill="#1A1A1A">
+    <text x="0" y="62" font-family="'Arial Black', 'Oswald', 'Anton', 'Archivo Black', 'Bebas Neue', 'Impact', sans-serif" font-size="74" font-weight="900" letter-spacing="-1">ACRES</text>
+    <text x="0" y="130" font-family="'Arial Black', 'Oswald', 'Anton', 'Archivo Black', 'Bebas Neue', 'Impact', sans-serif" font-size="74" font-weight="900" letter-spacing="-1">&amp; MANNA</text>
+  </g>
+</svg>

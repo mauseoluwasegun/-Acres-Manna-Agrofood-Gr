@@ -43,7 +43,7 @@ export function FinalCTASection() {
               <div className="relative h-full min-h-[420px] sm:min-h-[480px]">
                 <img
                   src="/images/farm-origin.jpg"
-                  alt="Acres X Manna partnership — farmers and agricultural excellence"
+                  alt="AcresxManna partnership — farmers and agricultural excellence"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/60 to-cream-50/10" />

@@ -36,7 +36,7 @@ export const STAKEHOLDERS = [
     icon: "truck",
     headline: "Distribution Opportunities",
     description:
-      "Bring Acres X Manna products to your region. Distributor, wholesaler & retail partnerships.",
+      "Bring AcresxManna products to your region. Distributor, wholesaler & retail partnerships.",
     ctaLabel: "Distributor Inquiry",
     ctaHref: "/contact?type=distributor",
   },
