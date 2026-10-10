@@ -88,7 +88,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "Seeds of <em>Africa</em>.",
     description:
       "Sourced from smallholder farms and cooperatives across growing regions — grains, cocoa, fruits, and indigenous crops.",
-    icon: "seed",
+    icon: "/icons/stage-01-agriculture.svg",
     accent: "forest",
   },
   {
@@ -97,7 +97,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "Golden <em>harvest</em>.",
     description:
       "Hand-picked and mechanically harvested at peak ripeness. Quality-checked at farm-gate before transport.",
-    icon: "wheat",
+    icon: "/icons/stage-02-harvest.svg",
     accent: "mango",
   },
   {
@@ -106,7 +106,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "Modern <em>transformation</em>.",
     description:
       "Hygienic, tech-enabled facilities. Cleaning, sorting, milling, blending — precision at every step.",
-    icon: "factory",
+    icon: "/icons/stage-03-processing.svg",
     accent: "terracotta",
   },
   {
@@ -115,7 +115,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "Ready for <em>the shelf</em>.",
     description:
       "Premium, shelf-stable packaging that preserves flavor, tells our story, and meets global food standards.",
-    icon: "box",
+    icon: "/icons/stage-04-packaging.svg",
     accent: "indigo",
   },
   {
@@ -124,7 +124,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "Great <em>food</em>.",
     description:
       "From our kitchens to yours. Delicious, nutritious, culturally rooted meals and ingredients.",
-    icon: "plate",
+    icon: "/icons/stage-05-food.svg",
     accent: "mango",
   },
   {
@@ -133,7 +133,7 @@ export const FARM_TO_FOOD_STAGES = [
     headline: "For <em>the world</em>.",
     description:
       "Distributed across regional and international markets. Africa on the global plate.",
-    icon: "globe",
+    icon: "/icons/stage-06-global.svg",
     accent: "indigo",
   },
 ] as const;

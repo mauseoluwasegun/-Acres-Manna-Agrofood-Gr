@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Processing icon - factory building">
+  <defs>
+    <linearGradient id="factory-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#9a3412" />
+      <stop offset="100%" style="stop-color:#ea580c" />
+    </linearGradient>
+  </defs>
+  <!-- Main building -->
+  <rect x="40" y="80" width="120" height="90" fill="#ea580c" rx="4" />
+  
+  <!-- Windows -->
+  <rect x="55" y="95" width="20" height="20" fill="#fed7aa" rx="2" />
+  <rect x="85" y="95" width="20" height="20" fill="#fed7aa" rx="2" />
+  <rect x="115" y="95" width="20" height="20" fill="#fed7aa" rx="2" />
+  <rect x="55" y="125" width="20" height="20" fill="#fed7aa" rx="2" />
+  <rect x="85" y="125" width="20" height="20" fill="#fed7aa" rx="2" />
+  <rect x="115" y="125" width="20" height="20" fill="#fed7aa" rx="2" />
+  
+  <!-- Door -->
+  <rect x="85" y="155" width="30" height="15" fill="#7c2d12" rx="2" />
+  
+  <!-- Chimney stack -->
+  <rect x="120" y="40" width="25" height="40" fill="#9a3412" rx="2" />
+  <rect x="118" y="35" width="29" height="8" fill="#7c2d12" rx="2" />
+  
+  <!-- Smoke/steam -->
+  <path d="M130 30 Q125 20 130 10" stroke="#fdba74" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6" />
+  <path d="M138 28 Q140 18 135 8" stroke="#fdba74" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" />
+  <path d="M122 28 Q118 18 123 8" stroke="#fdba74" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5" />
+  
+  <!-- Gear/cog detail on side -->
+  <circle cx="160" cy="100" r="15" fill="#9a3412" opacity="0.8" />
+  <circle cx="160" cy="100" r="8" fill="#fed7aa" />
+  <path d="M160 82 L160 85 M160 115 L160 118 M142 100 L145 100 M175 100 L178 100" stroke="#9a3412" stroke-width="4" stroke-linecap="round" />
+</svg>

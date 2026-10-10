@@ -3,7 +3,6 @@ import { PatternDivider } from "@/components/animations/PatternDivider";
 import { MotionSection } from "@/components/animations/MotionSection";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { HandDrawnIcon } from "@/components/ui/HandDrawnIcon";
 import { Button } from "@/components/ui/Button";
 import { FARM_TO_FOOD_STAGES } from "@/lib/constants";
 import { AboutSection } from "@/components/sections/AboutSection";
@@ -57,13 +56,14 @@ export default function HomePage() {
                   key={stage.num}
                   className="group relative rounded-soft-lg p-6 sm:p-8 bg-white/60 border border-cream-100 hover:border-terracotta-500/40 transition-colors duration-500 shadow-card hover:shadow-card-hover"
                 >
-                  <HandDrawnIcon
-                    name={stage.icon as any}
-                    size={44}
-                    color={stage.accent as any}
-                    withFrame
-                    className="mb-6"
-                  />
+                  <div className="flex items-center justify-center mb-6">
+                    <img
+                      src={stage.icon as any}
+                      alt=""
+                      className="w-16 h-16"
+                      aria-hidden="true"
+                    />
+                  </div>
                   <Eyebrow className="mb-3" accent={stage.accent as any}>
                     {stageEyebrow || stage.eyebrow}
                   </Eyebrow>
