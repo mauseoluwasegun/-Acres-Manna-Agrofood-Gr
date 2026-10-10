@@ -229,9 +229,17 @@ export function ProductsSection() {
           </div>
 
           {visible.length === 0 && (
-            <p className="text-center font-sans text-body-md text-charcoal-700 py-16">
-              No products in this category yet — real catalog coming soon.
-            </p>
+            <div className="mt-12 rounded-soft-xl border border-dashed border-charcoal-900/15 bg-cream-50/60 shadow-card px-6 py-12 text-center">
+              <HandDrawnIcon
+                name="box"
+                size={56}
+                color="terracotta"
+                className="mx-auto mb-5"
+              />
+              <p className="mx-auto max-w-lg font-sans text-body-md text-charcoal-700">
+                No products in this category yet — real catalog coming soon.
+              </p>
+            </div>
           )}
 
           {/* ====== Shelf-style product carousel ====== */}

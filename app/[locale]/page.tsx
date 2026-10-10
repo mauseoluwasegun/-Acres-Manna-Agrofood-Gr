@@ -57,9 +57,6 @@ export default function HomePage() {
                   key={stage.num}
                   className="group relative rounded-soft-lg p-6 sm:p-8 bg-white/60 border border-cream-100 hover:border-terracotta-500/40 transition-colors duration-500 shadow-card hover:shadow-card-hover"
                 >
-                  <div className="absolute top-4 right-6 font-display font-black text-6xl sm:text-7xl leading-none text-charcoal-900/5 group-hover:text-terracotta-600/10 transition-colors">
-                    {stage.num}
-                  </div>
                   <HandDrawnIcon
                     name={stage.icon as any}
                     size={44}
