@@ -27,7 +27,7 @@ export function Logo({
         initial={reduce ? {} : { opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring" as const, stiffness: 180, damping: 20, delay: reduce ? 0 : 0.1 }}
-        src={variant === "dark" ? "/logos/acresxmanna-horizontal.svg" : "/logos/acresxmanna-horizontal-dark.svg"}
+        src={variant === "dark" ? "/logos/vintage/concept1-stamp-horizontal.svg" : "/logos/vintage/concept1-stamp-horizontal.svg"}
         alt="AcresxManna Logo"
         className="h-10 sm:h-12 w-auto"
       />

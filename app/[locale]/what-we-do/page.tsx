@@ -11,7 +11,7 @@ export default function WhatWeDoPage() {
   return (
     <main id="main" className="pt-32 pb-24">
       <SectionContainer size="narrow" className="text-center">
-        <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
+        <Eyebrow className="mb-5">{t("c eyebrow")}</Eyebrow>
         <h1 
           className="font-display font-black text-display-1 text-balance mx-auto"
           dangerouslySetInnerHTML={{ __html: t.raw("headline") }}

@@ -14,6 +14,7 @@ import {
   FloatingPatternMotif,
 } from "@/components/ui/DecorativePatterns";
 import { ScrollTypingText } from "@/components/animations/TypingText";
+import { ParallaxSection } from "@/components/animations/ParallaxSection";
 import { cn } from "@/lib/utils";
 
 const THREE_PILLARS = [
@@ -122,35 +123,37 @@ export function AboutSection() {
               noBlur
               delay={0.05}
             >
-              <div className="relative">
-                <PatternFramedImage
-                  src="/images/farm-origin.jpg"
-                  alt="Sunrise over African maize farm fields with a farmer walking the rows"
-                  width={700}
-                  height={900}
-                  thickness="bold"
-                  pattern="kente"
-                  cornerAccent="terracotta"
-                  className="aspect-[4/5]"
-                />
-                <div className="absolute -bottom-8 -right-8 w-[55%] z-20">
+              <ParallaxSection speed={0.3} direction="up" rotate={true} rotateAmount={1.5} hoverScale={true} hoverRotate={true}>
+                <div className="relative">
                   <PatternFramedImage
-                    src="/images/processing-facility.jpg"
-                    alt="Clean food manufacturing line"
-                    width={420}
-                    height={420}
-                    thickness="medium"
-                    pattern="ankara"
-                    cornerAccent="mango"
-                    className="aspect-square"
+                    src="/images/farm-origin.jpg"
+                    alt="Sunrise over African maize farm fields with a farmer walking the rows"
+                    width={700}
+                    height={900}
+                    thickness="bold"
+                    pattern="kente"
+                    cornerAccent="terracotta"
+                    className="aspect-[4/5]"
+                  />
+                  <div className="absolute -bottom-8 -right-8 w-[55%] z-20">
+                    <PatternFramedImage
+                      src="/images/processing-facility.jpg"
+                      alt="Clean food manufacturing line"
+                      width={420}
+                      height={420}
+                      thickness="medium"
+                      pattern="ankara"
+                      cornerAccent="mango"
+                      className="aspect-square"
+                    />
+                  </div>
+                  <HandDrawnPlantLine
+                    variant="rice"
+                    size={140}
+                    className="absolute -left-10 bottom-8 text-forest-700/50"
                   />
                 </div>
-                <HandDrawnPlantLine
-                  variant="rice"
-                  size={140}
-                  className="absolute -left-10 bottom-8 text-forest-700/50"
-                />
-              </div>
+              </ParallaxSection>
             </ScrollReveal>
 
             {/* RIGHT 55% — copy */}

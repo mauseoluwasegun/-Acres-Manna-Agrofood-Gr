@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { DecorativeBlobSet } from "@/components/ui/DecorativeBlobs";
 import { FloatingPatternMotif, HandDrawnPlantLine } from "@/components/ui/DecorativePatterns";
 import { TypingText } from "@/components/animations/TypingText";
+import { ParallaxSection } from "@/components/animations/ParallaxSection";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 
@@ -227,67 +228,69 @@ export function Hero() {
             } as any}
             className="lg:col-span-5 relative"
           >
-            {/* Main thick-frame image */}
-            <div className="relative z-10">
-              <PatternFramedImage
-                src="/images/hero-bg.jpg"
-                alt="Vibrant African agricultural collage — farms, food, and a smiling farmer"
-                width={900}
-                height={760}
-                thickness="bold"
-                pattern="kente"
-                cornerAccent="terracotta"
-                priority
-                className="aspect-[4/3]"
-              />
-            </div>
+            <ParallaxSection speed={0.2} direction="up" rotate={true} rotateAmount={2}>
+              {/* Main thick-frame image */}
+              <div className="relative z-10">
+                <PatternFramedImage
+                  src="/images/hero-bg.jpg"
+                  alt="Vibrant African agricultural collage — farms, food, and a smiling farmer"
+                  width={900}
+                  height={760}
+                  thickness="bold"
+                  pattern="kente"
+                  cornerAccent="terracotta"
+                  priority
+                  className="aspect-[4/3]"
+                />
+              </div>
 
-            {/* Overlap images */}
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, y: 40, rotate: -8 }}
-              animate={{ opacity: 1, y: 0, rotate: -4 }}
-              transition={{
-                type: "spring",
-                stiffness: 160,
-                damping: 22,
-                delay: 0.75,
-              } as any}
-              className="absolute -top-6 -left-8 sm:-left-14 w-[46%] sm:w-[42%] z-20"
-            >
-              <PatternFramedImage
-                src="/images/product-mango.jpg"
-                alt="Farmer hands holding fresh mangoes and tomatoes"
-                width={420}
-                height={520}
-                thickness="medium"
-                pattern="ankara"
-                cornerAccent="mango"
-                className="aspect-[4/5]"
-              />
-            </motion.div>
+              {/* Overlap images */}
+              <motion.div
+                initial={reduce ? {} : { opacity: 0, y: 40, rotate: -8 }}
+                animate={{ opacity: 1, y: 0, rotate: -4 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 160,
+                  damping: 22,
+                  delay: 0.75,
+                } as any}
+                className="absolute -top-6 -left-8 sm:-left-14 w-[46%] sm:w-[42%] z-20"
+              >
+                <PatternFramedImage
+                  src="/images/product-mango.jpg"
+                  alt="Farmer hands holding fresh mangoes and tomatoes"
+                  width={420}
+                  height={520}
+                  thickness="medium"
+                  pattern="ankara"
+                  cornerAccent="mango"
+                  className="aspect-[4/5]"
+                />
+              </motion.div>
 
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, y: 40, rotate: 8 }}
-              animate={{ opacity: 1, y: 0, rotate: 5 }}
-              transition={{
-                type: "spring",
-                stiffness: 160,
-                damping: 22,
-                delay: 0.9,
-              } as any}
-              className="absolute -bottom-8 -right-6 sm:-right-12 w-[50%] sm:w-[46%] z-20"
-            >
-              <PatternFramedImage
-                src="/images/product-jollof.jpg"
-                alt="Plated jollof rice with fried plantains and vegetables"
-                width={420}
-                height={520}
-                thickness="medium"
-                pattern="mudcloth"
-                cornerAccent="forest"
-                className="aspect-[4/5]"
-              />
-            </motion.div>
+              <motion.div
+                initial={reduce ? {} : { opacity: 0, y: 40, rotate: 8 }}
+                animate={{ opacity: 1, y: 0, rotate: 5 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 160,
+                  damping: 22,
+                  delay: 0.9,
+                } as any}
+                className="absolute -bottom-8 -right-6 sm:-right-12 w-[50%] sm:w-[46%] z-20"
+              >
+                <PatternFramedImage
+                  src="/images/product-jollof.jpg"
+                  alt="Plated jollof rice with fried plantains and vegetables"
+                  width={420}
+                  height={520}
+                  thickness="medium"
+                  pattern="mudcloth"
+                  cornerAccent="forest"
+                  className="aspect-[4/5]"
+                />
+              </motion.div>
+            </ParallaxSection>
 
             <motion.div
               initial={reduce ? {} : { opacity: 0, scale: 0.8, y: 20 }}

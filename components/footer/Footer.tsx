@@ -47,9 +47,9 @@ export function Footer() {
           <div className="lg:col-span-4">
             <div className="mb-5">
               <img
-                src="/logos/acresxmanna-horizontal-dark.svg"
+                src="/logos/vintage/concept3-handrawn-horizontal.svg"
                 alt="AcresxManna"
-                className="h-12 w-auto"
+                className="h-10 w-auto"
               />
             </div>
             <p className="font-sans text-body-md text-charcoal-700 max-w-sm leading-relaxed">

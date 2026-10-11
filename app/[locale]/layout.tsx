@@ -20,6 +20,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: "%s · AcresxManna",
     },
     description: t('subheadline'),
+    icons: {
+      icon: '/favicon.svg',
+      apple: '/favicon.svg',
+    },
   } satisfies Metadata;
 }
 
@@ -49,8 +53,13 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${fontDisplay.variable} ${fontSans.variable} ${fontMono.variable} ${fontLogo.variable}`}
+      className={`${fontDisplay.variable} ${fontSans.variable} ${fontMono.variable} ${fontLogo.variable} scroll-smooth`}
     >
+      <head>
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className="bg-cream-100 text-charcoal-900 antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <a

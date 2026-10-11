@@ -10,6 +10,7 @@ import { HandDrawnIcon } from "@/components/ui/HandDrawnIcon";
 import { DecorativeBlob, DecorativeBlobSet } from "@/components/ui/DecorativeBlobs";
 import { PatternWatermark, FloatingPatternMotif } from "@/components/ui/DecorativePatterns";
 import { ScrollTypingText } from "@/components/animations/TypingText";
+import { ParallaxSection } from "@/components/animations/ParallaxSection";
 import { cn } from "@/lib/utils";
 
 const MFG_STAGES = [
@@ -180,16 +181,18 @@ export function ManufacturingSection() {
                   </div>
 
                   <div className="mb-5">
-                    <PatternFramedImage
-                      src={s.img}
-                      alt={s.headline}
-                      width={640}
-                      height={500}
-                      thickness="medium"
-                      pattern={s.pattern}
-                      cornerAccent={s.accent}
-                      className="aspect-[4/3] w-full"
-                    />
+                    <ParallaxSection speed={0.25} direction="up" rotate={true} rotateAmount={1.5} hoverScale={true} hoverRotate={true}>
+                      <PatternFramedImage
+                        src={s.img}
+                        alt={s.headline}
+                        width={640}
+                        height={500}
+                        thickness="medium"
+                        pattern={s.pattern}
+                        cornerAccent={s.accent}
+                        className="aspect-[4/3] w-full"
+                      />
+                    </ParallaxSection>
                   </div>
 
                   <Eyebrow accent={s.accent} className="mb-2.5">

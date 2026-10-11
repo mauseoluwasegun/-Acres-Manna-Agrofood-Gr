@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90" width="300" height="90" role="img" aria-label="AcresxManna hand-drawn vintage logo">
+  <defs>
+    <style>
+      .hand-drawn { font-family: 'Georgia', serif; }
+    </style>
+  </defs>
+  
+  <!-- Hand-drawn style text -->
+  <text x="15" y="50" class="hand-drawn" font-size="38" font-weight="bold" fill="#c66d3a" letter-spacing="1">
+    Acres
+  </text>
+  <text x="155" y="50" class="hand-drawn" font-size="38" font-weight="bold" fill="#2d5a3a" letter-spacing="1">
+    x
+  </text>
+  <text x="178" y="50" class="hand-drawn" font-size="38" font-weight="bold" fill="#c66d3a" letter-spacing="1">
+    Manna
+  </text>
+  
+  <!-- Hand-drawn underline with organic curve -->
+  <path d="M15,60 Q80,65 150,58 Q220,65 285,60" fill="none" stroke="#a85a32" stroke-width="2.5" stroke-linecap="round" />
+  
+  <!-- Decorative leaf elements (hand-drawn style) -->
+  <g transform="translate(15, 65)">
+    <path d="M0,0 Q8,-8 15,0 Q8,8 0,0" fill="#2d5a3a" opacity="0.7" />
+  </g>
+  <g transform="translate(270, 65)">
+    <path d="M0,0 Q8,-8 15,0 Q8,8 0,0" fill="#2d5a3a" opacity="0.7" />
+  </g>
+  
+  <!-- Small tagline below -->
+  <text x="150" y="82" class="hand-drawn" font-size="11" fill="#6b7280" text-anchor="middle" letter-spacing="2" font-style="italic">
+    African Richness, Transformed
+  </text>
+  
+  <!-- Decorative dot -->
+  <circle cx="150" cy="72" r="2" fill="#d97706" />
+</svg>

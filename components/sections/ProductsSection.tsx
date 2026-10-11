@@ -11,6 +11,7 @@ import { HandDrawnIcon } from "@/components/ui/HandDrawnIcon";
 import { DecorativeBlob, DecorativeBlobSet } from "@/components/ui/DecorativeBlobs";
 import { PatternWatermark } from "@/components/ui/DecorativePatterns";
 import { ScrollTypingText } from "@/components/animations/TypingText";
+import { ParallaxSection } from "@/components/animations/ParallaxSection";
 import { PRODUCTS, type Product } from "@/lib/products";
 import { cn } from "@/lib/utils";
 
@@ -167,21 +168,23 @@ export function ProductsSection() {
                     </div>
                   )}
 
-                  <PatternFramedImage
-                    src={p.imageUrl}
-                    alt={p.name}
-                    width={i === 0 ? 900 : 700}
-                    height={i === 0 ? 900 : i === 1 ? 700 : i === 2 ? 500 : 400}
-                    thickness={i === 0 ? "bold" : i === 1 ? "medium" : "thin"}
-                    pattern={accentToPattern[p.accentColor]}
-                    cornerAccent={accentToCorner[p.accentColor]}
-                    className={cn(
-                      "h-full min-h-full w-full",
-                      i === 0 && "aspect-[4/5] sm:aspect-auto",
-                      i === 1 && "aspect-[4/3] sm:aspect-auto",
-                      i >= 2 && "aspect-square sm:aspect-auto",
-                    )}
-                  />
+                  <ParallaxSection speed={0.2} direction="up" rotate={true} rotateAmount={1} hoverScale={true} hoverRotate={true}>
+                    <PatternFramedImage
+                      src={p.imageUrl}
+                      alt={p.name}
+                      width={i === 0 ? 900 : 700}
+                      height={i === 0 ? 900 : i === 1 ? 700 : i === 2 ? 500 : 400}
+                      thickness={i === 0 ? "bold" : i === 1 ? "medium" : "thin"}
+                      pattern={accentToPattern[p.accentColor]}
+                      cornerAccent={accentToCorner[p.accentColor]}
+                      className={cn(
+                        "h-full min-h-full w-full",
+                        i === 0 && "aspect-[4/5] sm:aspect-auto",
+                        i === 1 && "aspect-[4/3] sm:aspect-auto",
+                        i >= 2 && "aspect-square sm:aspect-auto",
+                      )}
+                    />
+                  </ParallaxSection>
 
                   <div className="absolute inset-x-0 bottom-0 z-20 p-5 sm:p-7 bg-gradient-to-t from-charcoal-900/95 via-charcoal-900/60 to-transparent">
                     <div className="flex items-center gap-2 mb-1.5 flex-wrap">
@@ -245,13 +248,20 @@ export function ProductsSection() {
           {/* ====== Shelf-style product carousel ====== */}
           <div className="mt-20 sm:mt-24">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-10">
-              <div>
-                <Eyebrow accent="forest" className="mb-4">
-                  Explore The Shelf
-                </Eyebrow>
-                <h3 className="font-display font-black text-heading-hero max-w-xl">
-                  Swipe through <em>the full line</em>.
-                </h3>
+              <div className="flex items-start gap-4">
+                <img
+                  src="/logos/vintage/concept4-industrial-stamp.svg"
+                  alt="Quality Certified"
+                  className="w-32 h-12 flex-shrink-0"
+                />
+                <div>
+                  <Eyebrow accent="forest" className="mb-4">
+                    Explore The Shelf
+                  </Eyebrow>
+                  <h3 className="font-display font-black text-heading-hero max-w-xl">
+                    Swipe through <em>the full line</em>.
+                  </h3>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <a

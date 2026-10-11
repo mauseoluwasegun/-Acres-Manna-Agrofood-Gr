@@ -257,6 +257,15 @@ export default function AboutPage() {
         <SectionContainer size="wide" className="relative py-16 sm:py-24">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <ScrollReveal noBlur>
+              <div className="inline-block mb-5">
+                <img
+                  src="/logos/vintage/concept2-badge-vertical.svg"
+                  alt="AcresxManna Badge"
+                  className="w-24 h-28 mx-auto"
+                />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal noBlur>
               <Eyebrow accent="terracotta" className="mb-5">{t("certificationsEyebrow")}</Eyebrow>
             </ScrollReveal>
             <ScrollReveal noBlur delay={0.1}>
