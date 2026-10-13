@@ -13,16 +13,43 @@ const SITE_URL = "https://acresxmanna.com";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'hero' });
+  const title = "Acres & Manna — Redefining the African Agro-food Market Globally.";
+  const description = t('subheadline');
   
   return {
+    metadataBase: new URL(SITE_URL),
     title: {
-      default: "Acres & Manna — Redefining the African Agro-food Market Globally.",
+      default: title,
       template: "%s · Acres & Manna",
     },
-    description: t('subheadline'),
+    description,
     icons: {
-      icon: '/favicon.svg',
-      apple: '/favicon.svg',
+      icon: [
+        { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+        { url: '/favicon.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/apple-touch-icon.png',
+    },
+    openGraph: {
+      type: 'website',
+      url: SITE_URL,
+      siteName: 'Acres & Manna',
+      title,
+      description,
+      images: [
+        {
+          url: '/brand/acres-manna-social.png',
+          width: 1200,
+          height: 630,
+          alt: 'Acres & Manna — Redefining the African Agro-food Market Globally',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/brand/acres-manna-social.png'],
     },
   } satisfies Metadata;
 }
@@ -57,8 +84,6 @@ export default async function LocaleLayout({
       className={`${fontDisplay.variable} ${fontSans.variable} ${fontMono.variable} ${fontLogo.variable} scroll-smooth`}
     >
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body className="bg-cream-100 text-charcoal-900 antialiased" suppressHydrationWarning>
