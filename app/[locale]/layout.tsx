@@ -16,8 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   return {
     title: {
-      default: "AcresxManna — Africa's Richness, Transformed Into Great Food",
-      template: "%s · AcresxManna",
+      default: "Acres & Manna — Redefining the African Agro-food Market Globally.",
+      template: "%s · Acres & Manna",
     },
     description: t('subheadline'),
     icons: {
@@ -29,11 +29,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FAF6F0" },
-    { media: "(prefers-color-scheme: dark)", color: "#1A1A1A" },
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#3F346E" },
   ],
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export function generateStaticParams() {

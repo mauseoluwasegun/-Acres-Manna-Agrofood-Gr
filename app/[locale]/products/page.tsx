@@ -17,9 +17,10 @@ export default function ProductsPage() {
         <h1 className="font-display font-black text-display-1 text-balance mx-auto max-w-4xl">
           {t("headlineP1")} <em>{t("headlineEmphasis")}</em> {t("headlineP2")}
         </h1>
-        <p className="mt-8 font-sans text-body-lg text-charcoal-700 max-w-2xl mx-auto leading-relaxed">
-          {t("shelfHeadline")}
-        </p>
+        <p
+          className="mt-8 font-sans text-body-lg text-charcoal-700 max-w-2xl mx-auto leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: t.raw("shelfHeadline") }}
+        />
       </SectionContainer>
 
       <div className="my-20">

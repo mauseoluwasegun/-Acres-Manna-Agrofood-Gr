@@ -16,6 +16,14 @@ import {
 
 import { useTranslations } from "next-intl";
 
+const FOOTER_NAV_KEY_MAP: Record<string, string> = {
+  about: "about",
+  "what-we-do": "whatWeDo",
+  products: "products",
+  impact: "impact",
+  contact: "contact",
+};
+
 export function Footer() {
   const t = useTranslations("footer");
   const tNav = useTranslations("nav");
@@ -47,9 +55,9 @@ export function Footer() {
           <div className="lg:col-span-4">
             <div className="mb-5">
               <img
-                src="/logos/vintage/concept3-handrawn-horizontal.svg"
-                alt="AcresxManna"
-                className="h-10 w-auto"
+                src="/brand/acres-manna-logo-purple.svg"
+                alt="Acres & Manna logo"
+                className="h-12 w-auto"
               />
             </div>
             <p className="font-sans text-body-md text-charcoal-700 max-w-sm leading-relaxed">
@@ -75,17 +83,21 @@ export function Footer() {
               {t("navigate")}
             </p>
             <ul className="space-y-3 font-sans text-body-md text-charcoal-900">
-              {NAV_LINKS.map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    className="hover:text-terracotta-600 transition-colors inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-0 group-hover:w-5 h-[2px] bg-terracotta-500 transition-all duration-300" />
-                    {l.href === "/" ? tNav("home") : tNav(l.href.replace("/", "") as any) || l.label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const navKey = FOOTER_NAV_KEY_MAP[link.href.replace("/", "")];
+
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="hover:text-terracotta-600 transition-colors inline-flex items-center gap-2 group"
+                    >
+                      <span className="w-0 group-hover:w-5 h-[2px] bg-terracotta-500 transition-all duration-300" />
+                      {navKey ? tNav(navKey as any) : link.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -150,11 +162,11 @@ export function Footer() {
                   type="email"
                   placeholder="you@email.com"
                   aria-label="Email address"
-                  className="flex-1 px-4 py-3 text-sm bg-white outline-none text-charcoal-900 placeholder:text-charcoal-700/50"
+                  className="min-w-0 flex-1 px-3 py-3 text-sm bg-white outline-none text-charcoal-900 placeholder:text-charcoal-700/50 sm:px-4"
                 />
                 <button
                   type="submit"
-                  className="px-4 bg-terracotta-500 hover:bg-terracotta-600 transition-colors text-white font-bold text-sm uppercase tracking-[0.08em]"
+                  className="shrink-0 px-2 py-3 bg-terracotta-500 hover:bg-terracotta-600 transition-colors text-white font-bold text-xs uppercase tracking-[0.06em] sm:px-4 sm:text-sm sm:tracking-[0.08em]"
                 >
                   {t("subscribe")}
                 </button>
@@ -166,7 +178,7 @@ export function Footer() {
 
       <div className="border-t border-charcoal-900/5 bg-cream-100/60">
         <SectionContainer className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-charcoal-700 font-sans">
-          <p>© {new Date().getFullYear()} AcresxManna. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Acres & Manna. All rights reserved.</p>
           <div className="flex items-center gap-5">
             <a href="#" className="hover:text-terracotta-600">{t("privacy")}</a>
             <a href="#" className="hover:text-terracotta-600">{t("terms")}</a>

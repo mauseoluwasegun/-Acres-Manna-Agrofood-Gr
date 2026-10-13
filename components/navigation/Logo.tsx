@@ -17,19 +17,22 @@ export function Logo({
   return (
     <button
       onClick={onClick}
-      aria-label="AcresxManna — Home"
+      aria-label="Acres & Manna — Home"
       className={cn(
-        "group relative inline-flex items-center justify-center select-none",
+        "group relative inline-flex shrink-0 items-center justify-center select-none",
         className,
       )}
     >
       <motion.img
-        initial={reduce ? {} : { opacity: 0, scale: 0.8 }}
+        initial={false}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring" as const, stiffness: 180, damping: 20, delay: reduce ? 0 : 0.1 }}
-        src={variant === "dark" ? "/logos/vintage/concept1-stamp-horizontal.svg" : "/logos/vintage/concept1-stamp-horizontal.svg"}
-        alt="AcresxManna Logo"
-        className="h-10 sm:h-12 w-auto"
+        src="/brand/acres-manna-logo-purple.svg"
+        alt="Acres & Manna logo"
+        className={cn(
+          "h-11 sm:h-14 w-auto",
+          variant === "light" && "brightness-0 invert",
+        )}
       />
     </button>
   );

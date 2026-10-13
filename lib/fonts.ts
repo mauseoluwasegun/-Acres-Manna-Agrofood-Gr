@@ -1,35 +1,4 @@
-import {
-  Playfair_Display,
-  DM_Sans,
-  DM_Mono,
-  Oswald,
-} from "next/font/google";
-
-export const fontDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["900"],
-  style: ["normal", "italic"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-export const fontSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-sans",
-  display: "swap",
-});
-
-export const fontMono = DM_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-mono",
-  display: "swap",
-});
-
-export const fontLogo = Oswald({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-logo",
-  display: "swap",
-});
+export const fontDisplay = { variable: "--font-display" };
+export const fontSans = { variable: "--font-sans" };
+export const fontMono = { variable: "--font-mono" };
+export const fontLogo = { variable: "--font-logo" };

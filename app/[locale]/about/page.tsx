@@ -260,7 +260,7 @@ export default function AboutPage() {
               <div className="inline-block mb-5">
                 <img
                   src="/logos/vintage/concept2-badge-vertical.svg"
-                  alt="AcresxManna Badge"
+                  alt="Acres & Manna Badge"
                   className="w-24 h-28 mx-auto"
                 />
               </div>

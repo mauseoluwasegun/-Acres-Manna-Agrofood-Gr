@@ -3,9 +3,14 @@ export const SITE_URL = "https://acresxmanna.com";
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Products", href: "/products" },
   { label: "What We Do", href: "/what-we-do" },
+  { label: "Products", href: "/products" },
+  { label: "Our Brands", href: "/our-brands" },
+  { label: "Infrastructure", href: "/infrastructure" },
   { label: "Impact", href: "/impact" },
+  { label: "Global Markets", href: "/global-markets" },
+  { label: "Investors & Partners", href: "/investors-partners" },
+  { label: "News & Insights", href: "/news-insights" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -36,7 +41,7 @@ export const STAKEHOLDERS = [
     icon: "truck",
     headline: "Distribution Opportunities",
     description:
-      "Bring AcresxManna products to your region. Distributor, wholesaler & retail partnerships.",
+      "Bring Acres & Manna products to your region. Distributor, wholesaler & retail partnerships.",
     ctaLabel: "Distributor Inquiry",
     ctaHref: "/contact?type=distributor",
   },

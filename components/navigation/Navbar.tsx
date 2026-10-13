@@ -12,18 +12,30 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
 const NAV_KEY_MAP: Record<string, string> = {
-  "/": "home",
   "/about": "about",
-  "/products": "products",
   "/what-we-do": "whatWeDo",
+  "/products": "products",
   "/impact": "impact",
   "/contact": "contact",
 };
 
+const PRIMARY_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
+  ["/about", "/what-we-do", "/products", "/impact"].includes(href),
+);
+
+const MORE_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
+  [
+    "/our-brands",
+    "/infrastructure",
+    "/global-markets",
+    "/investors-partners",
+    "/news-insights",
+  ].includes(href),
+);
+
 export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
   const pathname = usePathname();
   const router = useRouter();
-  const reduce = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("nav");
   const tHero = useTranslations("hero");
@@ -35,15 +47,15 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isLight = !scrolled && pathname === "/";
+  const isLight = false;
   const textClass = isLight ? "text-white" : "text-charcoal-900";
   const hoverClass = isLight ? "hover:text-mango-400" : "hover:text-terracotta-600";
 
   return (
     <motion.header
-      initial={reduce ? {} : { y: -80, opacity: 0 }}
+      initial={false}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ type: "spring", stiffness: 180, damping: 24, delay: 0.1 } as any}
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-colors duration-300 will-change-transform",
         scrolled
@@ -58,10 +70,10 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
         />
 
         <nav
-          className="hidden lg:flex items-center gap-8"
+          className="hidden lg:flex min-w-0 items-center gap-3 xl:gap-5"
           aria-label="Primary"
         >
-          {NAV_LINKS.map((link) => {
+          {PRIMARY_NAV_LINKS.map((link) => {
             const active =
               pathname === link.href ||
               (link.href !== "/" && pathname?.startsWith(link.href));
@@ -74,7 +86,7 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
                 href={link.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "group relative font-sans font-bold uppercase tracking-[0.12em] text-sm py-2 transition-colors",
+                  "group relative whitespace-nowrap font-sans font-bold uppercase tracking-[0.08em] xl:tracking-[0.12em] text-xs xl:text-sm py-2 transition-colors",
                   textClass,
                   hoverClass,
                 )}
@@ -92,12 +104,51 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
             );
           })}
 
-          <div className="pl-2 flex items-center gap-4">
+          <details className="group/more relative">
+            <summary
+              className={cn(
+                "relative cursor-pointer list-none whitespace-nowrap py-2 font-sans font-bold uppercase tracking-[0.08em] xl:tracking-[0.12em] text-xs xl:text-sm",
+                textClass,
+                hoverClass,
+                MORE_NAV_LINKS.some(
+                  ({ href }) => pathname === href || pathname?.startsWith(href),
+                ) && "text-terracotta-600",
+              )}
+            >
+              More
+              <span
+                aria-hidden
+                className="ml-1 inline-block border-b-2 border-r-2 border-current p-[2px] align-[3px] rotate-45"
+              />
+            </summary>
+            <div className="absolute right-0 top-full z-50 mt-3 w-60 rounded-soft-lg border border-cream-100 bg-cream-50 p-2 shadow-card">
+              {MORE_NAV_LINKS.map((link) => {
+                const active = pathname === link.href || pathname?.startsWith(link.href);
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-current={active ? "page" : undefined}
+                    className={cn(
+                      "block rounded-soft px-3 py-2.5 font-sans text-sm font-bold transition-colors hover:bg-cream-100 hover:text-terracotta-600",
+                      active ? "text-terracotta-600" : "text-charcoal-900",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </details>
+
+          <div className="flex shrink-0 items-center gap-2 xl:gap-4">
             <LanguageSwitcher isLight={isLight} />
             <Button
               href="/contact?type=partner"
               variant="primary"
               size="md"
+              className="px-3 py-3 text-xs xl:px-6 xl:py-3.5 xl:text-sm"
               ariaLabel={tHero("cta.partner")}
             >
               {tHero("cta.partner")}
@@ -197,7 +248,7 @@ export function MobileMenu({
             animate="open"
             exit="closed"
             aria-label="Mobile"
-            className="fixed inset-0 z-[90] bg-cream-100 overflow-hidden"
+            className="fixed inset-0 z-[90] overflow-y-auto overscroll-contain bg-cream-100"
           >
             <div
               aria-hidden
@@ -207,7 +258,13 @@ export function MobileMenu({
             <div aria-hidden className="absolute bottom-10 right-0 w-72 h-72 rounded-full bg-mango-400/25 animate-blob-drift" style={{ animationDelay: "2s" }} />
             <div aria-hidden className="absolute top-1/3 left-10 w-40 h-40 rounded-full bg-forest-600/10 animate-blob-drift" style={{ animationDelay: "4s" }} />
 
-            <div className="container-page relative h-full flex flex-col">
+            <div
+              className="container-page relative flex min-h-[100svh] flex-col"
+              style={{
+                paddingTop: "env(safe-area-inset-top)",
+                paddingBottom: "env(safe-area-inset-bottom)",
+              }}
+            >
               <div className="flex items-center justify-between h-20">
                 <Logo variant="dark" onClick={onClose} />
                 <button
@@ -220,7 +277,7 @@ export function MobileMenu({
                 </button>
               </div>
 
-              <div className="flex-1 flex flex-col justify-center gap-2 sm:gap-4 -mt-12">
+              <div className="flex flex-1 flex-col justify-center gap-2 py-6 sm:gap-4">
                 {NAV_LINKS.map((link, i) => {
                   const active =
                     pathname === link.href ||
@@ -239,8 +296,8 @@ export function MobileMenu({
                         onClick={onClose}
                         aria-current={active ? "page" : undefined}
                         className={cn(
-                          "block font-display font-black leading-[0.95] py-2 transition-colors",
-                          "text-[clamp(2.4rem,7vw,4.5rem)]",
+                          "block break-words py-2 font-display font-black leading-[0.95] transition-colors",
+                          "text-[clamp(2rem,7vw,4.5rem)]",
                           active
                             ? "text-terracotta-600"
                             : "text-charcoal-900 hover:text-terracotta-600",

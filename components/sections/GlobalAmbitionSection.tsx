@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
@@ -19,7 +19,7 @@ const HOTSPOTS = [
     id: "ghana",
     country: "Ghana",
     region: "West Africa",
-    flag: "🇬🇭",
+    flag: "ðŸ‡¬ðŸ‡­",
     position: { left: "40%", top: "62%" },
     tag: "HQ & Primary Processing",
     tint: "terracotta" as const,
@@ -29,7 +29,7 @@ const HOTSPOTS = [
     id: "nigeria",
     country: "Nigeria",
     region: "West Africa",
-    flag: "🇳🇬",
+    flag: "ðŸ‡³ðŸ‡¬",
     position: { left: "45%", top: "56%" },
     tag: "Largest Market",
     tint: "mango" as const,
@@ -37,9 +37,9 @@ const HOTSPOTS = [
   },
   {
     id: "ivory-coast",
-    country: "Côte d'Ivoire",
+    country: "CÃ´te d'Ivoire",
     region: "West Africa",
-    flag: "🇨🇮",
+    flag: "ðŸ‡¨ðŸ‡®",
     position: { left: "37%", top: "58%" },
     tag: "Cocoa Belt",
     tint: "forest" as const,
@@ -49,7 +49,7 @@ const HOTSPOTS = [
     id: "kenya",
     country: "Kenya",
     region: "East Africa",
-    flag: "🇰🇪",
+    flag: "ðŸ‡°ðŸ‡ª",
     position: { left: "62%", top: "68%" },
     tag: "East Africa Hub",
     tint: "terracotta" as const,
@@ -59,7 +59,7 @@ const HOTSPOTS = [
     id: "sa",
     country: "South Africa",
     region: "Southern Africa",
-    flag: "🇿🇦",
+    flag: "ðŸ‡¿ðŸ‡¦",
     position: { left: "58%", top: "86%" },
     tag: "Regional Distribution",
     tint: "indigo" as const,
@@ -69,9 +69,9 @@ const HOTSPOTS = [
     id: "uk",
     country: "United Kingdom",
     region: "Europe",
-    flag: "🇬🇧",
+    flag: "ðŸ‡¬ðŸ‡§",
     position: { left: "47%", top: "30%" },
-    tag: "Exports · EU Market",
+    tag: "Exports Â· EU Market",
     tint: "indigo" as const,
     size: "sm",
   },
@@ -79,7 +79,7 @@ const HOTSPOTS = [
     id: "us",
     country: "United States",
     region: "North America",
-    flag: "🇺🇸",
+    flag: "ðŸ‡ºðŸ‡¸",
     position: { left: "18%", top: "38%" },
     tag: "North America Entry",
     tint: "terracotta" as const,
@@ -89,7 +89,7 @@ const HOTSPOTS = [
     id: "uae",
     country: "UAE",
     region: "Middle East",
-    flag: "🇦🇪",
+    flag: "ðŸ‡¦ðŸ‡ª",
     position: { left: "64%", top: "46%" },
     tag: "GCC Distribution",
     tint: "mango" as const,
@@ -165,7 +165,7 @@ export function GlobalAmbitionSection() {
       <PatternDivider
         pattern="bogolan"
         thickness="medium"
-        eyebrow="— FROM LOCAL TO GLOBAL"
+        eyebrow="â€” FROM LOCAL TO GLOBAL"
         eyebrowAccent="indigo"
       />
 
@@ -217,7 +217,7 @@ export function GlobalAmbitionSection() {
                   {/* World map background image */}
                   <Image
                     src="/images/world-map.jpg"
-                    alt="World map showing AcresxManna global presence"
+                    alt="World map showing Acres & Manna global presence"
                     fill
                     className="object-cover object-center opacity-90"
                     sizes="(max-width: 1024px) 100vw, 66vw"
@@ -232,11 +232,11 @@ export function GlobalAmbitionSection() {
                   >
                     {/* Dashed lines from Ghana hub to export pins */}
                     <g stroke="#c4623a" strokeWidth="2.2" strokeDasharray="4 6" fill="none" strokeLinecap="round" opacity="0.55">
-                      <path d="M 400 355 Q 450 230 470 175" /> {/* Ghana → UK */}
-                      <path d="M 400 355 Q 280 260 180 220" /> {/* Ghana → US */}
-                      <path d="M 400 355 Q 510 300 640 260" /> {/* Ghana → UAE */}
-                      <path d="M 400 355 Q 470 370 620 395" /> {/* Ghana → Kenya */}
-                      <path d="M 400 355 Q 460 460 580 490" /> {/* Ghana → SA */}
+                      <path d="M 400 355 Q 450 230 470 175" /> {/* Ghana â†’ UK */}
+                      <path d="M 400 355 Q 280 260 180 220" /> {/* Ghana â†’ US */}
+                      <path d="M 400 355 Q 510 300 640 260" /> {/* Ghana â†’ UAE */}
+                      <path d="M 400 355 Q 470 370 620 395" /> {/* Ghana â†’ Kenya */}
+                      <path d="M 400 355 Q 460 460 580 490" /> {/* Ghana â†’ SA */}
                     </g>
                   </svg>
 
@@ -259,7 +259,7 @@ export function GlobalAmbitionSection() {
                           "absolute -translate-x-1/2 -translate-y-full group focus:outline-none",
                         )}
                         style={{ left: h.position.left, top: h.position.top }}
-                        aria-label={`${h.country} — ${h.tag}`}
+                        aria-label={`${h.country} â€” ${h.tag}`}
                       >
                         <IconMapPin
                           className={cn("mb-0.5 drop-shadow", h.size === "lg" ? "w-7 h-7" : h.size === "md" ? "w-6 h-6" : "w-5 h-5", t.text)}
@@ -322,11 +322,11 @@ export function GlobalAmbitionSection() {
 
                 <ul className="mt-7 space-y-4">
                   {[
-                    { f: "🇬🇭", c: t("hqGhana") },
-                    { f: "🇳🇬", c: t("hqNigeria") },
-                    { f: "🇨🇮", c: t("hqCoteDivoire") },
-                    { f: "🇰🇪", c: t("hqKenya") },
-                    { f: "🇿🇦", c: t("hqSouthAfrica") },
+                    { f: "ðŸ‡¬ðŸ‡­", c: t("hqGhana") },
+                    { f: "ðŸ‡³ðŸ‡¬", c: t("hqNigeria") },
+                    { f: "ðŸ‡¨ðŸ‡®", c: t("hqCoteDivoire") },
+                    { f: "ðŸ‡°ðŸ‡ª", c: t("hqKenya") },
+                    { f: "ðŸ‡¿ðŸ‡¦", c: t("hqSouthAfrica") },
                   ].map((row) => (
                     <li
                       key={row.c}
@@ -408,3 +408,4 @@ export function GlobalAmbitionSection() {
     </>
   );
 }
+

@@ -134,7 +134,7 @@ export function Hero() {
               </Eyebrow>
             </motion.div>
 
-            <h1 className="font-display font-black text-display-hero leading-[0.92] text-charcoal-900 tracking-tight text-balance">
+            <h1 className="font-display font-black text-[clamp(2.75rem,14vw,3.5rem)] sm:text-display-hero leading-[0.92] text-charcoal-900 tracking-tight text-balance">
               <span className="block mb-2 sm:mb-3">
                 <WordReveal word={t("headline.africa")} i={0} />
                 <WordReveal word={t("headline.richness")} i={1} isItalic />
@@ -236,6 +236,7 @@ export function Hero() {
                   alt="Vibrant African agricultural collage — farms, food, and a smiling farmer"
                   width={900}
                   height={760}
+                  sizes="(max-width: 639px) 85vw, (max-width: 1023px) 90vw, 42vw"
                   thickness="bold"
                   pattern="kente"
                   cornerAccent="terracotta"
@@ -261,6 +262,7 @@ export function Hero() {
                   alt="Farmer hands holding fresh mangoes and tomatoes"
                   width={420}
                   height={520}
+                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 38vw, 18vw"
                   thickness="medium"
                   pattern="ankara"
                   cornerAccent="mango"
@@ -284,6 +286,7 @@ export function Hero() {
                   alt="Plated jollof rice with fried plantains and vegetables"
                   width={420}
                   height={520}
+                  sizes="(max-width: 639px) 45vw, (max-width: 1023px) 42vw, 22vw"
                   thickness="medium"
                   pattern="mudcloth"
                   cornerAccent="forest"
@@ -308,6 +311,7 @@ export function Hero() {
                 alt="Golden cocoa and harvest products"
                 width={260}
                 height={260}
+                sizes="(max-width: 639px) 25vw, (max-width: 1023px) 24vw, 12vw"
                 thickness="thin"
                 pattern="woven"
                 cornerAccent="indigo"

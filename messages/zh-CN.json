@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "AcresxManna — 莱斯非洲的财富，转化为美食",
+    "siteTitle": "Acres & Manna — 莱斯非洲的财富，转化为美食",
     "siteDescription": "扎根于非洲最富饶的农田，我们将这片大陆最好的收成转化为供本地和国际餐桌享用的优质食品。",
     "skipToContent": "跳到内容"
   },
@@ -14,7 +14,7 @@
     "contact": "联系我们"
   },
   "hero": {
-    "eyebrow": "AcresxManna · 非洲农产品加工",
+    "eyebrow": "Acres & Manna · 非洲农产品加工",
     "headline": {
       "africa": "非洲的",
       "richness": "财富.",
@@ -82,7 +82,7 @@
     "originHeadlineL1": "我们从一个问题开始：",
     "originHeadlineL2": "为什么非洲食物没有",
     "originHeadlineL3": "遍及各地？",
-    "originParagraph1": "AcresxManna诞生于加纳的阿克拉。",
+    "originParagraph1": "Acres & Manna诞生于加纳的阿克拉。",
     "originParagraph2": "今天，我们运营着现代化的食品生产线。",
     "foundedYear": "2021",
     "foundedLabel": "成立年份",
@@ -103,7 +103,7 @@
     "pillar3Headline": "由<em>雄心</em>驱动。",
     "pillar3Description": "让非洲的食物摆上世界各地的主要货架。",
     "pullquote": "我们不仅出口食品——我们还出口非洲劳动力的尊严。",
-    "pullquoteName": "AcresxManna",
+    "pullquoteName": "Acres & Manna",
     "pullquoteTitle": "创始人兼首席执行官"
   },
   "products": {
@@ -256,7 +256,7 @@
     "newsletter": "时事通讯",
     "newsletterDescription": "获取最新动态。",
     "subscribe": "订阅",
-    "copyright": "© {year} AcresxManna.",
+    "copyright": "© {year} Acres & Manna.",
     "privacy": "隐私政策",
     "terms": "条款",
     "cookies": "Cookies"

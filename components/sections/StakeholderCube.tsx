@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo, useEffect } from "react";
 import { motion, useMotionValue, useTransform, useReducedMotion } from "framer-motion";
@@ -23,13 +23,13 @@ const FACE_LABELS = [
   { id: "employee", title: "Team", accent: "terracotta" as const, icon: "user" as IconName },
 ];
 
-/* Face index mapping (each cube face → stakeholder idx)
-   0 front  → customer
-   1 right  → farmer
-   2 back   → distributor
-   3 left   → partner
-   4 top    → investor
-   5 bottom → employee */
+/* Face index mapping (each cube face â†’ stakeholder idx)
+   0 front  â†’ customer
+   1 right  â†’ farmer
+   2 back   â†’ distributor
+   3 left   â†’ partner
+   4 top    â†’ investor
+   5 bottom â†’ employee */
 const FACE_ORDER = ["consumer", "farmer", "distributor", "partner", "investor", "employee"];
 
 function accentColor(id: string) {
@@ -60,7 +60,7 @@ export function StakeholderCube() {
       return;
     }
     const { x, y } = hoverBox;
-    // add ±14° parallax
+    // add Â±14Â° parallax
     mvX.set(idle.rY + (x - 0.5) * 28);
     mvY.set(idle.rX + (y - 0.5) * -20);
   }, [hoverBox, idle, mvX, mvY]);
@@ -126,7 +126,7 @@ export function StakeholderCube() {
       <PatternDivider
         pattern="mudcloth"
         thickness="medium"
-        eyebrow="— PICK YOUR ROLE"
+        eyebrow="â€” PICK YOUR ROLE"
         eyebrowAccent="terracotta"
       />
 
@@ -148,19 +148,19 @@ export function StakeholderCube() {
               Six faces. <em>One ecosystem.</em>
             </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
-              AcresxManna brings together a whole value chain. Rotate the
+              Acres & Manna brings together a whole value chain. Rotate the
               cube to explore a starting point that fits you.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* ====== LEFT 55% — Cube ====== */}
+            {/* ====== LEFT 55% â€” Cube ====== */}
             <div className="lg:col-span-7 order-2 lg:order-1">
               <div
                 aria-hidden={false}
                 role="img"
                 aria-label={`Interactive stakeholder cube. Active face: ${active.label}.`}
-                className="relative mx-auto w-full h-[480px] sm:h-[560px] flex items-center justify-center select-none touch-none"
+                className="relative mx-auto flex h-[420px] w-full select-none items-center justify-center touch-pan-y sm:h-[560px]"
                 style={{ perspective: reduce ? "none" : "1600px" }}
                 onPointerMove={reduce ? undefined : onBoxPointerMove}
                 onPointerLeave={() => setHoverBox(null)}
@@ -183,6 +183,7 @@ export function StakeholderCube() {
                 />
 
                 {/* Cube itself */}
+                <div className="scale-[0.8] min-[360px]:scale-[0.9] sm:scale-100">
                 <motion.div
                   style={{
                     width: CUBE_SIZE,
@@ -321,6 +322,7 @@ export function StakeholderCube() {
                     );
                   })}
                 </motion.div>
+                </div>
 
                 {/* Bottom decorative plant */}
                 <HandDrawnPlantLine
@@ -338,7 +340,7 @@ export function StakeholderCube() {
               {/* 6 face pill selector */}
               <div className="mt-4 sm:mt-8 max-w-2xl mx-auto">
                 <p className="text-center font-mono text-micro uppercase tracking-[0.16em] text-charcoal-700/70 mb-4">
-                  · Click cube faces, or pick directly ·
+                  Â· Click cube faces, or pick directly Â·
                 </p>
                 <div className="flex flex-wrap justify-center gap-2.5">
                   {STAKEHOLDERS.map((s, i) => {
@@ -379,7 +381,7 @@ export function StakeholderCube() {
               </div>
             </div>
 
-            {/* ====== RIGHT 45% — Dynamic content panel ====== */}
+            {/* ====== RIGHT 45% â€” Dynamic content panel ====== */}
             <motion.div
               key={active.id}
               initial={reduce ? {} : { opacity: 0, x: 30, filter: "blur(8px)" }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, useReducedMotion } from "framer-motion";
@@ -15,7 +15,7 @@ import { ScrollTypingText } from "@/components/animations/TypingText";
 import { IMPACT_METRICS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
-/* Progress ring — SVG with animated strokeDashoffset */
+/* Progress ring â€” SVG with animated strokeDashoffset */
 function ImpactRing({
   progress,
   color,
@@ -86,7 +86,7 @@ function ImpactRing({
   );
 }
 
-/* Counter — animates digits when metric enters viewport */
+/* Counter â€” animates digits when metric enters viewport */
 function ImpactCounter({ value, className }: { value: string; className?: string }) {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLSpanElement | null>(null);
@@ -138,9 +138,9 @@ function ImpactCounter({ value, className }: { value: string; className?: string
 
 const STORIES = [
   {
-    eyebrow: "FARMER STORY · NORTHERN REGION",
+    eyebrow: "FARMER STORY Â· NORTHERN REGION",
     name: "Maize Farmer, Northern Ghana",
-    text: "“Since joining AcresxManna, I received training on improved maize varieties, a guaranteed market, and a fairer price at harvest.”",
+    text: "â€œSince joining Acres & Manna, I received training on improved maize varieties, a guaranteed market, and a fairer price at harvest.â€",
     accent: "terracotta" as const,
     pattern: "kente" as const,
     img: encodeURIComponent(
@@ -148,9 +148,9 @@ const STORIES = [
     ),
   },
   {
-    eyebrow: "COMMUNITY · COCOA COOPERATIVE",
+    eyebrow: "COMMUNITY Â· COCOA COOPERATIVE",
     name: "Cocoa Cooperative, Western North",
-    text: "“Premium cocoa prices year on year, plus a school scholarship fund for our farmer families.”",
+    text: "â€œPremium cocoa prices year on year, plus a school scholarship fund for our farmer families.â€",
     accent: "forest" as const,
     pattern: "mudcloth" as const,
     img: encodeURIComponent(
@@ -158,9 +158,9 @@ const STORIES = [
     ),
   },
   {
-    eyebrow: "TEAM STORY · PRODUCTION LINE",
+    eyebrow: "TEAM STORY Â· PRODUCTION LINE",
     name: "Production Lead, Ghana Factory",
-    text: "“I started as a temp on the packaging line. Today I lead a team in the milling department.”",
+    text: "â€œI started as a temp on the packaging line. Today I lead a team in the milling department.â€",
     accent: "indigo" as const,
     pattern: "bogolan" as const,
     img: encodeURIComponent(
@@ -387,3 +387,4 @@ export function ImpactSection() {
     </>
   );
 }
+

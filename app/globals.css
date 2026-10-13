@@ -4,31 +4,32 @@
 
 @layer base {
   :root {
-    --cream-50: 251 248 243;
-    --cream-100: 250 246 240;
+    --cream-50: 255 255 255;
+    --cream-100: 239 235 248;
 
-    --terracotta-500: 198 93 58;
-    --terracotta-600: 168 74 44;
-    --terracotta-700: 138 59 34;
+    --terracotta-500: 89 75 154;
+    --terracotta-600: 63 52 110;
+    --terracotta-700: 47 35 80;
 
-    --mango-400: 244 167 58;
-    --mango-500: 232 146 42;
+    --mango-400: 253 220 66;
+    --mango-500: 253 220 66;
 
-    --earth-600: 107 66 38;
+    --earth-600: 111 94 60;
 
     --forest-600: 47 93 58;
     --forest-700: 31 64 41;
 
     --indigo-700: 43 58 103;
 
-    --charcoal-700: 61 61 61;
-    --charcoal-900: 26 26 26;
+    --charcoal-700: 81 86 114;
+    --charcoal-900: 39 29 64;
 
     --focus: var(--mango-500);
 
-    --font-display: "__Playfair_Display_xxxxxxxx";
-    --font-sans: "__DM_Sans_xxxxxxxx";
-    --font-mono: "__DM_Mono_xxxxxxxx";
+    --font-display: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    --font-sans: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --font-logo: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
   }
 
   * {
@@ -61,7 +62,7 @@
   }
 
   body {
-    background-color: rgb(var(--cream-100));
+    background-color: rgb(var(--cream-50));
     color: rgb(var(--charcoal-900));
     font-family: var(--font-sans), system-ui, sans-serif;
     font-feature-settings: "ss01", "ss02";

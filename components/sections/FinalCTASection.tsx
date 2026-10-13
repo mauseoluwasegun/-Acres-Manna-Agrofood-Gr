@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -39,11 +39,11 @@ export function FinalCTASection() {
         <SectionContainer size="wide" className="relative">
           <div className="relative rounded-soft-lg overflow-hidden shadow-cta border border-cream-100">
             <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-              {/* Left half — hero editorial image with overlay */}
+              {/* Left half â€” hero editorial image with overlay */}
               <div className="relative h-full min-h-[420px] sm:min-h-[480px]">
                 <img
                   src="/images/farm-origin.jpg"
-                  alt="AcresxManna partnership — farmers and agricultural excellence"
+                  alt="Acres & Manna partnership â€” farmers and agricultural excellence"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/60 to-cream-50/10" />
@@ -84,7 +84,7 @@ export function FinalCTASection() {
                 </div>
               </div>
 
-              {/* Right half — form panel */}
+              {/* Right half â€” form panel */}
               <div className="relative h-full min-h-[420px] sm:min-h-[480px] bg-cream-50 p-7 sm:p-10 lg:p-12 flex flex-col">
                 <FloatingPatternMotif
                   pattern="bogolan"
@@ -169,10 +169,10 @@ export function FinalCTASection() {
           {/* Bottom micro-trust row */}
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-charcoal-900">
             {[
-              { k: "✉", t: t("trust48h") },
-              { k: "🔒", t: t("trustSecure") },
-              { k: "🌾", t: t("trustFarmers") },
-              { k: "🌏", t: t("trustGlobal") },
+              { k: "âœ‰", t: t("trust48h") },
+              { k: "ðŸ”’", t: t("trustSecure") },
+              { k: "ðŸŒ¾", t: t("trustFarmers") },
+              { k: "ðŸŒ", t: t("trustGlobal") },
             ].map((row) => (
               <div
                 key={row.t}
@@ -188,4 +188,5 @@ export function FinalCTASection() {
     </>
   );
 }
+
 
