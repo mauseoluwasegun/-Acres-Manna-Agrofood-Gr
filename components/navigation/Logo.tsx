@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -19,18 +19,16 @@ export function Logo({
       onClick={onClick}
       aria-label="AcresxManna — Home"
       className={cn(
-        "group relative inline-flex shrink-0 items-center justify-center select-none",
+        "group isolate relative z-10 inline-flex shrink-0 items-center justify-center select-none",
         className,
       )}
     >
-      <motion.img
-        initial={false}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring" as const, stiffness: 180, damping: 20, delay: reduce ? 0 : 0.1 }}
+      <img
         src="/brand/acres-manna-logo-purple.svg"
         alt="AcresxManna logo"
         className={cn(
-          "h-11 sm:h-14 w-auto",
+          "h-11 sm:h-14 w-auto transition-opacity duration-500",
+          !reduce && "animate-[fadeIn_0.5s_ease-out_0.1s_both]",
           variant === "light" && "brightness-0 invert",
         )}
       />

@@ -88,6 +88,10 @@ module.exports = {
         "spring-soft": "cubic-bezier(0.22, 1, 0.36, 1)",
       },
       keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         "pulse-slow": {
           "0%, 100%": { opacity: "0.7", transform: "scale(1)" },
           "50%": { opacity: "1", transform: "scale(1.04)" },
