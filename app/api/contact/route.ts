@@ -1,4 +1,12 @@
 import { NextResponse } from "next/server";
+import { resend } from "@/lib/resend";
+import {
+  buildEnquirySubject,
+  buildEnquiryHtml,
+  buildAutoReplySubject,
+  buildAutoReplyHtml,
+} from "@/lib/email-templates";
+import { CONTACT_EMAIL } from "@/lib/constants";
 
 export const runtime = "nodejs";
 
@@ -25,6 +33,12 @@ type ContactPayload = {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+/**
+ * Sender address used for all outgoing emails.
+ * Update to noreply@acresxmanna.com once the domain is verified in Resend.
+ */
+const FROM_ADDRESS = "AcresxManna <onboarding@resend.dev>";
+
 export async function POST(request: Request) {
   let payload: ContactPayload;
 
@@ -37,6 +51,7 @@ export async function POST(request: Request) {
     );
   }
 
+  // Spam honeypot – silently accept
   if (payload.honeypot) {
     return NextResponse.json({ ok: true }, { status: 200 });
   }
@@ -77,6 +92,54 @@ export async function POST(request: Request) {
   };
 
   console.log("[contact] enquiry received:", submission);
+
+  // ── 1. Send notification email to the team ────────────────────────
+  try {
+    const { data, error } = await resend.emails.send({
+      from: FROM_ADDRESS,
+      to: [CONTACT_EMAIL],
+      replyTo: email,
+      subject: buildEnquirySubject(submission),
+      html: buildEnquiryHtml(submission),
+    });
+
+    if (error) {
+      console.error("[contact] Resend notification error:", error);
+      return NextResponse.json(
+        { error: "Failed to send your message. Please try again." },
+        { status: 500 },
+      );
+    }
+
+    console.log("[contact] notification email sent, id:", data?.id);
+  } catch (err) {
+    console.error("[contact] Resend notification exception:", err);
+    return NextResponse.json(
+      { error: "Failed to send your message. Please try again." },
+      { status: 500 },
+    );
+  }
+
+  // ── 2. Send auto-reply email to the sender ────────────────────────
+  try {
+    const { data, error } = await resend.emails.send({
+      from: FROM_ADDRESS,
+      to: [email],
+      replyTo: CONTACT_EMAIL,
+      subject: buildAutoReplySubject(submission),
+      html: buildAutoReplyHtml(submission),
+    });
+
+    if (error) {
+      // Auto-reply failure should not block the form success
+      console.error("[contact] Resend auto-reply error:", error);
+    } else {
+      console.log("[contact] auto-reply email sent, id:", data?.id);
+    }
+  } catch (err) {
+    // Auto-reply failure should not block the form success
+    console.error("[contact] Resend auto-reply exception:", err);
+  }
 
   return NextResponse.json({ ok: true }, { status: 200 });
 }
