@@ -1,192 +1,54 @@
-﻿"use client";
-
 import { SectionContainer } from "@/components/layout/SectionContainer";
+import { MotionSection } from "@/components/animations/MotionSection";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { PatternDivider } from "@/components/animations/PatternDivider";
-import { DecorativeBlobSet } from "@/components/ui/DecorativeBlobs";
-import { PatternWatermark, FloatingPatternMotif, HandDrawnPlantLine } from "@/components/ui/DecorativePatterns";
-import { IconPhone, IconMail, IconMapPin } from "@/components/ui/icons";
-import { useTranslations } from "next-intl";
+import { CONTACT_PHONE } from "@/lib/constants";
 
 export function FinalCTASection() {
-  const t = useTranslations("cta");
-
   return (
-    <>
-      <PatternDivider
-        pattern="ankara"
-        thickness="bold"
-        eyebrow={t("dividerEyebrow")}
-        eyebrowAccent="mango"
-      />
-
-      <section id="contact-cta" className="relative bg-cream-100 py-20 sm:py-24 overflow-hidden">
-        <PatternWatermark pattern="kente" opacity={0.07} />
-        <DecorativeBlobSet className="opacity-80" />
-        <HandDrawnPlantLine
-          variant="maize"
-          size={150}
-          className="absolute top-6 right-8 text-terracotta-600/40"
-        />
-        <HandDrawnPlantLine
-          variant="shea"
-          size={120}
-          className="absolute bottom-8 left-10 text-forest-700/40"
-        />
-
-        {/* ========= BIG IMAGE + OVERLAY CTA BAND ========= */}
-        <SectionContainer size="wide" className="relative">
-          <div className="relative rounded-soft-lg overflow-hidden shadow-cta border border-cream-100">
-            <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-2">
-              {/* Left half â€” hero editorial image with overlay */}
-              <div className="relative h-full min-h-[420px] sm:min-h-[480px]">
-                <img
-                  src="/images/farm-origin.jpg"
-                  alt="Acres & Manna partnership â€” farmers and agricultural excellence"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-charcoal-900/90 via-charcoal-900/60 to-cream-50/10" />
-
-                <div className="relative h-full p-7 sm:p-10 lg:p-12 flex flex-col justify-between text-cream-100">
-                  <div>
-                    <Eyebrow accent="mango" className="mb-4">
-                      {t("eyebrow")}
-                    </Eyebrow>
-                    <h3
-                      className="font-display font-black italic text-[clamp(2rem,4.2vw,3.5rem)] leading-[1.02] tracking-tight max-w-xl"
-                      dangerouslySetInnerHTML={{ __html: t.raw("headline") }}
-                    />
-                    <p className="mt-5 max-w-md font-sans text-body-md text-cream-50/90 leading-relaxed">
-                      {t("description")}
-                    </p>
-                  </div>
-                  <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-4">
-                    <li className="flex items-center gap-3">
-                      <span className="w-10 h-10 rounded-full bg-cream-50/10 flex items-center justify-center ring-1 ring-cream-50/20 text-mango-400">
-                        <IconMail size={18} />
-                      </span>
-                      <span className="font-sans text-body-md">{t("emailLabel")}</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="w-10 h-10 rounded-full bg-cream-50/10 flex items-center justify-center ring-1 ring-cream-50/20 text-mango-400">
-                        <IconPhone size={18} />
-                      </span>
-                      <span className="font-sans text-body-md">{t("phoneLabel")}</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <span className="w-10 h-10 rounded-full bg-cream-50/10 flex items-center justify-center ring-1 ring-cream-50/20 text-mango-400">
-                        <IconMapPin size={18} />
-                      </span>
-                      <span className="font-sans text-body-md">{t("hqLabel")}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* Right half â€” form panel */}
-              <div className="relative h-full min-h-[420px] sm:min-h-[480px] bg-cream-50 p-7 sm:p-10 lg:p-12 flex flex-col">
-                <FloatingPatternMotif
-                  pattern="bogolan"
-                  size={140}
-                  rotate={18}
-                  top="-4%"
-                  right="-6%"
-                  className="opacity-80"
-                />
-                <div className="relative">
-                  <Eyebrow accent="terracotta" className="mb-3">
-                    {t("formEyebrow")}
-                  </Eyebrow>
-                  <h4
-                    className="font-display font-black text-heading-hero leading-[1.02] max-w-md"
-                    dangerouslySetInnerHTML={{ __html: t.raw("formHeadline") }}
-                  />
-                </div>
-
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="relative mt-7 space-y-4"
-                >
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <label className="block">
-                      <span className="sr-only">{t("placeholderName")}</span>
-                      <input
-                        placeholder={t("placeholderName")}
-                        className="w-full rounded-soft border border-charcoal-900/10 bg-white px-4 py-3 text-body-md outline-none focus:ring-2 focus:ring-mango-500"
-                      />
-                    </label>
-                    <label className="block">
-                      <span className="sr-only">{t("placeholderEmail")}</span>
-                      <input
-                        type="email"
-                        placeholder={t("placeholderEmail")}
-                        className="w-full rounded-soft border border-charcoal-900/10 bg-white px-4 py-3 text-body-md outline-none focus:ring-2 focus:ring-mango-500"
-                      />
-                    </label>
-                  </div>
-                  <label className="block">
-                    <span className="sr-only">{t("placeholderCompany")}</span>
-                    <input
-                      placeholder={t("placeholderCompany")}
-                      className="w-full rounded-soft border border-charcoal-900/10 bg-white px-4 py-3 text-body-md outline-none focus:ring-2 focus:ring-mango-500"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="sr-only">{t("selectDefault")}</span>
-                    <select className="w-full rounded-soft border border-charcoal-900/10 bg-white px-4 py-3 text-body-md outline-none focus:ring-2 focus:ring-mango-500">
-                      <option>{t("selectDefault")}</option>
-                      <option>{t("selectConsumer")}</option>
-                      <option>{t("selectFarmer")}</option>
-                      <option>{t("selectDistributor")}</option>
-                      <option>{t("selectPartner")}</option>
-                      <option>{t("selectInvestor")}</option>
-                      <option>{t("selectPress")}</option>
-                      <option>{t("selectJobSeeker")}</option>
-                    </select>
-                  </label>
-                  <label className="block">
-                    <span className="sr-only">{t("placeholderMessage")}</span>
-                    <textarea
-                      rows={4}
-                      placeholder={t("placeholderMessage")}
-                      className="w-full rounded-soft border border-charcoal-900/10 bg-white px-4 py-3 text-body-md outline-none focus:ring-2 focus:ring-mango-500 resize-none"
-                    />
-                  </label>
-                  <div className="flex flex-wrap gap-3 pt-2">
-                    <Button type="submit" variant="primary" size="lg">
-                      {t("sendInquiry")}
-                    </Button>
-                    <Button href="/contact" variant="secondary" size="lg">
-                      {t("fullContactPage")}
-                    </Button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom micro-trust row */}
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-charcoal-900">
-            {[
-              { k: "âœ‰", t: t("trust48h") },
-              { k: "ðŸ”’", t: t("trustSecure") },
-              { k: "ðŸŒ¾", t: t("trustFarmers") },
-              { k: "ðŸŒ", t: t("trustGlobal") },
-            ].map((row) => (
-              <div
-                key={row.t}
-                className="flex items-center gap-3 rounded-soft bg-cream-50/60 border border-cream-100 px-4 py-3.5"
-              >
-                <span className="text-xl">{row.k}</span>
-                <span className="font-sans text-body-md">{row.t}</span>
-              </div>
-            ))}
-          </div>
-        </SectionContainer>
-      </section>
-    </>
+    <MotionSection className="bg-purple-700 py-20 text-white sm:py-28">
+      <SectionContainer size="wide" className="text-center">
+        <Eyebrow className="mb-5 text-yellow-400">Start a conversation</Eyebrow>
+        <h2 className="mx-auto max-w-4xl font-display text-display-1 font-black">
+          Let&apos;s build Africa&apos;s food future!
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl font-sans text-body-lg leading-relaxed text-white/85">
+          We welcome conversations with investors, agricultural suppliers,
+          distributors, retailers, food manufacturers and international
+          buyers.
+        </p>
+        <div className="mt-9 flex flex-wrap justify-center gap-4">
+          <Button
+            href="/business-enquiries"
+            variant="primary"
+            size="lg"
+            className="!bg-yellow-400 !text-purple-700 !shadow-none hover:brightness-95"
+          >
+            Partner With Us
+          </Button>
+          <Button
+            href="/become-a-supplier"
+            variant="secondary"
+            size="lg"
+            className="!border-white !text-white hover:!bg-white/10"
+          >
+            Become a Supplier
+          </Button>
+          <Button
+            href="/products"
+            variant="secondary"
+            size="lg"
+            className="!border-white !text-white hover:!bg-white/10"
+          >
+            Explore Our Products
+          </Button>
+        </div>
+        <p className="mt-6 font-sans text-body-md text-white/80">
+          <a href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`} className="underline underline-offset-4">
+            {CONTACT_PHONE}
+          </a>
+        </p>
+      </SectionContainer>
+    </MotionSection>
   );
 }
-
-

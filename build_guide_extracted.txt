@@ -1,0 +1,1009 @@
+
+
+
+
+
+Redefining the African Agro-food Market Globally.
+AcresxManna
+Website Build Guide
+Developer handover: content, design direction and build requirements for every page.
+Version 1.0 · October 2026
+Playful voice, precise facts.
+
+Contents
+1. About this document
+Business facts
+2. Truth rules (non-negotiable)
+3. Brand and voice
+4. Design direction
+5. Sitemap and navigation
+6. Page-by-page copy and build notes
+7. Footer
+8. Privacy, Terms and Cookies
+9. SEO and sharing
+10. Launch checklist
+11. Inputs we will supply
+12. Page blueprints
+13. Additional pages
+14. Product page template and FAQs
+15. Forms, routing and auto-replies
+16. Photography and asset shot list
+17. SEO, metadata and redirects
+18. Tech stack, CMS content model, performance and security
+19. Analytics and tracking
+20. Legal pages: what each must cover
+21. QA, go-live and the first 90 days
+22. Glossary and style notes
+
+1. About this document
+This guide is the single source of content, design direction and build requirements for the AcresxManna website. It is written for the developer, designer and content editor who will build and launch the site.
+Core principle: playful voice, precise facts. We are fun, bubbly and energetic in how we communicate, and strictly honest in what we claim. Every page should feel like a celebration of African food while staying credible to buyers, distributors and investors.
+How to use this guide
+The Business facts section is the source of truth. Where anything else in this guide conflicts with it, the Business facts section wins.
+Copy shown in the page sections is production copy unless it carries a tag.
+Build with placeholders for anything tagged, and do not publish a placeholder.
+Tags used in this guide
+[TBC] To be confirmed: we will supply or verify this detail before the content goes live.
+[PLANNED] Planned or in development: label it that way on the site, never as existing.
+[PHOTO] Needs a real photograph.
+Scope and deliverables
+The developer delivers:
+A design system and page designs in the brand colours, for desktop and mobile
+A responsive website with every page listed in section 5, built as specified in sections 6 and 12 to 14
+A CMS using the content model in section 18.2, plus editor training for our team
+Working forms with routing, validation and auto-replies (section 15)
+SEO set-up, redirects, analytics and a consent banner (sections 17 to 20)
+Privacy, Terms and Cookie pages, using copy supplied by our legal adviser (section 20)
+QA against the matrix in section 21, and a supported go-live
+Handover documentation: hosting and domain details, a CMS guide and transfer of all accounts to us
+Business facts
+These facts are confirmed by AcresxManna as of October 2026. Where anything elsewhere in this guide conflicts with this section, this section wins.
+Company and operations
+Item
+Confirmed fact
+Trading name
+AcresxManna (Nigerian entity: AcresxManna Ltd)
+Operating model today
+Export focused. Local retail in Nigeria is planned through shops and the UncleTobi online grocery store
+Nigerian entity
+AcresxManna Ltd: manufactures, signs customer contracts and exports
+UK entity
+UncleTobi.Shop: invoices buyers. [TBC] Full legal name and registration number
+Factory and HQ
+AcresxManna HQ, The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State
+Nigerian office
+House 3, 10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos
+UK warehouse and office
+Orland House, Unit 1, Mead Lane, Hertford SG13 7AT, United Kingdom
+Products
+Product
+Varieties
+Status
+Route to market
+Garri
+White, Ijebu, yellow
+On sale now
+Export today; Nigerian retail planned
+Cassava flour
+None stated
+On sale now
+Export today; Nigerian retail planned
+Konkote (cassava flour)
+None stated
+On sale now
+Export today; Nigerian retail planned
+Groundnuts and peanuts
+None stated
+On sale now
+Export today; Nigerian retail planned
+Cashew nuts
+None stated
+On sale now
+Export today; Nigerian retail planned
+Plantain chips
+None stated
+On sale now
+Export today; Nigerian retail planned
+Hibiscus and teas
+None stated
+On sale now
+Export today; Nigerian retail planned
+Seasonings and spices
+None stated
+Planned
+Not yet available
+Pack sizes: products are packed to each client’s requirements, so no standard sizes are published. Export destinations are not published.
+Brands
+Brand
+Role
+Status
+HappyMan Foods
+The brand AcresxManna uses to sell all of its products
+Active
+Maluza Foods Co.
+Bakery; developing new products and opening new stalls in and around Ibadan. The spelling is Maluza, not Malauza
+Live
+UncleTobi
+Online grocery concept that aggregates suppliers who will retail on the platform
+Coming soon; launch date to be announced
+Brand assets
+Colours: purple #594B9A, white #FFFFFF, yellow #FDDC42
+Font: Helvetica Neue
+Logos and mascot: We will supply these files directly to the developer
+Public contact details
+Email: info@acresxmanna.com
+Phone and WhatsApp: +234 804 700 0587
+Instagram: @acresxmanna
+Reply time: within two working days
+2. Truth rules (non-negotiable)
+We are a young company. Say we’re building, not we’ve built.
+Never publish invented numbers, farmer counts, certifications, testimonials, awards or markets. Every figure needs a source.
+Mark existing facilities and products separately from planned ones ([PLANNED]).
+Show peanut butter as a product only once it is commercially available.
+Show a country as an established market only where sales or distribution are verified. Everything else is a target market.
+Say exactly what the UK-facing business and the Nigerian operations each do: which entity manufactures, contracts with customers, exports and invoices buyers. [TBC]
+For each brand, say whether it is a separate company, an affiliate or a developing initiative. [TBC]
+Do not publish fundraising amounts, valuations, equity terms or financial projections.
+Use real photographs of the Nigerian operation. [PHOTO]
+3. Brand and voice
+Positioning: AcresxManna is an African agro-processing and food manufacturing company focused on transforming agricultural commodities into quality food products for African and international markets.
+Primary headline: Africa’s Agricultural Wealth. Transformed for the World.
+Tagline: Redefining the African Agro-food Market Globally.
+Vision: To become Africa’s leading agro-processing and food manufacturing company, recognised globally for scale, quality, innovation and the value we create from African agriculture.
+Mission: To transform African agricultural resources into competitive food products through processing, manufacturing, quality control, brand development and access to markets.
+Promise: More value from Africa’s harvest. More opportunities across the food value chain. More African food on the world’s tables.
+Voice rules
+Warm, upbeat, short sentences. Exclamation marks are welcome, but use one at most per section.
+Energy comes from rhythm and verbs (Source. Process. Pack. Ship.), not from big claims.
+Do: We’re building the capacity behind African food. Don’t: We are Africa’s number one food company.
+Do: Garri, ready for more tables! Don’t: Sold in 20 countries.
+Microcopy
+Buttons: Let’s Talk · Explore Our Products · Become a Supplier · Become a Distributor · Say Hello
+Form success: Yay, message received! The AcresxManna team will get back to you soon. [TBC] Replace soon with a real response time once agreed.
+Form error: Oops, that didn’t send. Please try again or email us directly.
+Page not found: Oops! This page took a detour. Let’s get you back on track.
+Newsletter: Get progress updates, new products and partnership news.
+4. Design direction
+Palette. Use the official brand colours exactly as supplied: purple, white and yellow.
+Brand Purple #594B9A for headers, hero and key sections
+White #FFFFFF for page backgrounds and cards
+Brand Yellow #FDDC42 for buttons, highlights and accents
+Optional derived tints for depth only, such as a darker purple #3F346E for text and shadows and a light lilac #EFEBF8 for card backgrounds [TBC] Needs our approval
+Pairing rules: white text on purple passes contrast (about 7 to 1); purple or near-black text on yellow passes; never put yellow text on white (about 1.4 to 1, which fails)
+Type. The official brand font is Helvetica Neue: bold for headings, regular for body. It is a licensed font, so confirm a web licence, and set the fallback stack to Helvetica Neue, Helvetica, Arial, sans-serif. Keep the fun in the colours, rounded shapes, motion and copy rather than in the typeface. [TBC]
+Shape language. Round everything: pill buttons, 30 to 44px card corners, circle number badges, a wavy divider under the hero and between sections.
+Motion (all of it off when the visitor prefers reduced motion)
+Slowly floating bubbles in the hero
+A scrolling ticker of products
+Sticker-style buttons that lift and tilt slightly on hover
+Cards that rise on hover; a gentle fade-up as sections enter
+Components to build once and reuse
+Hero with bubbles · Product ticker · Section heading with eyebrow label
+Feature card (icon, title, text) · Product card with status tag
+Step row (numbered circles) · Brand card · Role tile (who are you?)
+CTA band · Form with enquiry-type selector · Status tags: Available, In development, Target market
+Imagery. Real photos of production, equipment, packaging and finished products come first [PHOTO]. Where no photo exists yet, use friendly flat illustration or the mascot. Never use stock photos that imply facilities or markets that don’t exist.
+Accessibility and performance
+Text contrast of at least 4.5 to 1 (purple on gold and white on purple both pass)
+Visible focus rings, a skip link, alt text that describes the image (not file names)
+Mobile first; no sideways scrolling; tap targets of at least 44px
+Compress images, lazy-load below the fold, and keep each page light
+Set noindex on any staging site until launch
+5. Sitemap and navigation
+Tabs, in order: Home · About Us · What We Do · Products · Our Brands · Infrastructure · Impact · Global Markets · Investors & Partners · News & Insights · Contact
+Header button: Let’s Talk (goes to Contact)
+Eleven tabs is a lot for a header. On desktop show the first six plus a More menu. On mobile use a full-screen menu with big, friendly tap targets.
+Page purposes: Home introduces the vision; About explains the company; What We Do shows capabilities; Products shows the portfolio; Our Brands shows related ventures; Infrastructure shows operating capacity; Impact covers value creation; Global Markets covers international ambitions; Investors & Partners supports commercial talks; News hosts updates; Contact captures enquiries.
+6. Page-by-page copy and build notes
+6.1 Home
+Hero · Headline: AFRICA’S FOOD. PROCESSED FOR THE WORLD. Copy: We turn Africa’s agricultural resources into quality food products through processing, manufacturing and market access. Buttons: Explore Our Business · Explore Our Products. Build: purple and gold hero, floating bubbles, product ticker (Garri · Cassava flour · Konkote · Groundnuts · Cashew nuts · Plantain chips · Hibiscus teas).
+Our ambition · Heading: Africa should capture more value from what it grows. Copy: Africa has immense agricultural resources. AcresxManna exists to help bridge the gap between agricultural production and the finished food products consumers and businesses need.
+Who we are · Heading: More than food production. We’re building the platform. Copy: AcresxManna is building an integrated agro-processing and food manufacturing business that connects agricultural sourcing with processing, production, quality assurance, product development and market access. Our principle is simple: agricultural value shouldn’t end at the farm gate.
+What we do · Heading: From agricultural commodities to finished food products. Six cards: Agricultural sourcing (dependable relationships with suppliers and producers) · Aggregation (bringing commodities together for consistent production) · Processing (turning raw materials into value-added food products) · Manufacturing (producing and packaging to defined specifications) · Brand development (products and brands for consumer and business markets) · Distribution and trade (routes to market across Africa and internationally).
+Products · Heading: African ingredients. Everyday food. Global opportunity. Copy: Our portfolio reflects the versatility of African agriculture and the opportunity in processing it into convenient, market-ready products. Eight product cards: Garri (white, Ijebu, yellow) · Cassava flour · Konkote · Groundnuts and peanuts · Cashew nuts · Plantain chips · Hibiscus and teas · Seasonings and spices (tag: Coming soon). Tag the others Available now. Add the line: Export focused today, with Nigerian retail coming soon.
+Operating model · Heading: Building value across the food chain. Four steps: 1 Source (dependable supply relationships) · 2 Process and manufacture (consistent products from controlled production) · 3 Package and build brands (packaging, presentation and quality specifications) · 4 Connect to markets (distribution and trade relationships).
+Our brands · Heading: One platform. Multiple opportunities. Copy: Our wider ecosystem brings together food products, a bakery and an online grocery concept, each with its own role. Three cards: HappyMan Foods (the brand we sell our products under) · Maluza Foods Co. (our bakery, live in Ibadan) · UncleTobi (online grocery, coming soon).
+Impact · Heading: Processing creates value. Value creates opportunity. Copy: The future of African agriculture depends not only on what is grown, but also on what is processed, manufactured and sold. Four chips: Agricultural value addition · Local production and employment · Stronger supply chains · African food in global markets.
+Global ambition · Heading: Built in Africa. Designed to compete globally. Copy: We’re going beyond raw commodities. We’re building the processing capability, product portfolio and commercial relationships needed to compete in African and international food markets.
+Closing CTA · Heading: Let’s build Africa’s food future! Copy: We welcome conversations with investors, agricultural suppliers, distributors, retailers, food manufacturers and international buyers. Buttons: Partner With Us · Become a Supplier · Explore Our Products.
+6.2 About Us
+Header: We believe Africa should capture more value from its agriculture. Intro: AcresxManna is building an African agro-processing and food manufacturing business that turns agricultural resources into quality products and long-term commercial opportunities.
+Our story. Africa has significant agricultural resources, yet much of the value in the food economy sits in what happens after harvest. We believe more of that value can be captured through processing, manufacturing, packaging, quality control and competitive food brands. Through our operating capabilities in Nigeria and our UK-facing business, we’re building the foundations for a stronger link between African food production and international markets. We understand both sides: the realities of sourcing and processing in Africa, and the quality, consistency and commercial needs of the markets we want to serve. [TBC] Confirm the legal entities before publishing.
+Vision and mission. Use the wording in section 3.
+Values (six round cards)
+Quality and excellence: standards, discipline and consistency that earn confidence
+Community: growth that creates opportunity for suppliers, workers, producers and communities
+Innovation: better ways to process, package and deliver African food
+Collaboration: partnerships, shared expertise and strong commercial relationships
+Dedication and heart: responsibility, resilience and commitment to people
+Capacity building: investing in people, processes, partnerships and infrastructure
+Our philosophy. Africa’s agricultural wealth should create African industrial value: more commodities turned into finished products, more production capability built within African economies, and more African food businesses competing confidently worldwide.
+Build: a story section with a real team or factory photo [PHOTO], plus a leadership block (names, titles, photos). [TBC]
+6.3 What We Do
+Header: We turn agricultural potential into food products and commercial value. Intro: We connect agricultural supply with processing, manufacturing, product development and market access.
+Eight blocks, each with an icon and a short paragraph:
+Agricultural sourcing: dependable supply relationships, starting with an understanding of raw material quality, availability and seasonality
+Aggregation and supply management: coordinating suppliers and incoming materials so factory needs are met consistently
+Agro-processing: transforming commodities into products with more utility, convenience and value, using suitable equipment, defined procedures, trained people and quality control
+Food manufacturing: consistent specifications, efficient production, appropriate packaging and scalable output, expanding as demand, investment and readiness allow
+Product and brand development: developing our own products and brands as well as processing for others
+Distribution and international trade: building commercial relationships and market access; our UK-facing business is part of our international orientation, supported by Nigerian operations for local sourcing, processing, production and quality control
+Contract manufacturing and partnerships: where operationally suitable, we welcome talks on sourcing, private label and production partnerships [TBC] Confirm capabilities, minimum order quantities and lead times
+Closing line: We’re building one integrated African food business, not a pile of disconnected parts. Each capability strengthens the next. Button: Discuss a Commercial Partnership
+6.4 Products
+Header: African agricultural products, transformed into everyday food. Intro: From traditional staples to snacks, ingredients and beverages, we’re developing products that connect Africa’s agricultural resources with evolving consumer needs.
+Build one product card per category, each with a photo [PHOTO], a status tag [TBC] and a Request Product Information button.
+Garri (white, Ijebu and yellow): a staple with global potential. Status: Available now. Garri is an important staple in many African communities, with opportunities across retail, food service and international African food markets. We process it in three varieties: white, Ijebu and yellow. Highlights: three varieties · export ready · retail and wholesale potential · African and diaspora markets.
+Cassava flour: versatile and ready to use. Status: Available now. A cassava-based flour for home cooking, bakers and food businesses, packed to your requirements. [TBC] Add real uses and ingredients.
+Konkote: a cassava flour. Status: Available now. Konkote is a cassava derivative in flour form, packed to your requirements. [TBC] Add how it is prepared and served if we want that on the page.
+Plantain chips: a familiar favourite, ready for more markets. Status: Available now. A popular African snack for people who want convenient, enjoyable, consistently made food. We focus on quality, dependable production, packaging and distribution. Highlights: ready-to-eat snack · retail and wholesale potential · custom packing and different channels.
+Groundnuts and peanuts: one resource, many opportunities. Status: Available now. Valuable as a packaged food and as a raw material for further processing. [PLANNED] Possible future extensions, such as peanut butter or roasted snacks, only appear once they are commercially available.
+Cashew nuts: a snack and ingredient people love. Status: Available now. Packed to your requirements. [TBC] Add sourcing and how they are processed before publishing.
+Seasonings and spices: flavour rooted in African food culture. Status: Planned, coming soon. Connecting agricultural ingredients with everyday cooking, with a focus on flavour, convenience and consistency. Show this as a Coming soon card with a Notify me button, and never as a product on sale.
+Hibiscus and teas: African botanicals with wider potential. Status: Available now. A recognisable African ingredient for teas, infusions and beverages. [TBC] Add the specific products (dried hibiscus, tea blends or both).
+Closing CTA: Looking for a product or a supply partner? We welcome enquiries from retailers, wholesalers, distributors, food businesses and international buyers. Buttons: Request Product Information · Become a Distributor · Contact Our Team.
+6.5 Our Brands
+Header: One platform. Different ways to bring African food to market. Intro: AcresxManna’s wider ecosystem includes food brands, a bakery and an online grocery concept, each with a distinct purpose in the food value chain.
+HappyMan Foods: the brand under which AcresxManna sells all of its products, from garri and cassava flour to peanuts, cashew nuts, plantain chips and hibiscus teas.
+Maluza Foods Co.: our bakery, live today and developing new products, with new stalls opening in and around Ibadan.
+UncleTobi: an online grocery concept, coming soon, that aggregates suppliers who will sell on the platform. Show it with a Coming soon tag only.
+Relationship block (required). For each brand, state clearly whether it is a separate company, an affiliate or a developing initiative, and how it relates to AcresxManna. [TBC]
+Build: three big, colourful brand cards, each with a logo, a role tag and a link. Don’t link to a brand site unless it is live.
+6.6 Infrastructure
+Header: Building the capacity behind African food. Intro: Our ambition needs more than agricultural supply. It needs production infrastructure, people, systems and partnerships to turn raw materials into consistent, market-ready food.
+Production and processing: we’re developing the capability to process commodities efficiently and manufacture to defined specifications: suitable equipment, reliable utilities, production planning, efficient workflows and continuous improvement
+Quality assurance: quality is built into the process, not just checked at the end: raw material inspection, controlled production, hygiene, batch identification, packaging integrity and finished-product checks, aligned with the food-safety and regulatory requirements of the markets we serve
+Supply chain and warehousing: supplier coordination, appropriate storage, raw material availability and finished-goods management
+Infrastructure for growth ([PLANNED] roadmap): more production capacity, better energy reliability, more efficient processing and packaging, better storage and inventory control, wider product and format capability, and greater resilience
+Build: two clearly separated sections, What’s operating today and What we’re building next. Use real photos of the Nigerian operation [PHOTO]. Never show a rendering as if it were a working facility.
+6.7 Impact
+Header: Processing creates value. Value creates opportunity. Intro: A stronger African food economy depends on more than growing crops. It also depends on processing, manufacturing, distributing and selling them competitively.
+Agricultural value addition: moving more products beyond the raw-commodity stage into higher-value food
+Economic opportunities: a growing agro-processor can create opportunities across production, logistics, packaging, maintenance, quality, distribution and supporting services
+Supplier and farmer opportunities: stronger commercial relationships with suppliers and, where suitable, farmer groups
+Food systems and market access: processing, storage and distribution that connect production with consumers
+African industrial development: showing that African agricultural resources can support competitive manufacturing, employment and supply to markets beyond their home countries
+Impact scorecard. Build tiles for: tonnes processed · finished products manufactured · active suppliers and producer partnerships · direct jobs created and retained · product categories processed locally · countries with verified sales · compliance and quality measures. [TBC] Leave every tile empty or labelled Coming soon until the number is real and sourced.
+Closing line: We want our growth measured not only by the products we sell, but by the productive capacity and economic opportunities we help create.
+6.8 Global Markets
+Header: From African agricultural resources to global food markets. Intro: We’re building a business that connects African food production with customers, businesses and opportunities in international markets.
+Why it matters. International growth is more than shipping products overseas. It means understanding market requirements, developing the right packaging and specifications, building reliable supply and forming long-term relationships.
+Four step cards: Market development (choose markets by demand, competition, regulation and distribution) · Product readiness (documents, packaging and specifications for each destination) · Commercial partnerships (importers, distributors, retailers and food businesses) · Supply reliability (production and sourcing systems that support consistent orders).
+UK-facing business. Our Nigerian entity, AcresxManna Ltd, manufactures our products, signs customer contracts and exports. Our UK entity, UncleTobi.Shop, invoices buyers and operates a warehouse and office in Hertford, United Kingdom. [TBC] UncleTobi.Shop’s full legal name and registration number before publishing.
+Map and markets. Use two tags only: Established market (verified sales or distribution) and Target market (planned). Don’t colour a country as established unless that is true.
+Partner with us. International buyers, distributors, importers, retailers and food businesses are welcome. Buttons: International Trade Enquiries · Request Product Information.
+6.9 Investors and Partners
+Header: Building Africa’s next generation of agro-processing capacity. Intro: AcresxManna is built around a big opportunity: transforming African agricultural resources into competitive food through processing, manufacturing and market development. Growth depends on the right mix of production capacity, working capital, supply relationships, market access and operational systems.
+What we’re building (four cards): Production capacity · Working capital (raw materials, production cycles, packaging, inventory, fulfilment) · Product development · Market development.
+Who we’d love to meet (five tiles): Investors (long-term interest in African agro-processing, food manufacturing and value addition) · Agricultural suppliers (suitable raw materials to defined specifications) · Distributors and buyers · Industrial and strategic partners (processing, packaging, logistics, technology or market access).
+Closing CTA: We welcome people and organisations who can contribute capital, capabilities, supply, technology or market access. Button: Start a Partnership Conversation.
+Do not publish: fundraising amounts, valuation, equity terms or projections.
+6.10 News and Insights
+Header: Ideas, progress and perspectives shaping African food. Intro: Follow the developments, partnerships and thinking behind our work in agro-processing, food manufacturing and agricultural value addition.
+Categories: Company News · Products & Innovation · Industry Insights · Supply Chain · Global Trade.
+Suggested launch articles (topics to write, not articles that exist): Why Africa Needs More Agro-Processing, Not Just Agricultural Production · From Raw Commodity to Finished Product: Where Value Is Created · Building Reliable Agricultural Supply Chains for Food Manufacturing · The Opportunity for African Food Brands in International Markets · What It Takes to Scale a Food Processing Business in Africa.
+Build: launch with an Our first stories are coming soon state if no articles are published. Never use fake dates, authors or placeholder articles.
+6.11 Contact
+Header: Great partnerships start with a conversation. Intro: Whether you want to buy our products, supply agricultural commodities, distribute our brands, explore manufacturing partnerships or discuss investment, we’d love to hear from you.
+Form fields: Full name · Business email · Company or organisation · Enquiry type · Message. Enquiry types: Product enquiry · Supply or farming partnership · Distribution or wholesale · Manufacturing partnership · Investment enquiry · Other business enquiry.
+Routing. Send each type to the right inbox (sales, sourcing, partnerships, investor relations). [TBC] Provide the inboxes.
+Contact details (confirmed): Email info@acresxmanna.com · Phone and WhatsApp +234 804 700 0587 · Instagram @acresxmanna · Reply time: within two working days.
+Addresses: Factory and HQ: AcresxManna HQ, The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State · Nigerian office: House 3, 10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos · UK warehouse and office: Orland House, Unit 1, Mead Lane, Hertford SG13 7AT, United Kingdom.
+7. Footer
+Brand: AcresxManna · Redefining the African Agro-food Market Globally.
+Short description: We transform Africa’s agricultural resources into quality food products through agro-processing, manufacturing and market development.
+Explore: About Us · What We Do · Infrastructure · Impact
+Our Business: Products · Our Brands · Global Markets · Investors & Partners
+Get Involved: Become a Supplier · Become a Distributor · Business Enquiries
+Stay Connected: info@acresxmanna.com · +234 804 700 0587 (phone and WhatsApp) · Instagram @acresxmanna · News & Insights · Contact Us · Privacy Policy · Terms · Cookies
+Addresses: Nigeria factory (Moniya, Ibadan) · Nigeria office (Victoria Island) · UK warehouse and office (Hertford)
+Copyright: © 2026 AcresxManna. All rights reserved.
+8. Privacy, Terms and Cookies
+Privacy Policy: how contact-form submissions, business enquiries and newsletter sign-ups are collected, used, stored and protected
+Terms of Use: acceptable use, intellectual property, disclaimers and limitations
+Cookie Policy: which cookies and analytics are used, how consent is handled where required, and how visitors manage preferences
+Have these written for AcresxManna’s real website technology, legal entities and jurisdictions (Nigeria and the UK at least). Don’t copy another company’s policy.
+9. SEO and sharing
+Page titles follow the pattern Page Name | AcresxManna. Examples: Garri, Plantain Chips and More | AcresxManna; African Agro-Processing Capacity | AcresxManna.
+Each page gets a unique 150 to 160 character description based on its intro.
+One H1 per page, in order H1, H2, H3. Add a sharing image in the brand colours.
+Use consistent spelling everywhere: AcresxManna (not Acresxmanna, Acres X Manna or Cresx Manna).
+Add Organization structured data once the legal entity and address are confirmed.
+10. Launch checklist
+[TBC] Confirm contact details and addresses for the Nigerian and UK businesses
+[TBC] Confirm which products are made and sold today and which are planned
+[TBC] Confirm the relationship between AcresxManna Ltd, UncleTobi.Shop, HappyMan Foods, Maluza Foods Co. and UncleTobi, including whether each is a separate company, an affiliate or part of AcresxManna Ltd.
+[TBC] Verify every published figure, customer number, export market, certification and impact metric, or remove it
+Connect all forms to the correct inboxes and test each one
+Replace placeholder text, icons and # links; check for stray template text such as untranslated keys
+[PHOTO] Upload real photography and write meaningful alt text
+Set the official brand hexes and fonts, then re-check colour contrast
+Check every page on a phone, a tablet and a laptop; test keyboard navigation
+Add analytics and cookie consent that match the cookie policy
+Remove noindex only at launch, and add the sitemap and redirects
+Final read-through for the truth rules in section 2
+11. Inputs we will supply
+Build with placeholders for the items below, and flag any still pending at QA. Do not publish a placeholder.
+Full legal name and registration number of the UK entity (UncleTobi.Shop), and whether it is the same business as the UncleTobi online grocery concept
+Product page details for cassava flour, konkote, cashew nuts and the hibiscus and tea products (uses, origin, preparation)
+Whether any export destinations are named publicly (default: none)
+Leadership and team names, titles, short bios and photos for the About page
+Logo files for every brand, and the mascot, supplied directly to the developer
+Inbox addresses for each enquiry type (section 15.2) and the mailing-list tool
+Legal copy for the Privacy Policy, Terms of Use and Cookie Policy (section 20)
+Real photography (section 16)
+Certification status for each standard we are pursuing
+Verified impact figures for the scorecard (default: Coming soon)
+12. Page blueprints
+Use this table as the build order for each page. Sections run top to bottom in the order shown. Every page ends with the shared CTA band and the footer, and every page opens with a hero that has a gold eyebrow label, one H1 and one sentence of intro.
+Page
+Section order
+Layout and components
+Primary CTA
+Imagery
+Home
+Hero; ticker; ambition; who we are; what we do (6 cards); products (8 cards); operating model (4 steps); brands (3 cards); impact chips; global ambition; CTA band
+Full-width purple and yellow hero with bubbles; wavy dividers between sections; card grids of 3 columns on desktop, 1 on mobile
+Explore Our Products
+Hero product photo or illustration [PHOTO]; factory or farm photo in Who we are
+About Us
+Hero; story; vision and mission (two big cards); values (6 round cards); philosophy quote band; leadership; CTA band
+Two-column story with image; values in a 3 by 2 grid; large pull-quote band in purple
+Let’s Talk
+Team and factory photos [PHOTO]
+What We Do
+Hero; eight capability blocks; integration closing band; CTA band
+Alternating left and right blocks with an icon each; sticky side index on desktop
+Discuss a Commercial Partnership
+Process photos, one per block [PHOTO]
+Products
+Hero; category filter chips; product cards; request-information band
+Card grid with status tags; each card opens a product detail page (section 14)
+Request Product Information
+One clean pack shot or product photo each [PHOTO]
+Our Brands
+Hero; three brand cards; relationship block; CTA band
+Large coloured brand cards with logo, role tag and a short description
+Contact Our Team
+Brand logos; pack or storefront images [PHOTO]
+Infrastructure
+Hero; production and processing; quality assurance; supply chain and warehousing; Operating today vs Building next split; CTA band
+Four feature blocks, then a two-column split with clear status labels
+Enquire About Visiting
+Real facility photos; label planned items [PLANNED]
+Impact
+Hero; five impact themes; scorecard tiles; closing line
+Theme cards, then a row of 7 tiles with Coming soon states
+Partner With Us
+Community and supplier photos only with permission [PHOTO]
+Global Markets
+Hero; why it matters; four step cards; UK-facing business; markets map; partner CTA
+Step row; two-state map (Established, Target); entity explainer card
+International Trade Enquiries
+Map graphic; port, pack or shipment photos [PHOTO]
+Investors and Partners
+Hero; four what we’re building cards; five who we’d love to meet tiles; CTA band
+Card grid then tile row; no numbers or financials
+Start a Partnership Conversation
+Facility or team photos [PHOTO]
+News and Insights
+Hero; category filter; article grid; newsletter band
+Filterable cards; empty state Our first stories are coming soon
+Subscribe
+Article thumbnails in brand colours
+Contact
+Hero; form with enquiry-type selector; contact details card; map or address block
+Two columns: form left, details right; success state replaces the form
+Send Message
+Friendly illustration or team photo [PHOTO]
+Rules that apply to every page
+One H1 only, in the hero.
+Section spacing of 72 to 96px on desktop and 48 to 64px on mobile.
+Maximum text width of 70 characters for body copy.
+Every card is a link or has exactly one clear button; no dead cards.
+Status tags (Available, In development, Target market) use the same colours everywhere.
+13. Additional pages
+The footer links to Become a Supplier, Become a Distributor and Business Enquiries. Each needs a landing page, plus thank-you and error pages. All copy below follows the truth rules in section 2; [TBC] marks details we must supply.
+13.1 Become a Supplier
+Eyebrow: Grow with us
+H1: Let’s source Africa’s harvest together.
+Intro: A dependable processing business needs dependable agricultural supply. If you grow, aggregate or trade agricultural commodities, we’d love to hear from you.
+What we look for: consistent quality; reliable volumes through the season; clear origin and handling; willingness to work to agreed specifications; honest, long-term dealing.
+Commodities of interest: cassava; plantain; groundnuts and peanuts; hibiscus; spice and seasoning ingredients. [TBC] Confirm and extend the list.
+How it works (four steps): 1 Tell us what you supply · 2 We review quality, volume and timing · 3 We agree specifications and terms · 4 We build the supply relationship step by step.
+Form fields: name; business or farm name; location; commodities; estimated volumes and season; how long you’ve supplied; phone or WhatsApp; message.
+Button: Apply to Become a Supplier
+Note: Don’t promise prices, guaranteed purchase volumes or payment terms on the page.
+13.2 Become a Distributor
+Eyebrow: Stock the flavour
+H1: Bring African-made food to your shelves.
+Intro: We’re looking for retailers, wholesalers, distributors and importers who want dependable African food products and long-term partnerships.
+What we offer: product information and specifications; sampling where available; packaging suited to your channel; a named contact on our team. [TBC] Confirm each item before publishing.
+What we’ll ask you: who you serve; where you operate; the channels you sell through; the products you’re interested in; your expected order sizes.
+How it works (four steps): 1 Introduce yourself · 2 We share product information · 3 We discuss fit, volumes and logistics · 4 We agree a way to work together.
+Form fields: name; company; country and region; type of business (retailer, wholesaler, distributor, importer, food service); products of interest; message.
+Button: Apply to Become a Distributor
+Note: Don’t list minimum order quantities, discounts or exclusive territories on the page unless they are approved.
+13.3 Business Enquiries
+H1: Let’s talk business.
+Intro: For anything that isn’t a product, supply or distribution question: manufacturing and private-label talks, partnerships, media, or ideas we haven’t thought of yet.
+Content: a short list of the six enquiry types, the contact form (same component as the Contact page, with this page’s type pre-selected), and the business email.
+Button: Start the Conversation
+13.4 Thank-you pages (one per form)
+Heading: Yay, message received!
+Body: Thanks for reaching out to AcresxManna. A member of our team will read your message and reply. [TBC] State a real response time once agreed.
+Next steps: Browse our products · Read about our story · Follow our news.
+Developer note: each thank-you page needs its own URL so analytics can count conversions.
+13.5 Page not found (404)
+Heading: Oops! This page took a detour.
+Body: The page you’re looking for has moved or doesn’t exist. Let’s get you back to something delicious.
+Buttons: Back to Home · Explore Our Products · Contact Us
+13.6 Maintenance and error states
+Server error: Something went wrong on our side. Please try again in a moment.
+Form validation: Please enter your name. · That email doesn’t look right. Could you check it? · Please tell us a little about what you need.
+Empty states: News: Our first stories are coming soon. Impact scorecard: Coming soon: we only publish numbers we can stand behind.
+14. Product page template and FAQs
+14.1 Product detail page template
+Build one page per product from this template. Fill every field from real information; leave a field out rather than guess.
+Block
+What goes in it
+Source
+Hero
+Product name; one-line promise; status tag (Available or In development); pack photo [PHOTO]
+AcresxManna
+Overview
+2 to 3 sentences on what it is and where the ingredient comes from
+AcresxManna
+Highlights
+3 short bullets (for example processed cassava staple, retail and wholesale ready)
+Provided copy
+Specifications
+Packed to client requirements (no fixed sizes); shelf life; storage; ingredients; allergens; origin; country of manufacture
+AcresxManna [TBC]
+Quality and compliance
+Certifications held, or in progress; batch or lot identification
+AcresxManna [TBC]
+Who it’s for
+Retail, wholesale, food service, importers
+AcresxManna
+Ways to use it
+2 to 3 serving or recipe ideas (optional)
+AcresxManna
+Request band
+Request Product Information and Become a Distributor buttons; form pre-filled with the product name
+Developer
+Related products
+Two or three cards from other categories
+Developer
+Rules
+Never show a price unless the business has approved public pricing.
+Never show nutrition values or health claims unless they come from a validated label.
+In development products show a Notify me button instead of Request samples.
+14.2 FAQs (use on Products, Global Markets and Contact)
+Write each answer in the same upbeat voice, and keep every answer true. [TBC] marks where we must confirm the detail.
+What does AcresxManna do? We turn Africa’s agricultural resources into quality food products through sourcing, processing, manufacturing, brand development and distribution, for African and international markets.
+Where do you operate? Our factory is in Moniya, Ibadan, Oyo State, Nigeria. We also have an office in Victoria Island and a warehouse and office in Hertford, United Kingdom.
+Which products do you make? Garri (white, Ijebu and yellow), cassava flour, konkote, groundnuts and peanuts, cashew nuts, plantain chips, and hibiscus and teas are on sale now. Seasonings and spices are planned.
+Can I buy your products? We’re export focused today, so please send us an enquiry. Nigerian retail is coming soon through shops and our UncleTobi online grocery store.
+Do you work with distributors and retailers? Yes. We welcome enquiries from retailers, wholesalers, distributors and importers through our Become a Distributor page.
+Do you export? Yes. Export is our current focus. Contact our international trade team to discuss availability and destination markets.
+Do you offer private label or contract manufacturing? Where operationally suitable, we’re happy to explore it. Capabilities, minimum order quantities and lead times depend on the product, so please send us the details. [TBC]
+How do you make sure products are safe and consistent? We build quality into the process: raw material inspection, controlled production, hygiene, batch identification, packaging integrity and finished-product checks, aligned with the requirements of the markets we serve. [TBC] Do not claim a certification that isn’t held.
+Are your products certified? We’re working toward the certifications relevant to the markets we serve, and we’ll list each one on our site as it’s achieved. [TBC]
+I’m a farmer or supplier. How can I work with you? Use the Become a Supplier page and tell us what you grow or trade, where, and in what volumes.
+I’m an investor. Who do I talk to? Use the Investors and Partners page to start a conversation. We don’t publish fundraising details online.
+What are the brands? HappyMan Foods is the brand we sell our products under, Maluza Foods Co. is our bakery, and UncleTobi is our online grocery concept, coming soon. See the Our Brands page for how each one relates to AcresxManna.
+Build: an accordion component with one question open at a time, keyboard accessible, and FAQ structured data (see section 17).
+15. Forms, routing and auto-replies
+15.1 Form inventory
+Form
+Where it appears
+Fields
+Goes to
+General contact
+Contact page, footer link
+Full name; business email; company or organisation; enquiry type; message
+Routed by enquiry type (15.2)
+Product enquiry
+Product pages, Products page
+Name; email; company; product(s) of interest; country; message
+Sales inbox [TBC]
+Become a Supplier
+Supplier page
+Name; farm or business; location; commodities; volumes and season; phone or WhatsApp; message
+Sourcing inbox [TBC]
+Become a Distributor
+Distributor page
+Name; company; country and region; business type; products of interest; message
+Sales or trade inbox [TBC]
+Investor and partner
+Investors page
+Name; organisation; type of interest; message
+Partnerships inbox [TBC]
+Newsletter
+Footer, News page
+Email only
+Mailing list tool [TBC]
+15.2 Routing by enquiry type
+Enquiry type
+Send to
+Target first reply
+Product enquiry
+Sales
+[TBC] Set a real time
+Supply or farming partnership
+Sourcing
+[TBC]
+Distribution or wholesale
+Sales or trade
+[TBC]
+Manufacturing partnership
+Operations or business development
+[TBC]
+Investment enquiry
+Partnerships or leadership
+[TBC]
+Other business enquiry
+General inbox
+[TBC]
+Every submission also goes to one shared inbox so nothing is lost. Do not promise a reply time on the website until the team has agreed one it can meet.
+15.3 Behaviour and validation
+Required fields: name, email, message. Mark optional fields as (optional).
+Validate email format and show friendly inline errors next to each field.
+Protect against spam with an invisible method (honeypot field plus rate limiting, or a privacy-friendly challenge). Avoid asking visitors to solve puzzles where possible.
+Show a clear loading state on the button (Sending…), then the thank-you state.
+Save the submission in a database or CRM as well as emailing it, so nothing depends on one inbox.
+Include a consent line with a link to the Privacy Policy: By sending this form you agree to us using your details to reply, as explained in our Privacy Policy.
+Newsletter sign-up uses a confirmation email (double opt-in) where required by law.
+Never pre-tick marketing consent boxes.
+15.4 Auto-reply email copy
+Sender name: AcresxManna · Reply-to: the right team inbox [TBC]
+General and product enquiries
+Subject: We’ve got your message, [First name]!
+Hi [First name],
+Thank you for reaching out to AcresxManna. We’ve received your message about [enquiry type] and the right person on our team will read it and reply. [TBC] Add a response time if agreed.
+In the meantime, you can explore our products or read more about how we’re building African food for the world.
+The AcresxManna team
+Supplier applications
+Subject: Thanks for your interest in supplying AcresxManna
+Hi [First name],
+Thank you for telling us about what you grow or supply. Our sourcing team will review the details you shared, including quality, volumes and timing, and get in touch about next steps.
+The AcresxManna team
+Distributor applications
+Subject: Thanks for your interest in AcresxManna products
+Hi [First name],
+Thank you for your interest in stocking AcresxManna brands. Our team will review your details and share product information that fits your channel and region.
+The AcresxManna team
+Newsletter confirmation
+Subject: Confirm your subscription to AcresxManna updates
+Hi there, tap the button to confirm your email address and start receiving progress updates, new products and partnership news from AcresxManna. If you didn’t sign up, simply ignore this email.
+16. Photography and asset shot list
+Real images build trust faster than any headline. Commission a single shoot that covers the list below, and never use stock images that imply facilities, people or markets that don’t exist.
+16.1 Shot list
+Shot
+Used on
+Notes
+Factory or processing site exterior (with the sign if possible)
+Home, About, Infrastructure
+Golden hour, clean frame, no cars or clutter
+Processing line in action (cassava, plantain, groundnuts)
+What We Do, Infrastructure
+Show hygiene gear, equipment and people at work
+Raw ingredient close-ups (cassava, plantain, groundnuts, hibiscus, spices)
+Home, Products
+Bright natural light, colourful, appetising
+Finished products on a plain backdrop, one per product
+Product pages, Products
+Consistent angle and lighting so the set looks like a family
+Products in use (garri served, snacks in hand, tea poured)
+Home, Products
+Real people enjoying food; get written consent
+Packaging close-ups showing labels and brand marks
+Products, Our Brands
+Label text must be accurate and legible
+Quality control moments (inspection, sampling, batch labelling)
+Infrastructure
+Only show checks that really happen
+Warehouse and storage
+Infrastructure
+Show real stock, organised shelving
+Supplier or farm visits
+Impact, What We Do
+Get permission from every person shown
+Team portraits and group shot
+About, Investors
+Same background and style for all portraits
+Brand logos on white and on purple (SVG)
+Our Brands, footer
+Provide light and dark versions
+Short looping video of the line or products (optional)
+Home hero
+10 to 15 seconds, under 3MB, no sound needed
+16.2 Specifications
+Shoot at the highest resolution available; deliver web copies at 2000px wide, plus 800px for cards.
+Use WebP or AVIF with a JPEG fallback; keep each image under 250KB where possible.
+Keep the subject centred enough that it survives cropping into circles and rounded cards.
+Provide a consistent aspect-ratio set: 16:9 (heroes), 4:3 (cards), 1:1 (products), 3:4 (portraits).
+16.3 Alt text rules
+Describe what is in the image and why it matters: Workers inspecting plantain slices on the processing line, not IMG_2043 or image.
+Leave decorative images with empty alt text.
+Keep alt text under 125 characters.
+16.4 Permissions
+Get written consent from every identifiable person and, for farm visits, from the landowner.
+Keep a log of who owns each image and what it may be used for.
+Do not use the photographs of other companies’ facilities, products or people.
+16.5 Illustration and mascot
+Where a photo isn’t ready, use a flat, friendly illustration in the brand palette rather than a stock photo.
+If AcresxManna has a mascot, supply it in a transparent PNG or SVG with at least four poses (waving, holding a product, thinking, celebrating) for use on hero, 404 and thank-you pages. [TBC]
+17. SEO, metadata and redirects
+17.1 Per-page metadata
+Titles stay under 60 characters and descriptions under 160. Use these as the starting set and adjust once real keywords are researched.
+Page
+URL
+Title
+Meta description
+H1
+Home
+/
+AcresxManna | African Agro-Processing and Food
+AcresxManna turns Africa’s agricultural resources into quality food products through processing, manufacturing and market access.
+Africa’s food. Processed for the world.
+About Us
+/about
+About AcresxManna | Our Story and Vision
+Learn how AcresxManna is building an African agro-processing business that captures more value from what Africa grows.
+We believe Africa should capture more value from its agriculture.
+What We Do
+/what-we-do
+What We Do | Sourcing to Manufacturing
+From agricultural sourcing and processing to manufacturing, brands and distribution: how AcresxManna connects the food value chain.
+We turn agricultural potential into food products and commercial value.
+Products
+/products
+Garri, Plantain Chips, Groundnuts and More
+Explore AcresxManna’s African food products: garri, cassava flour, groundnuts, cashew nuts, plantain chips and hibiscus teas.
+African agricultural products, transformed into everyday food.
+Our Brands
+/brands
+Our Brands | HappyMan Foods, Maluza and More
+Meet the brands in the AcresxManna ecosystem and how each one brings African food to market.
+One platform. Different ways to bring African food to market.
+Infrastructure
+/infrastructure
+Infrastructure | Capacity Behind African Food
+How AcresxManna is building production, quality assurance and supply chain capacity for African food manufacturing.
+Building the capacity behind African food.
+Impact
+/impact
+Impact | Value Addition in African Agriculture
+How AcresxManna aims to create value, jobs and supplier opportunities by processing African agricultural resources.
+Processing creates value. Value creates opportunity.
+Global Markets
+/global-markets
+Global Markets | African Food for the World
+How AcresxManna is building routes from African agricultural resources to international food markets.
+From African agricultural resources to global food markets.
+Investors and Partners
+/partners
+Investors and Partners | AcresxManna
+Partner with AcresxManna to build African agro-processing capacity: capital, supply, technology and market access.
+Building Africa’s next generation of agro-processing capacity.
+News and Insights
+/news
+News and Insights | AcresxManna
+Updates, products and perspectives on African agro-processing, food manufacturing and value addition.
+Ideas, progress and perspectives shaping African food.
+Contact
+/contact
+Contact AcresxManna | Let’s Talk
+Get in touch about products, supply, distribution, manufacturing partnerships or investment.
+Great partnerships start with a conversation.
+Become a Supplier
+/become-a-supplier
+Become a Supplier | AcresxManna
+Supply agricultural commodities to AcresxManna’s processing operations.
+Let’s source Africa’s harvest together.
+Become a Distributor
+/become-a-distributor
+Become a Distributor | AcresxManna
+Stock African-made food from AcresxManna brands as a retailer, wholesaler, distributor or importer.
+Bring African-made food to your shelves.
+17.2 Technical SEO
+One canonical URL per page; use the www or non-www version consistently.
+Generate an XML sitemap and submit it to search engines.
+Add a robots file that allows indexing on the live site only.
+Add Open Graph and social-card tags with a branded sharing image (1200 by 630px) on every page.
+Add structured data: Organization (name, logo, official links, address once confirmed), BreadcrumbList on inner pages, Product on product pages (no price or reviews unless real), FAQPage where FAQs appear.
+Use descriptive, lowercase, hyphenated URLs; never change a URL without a redirect.
+Add hreflang only if separate Nigerian and UK language versions are created; use en-NG and en-GB spelling choices consistently.
+17.3 Redirects
+The live site and the staging site use different structures. When the new site launches, 301-redirect every old URL to its closest new page and test the list.
+Old URL pattern
+New destination
+Staging /about/
+/about
+Staging /expressions/ or brand pages
+/brands
+Staging #FoodisNotLuxury page
+/about (or a dedicated campaign page if one is built)
+Staging /contact/
+/contact
+Any removed page
+The closest relevant page, never the home page by default
+17.4 Brand name consistency
+Use AcresxManna in every title, heading and metadata field. Do not use Acresxmanna, Acres X Manna, Acres & Manna or Cresx Manna. Brands use their agreed spellings: HappyMan Foods, Maluza Foods Co. (not Malauza) and UncleTobi.
+18. Tech stack, CMS content model, performance and security
+18.1 Platform choice
+The team can edit content without a developer on any of these. Pick one and document it.
+Option
+Best when
+Trade-off
+WordPress (Elementor or block theme)
+The team already knows it; the staging site is built on it
+Needs careful plugin choices, updates and security hardening
+Headless CMS with a React or Next.js front end (for example Sanity, Contentful or Strapi)
+You want speed, flexibility and a rich custom look
+More developer time; needs a developer for changes to layouts
+Webflow or similar visual builder
+You want a designer-led build and easy editing
+Less control over forms, integrations and data ownership
+A preview site exists on Vercel, which suits the headless option. [TBC] Final platform choice to be agreed before build begins.
+18.2 Content model (what the CMS must hold)
+Content type
+Key fields
+Page
+Title; slug; hero eyebrow; H1; intro; sections (repeatable blocks); SEO title; meta description; share image
+Product
+Name; slug; category; brand; status (available, in development); short description; long description; highlights; specs; packing options; shelf life; images; certifications; related products
+Brand
+Name; slug; role tag; description; relationship to AcresxManna; logo (light and dark); website link; status
+Capability
+Title; icon; short description; page it belongs to; order
+Market
+Country; status (established, target); notes; verified date
+Article
+Title; slug; category; author; date; summary; body; cover image; SEO fields
+Person
+Name; title; bio; photo; order
+Impact metric
+Label; value; unit; period; source; verified (yes or no); verified date
+FAQ
+Question; answer; pages where it appears
+Site settings
+Contact details; social links; footer text; banner message; default share image
+Build the status, verified and source fields into the model so editors can’t publish an unverified claim by accident.
+18.3 Performance targets
+Largest Contentful Paint under 2.5 seconds on a mid-range phone over 4G
+Interaction to Next Paint under 200 milliseconds; layout shift under 0.1
+Total page weight under 1.5MB on first load; hero images preloaded; fonts limited to two families and subsetted
+Lazy-load every image below the fold; respect slower connections common in many African and UK mobile contexts
+Use a CDN with locations near both Nigeria and the UK [TBC]
+18.4 Accessibility
+Meet WCAG 2.2 level AA.
+Check colour contrast for every pairing, especially yellow text on purple and white text on yellow.
+All interactive elements are keyboard reachable, with visible focus rings and logical tab order.
+Respect the prefers-reduced-motion setting by switching off bubbles, tickers and bounces.
+Label every form field; link error messages to their fields; announce success and error states to screen readers.
+Test with a screen reader and keyboard only before launch.
+18.5 Security and privacy
+HTTPS everywhere with HSTS; security headers and a content-security policy.
+Keep software, themes and plugins up to date; remove anything unused.
+Store form submissions securely with access limited to named staff.
+Back up the site and database daily; test a restore at least once.
+Use two-factor sign-in for every CMS, hosting, DNS and email account.
+Do not collect more personal data than needed; set a retention period for enquiries. [TBC]
+18.6 Browsers and devices
+Latest two versions of Chrome, Safari, Firefox and Edge; Samsung Internet and Opera Mini should remain usable.
+Design mobile first at 360px wide; test on low-end Android devices and iPhones.
+Check layouts at 360, 768, 1024, 1280 and 1536px.
+19. Analytics and tracking
+Measure whether the site is turning interest into conversations. Track only what the Privacy and Cookie policies describe, and only after consent where the law requires it.
+19.1 Goals
+Distributor, supplier and investor enquiries (the three highest-value conversions)
+Product enquiries and sample requests
+Newsletter sign-ups
+Engagement with the story (About, What We Do, Impact)
+19.2 Events to track
+Event
+Trigger
+Why it matters
+form_start
+First field focused in any form
+Shows interest, even if the form isn’t finished
+form_submit_contact
+Contact form sent
+Overall enquiry volume
+form_submit_supplier
+Supplier form sent
+Sourcing pipeline
+form_submit_distributor
+Distributor form sent
+Sales pipeline
+form_submit_investor
+Investor form sent
+Partnership pipeline
+form_submit_product
+Product enquiry sent
+Product demand by item
+newsletter_signup
+Email confirmed
+List growth
+cta_click
+Any hero or CTA band button (with label and page)
+Which messages work
+product_view
+Product page opened (with product name)
+Which products attract interest
+brand_click
+Brand card clicked (with brand name)
+Brand interest
+faq_open
+FAQ item opened
+Which questions need clearer copy
+outbound_click
+Click to a brand site or social account
+Where visitors go next
+file_download
+Any downloaded document
+Interest in resources
+19.3 Dashboards and reporting
+Build one simple monthly dashboard: visitors, top pages, traffic sources, enquiries by type, newsletter sign-ups, top products viewed.
+Segment by country so the team can see Nigerian, UK and other international interest separately.
+Review monthly, and adjust copy, calls to action and page order based on what the numbers show.
+Do not publish traffic or enquiry figures as marketing claims unless they are verified.
+19.4 Tools and privacy
+Choose one analytics tool and, if the tool uses cookies, a consent banner that matches the Cookie Policy.
+Anonymise IP addresses and avoid collecting personal data in analytics.
+Use clear campaign tags (for example utm_source, utm_medium, utm_campaign) on every link the team shares in emails, social posts and adverts.
+20. Legal pages: what each must cover
+This is a checklist of topics, not legal advice. Have a qualified lawyer in Nigeria and the UK review and finalise all three pages for AcresxManna’s actual legal entities, website technology and data practices. Write them in plain, friendly language and keep the same visual style as the rest of the site.
+20.1 Privacy Policy
+Who we are: the legal name, registered address and contact details of each entity that handles personal data (Nigerian and UK). [TBC]
+What we collect: contact-form details, supplier and distributor application details, newsletter emails, analytics data, and technical data such as IP address and device type.
+Why we collect it and on what legal basis: replying to enquiries, managing partnerships, sending updates the person asked for, improving the site, and meeting legal obligations.
+Who we share it with: hosting, email, CRM and analytics providers acting on our behalf; professional advisers; authorities where required. State that we don’t sell personal data.
+International transfers: how data moves between Nigeria, the UK and any other country, and the safeguards used.
+How long we keep it: a stated retention period for each category. [TBC]
+Security: a short, honest summary of the measures used.
+Rights: access, correction, deletion, objection and withdrawal of consent, and how to exercise them, as required by the Nigeria Data Protection Act and UK GDPR where they apply.
+Complaints: how to complain to us, and the relevant regulators.
+Cookies and children: a link to the Cookie Policy; a statement that the site isn’t aimed at children.
+Changes and date: Last updated date and how changes are announced.
+20.2 Terms of Use
+Who can use the site and for what purposes; acceptable and prohibited use
+Ownership of the site, logos, text, images and brand names, and the limited permission to view and share
+Accuracy of information: the content is for general information, may change, and isn’t an offer to sell or a guarantee of availability
+Product information, specifications and availability are indicative until confirmed in writing
+Links to third-party and brand websites, and no responsibility for their content
+Limits of liability and disclaimers, to the extent the law allows
+Governing law and where disputes are handled [TBC]
+How to contact us about the terms; last-updated date
+20.3 Cookie Policy
+What cookies and similar technologies are, in plain words
+A table of each cookie or tool used: name, provider, purpose, type (essential, analytics, marketing) and duration. [TBC] List only what is actually installed.
+Which are essential and which need consent
+How consent is requested and recorded, and how to change or withdraw it at any time (a Cookie settings link in the footer)
+How to block or delete cookies in common browsers
+Last-updated date
+20.4 Consent banner copy
+Heading: We use cookies.
+Body: We use essential cookies to make the site work, and optional ones to understand how it’s used. You choose.
+Buttons: Accept All · Essential Only · Manage Settings
+Optional cookies stay off until the visitor says yes where the law requires it.
+20.5 Other things to confirm
+Company registration details, tax or VAT numbers if shown, and the registered address for each entity, displayed in the footer or on the Contact page where required [TBC]
+Any food-labelling, advertising or health-claim rules that affect product pages in Nigeria and the UK
+Trademark status of AcresxManna, HappyMan Foods, Maluza Foods Co. and UncleTobi [TBC]
+21. QA, go-live and the first 90 days
+21.1 QA matrix
+Tick each row on staging before launch. A named person signs off every row.
+Area
+What to test
+Done
+Content
+Every page read against the truth rules; no placeholder text, no nav. style labels, no Cresx Manna; every [TBC] resolved
+☐
+Claims
+Every number, certification, market and brand relationship backed by a source
+☐
+Links
+Every link, button, footer link and social icon goes to the right place; none point to #
+☐
+Forms
+Every form sends, validates, shows the thank-you state, reaches the right inbox and triggers the auto-reply
+☐
+Mobile
+All pages at 360, 768 and 1024px on real iPhone and Android devices
+☐
+Browsers
+Latest Chrome, Safari, Firefox and Edge
+☐
+Accessibility
+Keyboard-only run-through; screen reader check; contrast check; reduced-motion check
+☐
+Speed
+Performance targets in section 18.3 met on the five heaviest pages
+☐
+SEO
+Titles, descriptions, H1s, canonicals, sitemap, robots, social cards, structured data validated
+☐
+Analytics
+Each event in section 19.2 fires once; consent banner works
+☐
+Legal
+Privacy, Terms and Cookie pages live and linked in the footer
+☐
+Security
+HTTPS, headers, backups, two-factor sign-in, admin accounts reviewed
+☐
+Redirects
+Every old URL redirects to the right new page
+☐
+21.2 Go-live steps
+Freeze content and get final written approval from us.
+Take a full backup of the old site and the new build.
+Point the domain to the new site; confirm HTTPS works on both www and non-www.
+Remove noindex and switch robots to allow indexing.
+Submit the sitemap; check redirects again on the live domain.
+Send a test enquiry through every form on the live site.
+Announce the launch on social channels and by email.
+Watch errors, form deliveries and speed for the first 48 hours.
+21.3 First 90 days
+When
+What to do
+Week 1
+Fix any launch bugs; check every form delivery; confirm analytics is recording; share the site with partners and suppliers
+Weeks 2 to 4
+Publish the first two articles from the launch list; add real product photos as they arrive; replace any remaining coming soon tiles that now have verified data
+Month 2
+Review analytics: which pages and calls to action work; improve the three weakest pages; add real stories with permission; update the status of products, certifications and markets
+Month 3
+Publish the first impact update with verified numbers; add a case study or partner story; run a full content accuracy review; plan the next quarter’s articles
+21.4 Ongoing content governance
+Name one person who owns the truth of each page (products, markets, certifications, impact numbers).
+No claim is published without our approval and a source recorded in the CMS.
+Review every product, brand, market and certification status on a fixed schedule, such as monthly.
+Keep a changelog of what changed on the site and when.
+22. Glossary and style notes
+22.1 Terms used on the site
+Term
+Plain-language meaning for visitors
+Agro-processing
+Turning raw crops into finished or semi-finished food products
+Aggregation
+Gathering produce from many suppliers into reliable, quality-checked volumes
+Value addition
+Increasing the worth of a crop by processing, packaging and branding it
+Value chain
+Every step from the farm to the person who eats the food
+Commodity
+A raw agricultural product traded in bulk, such as cassava or groundnuts
+Traceability
+Being able to follow a product back to where it came from
+Private label
+A product made by one company and sold under another company’s brand
+Contract manufacturing
+Making products for another business to its specification
+Garri
+A staple food made from processed cassava
+Hibiscus
+The flower used for popular African teas and drinks
+Link the first use of each term on a page to this glossary, or show it in a small tooltip.
+22.2 Style rules
+Spelling: British English (organised, flavour, programme). Use it everywhere for consistency across the Nigerian and UK audiences.
+Names: AcresxManna (one word, capital A and M, lower-case x). Brands: HappyMan Foods, Maluza Foods Co., UncleTobi.
+Headlines: sentence case, except the Home hero which is upper case by design. Keep them under 12 words.
+Buttons: start with a verb, two to four words, for example Explore Our Products.
+Numbers: write one to nine in words, 10 and above as digits; always include the unit.
+Dates: 9 October 2026 style, with no ordinals.
+Punctuation: at most one exclamation mark per section; avoid ellipses and all caps outside the hero.
+Emojis: only in the places this guide shows them (thank-you, 404, cookie banner and a few playful accents); never in legal pages or formal documents.
+Tone check: read each section aloud. It should sound like a friendly, confident person who knows the business well and doesn’t oversell.
+22.3 Words to avoid
+Leading, largest, number one and similar superlatives, unless the claim is verified and sourced
+Luxury, premium and fine dining, which clash with the everyday and accessible brand idea
+Certified, approved and guaranteed, unless true and documented
+Exporting to or available in followed by a country, unless verified
+Thousands of farmers, tonnes per year and any other number without a source
+22.4 Final reminder
+If a sentence could not be defended in front of a buyer, a regulator or an investor, remove it. Playful voice, precise facts.

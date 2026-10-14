@@ -10,13 +10,6 @@ import { FloatingPatternMotif, HandDrawnPlantLine } from "@/components/ui/Decora
 import { TypingText } from "@/components/animations/TypingText";
 import { ParallaxSection } from "@/components/animations/ParallaxSection";
 import { cn } from "@/lib/utils";
-import { useTranslations } from "next-intl";
-
-const HEADLINE = [
-  ["Africa&apos;s", "Richness."],
-  ["Transformed Into"],
-  ["Great Food."],
-];
 
 const HERO_MAIN_PROMPT = encodeURIComponent(
   "A vibrant African agricultural landscape collage with golden maize fields, fresh ripe mango fruits, a bowl of colorful prepared West African jollof rice and vegetables, a smiling African farmer woman holding a harvest basket, warm golden hour sunlight, cinematic editorial food photography composition",
@@ -71,7 +64,7 @@ function WordReveal({
       animate="show"
       className={cn(
         "inline-block align-bottom mr-[0.12em]",
-        isItalic && "italic text-terracotta-600",
+        isItalic && "italic text-yellow-400",
       )}
       dangerouslySetInnerHTML={{ __html: word }}
     />
@@ -80,18 +73,17 @@ function WordReveal({
 
 export function Hero() {
   const reduce = useReducedMotion();
-  const t = useTranslations("hero");
 
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] pt-28 sm:pt-32 pb-24 overflow-hidden"
+      className="relative min-h-[100svh] overflow-hidden bg-purple-700 pb-24 pt-28 text-white sm:pt-32"
     >
       {/* Hero backdrop blobs + watermark */}
-      <div aria-hidden className="absolute inset-0 bg-cream-100">
-        <div className="absolute inset-0 bg-woven opacity-[0.045]" />
+      <div aria-hidden className="absolute inset-0">
+        <div className="absolute inset-0 bg-woven opacity-[0.09]" />
       </div>
-      <DecorativeBlobSet className="opacity-90" />
+      <DecorativeBlobSet className="opacity-45" />
       <FloatingPatternMotif
         pattern="kente"
         size={260}
@@ -112,10 +104,10 @@ export function Hero() {
       {/* Gradient glow over right side */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 right-0 w-[55%] aspect-square opacity-70 blur-3xl"
+        className="pointer-events-none absolute -top-32 right-0 aspect-square w-[55%] opacity-70 blur-3xl"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgb(var(--mango-400)/0.35), rgb(var(--terracotta-500)/0.12) 60%, transparent 70%)",
+            "radial-gradient(ellipse at center, rgb(var(--mango-400)/0.35), rgb(255 255 255/0.12) 60%, transparent 70%)",
         }}
       />
 
@@ -130,22 +122,22 @@ export function Hero() {
               className="mb-6 sm:mb-8"
             >
               <Eyebrow accent="mango">
-                {t("eyebrow")}
+                AcresxManna · Redefining the African Agro-food Market Globally
               </Eyebrow>
             </motion.div>
 
-            <h1 className="font-display font-black text-[clamp(2.75rem,14vw,3.5rem)] sm:text-display-hero leading-[0.92] text-charcoal-900 tracking-tight text-balance">
+            <h1 className="font-display text-balance text-[clamp(2.75rem,14vw,3.5rem)] font-black leading-[0.92] tracking-tight text-white sm:text-display-hero">
               <span className="block mb-2 sm:mb-3">
-                <WordReveal word={t("headline.africa")} i={0} />
-                <WordReveal word={t("headline.richness")} i={1} isItalic />
+                <WordReveal word="Africa&apos;s" i={0} />
+                <WordReveal word="food." i={1} isItalic />
               </span>
               <span className="block mb-2 sm:mb-3">
-                <WordReveal word={t("headline.transformed")} i={2} />
-                <WordReveal word={t("headline.into")} i={3} />
+                <WordReveal word="Processed" i={2} />
+                <WordReveal word="for" i={3} isItalic />
               </span>
               <span className="block">
-                <WordReveal word={t("headline.great")} i={4} />
-                <WordReveal word={t("headline.food")} i={5} isItalic />
+                <WordReveal word="the" i={4} />
+                <WordReveal word="World." i={5} isItalic />
               </span>
             </h1>
 
@@ -153,10 +145,10 @@ export function Hero() {
               initial={reduce ? {} : { opacity: 0, y: 30, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-8 sm:mt-10 max-w-xl font-sans text-body-lg text-charcoal-700 leading-relaxed"
+              className="mt-8 max-w-xl font-sans text-body-lg leading-relaxed text-white/90 sm:mt-10"
             >
               <TypingText
-                text={t("subheadline")}
+                text="We turn Africa's agricultural resources into quality food products through processing, manufacturing and market access."
                 delay={0.8}
                 speed={20}
               />
@@ -168,52 +160,24 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.75 }}
               className="mt-10 flex flex-wrap gap-4 sm:gap-5"
             >
-              <Button href="/products" variant="primary" size="lg">
-                {t("cta.explore")}
+              <Button
+                href="/products"
+                variant="primary"
+                size="lg"
+                className="!bg-yellow-400 !text-purple-700 !shadow-none hover:brightness-95"
+              >
+                Explore our products
               </Button>
               <Button
-                href="/contact?type=partner"
+                href="/contact"
                 variant="secondary"
                 size="lg"
+                className="!border-white !text-white hover:!bg-white/10"
               >
-                {t("cta.partner")}
+                Let&apos;s Talk
               </Button>
             </motion.div>
 
-            {/* Trust row */}
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 1 }}
-              className="mt-12 sm:mt-14 flex items-center gap-8 text-charcoal-700"
-            >
-              <div>
-                <p className="font-display font-black text-display-2 leading-none text-terracotta-600">
-                  {t("stats.farmersValue")}
-                </p>
-                <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80">
-                  {t("stats.farmers")}
-                </p>
-              </div>
-              <div className="w-px h-12 bg-charcoal-900/10" />
-              <div>
-                <p className="font-display font-black text-display-2 leading-none text-terracotta-600">
-                  {t("stats.marketsValue")}
-                </p>
-                <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80">
-                  {t("stats.markets")}
-                </p>
-              </div>
-              <div className="w-px h-12 bg-charcoal-900/10 hidden sm:block" />
-              <div className="hidden sm:block">
-                <p className="font-display font-black text-display-2 leading-none text-terracotta-600">
-                  {t("stats.capacityValue")}
-                </p>
-                <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80">
-                  {t("stats.capacity")}
-                </p>
-              </div>
-            </motion.div>
           </div>
 
           {/* RIGHT 40% - Collage */}
@@ -233,7 +197,7 @@ export function Hero() {
               <div className="relative z-10">
                 <PatternFramedImage
                   src="/images/hero-bg.jpg"
-                  alt="Vibrant African agricultural collage — farms, food, and a smiling farmer"
+                  alt="Illustrative African agriculture and food imagery; not a photograph of AcresxManna operations"
                   width={900}
                   height={760}
                   sizes="(max-width: 639px) 85vw, (max-width: 1023px) 90vw, 42vw"
@@ -259,7 +223,7 @@ export function Hero() {
               >
                 <PatternFramedImage
                   src="/images/product-mango.jpg"
-                  alt="Farmer hands holding fresh mangoes and tomatoes"
+                  alt="Illustrative agricultural produce"
                   width={420}
                   height={520}
                   sizes="(max-width: 639px) 40vw, (max-width: 1023px) 38vw, 18vw"
@@ -283,7 +247,7 @@ export function Hero() {
               >
                 <PatternFramedImage
                   src="/images/product-jollof.jpg"
-                  alt="Plated jollof rice with fried plantains and vegetables"
+                  alt="Illustrative prepared African food"
                   width={420}
                   height={520}
                   sizes="(max-width: 639px) 45vw, (max-width: 1023px) 42vw, 22vw"
@@ -308,7 +272,7 @@ export function Hero() {
             >
               <PatternFramedImage
                 src="/images/product-cocoa.jpg"
-                alt="Golden cocoa and harvest products"
+                alt="Illustrative agricultural produce"
                 width={260}
                 height={260}
                 sizes="(max-width: 639px) 25vw, (max-width: 1023px) 24vw, 12vw"
@@ -324,7 +288,7 @@ export function Hero() {
               initial={reduce ? {} : { opacity: 0, rotate: -30, y: 30 }}
               animate={{ opacity: 1, rotate: -14, y: 0 }}
               transition={{ duration: 1, delay: 1.15 }}
-              className="absolute -bottom-20 -left-8 text-terracotta-600/70"
+              className="absolute -bottom-20 -left-8 text-yellow-400/80"
             >
               <HandDrawnPlantLine variant="maize" size={120} />
             </motion.div>
@@ -333,7 +297,7 @@ export function Hero() {
               initial={reduce ? {} : { opacity: 0, rotate: 30, y: -20 }}
               animate={{ opacity: 1, rotate: 20, y: 0 }}
               transition={{ duration: 1, delay: 1.25 }}
-              className="absolute -top-12 right-2 text-forest-700/60"
+              className="absolute -top-12 right-2 text-yellow-400/60"
             >
               <HandDrawnPlantLine variant="cocoa" size={96} />
             </motion.div>
@@ -342,7 +306,7 @@ export function Hero() {
       </SectionContainer>
 
       {/* Grain overlay */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 grain opacity-60 mix-blend-multiply" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 grain opacity-25 mix-blend-screen" />
     </section>
   );
 }

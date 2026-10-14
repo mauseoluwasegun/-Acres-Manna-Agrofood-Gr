@@ -148,8 +148,8 @@ export function StakeholderCube() {
               Six faces. <em>One ecosystem.</em>
             </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
-              Acres & Manna brings together a whole value chain. Rotate the
-              cube to explore a starting point that fits you.
+              Explore product, supply, distribution and business enquiry
+              pathways. Choose the topic that fits your conversation.
             </p>
           </div>
 
@@ -449,121 +449,6 @@ export function StakeholderCube() {
                     className="font-sans text-body-lg text-charcoal-700 leading-relaxed mb-8"
                     dangerouslySetInnerHTML={{ __html: active.description }}
                   />
-
-                  {/* mini stats row */}
-                  <div className="grid grid-cols-3 gap-5 mb-8 pb-8 border-b border-cream-100">
-                    <div>
-                      <p className={cn("font-display font-black text-display-2 leading-none", accentText)}>
-                        {activeIdx === 0
-                          ? "6"
-                          : activeIdx === 1
-                            ? "10K+"
-                            : activeIdx === 2
-                              ? "12+"
-                              : activeIdx === 3
-                                ? "36+"
-                                : activeIdx === 4
-                                  ? "24+"
-                                  : "420+"}
-                      </p>
-                      <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80 leading-tight">
-                        {activeIdx === 0
-                          ? "Product lines"
-                          : activeIdx === 1
-                            ? "Farmers served"
-                            : activeIdx === 2
-                              ? "Countries"
-                              : activeIdx === 3
-                                ? "Partners"
-                                : activeIdx === 4
-                                  ? "Years horizon"
-                                  : "Open roles"}
-                      </p>
-                    </div>
-                    <div className="w-px h-14 self-center bg-cream-200" />
-                    <div className="col-span-1">
-                      <p className={cn("font-display font-black text-display-2 leading-none", accentText)}>
-                        {activeIdx === 0
-                          ? "24/7"
-                          : activeIdx === 1
-                            ? "Fair"
-                            : activeIdx === 2
-                              ? "D2W"
-                              : activeIdx === 3
-                                ? "Co-create"
-                                : activeIdx === 4
-                                  ? "Impact"
-                                  : "Purpose"}
-                      </p>
-                      <p className="mt-1.5 font-mono text-micro uppercase tracking-[0.12em] text-charcoal-700/80 leading-tight">
-                        {activeIdx === 0
-                          ? "Availability"
-                          : activeIdx === 1
-                            ? "Pricing"
-                            : activeIdx === 2
-                              ? "Distribution"
-                              : activeIdx === 3
-                                ? "Business model"
-                                : activeIdx === 4
-                                  ? "Reporting"
-                                  : "Driven by"}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Checklist perks */}
-                  <ul className="space-y-3 mb-8">
-                    {[
-                      activeIdx === 0
-                        ? "Premium African-made food products"
-                        : activeIdx === 1
-                          ? "Fair, transparent pricing with steady off-take"
-                          : activeIdx === 2
-                            ? "Marketing, merchandising & training support"
-                            : activeIdx === 3
-                              ? "Co-branded & white-label capabilities"
-                              : activeIdx === 4
-                                ? "Quarterly impact + financial reporting"
-                                : "Meaningful work, growth, community impact",
-                      activeIdx === 0
-                        ? "Consistent flavor, authentic African heritage"
-                        : activeIdx === 1
-                          ? "Input & training support where needed"
-                          : activeIdx === 2
-                            ? "Regional & global product assortment"
-                            : activeIdx === 3
-                              ? "Flexible MOQs and lead times"
-                              : activeIdx === 4
-                                ? "Full pipeline transparency"
-                                : "Competitive compensation & equity",
-                      activeIdx === 0
-                        ? "Traceable, food-safe manufacturing"
-                        : activeIdx === 1
-                          ? "Long-term partnerships, not one-off buys"
-                          : activeIdx === 2
-                            ? "Margin-friendly distributor terms"
-                            : activeIdx === 3
-                              ? "Joint marketing & growth funding"
-                              : activeIdx === 4
-                                ? "Multiple vehicles: equity / debt / hybrid"
-                                : "Hybrid & remote-friendly options",
-                    ].map((line) => (
-                      <li
-                        key={line}
-                        className="flex items-start gap-3 font-sans text-body-md text-charcoal-700"
-                      >
-                        <span
-                          className={cn(
-                            "mt-1 shrink-0 w-4 h-4 rounded-full flex items-center justify-center",
-                            accentBg,
-                          )}
-                        >
-                          <span className="w-1.5 h-1.5 bg-cream-50 rounded-full" />
-                        </span>
-                        {line}
-                      </li>
-                    ))}
-                  </ul>
 
                   <div className="flex flex-wrap gap-3.5">
                     <Button

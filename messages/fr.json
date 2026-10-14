@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres & Manna — La richesse de l'Afrique, transformée en grande alimentation",
+    "siteTitle": "AcresxManna — La richesse de l'Afrique, transformée en grande alimentation",
     "siteDescription": "Ancrée dans les terres agricoles les plus riches d'Afrique, nous transformons les meilleures récoltes du continent en produits alimentaires premium pour les tables locales et internationales.",
     "skipToContent": "Aller au contenu principal"
   },
@@ -14,7 +14,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Acres & Manna · Agro-transformation africaine",
+    "eyebrow": "AcresxManna · Agro-transformation africaine",
     "headline": {
       "africa": "La richesse",
       "richness": "de l'Afrique.",
@@ -27,14 +27,6 @@
     "cta": {
       "explore": "Explorer nos produits",
       "partner": "Devenir partenaire"
-    },
-    "stats": {
-      "farmersValue": "10 000+",
-      "farmers": "Agriculteurs accompagnés",
-      "marketsValue": "24+",
-      "markets": "Marchés mondiaux",
-      "capacityValue": "15 000 t/an",
-      "capacity": "Capacité"
     }
   },
   "farmToFood": {
@@ -82,7 +74,7 @@
     "originHeadlineL1": "Nous avons commencé avec une question :",
     "originHeadlineL2": "pourquoi la cuisine africaine",
     "originHeadlineL3": "n'est-elle pas partout ?",
-    "originParagraph1": "Acres & Manna est née à Accra, au Ghana, d'une simple observation : l'Afrique produit plus de 60 % du cacao mondial, mais moins de 5 % de son chocolat. Nous avons décidé de combler cet écart de valeur — pas seulement pour le cacao, mais aussi pour les céréales, le karité, les fruits et les plats préparés — en construisant des usines de transformation de classe mondiale là où poussent les cultures.",
+    "originParagraph1": "AcresxManna est née à Accra, au Ghana, d'une simple observation : l'Afrique produit plus de 60 % du cacao mondial, mais moins de 5 % de son chocolat. Nous avons décidé de combler cet écart de valeur — pas seulement pour le cacao, mais aussi pour les céréales, le karité, les fruits et les plats préparés — en construisant des usines de transformation de classe mondiale là où poussent les cultures.",
     "originParagraph2": "Aujourd'hui, nous exploitons des lignes de fabrication alimentaire modernes qui allient un approvisionnement communautaire à des certifications internationales de sécurité alimentaire (HACCP, ISO 22000, Ghana FDA). Résultat : des produits premium fabriqués en Afrique, présents sur n'importe quel rayon, n'importe où.",
     "foundedYear": "2021",
     "foundedLabel": "Fondée",
@@ -103,8 +95,8 @@
     "pillar3Headline": "Portés par l'<em>Ambition</em>.",
     "pillar3Description": "La nourriture africaine sur chaque grand rayon du monde. Grâce aux corridors ZLECAf et aux partenariats directs avec les distributeurs européens et nord-américains, nous portons l'histoire du continent toujours plus loin.",
     "pullquote": "Nous n'exportons pas seulement de la nourriture — nous exportons la dignité du travail africain et la joie de nos tables.",
-    "pullquoteName": "Acres & Manna",
-    "pullquoteTitle": "Fondateur et Directeur général, Acres & Manna"
+    "pullquoteName": "AcresxManna",
+    "pullquoteTitle": "Fondateur et Directeur général, AcresxManna"
   },
   "products": {
     "dividerEyebrow": "— PRODUITS SIGNATURE",
@@ -153,28 +145,15 @@
       "productionCapacity": "Capacité de production"
     },
     "metricsValues": {
-      "farmers": "10 000+",
-      "communities": "85",
-      "products": "36+",
-      "markets": "24+",
-      "jobs": "420+",
-      "capacity": "15 000 t/an"
+      "farmers": "Coming soon",
+      "communities": "Coming soon",
+      "products": "Coming soon",
+      "markets": "Coming soon",
+      "jobs": "Coming soon",
+      "capacity": "Coming soon"
     },
     "storiesEyebrow": "Histoires humaines",
-    "storiesHeadline": "Derrière chaque chiffre, une <em>vraie histoire.</em>",
-    "story1Eyebrow": "TÉMOIGNAGE · RÉGION DU NORD",
-    "story1Name": "Maize Farmer, Northern Ghana",
-    "story1Text": "« Depuis que j'ai rejoint le programme d'agriculteurs contractuels d'Acres & Manna en 2022, j'ai bénéficié d'une formation sur les variétés de maïs OPV améliorées, d'un contrat d'achat garanti et d'un prix 32 % supérieur à la récolte. Les frais de scolarité de mes enfants sont désormais couverts chaque trimestre. »",
-    "story2Eyebrow": "COMMUNAUTÉ · COOPÉRATIVE CACAO",
-    "story2Name": "Coopérative Osei & Fils, Sefwi Wiawso",
-    "story2Text": "« Des prix premium pour le cacao année après année, plus un fonds de bourses scolaires couvrant 240 familles d'agriculteurs. Nous avons investi dans des hangars de fermentation et classons désormais nos fèves selon les normes d'exportation européennes. »",
-    "story3Eyebrow": "ÉQUIPE · LIGNE DE PRODUCTION",
-    "story3Name": "Production Lead, Ghana Factory",
-    "story3Text": "« J'ai commencé comme intérimaire saisonnière sur la ligne d'emballage en 2021. Après avoir suivi le programme interne de compétences d'Acres & Manna, je dirige aujourd'hui une équipe de 14 personnes au département de mouture, travaillant quotidiennement avec les protocoles GMP et HACCP. »",
-    "reportEyebrow": "RAPPORT D'IMPACT Acres & Manna · 2024",
-    "reportHeadline": "Notre <em>rapport d'impact</em> complet, avec méthodologie, audits communautaires et notes sur les sources de données.",
-    "downloadPdf": "Télécharger le PDF",
-    "viewAllStories": "Voir toutes les histoires"
+    "storiesHeadline": "Derrière chaque chiffre, une <em>vraie histoire.</em>"
   },
   "global": {
     "dividerEyebrow": "— DU LOCAL AU MONDIAL",
@@ -196,30 +175,16 @@
     "legendCocoa": "Ceinture cacaoyère",
     "legendEastAfrica": "Hub Afrique de l'Est",
     "legendDistribution": "Distribution régionale",
-    "legendExports": "Marchés d'exportation",
-    "exportStats": {
-      "currentEyebrow": "ACTUEL",
-      "currentValue": "24+",
-      "currentLabel": "Pays avec distribution actuelle",
-      "targetEyebrow": "OBJECTIF 3 ANS",
-      "targetValue": "40+",
-      "targetLabel": "Pays cibles d'ici 3 ans",
-      "capacityEyebrow": "CAPACITÉ",
-      "capacityValue": "15 000 t/an",
-      "capacityLabel": "Capacité de production annuelle",
-      "exportsEyebrow": "EXPORTATIONS",
-      "exportsValue": "38 %",
-      "exportsLabel": "De la production vendue hors marchés nationaux"
-    }
+    "legendExports": "Marchés d'exportation"
   },
   "cta": {
     "dividerEyebrow": "— GRANDISSONS ENSEMBLE",
     "eyebrow": "Parlons-en",
     "headline": "Les grands partenariats commencent par une <em>simple conversation.</em>",
     "description": "Que vous soyez agriculteur, distributeur, investisseur ou détaillant prêt à stocker des produits africains — notre équipe est prête à construire la prochaine étape avec vous.",
-    "emailLabel": "E-mail : hello@acresxmanna.com",
-    "phoneLabel": "Téléphone : +234 20 000 0000",
-    "hqLabel": "Siège : Zone industrielle de Tema, Grand Accra, Ghana",
+    "emailLabel": "E-mail : hello@aAcresxManna.com",
+    "phoneLabel": "Téléphone : +234 804 700 0587",
+    "hqLabel": "Siège : The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "Demande rapide",
     "formHeadline": "Dites-nous ce qu'il vous faut — <em>nous répondons sous 48h.</em>",
     "placeholderName": "Nom complet",
@@ -252,11 +217,11 @@
     "mealKits": "Kits repas et plats préparés",
     "viewFullCatalog": "Voir le catalogue complet →",
     "stayConnected": "Restez connecté",
-    "location": "Accra, Ghana — Afrique de l'Ouest",
+    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "Newsletter",
-    "newsletterDescription": "Rejoignez Acres & Manna pour nourrir le monde — actualités de nos fermes, marques et impact sur toute la chaîne de valeur agroalimentaire.",
+    "newsletterDescription": "Rejoignez AcresxManna pour nourrir le monde — actualités de nos fermes, marques et impact sur toute la chaîne de valeur agroalimentaire.",
     "subscribe": "S'abonner",
-    "copyright": "© {year} Acres & Manna. Tous droits réservés.",
+    "copyright": "© {year} AcresxManna. Tous droits réservés.",
     "privacy": "Confidentialité",
     "terms": "Conditions",
     "cookies": "Cookies"

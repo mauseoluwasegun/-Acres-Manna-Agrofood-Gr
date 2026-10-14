@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres & Manna — Africa's Richness, Transformed Into Great Food",
+    "siteTitle": "AcresxManna — Africa's Richness, Transformed Into Great Food",
     "siteDescription": "A diversified international food, ingredients and retail group redefining Africa's role in the Agrofood global market.",
     "skipToContent": "Skip to content"
   },
@@ -14,7 +14,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Acres & Manna · Agrofood Group",
+    "eyebrow": "AcresxManna · Agrofood Group",
     "headline": {
       "africa": "Redefining",
       "richness": "Africa's role",
@@ -27,14 +27,6 @@
     "cta": {
       "explore": "Explore Our Products",
       "partner": "Partner With Us"
-    },
-    "stats": {
-      "farmersValue": "10,000+",
-      "farmers": "Farmers Supported",
-      "marketsValue": "24+",
-      "markets": "Global Markets",
-      "capacityValue": "15,000 t/yr",
-      "capacity": "Capacity"
     }
   },
   "farmToFood": {
@@ -79,13 +71,13 @@
   "about": {
     "dividerEyebrow": "— WHO WE ARE",
     "headerEyebrow": "Our Purpose",
-    "headerText": "At Acres & Manna, we are dedicated to feeding the world. We are at the forefront of satisfying the increasing need for safe and wholesome food.",
+    "headerText": "At AcresxManna, we are dedicated to feeding the world. We are at the forefront of satisfying the increasing need for safe and wholesome food.",
     "originEyebrow": "Our Origin Story",
     "originHeadlineL1": "Rooted in Africa.",
     "originHeadlineL2": "Growing for",
     "originHeadlineL3": "the World.",
-    "originParagraph1": "Acres & Manna Group is redefining how Africa feeds itself and the world. We are a pan-African agrofood group of company committed to building a reliable, sustainable, and equitable food future. Our model integrates farming, food processing, financing, media, and distribution—ensuring quality and access at every stage of the agrofood value chain. Our collective of companies serves both rural producers and urban consumers, creating value through innovation, integrity, and deep community partnerships. We specialize in blending local knowledge with modern practices to empower smallholder farmers, enhance food security, and deliver authentic African food experiences globally. Whether it's through modern farms, inclusive finance, logistics, or storytelling, our mission is simple: to nourish lives, preserve heritage, and strengthen economies from the ground up.",
-    "originParagraph2": "From the small farms of West Africa to global food markets, Acres & Manna Group was born out of a belief that Africa can feed itself—and the world—with dignity and excellence. We started with one goal: to bridge the gap between African agricultural abundance and market accessibility. Along the way, we saw the need for more than just farming. We saw the need for structure, support, and systems that work—from seed to shelf. Today, our brands support farmers with improved practices, offer consumers wholesome food options, and bring the vibrance of African culture to global audiences.",
+    "originParagraph1": "AcresxManna Group is redefining how Africa feeds itself and the world. We are a pan-African agrofood group of company committed to building a reliable, sustainable, and equitable food future. Our model integrates farming, food processing, financing, media, and distribution—ensuring quality and access at every stage of the agrofood value chain. Our collective of companies serves both rural producers and urban consumers, creating value through innovation, integrity, and deep community partnerships. We specialize in blending local knowledge with modern practices to empower smallholder farmers, enhance food security, and deliver authentic African food experiences globally. Whether it's through modern farms, inclusive finance, logistics, or storytelling, our mission is simple: to nourish lives, preserve heritage, and strengthen economies from the ground up.",
+    "originParagraph2": "From the small farms of West Africa to global food markets, AcresxManna Group was born out of a belief that Africa can feed itself—and the world—with dignity and excellence. We started with one goal: to bridge the gap between African agricultural abundance and market accessibility. Along the way, we saw the need for more than just farming. We saw the need for structure, support, and systems that work—from seed to shelf. Today, our brands support farmers with improved practices, offer consumers wholesome food options, and bring the vibrance of African culture to global audiences.",
     "visionEyebrow": "Our Vision",
     "visionText": "To significantly contribute to a food secure and nourished global future",
     "missionEyebrow": "Our Mission",
@@ -118,14 +110,14 @@
     "value6": "A formidable balance sheet",
     "value6Desc": "Our robust financial foundation empowers us to drive impactful projects and sustain long-term growth.",
     "brandsEyebrow": "Our Brands",
-    "brand1Name": "Uncle Tobi Farmers",
+    "brand1Name": "UncleTobi Farmers",
     "brand1Desc": "An agricultural sourcing and farm network arm, building and managing relationships with farmers and producers, ensuring consistent supply of agricultural produce.",
-    "brand2Name": "Malauza Foods Co.",
-    "brand2Desc": "The bakery division of Acres & Manna, focused on producing fresh bread and pastries. Converting agricultural inputs into finished staple food products.",
-    "brand3Name": "Happy Man Foods",
+    "brand2Name": "Maluza Foods Co.",
+    "brand2Desc": "The bakery division of AcresxManna, focused on producing fresh bread and pastries. Converting agricultural inputs into finished staple food products.",
+    "brand3Name": "HappyMan Foods",
     "brand3Desc": "A consumer food brand producing and distributing food products designed for affordability, accessibility, and everyday consumption.",
     "brand4Name": "African Food King",
-    "brand4Desc": "Developed for retail, distribution, and export markets, representing Acres & Manna's primary branded product identity, bringing African foods to consumers.",
+    "brand4Desc": "Developed for retail, distribution, and export markets, representing AcresxManna's primary branded product identity, bringing African foods to consumers.",
     "certificationsEyebrow": "Standards & Certifications",
     "cert1Name": "NAFDAC",
     "cert1Desc": "Ensures food products meet national safety, quality, and regulatory standards.",
@@ -140,7 +132,7 @@
     "cert6Name": "HALAL",
     "cert6Desc": "Verifies food and beverages comply with Islamic dietary laws and preparation.",
     "pullquote": "We don't just export food — we export the dignity of African labor, the spirit of our soil, and the joy of our communal tables.",
-    "pullquoteName": "Acres & Manna",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "Founding Leadership",
     "workSpansEyebrow": "Our Work Spans Across",
     "workSpansHeadline": "From seed to shelf, across the full value chain.",
@@ -190,9 +182,9 @@
   "expressions": {
     "dividerEyebrow": "— OUR EXPRESSIONS",
     "eyebrow": "Our Expressions",
-    "headline": "Together we <em>are Acres & Manna.</em>",
+    "headline": "Together we <em>are AcresxManna.</em>",
     "description": "Our expressions are how we deliver our mission — across farms, foods, storytelling, and social impact.",
-    "expr1Name": "Uncle Tobi Shop",
+    "expr1Name": "UncleTobi Shop",
     "expr1Tagline": "Shop Exclusive African Flavours, Delivered.",
     "expr1Desc": "Your online grocery store for the bold and the flavourful. We bring together the best of Africa's independent producers, farmers, and food makers.",
     "expr2Name": "African Food King",
@@ -201,7 +193,7 @@
     "expr3Name": "Food Is Not Luxury",
     "expr3Tagline": "Feed the Mind, Nourish the Future.",
     "expr3Desc": "Our social impact arm — because real change starts with access. We believe food is a right, not a luxury. But instead of handouts, we fund education that empowers communities to feed themselves for life.",
-    "expr4Name": "Happy Man Foods",
+    "expr4Name": "HappyMan Foods",
     "expr4Tagline": "Feel-Good African Foods",
     "expr4Desc": "From savory bites to sweet treats, HappyMan delivers African-inspired comfort food you'll love. Ready-to-eat meals, perfect for homes, offices, and life on the move.",
     "expr5Name": "Panem Vitae",
@@ -230,28 +222,15 @@
       "productionCapacity": "Production capacity"
     },
     "metricsValues": {
-      "farmers": "10,000+",
-      "communities": "85",
-      "products": "36+",
-      "markets": "24+",
-      "jobs": "420+",
-      "capacity": "15,000 t/yr"
+      "farmers": "Coming soon",
+      "communities": "Coming soon",
+      "products": "Coming soon",
+      "markets": "Coming soon",
+      "jobs": "Coming soon",
+      "capacity": "Coming soon"
     },
     "storiesEyebrow": "Human Stories",
-    "storiesHeadline": "Behind each metric, a <em>real story.</em>",
-    "story1Eyebrow": "FARMER STORY · NORTHERN REGION",
-    "story1Name": "Maize Farmer, Northern Ghana",
-    "story1Text": "\"Since joining the Acres & Manna outgrower program in 2022, I received training on improved OPV maize varieties, a guaranteed off-take contract, and a 32% higher price at harvest. My children's school fees are now covered every term.\"",
-    "story2Eyebrow": "COMMUNITY · COCOA COOPERATIVE",
-    "story2Name": "Cocoa Cooperative, Western North",
-    "story2Text": "\"Premium cocoa prices year on year, plus a school scholarship fund covering 240 farmer families. We've invested in fermentation sheds and now grade our beans to EU export standard ourselves.\"",
-    "story3Eyebrow": "TEAM STORY · PRODUCTION LINE",
-    "story3Name": "Production Lead, Ghana Factory",
-    "story3Text": "\"I started as a seasonal temp on the packaging line in 2021. After completing Acres & Manna's internal skills program, I now lead a team of 14 in the milling department, working with GMP and HACCP protocols daily.\"",
-    "reportEyebrow": "Acres & Manna IMPACT REPORT · 2024",
-    "reportHeadline": "Our full <em>impact report</em>, with methodology, community audits and data source notes.",
-    "downloadPdf": "Download PDF",
-    "viewAllStories": "View all stories"
+    "storiesHeadline": "Behind each metric, a <em>real story.</em>"
   },
   "global": {
     "dividerEyebrow": "— FROM LOCAL TO GLOBAL",
@@ -273,30 +252,16 @@
     "legendCocoa": "Cocoa Belt",
     "legendEastAfrica": "East Africa Hub",
     "legendDistribution": "Regional Distribution",
-    "legendExports": "Export Markets",
-    "exportStats": {
-      "currentEyebrow": "CURRENT",
-      "currentValue": "24+",
-      "currentLabel": "Countries with current distribution",
-      "targetEyebrow": "3-YEAR TARGET",
-      "targetValue": "40+",
-      "targetLabel": "Target countries by Year 3",
-      "capacityEyebrow": "CAPACITY",
-      "capacityValue": "15,000 t/yr",
-      "capacityLabel": "Annual production capacity",
-      "exportsEyebrow": "EXPORTS",
-      "exportsValue": "38%",
-      "exportsLabel": "Of output sold outside home markets"
-    }
+    "legendExports": "Export Markets"
   },
   "cta": {
     "dividerEyebrow": "— LET'S CONNECT",
     "eyebrow": "Contact Us",
     "headline": "We're Building the <em>Future of Food.</em> Let's feed the future.",
     "description": "Got a question about our brands, strategy, or ecosystem? Let's connect, create value, and feed the future together.",
-    "emailLabel": "Email: hello@acresxmanna.com",
-    "phoneLabel": "Phone: +234 20 000 0000",
-    "hqLabel": "HQ: Accra, Ghana — West Africa",
+    "emailLabel": "Email: hello@aAcresxManna.com",
+    "phoneLabel": "Phone: +234 804 700 0587",
+    "hqLabel": "HQ: The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "Quick Inquiry",
     "formHeadline": "Tell us what you need — <em>we'll reply in 48h.</em>",
     "placeholderName": "Full name",
@@ -329,11 +294,11 @@
     "mealKits": "Meal Kits & Ready Meals",
     "viewFullCatalog": "View full catalog →",
     "stayConnected": "Stay Connected",
-    "location": "Accra, Ghana — West Africa",
+    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "Newsletter",
-    "newsletterDescription": "Join Acres & Manna in feeding the world — updates from our farms, brands and impact across the agrofood value chain.",
+    "newsletterDescription": "Join AcresxManna in feeding the world — updates from our farms, brands and impact across the agrofood value chain.",
     "subscribe": "Subscribe",
-    "copyright": "© {year} Acres & Manna. All rights reserved.",
+    "copyright": "© {year} AcresxManna. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
     "cookies": "Cookies"

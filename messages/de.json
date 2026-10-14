@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres & Manna — Afrikas Reichtum in großartiges Essen verwandelt",
+    "siteTitle": "AcresxManna — Afrikas Reichtum in großartiges Essen verwandelt",
     "siteDescription": "Verwurzelt in den reichsten landwirtschaftlichen Gebieten Afrikas.",
     "skipToContent": "Zum Inhalt springen"
   },
@@ -14,7 +14,7 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "eyebrow": "Acres & Manna · Afrikanische Agrarverarbeitung",
+    "eyebrow": "AcresxManna · Afrikanische Agrarverarbeitung",
     "headline": {
       "africa": "Afrikas",
       "richness": "Reichtum.",
@@ -27,14 +27,6 @@
     "cta": {
       "explore": "Unsere Produkte entdecken",
       "partner": "Partner werden"
-    },
-    "stats": {
-      "farmersValue": "10.000+",
-      "farmers": "Unterstützte Landwirte",
-      "marketsValue": "24+",
-      "markets": "Globale Märkte",
-      "capacityValue": "15.000 t/Jahr",
-      "capacity": "Kapazität"
     }
   },
   "farmToFood": {
@@ -82,7 +74,7 @@
     "originHeadlineL1": "Wir begannen mit einer Frage:",
     "originHeadlineL2": "Warum ist afrikanisches Essen",
     "originHeadlineL3": "nicht überall?",
-    "originParagraph1": "Acres & Manna entstand aus einer einfachen Beobachtung.",
+    "originParagraph1": "AcresxManna entstand aus einer einfachen Beobachtung.",
     "originParagraph2": "Heute betreiben wir moderne Lebensmittelproduktionslinien.",
     "foundedYear": "2021",
     "foundedLabel": "Gegründet",
@@ -103,7 +95,7 @@
     "pillar3Headline": "Angetrieben von <em>Ambition</em>.",
     "pillar3Description": "Afrikas Lebensmittel in jedem großen Regal der Welt.",
     "pullquote": "Wir exportieren nicht nur Lebensmittel — wir exportieren die Würde.",
-    "pullquoteName": "Acres & Manna",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "Gründer & CEO"
   },
   "products": {
@@ -153,28 +145,15 @@
       "productionCapacity": "Produktionskapazität"
     },
     "metricsValues": {
-      "farmers": "10.000+",
-      "communities": "85",
-      "products": "36+",
-      "markets": "24+",
-      "jobs": "420+",
-      "capacity": "15.000 t/a"
+      "farmers": "Coming soon",
+      "communities": "Coming soon",
+      "products": "Coming soon",
+      "markets": "Coming soon",
+      "jobs": "Coming soon",
+      "capacity": "Coming soon"
     },
     "storiesEyebrow": "Menschliche Geschichten",
-    "storiesHeadline": "Hinter jeder Kennzahl eine <em>echte Geschichte.</em>",
-    "story1Eyebrow": "BAUERN-GESCHICHTE",
-    "story1Name": "Maize Farmer, Northern Ghana",
-    "story1Text": "\"Seit ich dabei bin...\"",
-    "story2Eyebrow": "GEMEINSCHAFT",
-    "story2Name": "Osei Genossenschaft",
-    "story2Text": "\"Premium-Preise Jahr für Jahr...\"",
-    "story3Eyebrow": "TEAM-GESCHICHTE",
-    "story3Name": "Production Lead, Ghana Factory",
-    "story3Text": "\"Ich habe als Aushilfe angefangen...\"",
-    "reportEyebrow": "WIRKUNGSBERICHT",
-    "reportHeadline": "Unser vollständiger <em>Wirkungsbericht</em>.",
-    "downloadPdf": "PDF herunterladen",
-    "viewAllStories": "Alle Geschichten anzeigen"
+    "storiesHeadline": "Hinter jeder Kennzahl eine <em>echte Geschichte.</em>"
   },
   "global": {
     "dividerEyebrow": "— VON LOKAL ZU GLOBAL",
@@ -196,30 +175,16 @@
     "legendCocoa": "Kakaogürtel",
     "legendEastAfrica": "Ostafrika Hub",
     "legendDistribution": "Regionale Distribution",
-    "legendExports": "Exportmärkte",
-    "exportStats": {
-      "currentEyebrow": "AKTUELL",
-      "currentValue": "24+",
-      "currentLabel": "Länder",
-      "targetEyebrow": "ZIEL",
-      "targetValue": "40+",
-      "targetLabel": "Zielländer",
-      "capacityEyebrow": "KAPAZITÄT",
-      "capacityValue": "15,000",
-      "capacityLabel": "Kapazität",
-      "exportsEyebrow": "EXPORTE",
-      "exportsValue": "38%",
-      "exportsLabel": "Exporte"
-    }
+    "legendExports": "Exportmärkte"
   },
   "cta": {
     "dividerEyebrow": "— LASSEN SIE UNS GEMEINSAM WACHSEN",
     "eyebrow": "Lass uns reden",
     "headline": "Großartige Partnerschaften beginnen mit einem <em>einzigen Gespräch.</em>",
     "description": "Unser Team ist bereit.",
-    "emailLabel": "E-Mail: hello@acresxmanna.com",
-    "phoneLabel": "Telefon: +234 20 000 0000",
-    "hqLabel": "Hauptsitz: Accra, Ghana",
+    "emailLabel": "E-Mail: hello@aAcresxManna.com",
+    "phoneLabel": "Telefon: +234 804 700 0587",
+    "hqLabel": "Hauptsitz: The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "Schnelle Anfrage",
     "formHeadline": "Sagen Sie uns, was Sie brauchen — <em>wir antworten in 48 Stunden.</em>",
     "placeholderName": "Vollständiger Name",
@@ -252,11 +217,11 @@
     "mealKits": "Mahlzeiten-Kits",
     "viewFullCatalog": "Gesamten Katalog ansehen →",
     "stayConnected": "Bleiben Sie in Verbindung",
-    "location": "Accra, Ghana — Westafrika",
+    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "Newsletter",
     "newsletterDescription": "Updates erhalten.",
     "subscribe": "Abonnieren",
-    "copyright": "© {year} Acres & Manna.",
+    "copyright": "© {year} AcresxManna.",
     "privacy": "Datenschutz",
     "terms": "Bedingungen",
     "cookies": "Cookies"

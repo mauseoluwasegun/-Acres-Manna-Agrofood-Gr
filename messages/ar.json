@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres & Manna — ثروة إفريقيا، تتحول إلى طعام رائع",
+    "siteTitle": "AcresxManna — ثروة إفريقيا، تتحول إلى طعام رائع",
     "siteDescription": "متجذرون في أغنى الأراضي الزراعية في إفريقيا، نحوّل أفضل المحاصيل إلى منتجات غذائية ممتازة.",
     "skipToContent": "تخطي إلى المحتوى"
   },
@@ -27,14 +27,6 @@
     "cta": {
       "explore": "اكتشف منتجاتنا",
       "partner": "كن شريكاً"
-    },
-    "stats": {
-      "farmersValue": "10,000+",
-      "farmers": "المزارعون المدعومون",
-      "marketsValue": "24+",
-      "markets": "الأسواق العالمية",
-      "capacityValue": "15,000 طن/سنة",
-      "capacity": "السعة"
     }
   },
   "farmToFood": {
@@ -150,28 +142,15 @@
       "productionCapacity": "السعة"
     },
     "metricsValues": {
-      "farmers": "10,000+",
-      "communities": "85",
-      "products": "36+",
-      "markets": "24+",
-      "jobs": "420+",
-      "capacity": "15,000 طن"
+      "farmers": "Coming soon",
+      "communities": "Coming soon",
+      "products": "Coming soon",
+      "markets": "Coming soon",
+      "jobs": "Coming soon",
+      "capacity": "Coming soon"
     },
     "storiesEyebrow": "قصص إنسانية",
-    "storiesHeadline": "وراء كل رقم <em>قصة حقيقية.</em>",
-    "story1Eyebrow": "قصة مزارع",
-    "story1Name": "أما",
-    "story1Text": "\"تلقيت التدريب والدعم...\"",
-    "story2Eyebrow": "المجتمع",
-    "story2Name": "تعاونية أوسي",
-    "story2Text": "\"أسعار ممتازة...\"",
-    "story3Eyebrow": "فريقنا",
-    "story3Name": "نانا",
-    "story3Text": "\"بدأت كعاملة مؤقتة...\"",
-    "reportEyebrow": "تقرير التأثير",
-    "reportHeadline": "<em>تقرير التأثير</em> الكامل.",
-    "downloadPdf": "تحميل PDF",
-    "viewAllStories": "جميع القصص"
+    "storiesHeadline": "وراء كل رقم <em>قصة حقيقية.</em>"
   },
   "global": {
     "dividerEyebrow": "— نحو العالمية",
@@ -193,30 +172,16 @@
     "legendCocoa": "الكاكاو",
     "legendEastAfrica": "شرق إفريقيا",
     "legendDistribution": "توزيع",
-    "legendExports": "تصدير",
-    "exportStats": {
-      "currentEyebrow": "الحالي",
-      "currentValue": "24+",
-      "currentLabel": "دولة",
-      "targetEyebrow": "الهدف",
-      "targetValue": "40+",
-      "targetLabel": "دولة",
-      "capacityEyebrow": "السعة",
-      "capacityValue": "15,000",
-      "capacityLabel": "طن",
-      "exportsEyebrow": "تصدير",
-      "exportsValue": "38%",
-      "exportsLabel": "نسبة"
-    }
+    "legendExports": "تصدير"
   },
   "cta": {
     "dividerEyebrow": "— لننمو معاً",
     "eyebrow": "دعنا نتحدث",
     "headline": "الشراكات العظيمة تبدأ <em>بمحادثة بسيطة.</em>",
     "description": "فريقنا جاهز.",
-    "emailLabel": "hello@acresxmanna.com",
-    "phoneLabel": "+234 20 000 0000",
-    "hqLabel": "أكرا، غانا",
+    "emailLabel": "hello@aAcresxManna.com",
+    "phoneLabel": "+234 804 700 0587",
+    "hqLabel": "Factory and HQ: The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "استفسار سريع",
     "formHeadline": "ماذا تحتاج؟ <em>نرد خلال 48 ساعة.</em>",
     "placeholderName": "الاسم",
@@ -249,7 +214,7 @@
     "mealKits": "الوجبات",
     "viewFullCatalog": "الكتالوج →",
     "stayConnected": "تواصل معنا",
-    "location": "أكرا، غانا — غرب أفريقيا",
+    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "النشرة الإخبارية",
     "newsletterDescription": "احصل على التحديثات.",
     "subscribe": "اشترك",

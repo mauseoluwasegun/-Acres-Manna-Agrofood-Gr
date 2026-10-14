@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --cream-50: 255 255 255;
-    --cream-100: 239 235 248;
+    --cream-100: 255 255 255;
 
     --terracotta-500: 89 75 154;
     --terracotta-600: 63 52 110;
@@ -16,13 +16,13 @@
 
     --earth-600: 111 94 60;
 
-    --forest-600: 47 93 58;
-    --forest-700: 31 64 41;
+    --forest-600: 89 75 154;
+    --forest-700: 63 52 110;
 
-    --indigo-700: 43 58 103;
+    --indigo-700: 63 52 110;
 
-    --charcoal-700: 81 86 114;
-    --charcoal-900: 39 29 64;
+    --charcoal-700: 63 52 110;
+    --charcoal-900: 35 29 63;
 
     --focus: var(--mango-500);
 
@@ -123,6 +123,24 @@
 }
 
 @layer components {
+  @keyframes product-ticker {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .product-ticker-track {
+    animation: product-ticker 32s linear infinite;
+  }
+
+  .product-ticker-track:hover {
+    animation-play-state: paused;
+  }
+
   .container-page {
     @apply mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12;
   }

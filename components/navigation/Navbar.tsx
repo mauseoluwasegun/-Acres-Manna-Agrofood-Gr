@@ -12,6 +12,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
 const NAV_KEY_MAP: Record<string, string> = {
+  "/": "home",
   "/about": "about",
   "/what-we-do": "whatWeDo",
   "/products": "products",
@@ -19,14 +20,11 @@ const NAV_KEY_MAP: Record<string, string> = {
   "/contact": "contact",
 };
 
-const PRIMARY_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
-  ["/about", "/what-we-do", "/products", "/impact"].includes(href),
-);
+const PRIMARY_NAV_LINKS = NAV_LINKS.slice(0, 6);
 
 const MORE_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
   [
-    "/our-brands",
-    "/infrastructure",
+    "/impact",
     "/global-markets",
     "/investors-partners",
     "/news-insights",
@@ -38,7 +36,6 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
   const router = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const t = useTranslations("nav");
-  const tHero = useTranslations("hero");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 300);
@@ -47,7 +44,7 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const isLight = false;
+  const isLight = pathname === "/" && !scrolled;
   const textClass = isLight ? "text-white" : "text-charcoal-900";
   const hoverClass = isLight ? "hover:text-mango-400" : "hover:text-terracotta-600";
 
@@ -145,13 +142,13 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
           <div className="flex shrink-0 items-center gap-2 xl:gap-4">
             <LanguageSwitcher isLight={isLight} />
             <Button
-              href="/contact?type=partner"
+              href="/contact"
               variant="primary"
               size="md"
               className="px-3 py-3 text-xs xl:px-6 xl:py-3.5 xl:text-sm"
-              ariaLabel={tHero("cta.partner")}
+              ariaLabel={t("contact")}
             >
-              {tHero("cta.partner")}
+              Let&apos;s Talk
             </Button>
           </div>
         </nav>
@@ -184,7 +181,6 @@ export function MobileMenu({
   const pathname = usePathname();
   const reduce = useReducedMotion();
   const t = useTranslations("nav");
-  const tHero = useTranslations("hero");
 
   const backdrop = {
     open: {
@@ -318,13 +314,13 @@ export function MobileMenu({
                   <LanguageSwitcher />
                 </div>
                 <Button
-                  href="/contact?type=partner"
+                  href="/contact"
                   variant="primary"
                   size="lg"
                   className="w-full"
-                  ariaLabel={tHero("cta.partner")}
+                  ariaLabel={t("contact")}
                 >
-                  {tHero("cta.partner")}
+                  Let&apos;s Talk
                 </Button>
               </motion.div>
             </div>

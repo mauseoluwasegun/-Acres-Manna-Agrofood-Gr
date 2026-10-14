@@ -1,41 +1,30 @@
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { SITE_LOCATIONS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
+import { ScrollReveal } from "@/components/animations/MotionSection";
 
-const INFRASTRUCTURE_CARDS = [
-  {
-    title: "Source",
-    description: "Dependable supply relationships built around raw material quality, availability and seasonality.",
-    accent: "forest",
-  },
-  {
-    title: "Process & Manufacture",
-    description: "Consistent products from controlled production, defined procedures and trained teams.",
-    accent: "mango",
-  },
-  {
-    title: "Package & Brand",
-    description: "Packaging, presentation and quality specifications designed for trusted market-ready output.",
-    accent: "terracotta",
-  },
-  {
-    title: "Connect to Markets",
-    description: "Distribution and trade relationships to move African food beyond the farm gate.",
-    accent: "indigo",
-  },
-];
+export const metadata = {
+  title: "Infrastructure",
+  description:
+    "How AcresxManna is building production, quality assurance and supply chain capacity for African food manufacturing.",
+};
 
 export default function InfrastructurePage() {
   return (
-    <main id="main" className="pt-32 pb-24">
-      <SectionContainer size="wide" className="text-center">
-        <Eyebrow className="mb-5">Operating capability</Eyebrow>
-        <h1 className="font-display font-black text-display-1 text-balance mx-auto max-w-4xl">
-          Building value across <em>the food chain.</em>
+    <main id="main" className="pb-24 pt-32">
+      <SectionContainer size="wide">
+        <Eyebrow className="mb-5">Our operations</Eyebrow>
+        <h1 className="max-w-5xl font-display text-display-1 font-black">
+          Building the capacity behind African food.
         </h1>
-        <p className="mt-8 font-sans text-body-lg text-charcoal-700 max-w-2xl mx-auto leading-relaxed">
-          Acres & Manna is building the systems, processes and partnerships needed to turn agricultural resources into competitive food products and commercial opportunity.
+        <p className="mt-8 max-w-3xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+          Our ambition needs more than agricultural supply. It needs
+          production infrastructure, people, systems and partnerships to turn
+          raw materials into consistent, market-ready food. AcresxManna Ltd
+          manufactures and exports from Nigeria; we are building further
+          capability as demand, investment and readiness allow.
         </p>
       </SectionContainer>
 
@@ -44,30 +33,70 @@ export default function InfrastructurePage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
-          {INFRASTRUCTURE_CARDS.map((item, index) => (
-            <article
+        <div className="grid gap-5 md:grid-cols-2">
+          {[
+            {
+              title: "Production and processing",
+              status: "Operating today",
+              description:
+                "AcresxManna Ltd manufactures food products at its factory and headquarters in Moniya, Ibadan. Further production capacity and process improvements are part of our development ambitions.",
+            },
+            {
+              title: "Quality information",
+              status: "Built into the work",
+              description:
+                "Quality requirements are product- and market-specific. We confirm specifications and compliance details for each enquiry, and do not publish unverified certification claims.",
+            },
+            {
+              title: "Supply chain and warehousing",
+              status: "Operating today",
+              description:
+                "Our confirmed locations include the factory and headquarters in Moniya, the Nigerian office in Lagos, and the UK warehouse and office in Hertford.",
+            },
+            {
+              title: "Infrastructure for growth",
+              status: "Building next",
+              description:
+                "Planned development includes additional production capacity, more efficient processing and packaging, improved storage and inventory control, and wider product capability.",
+            },
+          ].map((item, index) => (
+            <ScrollReveal
+              as="article"
               key={item.title}
-              className="group relative rounded-soft-lg border border-cream-100 bg-white/70 p-7 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2"
+              delay={0.05 * index}
+              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
             >
-              <div className="mb-5 flex items-center gap-4">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-terracotta-500/10 font-mono text-label uppercase tracking-[0.12em] text-terracotta-700">
-                  0{index + 1}
-                </span>
-                <Eyebrow accent={item.accent as any}>{item.title}</Eyebrow>
-              </div>
-              <p className="font-sans text-body-md text-charcoal-700 leading-relaxed">
+              <Eyebrow className="mb-4">{item.status}</Eyebrow>
+              <h2 className="font-display text-heading-2 font-black">
+                {item.title}
+              </h2>
+              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
                 {item.description}
               </p>
-            </article>
+            </ScrollReveal>
           ))}
         </div>
+      </SectionContainer>
 
-        <div className="mt-16 text-center">
-          <Button href="/contact?type=partner" variant="primary" size="lg">
-            Let&apos;s Talk
-          </Button>
+      <SectionContainer size="wide" className="mt-16">
+        <div className="grid gap-4 md:grid-cols-3">
+          {SITE_LOCATIONS.map(({ label, address }) => (
+            <address
+              key={label}
+              className="rounded-3xl border border-cream-200 bg-white p-6 not-italic shadow-card"
+            >
+              <Eyebrow className="mb-4">{label}</Eyebrow>
+              <p className="font-sans text-body-md leading-relaxed text-charcoal-700">
+                {address}
+              </p>
+            </address>
+          ))}
         </div>
+      </SectionContainer>
+      <SectionContainer className="mt-16 text-center">
+        <Button href="/contact?type=visit" variant="primary" size="lg">
+          Enquire about visiting
+        </Button>
       </SectionContainer>
     </main>
   );

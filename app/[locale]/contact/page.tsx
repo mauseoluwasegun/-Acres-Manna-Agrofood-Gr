@@ -3,7 +3,7 @@ import { ContactPageContent } from "./ContactPageContent";
 export const metadata = {
   title: "Contact",
   description:
-    "Get in touch with Acres & Manna — partnerships, supply, distribution, careers, investment or general inquiries.",
+    "Get in touch about products, supply, distribution, manufacturing partnerships or investment. AcresxManna replies within two working days.",
 };
 
 export default function ContactPage() {

@@ -2,48 +2,46 @@ import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { PatternFramedImage } from "@/components/ui/PatternFrame";
 
-const BRAND_CARDS = [
+export const metadata = {
+  title: "Our Brands",
+  description:
+    "Meet HappyMan Foods, Maluza Foods Co. and UncleTobi, and learn each brand's role and status.",
+};
+
+const BRANDS = [
   {
     name: "HappyMan Foods",
-    role: "The brand we sell our products under",
     status: "Active",
     description:
-      "The signature consumer-facing food brand used to present Acres & Manna products in African and international markets.",
-    accent: "mango" as const,
-    image: "/images/product-jollof.jpg",
+      "The brand AcresxManna uses to sell all of its products.",
   },
   {
     name: "Maluza Foods Co.",
-    role: "Bakery and food retail development",
     status: "Live",
     description:
-      "A bakery-focused venture developing products and sales points in and around Ibadan, with a growing local presence.",
-    accent: "forest" as const,
-    image: "/images/processing-facility.jpg",
+      "A bakery developing new products and opening new stalls in and around Ibadan.",
   },
   {
     name: "UncleTobi",
-    role: "Online grocery concept",
     status: "Coming soon",
     description:
-      "An online grocery proposition designed to aggregate suppliers and create a convenient digital retail channel for consumers.",
-    accent: "terracotta" as const,
-    image: "/images/farm-origin.jpg",
+      "An online grocery concept aggregating suppliers for retail. Launch date to be announced.",
   },
 ];
 
 export default function OurBrandsPage() {
   return (
-    <main id="main" className="pt-32 pb-24">
-      <SectionContainer size="wide" className="text-center">
-        <Eyebrow className="mb-5">Our ecosystem</Eyebrow>
-        <h1 className="font-display font-black text-display-1 text-balance mx-auto max-w-4xl">
-          One platform. <em>Multiple opportunities.</em>
+    <main id="main" className="pb-24 pt-32">
+      <SectionContainer size="wide">
+        <Eyebrow className="mb-5">Our brands</Eyebrow>
+        <h1 className="max-w-5xl font-display text-display-1 font-black">
+          One platform. Different ways to bring African food to market.
         </h1>
-        <p className="mt-8 font-sans text-body-lg text-charcoal-700 max-w-2xl mx-auto leading-relaxed">
-          Our wider ecosystem brings together food products, a bakery and an online grocery concept, each with its own role in building a stronger African food value chain.
+        <p className="mt-8 max-w-3xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+          AcresxManna&apos;s wider ecosystem includes food brands, a bakery
+          and an online grocery concept, each with a distinct purpose in the
+          food value chain.
         </p>
       </SectionContainer>
 
@@ -52,48 +50,47 @@ export default function OurBrandsPage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-10">
-          {BRAND_CARDS.map((brand) => (
+        <div className="grid gap-5 md:grid-cols-3">
+          {BRANDS.map((brand) => (
             <article
               key={brand.name}
-              className="group relative rounded-soft-lg overflow-hidden border border-cream-100 bg-white/70 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2"
+              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
             >
-              <PatternFramedImage
-                src={brand.image}
-                alt={brand.name}
-                width={700}
-                height={820}
-                thickness="medium"
-                pattern={brand.accent === "mango" ? "woven" : brand.accent === "forest" ? "mudcloth" : "ankara"}
-                cornerAccent={brand.accent}
-                className="aspect-[4/5]"
-              />
-              <div className="p-6 sm:p-7">
-                <div className="mb-3 flex items-center justify-between gap-3">
-                  <Eyebrow accent={brand.accent}>{brand.status}</Eyebrow>
-                </div>
-                <h2 className="font-display font-black text-heading-1 mb-2">{brand.name}</h2>
-                <p className="font-mono text-label uppercase tracking-[0.12em] text-charcoal-700/70 mb-3">
-                  {brand.role}
-                </p>
-                <p className="font-sans text-body-md text-charcoal-700 leading-relaxed">
-                  {brand.description}
-                </p>
-              </div>
+              <Eyebrow className="mb-4">{brand.status}</Eyebrow>
+              <h2 className="font-display text-heading-1 font-black">
+                {brand.name}
+              </h2>
+              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
+                {brand.description}
+              </p>
             </article>
           ))}
         </div>
+      </SectionContainer>
 
-        <div className="mt-16 text-center">
-          <Button
-            href="/products"
-            variant="secondary"
-            size="lg"
-            className="max-w-full whitespace-normal text-center"
-          >
-            Explore Our Products
-          </Button>
+      <SectionContainer size="wide" className="mt-16">
+        <div className="rounded-3xl bg-purple-700 p-8 text-white sm:p-10">
+          <Eyebrow className="mb-4 text-yellow-400">How the roles fit</Eyebrow>
+          <h2 className="font-display text-display-2 font-black">
+            Different roles across the food value chain.
+          </h2>
+          <p className="mt-5 max-w-3xl font-sans text-body-lg leading-relaxed text-white/90">
+            HappyMan Foods is the brand AcresxManna uses to sell its products.
+            Maluza Foods Co. is a bakery developing products and stalls in and
+            around Ibadan. UncleTobi is an online grocery concept that will
+            aggregate suppliers for retail and is coming soon.
+          </p>
         </div>
+      </SectionContainer>
+
+      <SectionContainer className="mt-16 text-center">
+        <p className="mx-auto max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+          Interested in our products, brands or a commercial partnership?
+          We&apos;d love to hear from you.
+        </p>
+        <Button href="/contact" variant="primary" size="lg" className="mt-6">
+          Contact Our Team
+        </Button>
       </SectionContainer>
     </main>
   );

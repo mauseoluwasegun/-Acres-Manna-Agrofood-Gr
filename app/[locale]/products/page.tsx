@@ -2,25 +2,38 @@ import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { PatternFramedImage } from "@/components/ui/PatternFrame";
 import { PRODUCTS } from "@/lib/products";
-import { useTranslations } from "next-intl";
+import { ScrollReveal } from "@/components/animations/MotionSection";
+import { Link } from "@/i18n/routing";
+import { BusinessFaq } from "@/components/sections/BusinessFaq";
+
+export const metadata = {
+  title: "Products",
+  description:
+    "Explore AcresxManna's products on sale for export, product varieties, and planned Nigerian retail.",
+};
 
 export default function ProductsPage() {
-  const t = useTranslations("products");
-  const tNav = useTranslations("nav");
+  const availableProducts = PRODUCTS.filter(
+    (product) => product.status === "Available now",
+  );
+  const plannedProducts = PRODUCTS.filter(
+    (product) => product.status !== "Available now",
+  );
 
   return (
-    <main id="main" className="pt-32 pb-24">
+    <main id="main" className="pb-24 pt-32">
       <SectionContainer size="wide" className="text-center">
-        <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
-        <h1 className="font-display font-black text-display-1 text-balance mx-auto max-w-4xl">
-          {t("headlineP1")} <em>{t("headlineEmphasis")}</em> {t("headlineP2")}
+        <Eyebrow className="mb-5">Our products</Eyebrow>
+        <h1 className="mx-auto max-w-4xl font-display text-display-1 font-black">
+          African agricultural products, transformed into everyday food.
         </h1>
-        <p
-          className="mt-8 font-sans text-body-lg text-charcoal-700 max-w-2xl mx-auto leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: t.raw("shelfHeadline") }}
-        />
+        <p className="mx-auto mt-8 max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+          From traditional staples to snacks, ingredients and beverages,
+          we&apos;re developing products that connect Africa&apos;s
+          agricultural resources with evolving consumer needs. Export is our
+          focus today, with Nigerian retail planned.
+        </p>
       </SectionContainer>
 
       <div className="my-20">
@@ -28,51 +41,93 @@ export default function ProductsPage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
-          {PRODUCTS.map((p) => (
-            <article
-              key={p.id}
-              className="group relative rounded-soft-lg bg-white/60 border border-cream-100 p-5 shadow-card hover:shadow-card-hover transition-all duration-500 hover:-translate-y-2"
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {availableProducts.map((product, index) => (
+            <ScrollReveal
+              as="article"
+              key={product.id}
+              delay={0.04 * index}
+              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
             >
-              <PatternFramedImage
-                src={p.imageUrl}
-                alt={p.name}
-                width={600}
-                height={760}
-                thickness="medium"
-                pattern={
-                  p.accentColor === "forest"
-                    ? "bogolan"
-                    : p.accentColor === "indigo"
-                      ? "mudcloth"
-                      : p.accentColor === "mango"
-                        ? "woven"
-                        : "ankara"
-                }
-                cornerAccent={p.accentColor as any}
-                className="aspect-[4/5] mb-6"
-                priority={false}
-              />
-              <Eyebrow className="mb-3" accent={p.accentColor as any}>
-                {p.category}
-              </Eyebrow>
-              <h3 className="font-display font-black text-heading-1 mb-2">
-                {p.name}
-              </h3>
-              <p
-                className="font-sans text-body-md text-charcoal-700 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: p.description }}
-              />
-            </article>
+              <Eyebrow className="mb-4">On sale now · Export</Eyebrow>
+              <h2 className="font-display text-heading-1 font-black">
+                {product.name}
+              </h2>
+              {product.varieties && (
+                <p className="mt-3 font-sans text-body-md text-charcoal-700">
+                  Varieties: {product.varieties.join(", ")}
+                </p>
+              )}
+              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
+                {product.description}
+              </p>
+              {product.highlights && (
+                <ul className="mt-4 space-y-2 font-sans text-body-md text-charcoal-700">
+                  {product.highlights.map((highlight) => (
+                    <li key={highlight} className="flex gap-2">
+                      <span aria-hidden="true" className="font-bold text-purple-700">•</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <Link
+                href={`/products/${product.slug}`}
+                className="mt-6 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
+              >
+                {product.status === "Available now"
+                  ? "Request product information"
+                  : "View planned product"}
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="text-center mt-20">
-          <Button href="/" variant="secondary" size="lg">
-            ← {tNav("home")}
+        {plannedProducts.length > 0 && (
+          <section className="mt-16">
+            <Eyebrow className="mb-4">Planned</Eyebrow>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {plannedProducts.map((product) => (
+                <ScrollReveal
+                  as="article"
+                  key={product.id}
+                  className="rounded-3xl border border-cream-200 bg-cream-50 p-7"
+                >
+                  <Eyebrow className="mb-4">Coming soon</Eyebrow>
+                  <h2 className="font-display text-heading-1 font-black">
+                    {product.name}
+                  </h2>
+                  <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
+                    {product.description}
+                  </p>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="mt-6 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
+                  >
+                    Notify me
+                  </Link>
+                </ScrollReveal>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="mt-16 text-center">
+          <p className="mx-auto mb-6 max-w-2xl font-sans text-body-md text-charcoal-700">
+            Export destinations and standard pack sizes are not published.
+            Contact us to discuss your requirements.
+          </p>
+          <Button
+            href="/contact"
+            variant="primary"
+            size="lg"
+            className="max-w-full whitespace-normal px-5 text-center"
+          >
+            Request product info
           </Button>
         </div>
       </SectionContainer>
+      <BusinessFaq />
     </main>
   );
 }

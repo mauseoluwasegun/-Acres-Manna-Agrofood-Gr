@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Acres & Manna — De rijkdom van Afrika, getransformeerd in geweldig eten",
+    "siteTitle": "AcresxManna — De rijkdom van Afrika, getransformeerd in geweldig eten",
     "siteDescription": "Geworteld in de rijkste landbouwgronden van Afrika.",
     "skipToContent": "Spring naar inhoud"
   },
@@ -14,7 +14,7 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Acres & Manna · Afrikaanse landbouwverwerking",
+    "eyebrow": "AcresxManna · Afrikaanse landbouwverwerking",
     "headline": {
       "africa": "Afrika's",
       "richness": "Rijkdom.",
@@ -27,14 +27,6 @@
     "cta": {
       "explore": "Ontdek Onze Producten",
       "partner": "Word Partner"
-    },
-    "stats": {
-      "farmersValue": "10.000+",
-      "farmers": "Ondersteunde Boeren",
-      "marketsValue": "24+",
-      "markets": "Wereldwijde Markten",
-      "capacityValue": "15.000 t/j",
-      "capacity": "Capaciteit"
     }
   },
   "farmToFood": {
@@ -82,7 +74,7 @@
     "originHeadlineL1": "We begonnen met een vraag:",
     "originHeadlineL2": "waarom is Afrikaans eten niet",
     "originHeadlineL3": "overal?",
-    "originParagraph1": "Acres & Manna ontstond in Accra, Ghana.",
+    "originParagraph1": "AcresxManna ontstond in Accra, Ghana.",
     "originParagraph2": "Vandaag de dag beheren we moderne voedselproductielijnen.",
     "foundedYear": "2021",
     "foundedLabel": "Opgericht",
@@ -103,7 +95,7 @@
     "pillar3Headline": "Gedreven door <em>Ambitie</em>.",
     "pillar3Description": "Afrikaans eten in de schappen wereldwijd.",
     "pullquote": "We exporteren niet alleen voedsel, we exporteren waardigheid.",
-    "pullquoteName": "Acres & Manna",
+    "pullquoteName": "AcresxManna",
     "pullquoteTitle": "Oprichter & CEO"
   },
   "products": {
@@ -153,28 +145,15 @@
       "productionCapacity": "Capaciteit"
     },
     "metricsValues": {
-      "farmers": "10.000+",
-      "communities": "85",
-      "products": "36+",
-      "markets": "24+",
-      "jobs": "420+",
-      "capacity": "15.000 t/j"
+      "farmers": "Coming soon",
+      "communities": "Coming soon",
+      "products": "Coming soon",
+      "markets": "Coming soon",
+      "jobs": "Coming soon",
+      "capacity": "Coming soon"
     },
     "storiesEyebrow": "Menselijke Verhalen",
-    "storiesHeadline": "Achter elk cijfer een <em>echt verhaal.</em>",
-    "story1Eyebrow": "BOER VERHAAL",
-    "story1Name": "Maize Farmer, Northern Ghana",
-    "story1Text": "\"Sinds ik meedeed...\"",
-    "story2Eyebrow": "GEMEENSCHAP",
-    "story2Name": "Osei Coöperatie",
-    "story2Text": "\"Premium prijzen...\"",
-    "story3Eyebrow": "TEAM VERHAAL",
-    "story3Name": "Production Lead, Ghana Factory",
-    "story3Text": "\"Ik begon als uitzendkracht...\"",
-    "reportEyebrow": "IMPACT RAPPORT",
-    "reportHeadline": "Ons volledige <em>impact rapport</em>.",
-    "downloadPdf": "PDF Downloaden",
-    "viewAllStories": "Bekijk alle verhalen"
+    "storiesHeadline": "Achter elk cijfer een <em>echt verhaal.</em>"
   },
   "global": {
     "dividerEyebrow": "— VAN LOKAAL TOT WERELDWIJD",
@@ -196,30 +175,16 @@
     "legendCocoa": "Cacao",
     "legendEastAfrica": "Oost-Afrika",
     "legendDistribution": "Distributie",
-    "legendExports": "Export",
-    "exportStats": {
-      "currentEyebrow": "HUIDIG",
-      "currentValue": "24+",
-      "currentLabel": "Landen",
-      "targetEyebrow": "DOEL",
-      "targetValue": "40+",
-      "targetLabel": "Landen",
-      "capacityEyebrow": "CAPACITEIT",
-      "capacityValue": "15,000",
-      "capacityLabel": "Capaciteit",
-      "exportsEyebrow": "EXPORT",
-      "exportsValue": "38%",
-      "exportsLabel": "Export"
-    }
+    "legendExports": "Export"
   },
   "cta": {
     "dividerEyebrow": "— LATEN WE SAMEN GROEIEN",
     "eyebrow": "Laten We Praten",
     "headline": "Geweldige samenwerkingen beginnen met een <em>simpel gesprek.</em>",
     "description": "Ons team staat klaar.",
-    "emailLabel": "E-mail: hello@acresxmanna.com",
-    "phoneLabel": "Telefoon: +234 20 000 0000",
-    "hqLabel": "HQ: Tema",
+    "emailLabel": "E-mail: hello@aAcresxManna.com",
+    "phoneLabel": "Telefoon: +234 804 700 0587",
+    "hqLabel": "HQ: The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "Snel Aanvragen",
     "formHeadline": "Wat heeft u nodig? <em>We antwoorden binnen 48 uur.</em>",
     "placeholderName": "Volledige naam",
@@ -252,11 +217,11 @@
     "mealKits": "Maaltijdpakketten",
     "viewFullCatalog": "Volledige catalogus →",
     "stayConnected": "Blijf Verbonden",
-    "location": "Accra, Ghana — West-Afrika",
+    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "Nieuwsbrief",
     "newsletterDescription": "Ontvang updates.",
     "subscribe": "Abonneren",
-    "copyright": "© {year} Acres & Manna.",
+    "copyright": "© {year} AcresxManna.",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "cookies": "Cookies"

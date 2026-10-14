@@ -8,6 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        purple: {
+          700: "#594B9A",
+        },
+        yellow: {
+          400: "#FDDC42",
+        },
         cream: {
           50: "rgb(var(--cream-50) / <alpha-value>)",
           100: "rgb(var(--cream-100) / <alpha-value>)",
@@ -67,8 +73,9 @@ module.exports = {
         micro: ["0.75rem", { lineHeight: "1.4", letterSpacing: "0.1em" }],
       },
       borderRadius: {
-        soft: "14px",
-        "soft-lg": "22px",
+        soft: "1rem",
+        "soft-lg": "1.5rem",
+        "soft-xl": "2rem",
       },
       boxShadow: {
         cta: "0 10px 30px -12px rgb(var(--terracotta-500) / 0.4)",

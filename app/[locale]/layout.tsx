@@ -1,28 +1,35 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { fontDisplay, fontSans, fontMono, fontLogo } from "@/lib/fonts";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { Footer } from "@/components/footer/Footer";
+import { CookieConsent } from "@/components/ui/CookieConsent";
+import { CONTACT_EMAIL, CONTACT_PHONE, INSTAGRAM_URL, SITE_NAME, SITE_URL } from "@/lib/constants";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const SITE_URL = "https://acresxmanna.com";
+const isIndexable = process.env.VERCEL_ENV
+  ? process.env.VERCEL_ENV === "production"
+  : process.env.SITE_INDEXABLE === "true";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'hero' });
-  const title = "Acres & Manna — Redefining the African Agro-food Market Globally.";
-  const description = t('subheadline');
+export async function generateMetadata() {
+  const title = "AcresxManna | African Agro-Processing and Food";
+  const description =
+    "AcresxManna transforms Africa’s agricultural resources into quality food products through processing, manufacturing and market access.";
   
   return {
     metadataBase: new URL(SITE_URL),
     title: {
       default: title,
-      template: "%s · Acres & Manna",
+      template: "%s | AcresxManna",
     },
     description,
+    robots: {
+      index: isIndexable,
+      follow: isIndexable,
+    },
     icons: {
       icon: [
         { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
@@ -33,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       type: 'website',
       url: SITE_URL,
-      siteName: 'Acres & Manna',
+      siteName: SITE_NAME,
       title,
       description,
       images: [
@@ -41,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
           url: '/brand/acres-manna-social.png',
           width: 1200,
           height: 630,
-          alt: 'Acres & Manna — Redefining the African Agro-food Market Globally',
+          alt: 'AcresxManna — African agro-processing and food manufacturing',
         },
       ],
     },
@@ -85,6 +92,29 @@ export default async function LocaleLayout({
     >
       <head>
         <link rel="manifest" href="/manifest.json" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: SITE_NAME,
+              legalName: "AcresxManna Ltd",
+              url: SITE_URL,
+              logo: `${SITE_URL}/brand/acres-manna-logo-purple.svg`,
+              email: CONTACT_EMAIL,
+              telephone: CONTACT_PHONE,
+              sameAs: [INSTAGRAM_URL],
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "The Goodland, Off Apapa Road, Moniya",
+                addressLocality: "Ibadan",
+                addressRegion: "Oyo State",
+                addressCountry: "NG",
+              },
+            }),
+          }}
+        />
       </head>
       <body className="bg-cream-100 text-charcoal-900 antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
@@ -97,6 +127,7 @@ export default async function LocaleLayout({
           <SiteHeader />
           {children}
           <Footer />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

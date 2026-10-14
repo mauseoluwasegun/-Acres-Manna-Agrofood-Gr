@@ -1,8 +1,27 @@
 export const SITE_URL = "https://acresxmanna.com";
+export const SITE_NAME = "AcresxManna";
+export const CONTACT_EMAIL = "info@acresxmanna.com";
+export const CONTACT_PHONE = "+234 804 700 0587";
+export const INSTAGRAM_URL = "https://www.instagram.com/acresxmanna/";
+
+export const SITE_LOCATIONS = [
+  {
+    label: "Factory and HQ",
+    address: "The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
+  },
+  {
+    label: "Nigerian office",
+    address: "House 3, 10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos, Nigeria",
+  },
+  {
+    label: "UK warehouse and office",
+    address: "Orland House, Unit 1, Mead Lane, Hertford SG13 7AT, United Kingdom",
+  },
+] as const;
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "What We Do", href: "/what-we-do" },
   { label: "Products", href: "/products" },
   { label: "Our Brands", href: "/our-brands" },
@@ -21,7 +40,7 @@ export const STAKEHOLDERS = [
     icon: "cart",
     headline: "I want to Explore Products",
     description:
-      "Discover our range of premium African-made food products crafted for global tables.",
+      "Explore our African agricultural food products.",
     ctaLabel: "Browse Catalog",
     ctaHref: "/products",
   },
@@ -31,114 +50,62 @@ export const STAKEHOLDERS = [
     icon: "wheat",
     headline: "Become a Supplier (Farmers)",
     description:
-      "Partner with us as a farmer or agricultural supplier. Fair prices, steady markets, shared growth.",
+      "Tell us what agricultural commodities you grow, aggregate or trade.",
     ctaLabel: "Farmer Inquiry",
-    ctaHref: "/contact?type=supplier",
+    ctaHref: "/become-a-supplier",
   },
   {
     id: "distributor",
     label: "Distribution",
     icon: "truck",
     headline: "Distribution Opportunities",
-    description:
-      "Bring Acres & Manna products to your region. Distributor, wholesaler & retail partnerships.",
+    description: "Discuss product availability and distribution opportunities with our team.",
     ctaLabel: "Distributor Inquiry",
-    ctaHref: "/contact?type=distributor",
+    ctaHref: "/become-a-distributor",
   },
   {
     id: "partner",
     label: "Partner With Us",
     icon: "handshake",
-    headline: "Partner With Us",
-    description:
-      "Strategic business partnerships, co-branding, ingredient supply & joint ventures welcome.",
+    headline: "Business Enquiries",
+    description: "Start a conversation about a commercial or manufacturing partnership.",
     ctaLabel: "Start Partnership",
-    ctaHref: "/contact?type=partner",
+    ctaHref: "/business-enquiries",
   },
   {
     id: "investor",
     label: "Invest in Growth",
     icon: "briefcase",
-    headline: "Invest in Growth",
-    description:
-      "Investment opportunities in African agro-processing and food manufacturing infrastructure.",
-    ctaLabel: "Investor Deck",
-    ctaHref: "/contact?type=investor",
+    headline: "Investors & Partners",
+    description: "Start a conversation about building African agro-processing capacity.",
+    ctaLabel: "Start a Conversation",
+    ctaHref: "/investors-partners",
   },
   {
     id: "employee",
     label: "Join Our Team",
     icon: "user",
-    headline: "Join Our Team",
-    description:
-      "Build a career at the intersection of African agriculture, food & global commerce.",
-    ctaLabel: "View Roles",
-    ctaHref: "/contact?type=career",
+    headline: "Contact Our Team",
+    description: "Get in touch with AcresxManna about products, supply or partnerships.",
+    ctaLabel: "Say Hello",
+    ctaHref: "/contact",
   },
 ] as const;
 
 export const IMPACT_METRICS = [
-  { value: "10,000+", label: "Farmers supported", icon: "farmers", progress: 0.95 },
-  { value: "85", label: "Communities reached", icon: "communities", progress: 0.85 },
-  { value: "36+", label: "Products developed", icon: "products", progress: 0.78 },
-  { value: "24+", label: "Markets served", icon: "markets", progress: 0.65 },
-  { value: "420+", label: "Jobs created", icon: "jobs", progress: 0.88 },
-  { value: "15,000 t/yr", label: "Production capacity", icon: "capacity", progress: 0.75 },
+  "Agricultural value addition",
+  "Economic opportunities",
+  "Supplier and farmer opportunities",
+  "Food systems and market access",
+  "African industrial development",
 ] as const;
 
-export const FARM_TO_FOOD_STAGES = [
-  {
-    num: "01",
-    eyebrow: "STAGE 01 · AGRICULTURE",
-    headline: "Seeds of <em>Africa</em>.",
-    description:
-      "Sourced from smallholder farms and cooperatives across growing regions — grains, cocoa, fruits, and indigenous crops.",
-    icon: "/icons/stage-01-agriculture.svg",
-    accent: "forest",
-  },
-  {
-    num: "02",
-    eyebrow: "STAGE 02 · HARVEST",
-    headline: "Golden <em>harvest</em>.",
-    description:
-      "Hand-picked and mechanically harvested at peak ripeness. Quality-checked at farm-gate before transport.",
-    icon: "/icons/stage-02-harvest.svg",
-    accent: "mango",
-  },
-  {
-    num: "03",
-    eyebrow: "STAGE 03 · PROCESSING",
-    headline: "Modern <em>transformation</em>.",
-    description:
-      "Hygienic, tech-enabled facilities. Cleaning, sorting, milling, blending — precision at every step.",
-    icon: "/icons/stage-03-processing.svg",
-    accent: "terracotta",
-  },
-  {
-    num: "04",
-    eyebrow: "STAGE 04 · PACKAGING",
-    headline: "Ready for <em>the shelf</em>.",
-    description:
-      "Premium, shelf-stable packaging that preserves flavor, tells our story, and meets global food standards.",
-    icon: "/icons/stage-04-packaging.svg",
-    accent: "indigo",
-  },
-  {
-    num: "05",
-    eyebrow: "STAGE 05 · FOOD",
-    headline: "Great <em>food</em>.",
-    description:
-      "From our kitchens to yours. Delicious, nutritious, culturally rooted meals and ingredients.",
-    icon: "/icons/stage-05-food.svg",
-    accent: "mango",
-  },
-  {
-    num: "06",
-    eyebrow: "STAGE 06 · GLOBAL MARKETS",
-    headline: "For <em>the world</em>.",
-    description:
-      "Distributed across regional and international markets. Africa on the global plate.",
-    icon: "/icons/stage-06-global.svg",
-    accent: "indigo",
-  },
+export const IMPACT_SCORECARD = [
+  "Tonnes processed",
+  "Finished products manufactured",
+  "Active suppliers and producer partnerships",
+  "Direct jobs created and retained",
+  "Product categories processed locally",
+  "Countries with verified sales",
+  "Compliance and quality measures",
 ] as const;

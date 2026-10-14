@@ -2,145 +2,111 @@ export interface Product {
   id: string;
   slug: string;
   name: string;
-  category: string;
+  varieties?: string[];
   description: string;
-  imageUrl: string;
-  badge?: string;
+  highlights?: string[];
   status?: "Available now" | "Coming soon" | "In development";
-  accentColor: "terracotta" | "mango" | "forest" | "indigo";
-  ctaLabel?: string;
-  origin?: string;
-  terroir?: string;
-  culturalNote?: string;
 }
 
 export const PRODUCTS: Product[] = [
   {
-    id: "product-01",
+    id: "garri",
     slug: "garri",
     name: "Garri",
-    category: "GRAINS & FLOURS",
+    varieties: ["White", "Ijebu", "Yellow"],
     description:
-      "A staple with global potential, available in white, Ijebu and yellow varieties for retail, food service and diaspora markets.",
-    imageUrl: "/images/product-flour.jpg",
-    badge: "Available now",
+      "An important staple in many African communities, with opportunities across retail, food service and international African food markets. We process it in white, Ijebu and yellow varieties.",
+    highlights: [
+      "Three varieties: white, Ijebu and yellow",
+      "Available for export",
+      "Packed to each client's requirements",
+    ],
     status: "Available now",
-    accentColor: "terracotta",
-    origin: "Nigeria · West Africa",
-    terroir: "Cassava-growing regions",
-    culturalNote: "A staple food with strong local and export appeal",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-02",
+    id: "cassava-flour",
     slug: "cassava-flour",
     name: "Cassava Flour",
-    category: "CASSAVA & STAPLES",
     description:
-      "A versatile cassava-based flour for home cooking, baking and food businesses, packed to client requirements.",
-    imageUrl: "/images/product-cocoa.jpg",
-    badge: "Available now",
+      "A cassava-based flour for home cooking, bakers and food businesses, packed to your requirements.",
+    highlights: [
+      "Cassava-based flour",
+      "For home cooking and food businesses",
+      "Packed to each client's requirements",
+    ],
     status: "Available now",
-    accentColor: "forest",
-    origin: "Nigeria · West Africa",
-    terroir: "Cassava supply regions",
-    culturalNote: "Flexible ingredient for food service and retail applications",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-03",
+    id: "konkote",
     slug: "konkote",
     name: "Konkote",
-    category: "CASSAVA & STAPLES",
     description:
-      "A cassava derivative in flour form, packed to client requirements and suitable for food businesses and wholesale channels.",
-    imageUrl: "/images/product-mango.jpg",
-    badge: "Available now",
+      "A cassava derivative in flour form, packed to your requirements.",
+    highlights: [
+      "Cassava derivative in flour form",
+      "Available for export",
+      "Packed to each client's requirements",
+    ],
     status: "Available now",
-    accentColor: "mango",
-    origin: "Nigeria · West Africa",
-    terroir: "Cassava processing regions",
-    culturalNote: "A flexible ingredient for commercial and culinary applications",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-04",
-    slug: "plantain-chips",
-    name: "Plantain Chips",
-    category: "SNACKS & READY TO EAT",
-    description:
-      "A familiar favourite for consumers who want a convenient, enjoyable snack made with dependable production and packaging quality.",
-    imageUrl: "/images/product-shea.jpg",
-    badge: "Available now",
-    status: "Available now",
-    accentColor: "forest",
-    origin: "Nigeria · West Africa",
-    terroir: "Plantain supply regions",
-    culturalNote: "Suitable for retail, wholesale and food-service channels",
-    ctaLabel: "Request Product Information",
-  },
-  {
-    id: "product-05",
+    id: "groundnuts-peanuts",
     slug: "groundnuts-peanuts",
-    name: "Groundnuts & Peanuts",
-    category: "NUTS & INGREDIENTS",
+    name: "Groundnuts and Peanuts",
     description:
-      "A valuable crop for packaged food and for further processing, with strong potential in both retail and industrial channels.",
-    imageUrl: "/images/product-jollof.jpg",
-    badge: "Available now",
+      "A versatile agricultural product with potential as packaged food and as a raw material for further processing. We do not list products such as peanut butter unless commercially available.",
+    highlights: [
+      "Available for export",
+      "Packed to each client's requirements",
+      "No unlaunched product extensions are listed",
+    ],
     status: "Available now",
-    accentColor: "terracotta",
-    origin: "Nigeria · West Africa",
-    terroir: "Groundnut growing regions",
-    culturalNote: "Suitable for retail and commercial food applications",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-06",
+    id: "cashew-nuts",
     slug: "cashew-nuts",
     name: "Cashew Nuts",
-    category: "NUTS & SNACKS",
     description:
-      "A snack and ingredient people love, packed to client requirements and suitable for wholesale as well as retail distribution.",
-    imageUrl: "/images/product-tea.jpg",
-    badge: "Available now",
+      "A snack and ingredient people love, packed to your requirements.",
+    highlights: [
+      "Available for export",
+      "Suitable for food retail and business enquiries",
+      "Packed to each client's requirements",
+    ],
     status: "Available now",
-    accentColor: "indigo",
-    origin: "West Africa",
-    terroir: "Cashew-growing regions",
-    culturalNote: "Flexible ingredient and snack for diverse channels",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-07",
+    id: "plantain-chips",
+    slug: "plantain-chips",
+    name: "Plantain Chips",
+    description:
+      "A familiar, convenient African snack for people looking for enjoyable food. Product enquiries can discuss packaging and distribution requirements.",
+    highlights: [
+      "Ready-to-eat snack",
+      "Retail and wholesale enquiries welcome",
+      "Custom packing can be discussed",
+    ],
+    status: "Available now",
+  },
+  {
+    id: "hibiscus-teas",
     slug: "hibiscus-and-teas",
     name: "Hibiscus and Teas",
-    category: "BOTANICALS & BEVERAGES",
     description:
-      "A recognisable African ingredient for teas and infusions with wider potential across beverage channels.",
-    imageUrl: "/images/product-tea.jpg",
-    badge: "Available now",
+      "A recognisable African botanical for teas, infusions and beverages. Contact us to discuss available products and requirements.",
+    highlights: [
+      "Hibiscus and tea products available for export",
+      "For tea, infusion and beverage enquiries",
+      "Packed to each client's requirements",
+    ],
     status: "Available now",
-    accentColor: "mango",
-    origin: "West Africa",
-    terroir: "Botanical growing regions",
-    culturalNote: "A strong fit for wellness and beverage ranges",
-    ctaLabel: "Request Product Information",
   },
   {
-    id: "product-08",
+    id: "seasonings-spices",
     slug: "seasonings-and-spices",
     name: "Seasonings and Spices",
-    category: "FLAVOUR & INGREDIENTS",
     description:
-      "Flavour rooted in African food culture, created for convenience, consistency and everyday cooking needs.",
-    imageUrl: "/images/product-tea.jpg",
-    badge: "Coming soon",
+      "A planned range connecting agricultural ingredients with everyday cooking, with a focus on flavour, convenience and consistency. Not yet available.",
     status: "Coming soon",
-    accentColor: "forest",
-    origin: "West Africa",
-    terroir: "Regional spice and seasoning sources",
-    culturalNote: "Planned product line, not yet on sale",
-    ctaLabel: "Notify Me",
   },
 ];

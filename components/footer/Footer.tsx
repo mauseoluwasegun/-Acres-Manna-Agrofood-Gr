@@ -1,15 +1,19 @@
 "use client";
 
+import { useState, type FormEvent } from "react";
 import { Link } from "@/i18n/routing";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
-import { NAV_LINKS } from "@/lib/constants";
+import {
+  CONTACT_EMAIL,
+  CONTACT_PHONE,
+  INSTAGRAM_URL,
+  SITE_LOCATIONS,
+  SITE_NAME,
+  NAV_LINKS,
+} from "@/lib/constants";
 import {
   IconInstagram,
-  IconLinkedIn,
-  IconFacebook,
-  IconTwitter,
-  IconYoutube,
   IconMail,
   IconPhone,
 } from "@/components/ui/icons";
@@ -17,6 +21,7 @@ import {
 import { useTranslations } from "next-intl";
 
 const FOOTER_NAV_KEY_MAP: Record<string, string> = {
+  "": "home",
   about: "about",
   "what-we-do": "whatWeDo",
   products: "products",
@@ -24,25 +29,38 @@ const FOOTER_NAV_KEY_MAP: Record<string, string> = {
   contact: "contact",
 };
 
-export function Footer() {
-  const t = useTranslations("footer");
-  const tNav = useTranslations("nav");
+const LEGAL_LINKS = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Use", href: "/terms" },
+  { label: "Cookie Policy", href: "/cookies" },
+];
 
-  const socials = [
-    { icon: IconInstagram, label: "Instagram", href: "#" },
-    { icon: IconLinkedIn, label: "LinkedIn", href: "#" },
-    { icon: IconFacebook, label: "Facebook", href: "#" },
-    { icon: IconTwitter, label: "X / Twitter", href: "#" },
-    { icon: IconYoutube, label: "YouTube", href: "#" },
-  ];
+export function Footer() {
+  const tNav = useTranslations("nav");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const socials = [{ icon: IconInstagram, label: "Instagram", href: INSTAGRAM_URL }];
 
   const productCategories = [
-    t("grainsFlours"),
-    t("cocoaChocolate"),
-    t("beveragesNectars"),
-    t("sheaOils"),
-    t("mealKits"),
+    "Garri, cassava flour and konkote",
+    "Groundnuts and peanuts",
+    "Cashew nuts",
+    "Plantain chips",
+    "Hibiscus and teas",
+    "Seasonings and spices — coming soon",
   ];
+
+  function handleNewsletter(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const value = email.trim();
+    if (!value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      setStatus("error");
+      return;
+    }
+    setStatus("success");
+    setEmail("");
+  }
 
   return (
     <footer className="relative bg-cream-50 pt-16 sm:pt-24 border-t border-cream-100">
@@ -56,12 +74,17 @@ export function Footer() {
             <div className="mb-5">
               <img
                 src="/brand/acres-manna-logo-purple.svg"
-                alt="Acres & Manna logo"
+                alt="AcresxManna logo"
                 className="h-12 w-auto"
               />
             </div>
             <p className="font-sans text-body-md text-charcoal-700 max-w-sm leading-relaxed">
-              {t("tagline")}
+              We transform Africa&apos;s agricultural resources into quality
+              food products through agro-processing, manufacturing and market
+              development.
+            </p>
+            <p className="mt-3 font-sans text-body-md font-bold text-purple-700">
+              Redefining the African Agro-food Market Globally.
             </p>
             <div className="mt-7 flex items-center gap-3">
               {socials.map(({ icon: Icon, label, href }) => (
@@ -75,12 +98,50 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+            <div className="mt-8 max-w-sm">
+              <p className="font-mono text-label uppercase tracking-[0.12em] text-terracotta-700 mb-3">
+                Stay connected
+              </p>
+              <form onSubmit={handleNewsletter} className="flex gap-2">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    setStatus("idle");
+                  }}
+                  placeholder="Your email"
+                  aria-label="Email for newsletter"
+                  className="flex-1 min-w-0 rounded-2xl border-2 border-cream-200 bg-white px-4 py-3 font-sans text-body-md text-charcoal-900 placeholder:text-charcoal-700/50 focus:border-terracotta-500 focus:outline-none focus:ring-0"
+                />
+                <button
+                  type="submit"
+                  className="shrink-0 rounded-2xl bg-terracotta-500 px-5 py-3 font-sans font-bold text-white hover:bg-terracotta-600 transition-colors"
+                >
+                  Subscribe
+                </button>
+              </form>
+              {status === "success" && (
+                <p className="mt-2 text-sm text-green-700">
+                  Thanks! We&apos;ll be in touch soon.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="mt-2 text-sm text-red-600">
+                  Please enter a valid email address.
+                </p>
+              )}
+              <p className="mt-2 text-sm text-charcoal-700">
+                Get progress updates, new products and partnership news.
+              </p>
+            </div>
           </div>
 
           {/* Nav */}
           <div>
             <p className="font-mono text-label uppercase tracking-[0.12em] text-terracotta-700 mb-5">
-              {t("navigate")}
+              Navigate
             </p>
             <ul className="space-y-3 font-sans text-body-md text-charcoal-900">
               {NAV_LINKS.map((link) => {
@@ -98,13 +159,30 @@ export function Footer() {
                   </li>
                 );
               })}
+              <li className="pt-3 font-mono text-label font-bold uppercase tracking-[0.12em] text-purple-700">
+                Business enquiries
+              </li>
+              {[
+                ["Become a Supplier", "/become-a-supplier"],
+                ["Become a Distributor", "/become-a-distributor"],
+                ["Business Enquiries", "/business-enquiries"],
+              ].map(([label, href]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="hover:text-terracotta-600 transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Products */}
           <div>
             <p className="font-mono text-label uppercase tracking-[0.12em] text-terracotta-700 mb-5">
-              {t("footerProducts")}
+              Products
             </p>
             <ul className="space-y-3 font-sans text-body-md text-charcoal-900">
               {productCategories.map((item) => (
@@ -120,7 +198,7 @@ export function Footer() {
                   href="/products"
                   className="text-terracotta-600 hover:text-terracotta-700 font-bold inline-flex items-center gap-2"
                 >
-                  {t("viewFullCatalog")}
+                  View full catalogue
                 </Link>
               </li>
             </ul>
@@ -129,60 +207,66 @@ export function Footer() {
           {/* Contact */}
           <div className="lg:col-span-3">
             <p className="font-mono text-label uppercase tracking-[0.12em] text-terracotta-700 mb-5">
-              {t("stayConnected")}
+              Contact
             </p>
             <ul className="space-y-4 font-sans text-body-md text-charcoal-700">
               <li className="flex items-center gap-3">
                 <IconMail size={18} className="shrink-0 text-terracotta-600" />
                 <a
-                  href="mailto:hello@acresxmanna.com"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="hover:text-terracotta-600 transition-colors"
                 >
-                  hello@acresxmanna.com
+                  {CONTACT_EMAIL}
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <IconPhone size={18} className="shrink-0 text-terracotta-600" />
                 <a
-                  href="tel:+234200000000"
+                  href={`tel:${CONTACT_PHONE.replace(/\s/g, "")}`}
                   className="hover:text-terracotta-600 transition-colors"
                 >
-                  +234 20 000 0000
+                  {CONTACT_PHONE}
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <IconPhone size={18} className="shrink-0 text-terracotta-600" />
+                <a
+                  href={`https://wa.me/${CONTACT_PHONE.replace(/\D/g, "")}`}
+                  className="hover:text-terracotta-600 transition-colors"
+                >
+                  WhatsApp AcresxManna
                 </a>
               </li>
             </ul>
-
-            <form onSubmit={(e) => e.preventDefault()} className="mt-7">
-              <label className="block font-sans text-sm font-bold text-charcoal-900 mb-2 uppercase tracking-[0.1em]">
-                {t("newsletter")}
-              </label>
-              <p className="text-xs text-charcoal-700 mb-3">{t("newsletterDescription")}</p>
-              <div className="flex rounded-soft overflow-hidden ring-1 ring-charcoal-900/10 focus-within:ring-2 focus-within:ring-mango-500">
-                <input
-                  type="email"
-                  placeholder="you@email.com"
-                  aria-label="Email address"
-                  className="min-w-0 flex-1 px-3 py-3 text-sm bg-white outline-none text-charcoal-900 placeholder:text-charcoal-700/50 sm:px-4"
-                />
-                <button
-                  type="submit"
-                  className="shrink-0 px-2 py-3 bg-terracotta-500 hover:bg-terracotta-600 transition-colors text-white font-bold text-xs uppercase tracking-[0.06em] sm:px-4 sm:text-sm sm:tracking-[0.08em]"
-                >
-                  {t("subscribe")}
-                </button>
-              </div>
-            </form>
+            <div className="mt-6 space-y-4">
+              {SITE_LOCATIONS.map(({ label, address }) => (
+                <address key={label} className="not-italic">
+                  <p className="font-mono text-label uppercase tracking-[0.08em] text-charcoal-900">
+                    {label}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-charcoal-700">
+                    {address}
+                  </p>
+                </address>
+              ))}
+            </div>
           </div>
         </div>
       </SectionContainer>
 
       <div className="border-t border-charcoal-900/5 bg-cream-100/60">
         <SectionContainer className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-charcoal-700 font-sans">
-          <p>© {new Date().getFullYear()} Acres & Manna. All rights reserved.</p>
-          <div className="flex items-center gap-5">
-            <a href="#" className="hover:text-terracotta-600">{t("privacy")}</a>
-            <a href="#" className="hover:text-terracotta-600">{t("terms")}</a>
-            <a href="#" className="hover:text-terracotta-600">{t("cookies")}</a>
+          <p>© {new Date().getFullYear()} {SITE_NAME}. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            {LEGAL_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-terracotta-600 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </SectionContainer>
       </div>
