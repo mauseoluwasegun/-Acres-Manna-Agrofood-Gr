@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -14,11 +15,15 @@ export const metadata = {
 const responsibilities = [
   {
     title: "AcresxManna Ltd",
+    image: "/images/corporate/acresxmanna-reception-brand-wall.jpg",
+    alt: "AcresxManna corporate headquarters reception wall in Ibadan, Nigeria",
     description:
-      "The Nigerian entity manufactures, signs customer contracts and exports.",
+      "The Nigerian entity manufactures, signs customer contracts and exports from our Moniya processing facility.",
   },
   {
     title: "UncleTobi.Shop",
+    image: "/images/logistics/highbay-racking-warehouse-logistics.jpg",
+    alt: "Modern high-bay logistics warehouse and inventory distribution facility",
     description:
       "The UK-facing entity invoices buyers and operates a warehouse and office in Hertford, United Kingdom.",
   },
@@ -51,29 +56,38 @@ export default function AboutPage() {
       </SectionContainer>
 
       <SectionContainer size="wide" className="mt-12">
-        <div className="grid gap-8 rounded-3xl bg-cream-50 p-7 sm:p-10 lg:grid-cols-2 lg:gap-12">
-          <div>
+        <div className="overflow-hidden rounded-3xl bg-cream-50 shadow-card lg:grid lg:grid-cols-12">
+          <div className="p-7 sm:p-10 lg:col-span-7 flex flex-col justify-center">
             <Eyebrow className="mb-4">Our story</Eyebrow>
             <h2 className="font-display text-display-2 font-black">
               More value can be created after harvest.
             </h2>
+            <div className="mt-6 space-y-4 font-sans text-body-md leading-relaxed text-charcoal-700">
+              <p>
+                Africa has significant agricultural resources, yet much of the
+                value in the food economy sits in what happens after harvest. We
+                believe more of that value can be captured through processing,
+                manufacturing, packaging, quality control and competitive food
+                brands.
+              </p>
+              <p>
+                Through our Nigerian operations and UK-facing business, we&apos;re
+                building the foundations for a stronger link between African
+                food production and international markets. We understand both
+                sides: the realities of sourcing and processing in Africa, and
+                the quality, consistency and commercial needs of the markets we
+                want to serve.
+              </p>
+            </div>
           </div>
-          <div className="space-y-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-            <p>
-              Africa has significant agricultural resources, yet much of the
-              value in the food economy sits in what happens after harvest. We
-              believe more of that value can be captured through processing,
-              manufacturing, packaging, quality control and competitive food
-              brands.
-            </p>
-            <p>
-              Through our Nigerian operations and UK-facing business, we&apos;re
-              building the foundations for a stronger link between African
-              food production and international markets. We understand both
-              sides: the realities of sourcing and processing in Africa, and
-              the quality, consistency and commercial needs of the markets we
-              want to serve.
-            </p>
+          <div className="relative aspect-[4/3] lg:aspect-auto lg:col-span-5 bg-cream-200">
+            <Image
+              src="/images/corporate/executive-consultation-showroom-office.jpg"
+              alt="AcresxManna commercial showroom and consultation office with product samples"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1023px) 100vw, 40vw"
+            />
           </div>
         </div>
       </SectionContainer>
@@ -83,19 +97,30 @@ export default function AboutPage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {responsibilities.map((item) => (
             <article
               key={item.title}
-              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
+              className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <Eyebrow className="mb-4">Company structure</Eyebrow>
-              <h2 className="font-display text-heading-1 font-black">
-                {item.title}
-              </h2>
-              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {item.description}
-              </p>
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-cream-100">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-7">
+                <Eyebrow className="mb-3">Company structure</Eyebrow>
+                <h2 className="font-display text-heading-1 font-black">
+                  {item.title}
+                </h2>
+                <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
+                  {item.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>

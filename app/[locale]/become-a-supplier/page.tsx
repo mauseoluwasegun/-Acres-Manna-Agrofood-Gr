@@ -27,6 +27,9 @@ export default function BecomeSupplierPage() {
       enquiryType="supplier"
       submitLabel="Apply to become a supplier"
       formIntro="Tell us what you grow or trade."
+      image="/images/farms/plantain-plantation-irrigation.jpg"
+      imageAlt="AcresxManna commercial plantain groves with drip irrigation"
+      imageCaption="Sustainable sourcing and off-take partnerships with local growers."
     />
   );
 }

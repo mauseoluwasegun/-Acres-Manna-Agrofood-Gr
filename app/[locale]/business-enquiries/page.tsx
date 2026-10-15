@@ -27,6 +27,9 @@ export default function BusinessEnquiriesPage() {
       enquiryType="other"
       submitLabel="Start the conversation"
       formIntro="Tell us what's on your mind."
+      image="/images/corporate/executive-consultation-showroom-office.jpg"
+      imageAlt="AcresxManna executive consultation and showroom office"
+      imageCaption="Strategic conversations at AcresxManna headquarters in Ibadan, Nigeria."
     />
   );
 }

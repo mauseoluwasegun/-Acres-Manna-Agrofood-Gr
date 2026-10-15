@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/layout/SectionContainer";
@@ -94,47 +95,74 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         >
           Back to products
         </Link>
-        <Eyebrow className="mb-5">
-          {available ? "On sale now · Export" : "Planned · Not yet available"}
-        </Eyebrow>
-        <h1 className="max-w-4xl font-display text-display-1 font-black">
-          {product.name}
-        </h1>
-        <p className="mt-8 max-w-3xl font-sans text-body-lg leading-relaxed text-charcoal-700">
-          {product.description}
-        </p>
-        {product.varieties && (
-          <p className="mt-5 font-sans text-body-md text-charcoal-700">
-            Varieties: {product.varieties.join(", ")}
-          </p>
-        )}
-        {product.highlights && (
-          <section className="mt-10 max-w-3xl">
-            <Eyebrow className="mb-4">Product highlights</Eyebrow>
-            <ul className="grid gap-3 sm:grid-cols-2">
-              {product.highlights.map((highlight) => (
-                <li
-                  key={highlight}
-                  className="rounded-2xl border border-cream-200 bg-white p-4 font-sans text-body-md leading-relaxed text-charcoal-700"
-                >
-                  {highlight}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-        {available && (
-          <p className="mt-8 max-w-3xl font-sans text-body-md leading-relaxed text-charcoal-700">
-            We welcome enquiries from retailers, wholesalers, food service
-            businesses, importers and distributors.
-          </p>
-        )}
-        <p className="mt-8 max-w-2xl font-sans text-body-md leading-relaxed text-charcoal-700">
-          Pack sizes are set to each client&apos;s requirements. Product
-          specifications, ingredients, origin, storage, shelf life, allergens
-          and compliance information must be confirmed for the specific
-          product and are not published here.
-        </p>
+
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
+          <div className="lg:col-span-7">
+            <Eyebrow className="mb-5">
+              {available ? "On sale now · Export" : "Planned · Not yet available"}
+            </Eyebrow>
+            <h1 className="max-w-4xl font-display text-display-1 font-black">
+              {product.name}
+            </h1>
+            <p className="mt-8 max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+              {product.description}
+            </p>
+            {product.varieties && (
+              <p className="mt-5 font-sans text-body-md text-charcoal-700">
+                Varieties: {product.varieties.join(", ")}
+              </p>
+            )}
+            {product.highlights && (
+              <section className="mt-8 max-w-2xl">
+                <Eyebrow className="mb-4">Product highlights</Eyebrow>
+                <ul className="grid gap-3 sm:grid-cols-2">
+                  {product.highlights.map((highlight) => (
+                    <li
+                      key={highlight}
+                      className="rounded-2xl border border-cream-200 bg-white p-4 font-sans text-body-md leading-relaxed text-charcoal-700"
+                    >
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {available && (
+              <p className="mt-8 max-w-2xl font-sans text-body-md leading-relaxed text-charcoal-700">
+                We welcome enquiries from retailers, wholesalers, food service
+                businesses, importers and distributors.
+              </p>
+            )}
+            <p className="mt-6 max-w-2xl font-sans text-body-sm leading-relaxed text-charcoal-500">
+              Pack sizes are set to each client&apos;s requirements. Product
+              specifications, ingredients, origin, storage, shelf life, allergens
+              and compliance information must be confirmed for the specific
+              product and are not published here.
+            </p>
+          </div>
+
+          {product.image && (
+            <div className="lg:col-span-5">
+              <figure className="overflow-hidden rounded-3xl border border-cream-200 bg-white p-3 shadow-card">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream-100">
+                  <Image
+                    src={product.image}
+                    alt={product.imageAlt || product.name}
+                    fill
+                    priority
+                    sizes="(max-width: 1023px) 100vw, 42vw"
+                    className="object-cover"
+                  />
+                </div>
+                {product.caption && (
+                  <figcaption className="p-4 text-center font-sans text-body-sm text-charcoal-600">
+                    {product.caption}
+                  </figcaption>
+                )}
+              </figure>
+            </div>
+          )}
+        </div>
       </SectionContainer>
 
       {available && (

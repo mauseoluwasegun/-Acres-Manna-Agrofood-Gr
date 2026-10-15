@@ -196,8 +196,8 @@ export function Hero() {
               {/* Main thick-frame image */}
               <div className="relative z-10">
                 <PatternFramedImage
-                  src="/images/hero-bg.jpg"
-                  alt="Illustrative African agriculture and food imagery; not a photograph of AcresxManna operations"
+                  src="/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg"
+                  alt="AcresxManna agricultural team harvesting greenhouse tomatoes at our farm operations"
                   width={900}
                   height={760}
                   sizes="(max-width: 639px) 85vw, (max-width: 1023px) 90vw, 42vw"
@@ -205,7 +205,7 @@ export function Hero() {
                   pattern="kente"
                   cornerAccent="terracotta"
                   priority
-                  className="aspect-[4/3]"
+                  className="aspect-[4/3] object-cover"
                 />
               </div>
 
@@ -222,15 +222,15 @@ export function Hero() {
                 className="absolute -top-6 -left-8 sm:-left-14 w-[46%] sm:w-[42%] z-20"
               >
                 <PatternFramedImage
-                  src="/images/product-mango.jpg"
-                  alt="Illustrative agricultural produce"
+                  src="/images/products/african-food-king-hibiscus-tea.jpg"
+                  alt="African Food King premium hibiscus tea retail pouches"
                   width={420}
                   height={520}
                   sizes="(max-width: 639px) 40vw, (max-width: 1023px) 38vw, 18vw"
                   thickness="medium"
                   pattern="ankara"
                   cornerAccent="mango"
-                  className="aspect-[4/5]"
+                  className="aspect-[4/5] object-cover"
                 />
               </motion.div>
 
@@ -246,15 +246,15 @@ export function Hero() {
                 className="absolute -bottom-8 -right-6 sm:-right-12 w-[50%] sm:w-[46%] z-20"
               >
                 <PatternFramedImage
-                  src="/images/product-jollof.jpg"
-                  alt="Illustrative prepared African food"
+                  src="/images/products/palm-oil-bottling-hall.jpg"
+                  alt="Quality assurance and bottling of AcresxManna pure palm oil"
                   width={420}
                   height={520}
                   sizes="(max-width: 639px) 45vw, (max-width: 1023px) 42vw, 22vw"
                   thickness="medium"
                   pattern="mudcloth"
                   cornerAccent="forest"
-                  className="aspect-[4/5]"
+                  className="aspect-[4/5] object-cover"
                 />
               </motion.div>
             </ParallaxSection>
@@ -271,15 +271,15 @@ export function Hero() {
               className="absolute top-[38%] -right-4 sm:-right-8 w-[28%] sm:w-[24%] z-30"
             >
               <PatternFramedImage
-                src="/images/product-cocoa.jpg"
-                alt="Illustrative agricultural produce"
+                src="/images/processing/bakery-deck-oven-fresh-bread.jpg"
+                alt="Freshly baked artisan bread from our commercial deck ovens"
                 width={260}
                 height={260}
                 sizes="(max-width: 639px) 25vw, (max-width: 1023px) 24vw, 12vw"
                 thickness="thin"
                 pattern="woven"
                 cornerAccent="indigo"
-                className="aspect-square"
+                className="aspect-square object-cover"
               />
             </motion.div>
 

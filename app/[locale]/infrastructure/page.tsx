@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -10,6 +11,39 @@ export const metadata = {
   description:
     "How AcresxManna is building production, quality assurance and supply chain capacity for African food manufacturing.",
 };
+
+const facilityGallery = [
+  {
+    title: "Stainless Steel Mixing & Sifting",
+    caption: "Food-grade industrial processing tanks, motorized blenders, and mechanical sifters operating at our central processing hub.",
+    image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
+  },
+  {
+    title: "Commercial Multi-Deck Bakery Ovens",
+    caption: "Master bakers crafting golden loaves and baked items using high-capacity commercial digital deck ovens.",
+    image: "/images/processing/bakery-deck-oven-fresh-bread.jpg",
+  },
+  {
+    title: "Hygienic Sorting & Quality Control",
+    caption: "Skilled quality assurance personnel in sterile protective gear meticulously hand-sorting produce to export grade.",
+    image: "/images/processing/full-facility-sorting-hall.jpg",
+  },
+  {
+    title: "Automated Bottling & Sealing",
+    caption: "Hygienic packaging operators sealing and inspecting thousands of bottles of pure AcresxManna cooking oils.",
+    image: "/images/products/palm-oil-bottling-hall.jpg",
+  },
+  {
+    title: "High-Bay Pallet Logistics Racking",
+    caption: "State-of-the-art warehouse racking system with computerized barcode tracking at our central agro-logistics hub.",
+    image: "/images/logistics/highbay-racking-warehouse-logistics.jpg",
+  },
+  {
+    title: "Container Loading & Dispatch",
+    caption: "Supervised container loading operations ensuring safe transit for high-capacity regional and global export orders.",
+    image: "/images/logistics/loading-bottled-nuts-truck-supervision.jpg",
+  },
+];
 
 export default function InfrastructurePage() {
   return (
@@ -33,29 +67,33 @@ export default function InfrastructurePage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {[
             {
               title: "Production and processing",
               status: "Operating today",
+              image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
               description:
                 "AcresxManna Ltd manufactures food products at its factory and headquarters in Moniya, Ibadan. Further production capacity and process improvements are part of our development ambitions.",
             },
             {
               title: "Quality information",
               status: "Built into the work",
+              image: "/images/processing/hygienic-nut-sorting-team.jpg",
               description:
                 "Quality requirements are product- and market-specific. We confirm specifications and compliance details for each enquiry, and do not publish unverified certification claims.",
             },
             {
               title: "Supply chain and warehousing",
               status: "Operating today",
+              image: "/images/logistics/highbay-racking-warehouse-logistics.jpg",
               description:
                 "Our confirmed locations include the factory and headquarters in Moniya, the Nigerian office in Lagos, and the UK warehouse and office in Hertford.",
             },
             {
               title: "Infrastructure for growth",
               status: "Building next",
+              image: "/images/processing/industrial-tilting-cooker-station.jpg",
               description:
                 "Planned development includes additional production capacity, more efficient processing and packaging, improved storage and inventory control, and wider product capability.",
             },
@@ -64,15 +102,71 @@ export default function InfrastructurePage() {
               as="article"
               key={item.title}
               delay={0.05 * index}
-              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
+              className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <Eyebrow className="mb-4">{item.status}</Eyebrow>
-              <h2 className="font-display text-heading-2 font-black">
-                {item.title}
-              </h2>
-              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {item.description}
-              </p>
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
+                    {item.status}
+                  </span>
+                </div>
+              </div>
+              <div className="p-7">
+                <h2 className="font-display text-heading-2 font-black">
+                  {item.title}
+                </h2>
+                <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
+                  {item.description}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </SectionContainer>
+
+      {/* Facility Visual Showcase */}
+      <SectionContainer size="wide" className="mt-20">
+        <div className="mb-10 max-w-3xl">
+          <Eyebrow className="mb-4">Inside the facility</Eyebrow>
+          <h2 className="font-display text-display-2 font-black">
+            Active processing, testing and packaging in Moniya, Ibadan.
+          </h2>
+          <p className="mt-4 font-sans text-body-lg leading-relaxed text-charcoal-700">
+            A glimpse into the daily operations that convert harvested commodities into market-ready, hygienically packaged food products.
+          </p>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {facilityGallery.map((item, index) => (
+            <ScrollReveal
+              as="figure"
+              key={item.title}
+              delay={0.04 * index}
+              className="group overflow-hidden rounded-3xl border border-cream-200 bg-cream-50 shadow-card transition hover:shadow-card-hover"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-200">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <figcaption className="p-5">
+                <h3 className="font-display text-heading-3 font-bold text-charcoal-900">
+                  {item.title}
+                </h3>
+                <p className="mt-2 font-sans text-body-sm leading-relaxed text-charcoal-600">
+                  {item.caption}
+                </p>
+              </figcaption>
             </ScrollReveal>
           ))}
         </div>

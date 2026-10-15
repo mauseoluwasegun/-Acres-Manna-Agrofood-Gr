@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -23,7 +24,7 @@ export function ProductsSection() {
               Full product range
             </Button>
           </div>
-          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PRODUCTS.map((product) => (
               <ScrollReveal
                 as="li"
@@ -32,24 +33,42 @@ export function ProductsSection() {
               >
                 <Link
                   href={`/products/${product.slug}`}
-                  className="block h-full rounded-3xl border border-cream-200 bg-cream-50 p-6 transition hover:-translate-y-1 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700"
+                  className="group flex h-full flex-col overflow-hidden rounded-3xl border border-cream-200 bg-cream-50 shadow-card transition hover:-translate-y-1 hover:shadow-card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple-700"
                 >
-                  <p className="font-mono text-label font-bold uppercase tracking-[0.1em] text-purple-700">
-                    {product.status === "Available now"
-                      ? "Available now"
-                      : "Coming soon"}
-                  </p>
-                  <h3 className="mt-3 font-display text-heading-2 font-black">
-                    {product.name}
-                  </h3>
-                  {product.varieties && (
-                    <p className="mt-2 font-sans text-body-md text-charcoal-700">
-                      {product.varieties.join(" · ")}
-                    </p>
+                  {product.image && (
+                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-cream-200">
+                      <Image
+                        src={product.image}
+                        alt={product.imageAlt || product.name}
+                        fill
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
+                          {product.status === "Available now"
+                            ? "Available now"
+                            : "Coming soon"}
+                        </span>
+                      </div>
+                    </div>
                   )}
-                  <span className="mt-5 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4">
-                    Request product information
-                  </span>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="font-display text-heading-2 font-black">
+                      {product.name}
+                    </h3>
+                    {product.varieties && (
+                      <p className="mt-2 font-sans text-body-sm text-charcoal-700">
+                        {product.varieties.join(" · ")}
+                      </p>
+                    )}
+                    <p className="mt-2 line-clamp-2 font-sans text-body-sm text-charcoal-600">
+                      {product.description}
+                    </p>
+                    <span className="mt-auto pt-4 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4">
+                      Request product information
+                    </span>
+                  </div>
                 </Link>
               </ScrollReveal>
             ))}

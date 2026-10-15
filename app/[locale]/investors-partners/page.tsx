@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { ScrollReveal } from "@/components/animations/MotionSection";
@@ -13,21 +14,29 @@ export const metadata = {
 const WHAT_WE_BUILD = [
   {
     title: "Production capacity",
+    image: "/images/processing/industrial-tilting-cooker-station.jpg",
+    alt: "Industrial stainless steel cooking and mixing station",
     description:
       "Building the production capability behind African agro-processing and food manufacturing.",
   },
   {
-    title: "Working capital",
+    title: "Working capital & Inventory",
+    image: "/images/logistics/warehouse-pallet-bottled-peanuts.jpg",
+    alt: "Palletized finished food stock in warehouse storage",
     description:
       "The resources needed for raw materials, production cycles, packaging, inventory and fulfilment.",
   },
   {
     title: "Product development",
+    image: "/images/products/packaged-snacks-jars.jpg",
+    alt: "Packaged retail agro-food snacks in branded jars",
     description:
       "Developing food products that connect African agricultural resources with buyer needs.",
   },
   {
     title: "Market development",
+    image: "/images/logistics/shipping-container-export-ready.jpg",
+    alt: "Export freight container prepared for international shipping",
     description:
       "Building commercial relationships and routes to market in Africa and internationally.",
   },
@@ -58,26 +67,61 @@ export default function InvestorsPartnersPage() {
         </p>
       </SectionContainer>
 
+      {/* Corporate Facility Spotlight */}
+      <SectionContainer size="wide" className="mt-12">
+        <div className="overflow-hidden rounded-3xl bg-cream-50 shadow-card lg:grid lg:grid-cols-12">
+          <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-5 bg-cream-200">
+            <Image
+              src="/images/corporate/acresxmanna-reception-brand-wall.jpg"
+              alt="AcresxManna headquarters in Ibadan, Nigeria"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1023px) 100vw, 40vw"
+            />
+          </div>
+          <div className="p-8 sm:p-12 lg:col-span-7 flex flex-col justify-center">
+            <Eyebrow className="mb-4">Our Base of Operations</Eyebrow>
+            <h2 className="font-display text-display-2 font-black leading-tight">
+              Grounded in Nigeria. Scaled for Global Markets.
+            </h2>
+            <p className="mt-4 font-sans text-body-lg leading-relaxed text-charcoal-700">
+              Our central processing facility, storage infrastructure, and administrative headquarters are located in Moniya, Ibadan, Oyo State — within reach of major agricultural cultivation belts and direct logistics corridors to port.
+            </p>
+          </div>
+        </div>
+      </SectionContainer>
+
       <div className="my-20">
         <PatternDivider pattern="woven" thickness="medium" />
       </div>
 
       <SectionContainer size="wide">
         <Eyebrow className="mb-5">What we&apos;re building</Eyebrow>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2">
           {WHAT_WE_BUILD.map((item, index) => (
             <ScrollReveal
               as="article"
               key={item.title}
               delay={0.05 * index}
-              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
+              className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <h2 className="font-display text-heading-1 font-black">
-                {item.title}
-              </h2>
-              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {item.description}
-              </p>
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
+                <Image
+                  src={item.image}
+                  alt={item.alt}
+                  fill
+                  sizes="(max-width: 767px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-7">
+                <h2 className="font-display text-heading-1 font-black">
+                  {item.title}
+                </h2>
+                <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
+                  {item.description}
+                </p>
+              </div>
             </ScrollReveal>
           ))}
         </div>

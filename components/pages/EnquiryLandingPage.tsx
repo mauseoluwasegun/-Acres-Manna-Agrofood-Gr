@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -12,6 +13,9 @@ type EnquiryLandingPageProps = {
   enquiryType: EnquiryType;
   submitLabel: string;
   formIntro?: string;
+  image?: string;
+  imageAlt?: string;
+  imageCaption?: string;
 };
 
 export function EnquiryLandingPage({
@@ -23,17 +27,45 @@ export function EnquiryLandingPage({
   enquiryType,
   submitLabel,
   formIntro,
+  image,
+  imageAlt,
+  imageCaption,
 }: EnquiryLandingPageProps) {
   return (
     <main id="main" className="pb-24 pt-32">
       <SectionContainer size="wide">
-        <Eyebrow className="mb-5">{eyebrow}</Eyebrow>
-        <h1 className="max-w-5xl font-display text-display-1 font-black">
-          {title}
-        </h1>
-        <p className="mt-8 max-w-3xl font-sans text-body-lg leading-relaxed text-charcoal-700">
-          {intro}
-        </p>
+        <div className={image ? "grid gap-12 lg:grid-cols-12 lg:items-center" : ""}>
+          <div className={image ? "lg:col-span-7" : ""}>
+            <Eyebrow className="mb-5">{eyebrow}</Eyebrow>
+            <h1 className="max-w-5xl font-display text-display-1 font-black">
+              {title}
+            </h1>
+            <p className="mt-8 max-w-3xl font-sans text-body-lg leading-relaxed text-charcoal-700">
+              {intro}
+            </p>
+          </div>
+          {image && (
+            <div className="lg:col-span-5">
+              <figure className="overflow-hidden rounded-3xl border border-cream-200 bg-white p-3 shadow-card">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream-100">
+                  <Image
+                    src={image}
+                    alt={imageAlt || title}
+                    fill
+                    priority
+                    sizes="(max-width: 1023px) 100vw, 42vw"
+                    className="object-cover"
+                  />
+                </div>
+                {imageCaption && (
+                  <figcaption className="p-3 text-center font-sans text-body-sm text-charcoal-600">
+                    {imageCaption}
+                  </figcaption>
+                )}
+              </figure>
+            </div>
+          )}
+        </div>
       </SectionContainer>
 
       <div className="my-20">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -41,44 +42,61 @@ export default function ProductsPage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {availableProducts.map((product, index) => (
             <ScrollReveal
               as="article"
               key={product.id}
               delay={0.04 * index}
-              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <Eyebrow className="mb-4">On sale now · Export</Eyebrow>
-              <h2 className="font-display text-heading-1 font-black">
-                {product.name}
-              </h2>
-              {product.varieties && (
-                <p className="mt-3 font-sans text-body-md text-charcoal-700">
-                  Varieties: {product.varieties.join(", ")}
+              {product.image && (
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-cream-100">
+                  <Image
+                    src={product.image}
+                    alt={product.imageAlt || product.name}
+                    fill
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
+                      On sale now · Export
+                    </span>
+                  </div>
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-7">
+                <h2 className="font-display text-heading-1 font-black">
+                  {product.name}
+                </h2>
+                {product.varieties && (
+                  <p className="mt-2 font-sans text-body-sm font-semibold text-purple-700">
+                    Varieties: {product.varieties.join(", ")}
+                  </p>
+                )}
+                <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
+                  {product.description}
                 </p>
-              )}
-              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {product.description}
-              </p>
-              {product.highlights && (
-                <ul className="mt-4 space-y-2 font-sans text-body-md text-charcoal-700">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="flex gap-2">
-                      <span aria-hidden="true" className="font-bold text-purple-700">•</span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <Link
-                href={`/products/${product.slug}`}
-                className="mt-6 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
-              >
-                {product.status === "Available now"
-                  ? "Request product information"
-                  : "View planned product"}
-              </Link>
+                {product.highlights && (
+                  <ul className="mt-4 space-y-1.5 font-sans text-body-sm text-charcoal-700">
+                    {product.highlights.map((highlight) => (
+                      <li key={highlight} className="flex gap-2">
+                        <span aria-hidden="true" className="font-bold text-purple-700">•</span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="mt-auto pt-6">
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
+                  >
+                    Request product information
+                  </Link>
+                </div>
+              </div>
             </ScrollReveal>
           ))}
         </div>

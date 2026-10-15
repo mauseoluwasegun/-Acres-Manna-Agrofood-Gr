@@ -27,6 +27,9 @@ export default function BecomeDistributorPage() {
       enquiryType="distributor"
       submitLabel="Apply to become a distributor"
       formIntro="Tell us about your business."
+      image="/images/logistics/distribution-depot-pallets-peanuts.jpg"
+      imageAlt="Pallets of packaged snacks and food items in dispatch depot"
+      imageCaption="Palletized inventory and wholesale fulfillment for distribution partners."
     />
   );
 }
