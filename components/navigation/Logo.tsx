@@ -24,12 +24,14 @@ export function Logo({
       )}
     >
       <img
-        src="/brand/acres-manna-logo-purple.svg"
-        alt="AcresxManna logo"
+        src={
+          variant === "dark"
+            ? "/brand/acres-manna-logo-horizontal-white.svg"
+            : "/brand/acres-manna-logo-horizontal.svg"
+        }
+        alt="Acres & Manna"
         className={cn(
-          "h-11 sm:h-14 w-auto transition-opacity duration-500",
-          !reduce && "animate-[fadeIn_0.5s_ease-out_0.1s_both]",
-          variant === "light" && "",
+          "h-10 sm:h-12 w-auto transition-opacity duration-300",
         )}
       />
     </button>

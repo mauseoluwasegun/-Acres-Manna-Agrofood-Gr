@@ -62,7 +62,7 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
     >
       <div className="container-page flex items-center justify-between h-16 sm:h-20">
         <Logo
-          variant={isLight ? "light" : "dark"}
+          variant={pathname === "/" && !scrolled ? "dark" : "light"}
           onClick={() => router.push("/")}
         />
 
