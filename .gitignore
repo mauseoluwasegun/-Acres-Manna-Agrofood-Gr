@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# scratch and extraction scripts
+*.py
+current_logo.png
+page*.png
+page*.svg
+test_logo_*
+

@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { SITE_LOCATIONS } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { MotionSection, ScrollReveal } from "@/components/animations/MotionSection";
+import { BusinessFaq } from "@/components/sections/BusinessFaq";
 
 export const metadata = {
   title: "About Us",
@@ -22,10 +23,11 @@ const responsibilities = [
   },
   {
     title: "UncleTobi.Shop",
-    image: "/images/logistics/highbay-racking-warehouse-logistics.jpg",
-    alt: "Modern high-bay logistics warehouse and inventory distribution facility",
+    image: "/images/brands/uncletobi-logo.png",
+    alt: "UncleTobi.Shop official brand identity",
     description:
       "The UK-facing entity invoices buyers and operates a warehouse and office in Hertford, United Kingdom.",
+    fit: "contain",
   },
 ];
 
@@ -82,8 +84,8 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/3] lg:aspect-auto lg:col-span-5 bg-cream-200">
             <Image
-              src="/images/corporate/executive-consultation-showroom-office.jpg"
-              alt="AcresxManna commercial showroom and consultation office with product samples"
+              src="/images/corporate/acresxmanna-hq-showroom-desk.jpg"
+              alt="AcresxManna headquarters showroom with purple geometric wall and branded products on desk"
               fill
               className="object-cover"
               sizes="(max-width: 1023px) 100vw, 40vw"
@@ -103,13 +105,21 @@ export default function AboutPage() {
               key={item.title}
               className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <div className="relative aspect-[16/10] w-full overflow-hidden bg-cream-100">
+              <div
+                className={`relative aspect-[16/10] w-full overflow-hidden ${
+                  item.fit === "contain" ? "bg-white" : "bg-cream-100"
+                }`}
+              >
                 <Image
                   src={item.image}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 767px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`transition-transform duration-500 group-hover:scale-105 ${
+                    item.fit === "contain"
+                      ? "object-contain p-8"
+                      : "object-cover"
+                  }`}
                 />
               </div>
               <div className="p-7">
@@ -148,6 +158,49 @@ export default function AboutPage() {
           </div>
         </SectionContainer>
       </MotionSection>
+
+      {/* Farm & Processing Gallery */}
+      <SectionContainer size="wide" className="mt-16">
+        <div className="mb-8 max-w-3xl">
+          <Eyebrow className="mb-4">From field to factory</Eyebrow>
+          <h2 className="font-display text-display-2 font-black">
+            Agricultural roots, industrial ambition.
+          </h2>
+          <p className="mt-4 font-sans text-body-lg leading-relaxed text-charcoal-700">
+            Our operations span greenhouse farming, commodity aggregation, processing and packaged food—all built on African soil.
+          </p>
+        </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="about-gallery">
+          {[
+            { src: "/images/farms/tomato-farm-team-branded-uniforms.jpg", alt: "AcresxManna team harvesting tomatoes in branded purple uniforms", caption: "Tomato greenhouse farming" },
+            { src: "/images/farms/shadehouse-tomato-seedling-nursery.jpg", alt: "Dense tomato seedlings in shadehouse nursery rows", caption: "Seedling nursery" },
+            { src: "/images/farms/papaya-tree-greenhouse-harvest.jpg", alt: "Papaya tree laden with fruit inside greenhouse with farmer", caption: "Papaya growing" },
+            { src: "/images/processing/nut-sorting-team-white-coats.jpg", alt: "Nut sorting team in white lab coats at long table", caption: "Peanut processing" },
+            { src: "/images/processing/palm-oil-labelling-bottling-line.jpg", alt: "Workers labelling rows of palm oil bottles on production floor", caption: "Palm oil bottling" },
+            { src: "/images/products/coated-peanut-jars-snack-warehouse.jpg", alt: "Stacked coated peanut jars and snack jars in warehouse", caption: "Finished product stock" },
+          ].map(({ src, alt, caption }, i) => (
+            <ScrollReveal
+              as="figure"
+              key={caption}
+              delay={0.05 * i}
+              className="group overflow-hidden rounded-3xl border border-cream-200 bg-cream-50 shadow-card transition hover:shadow-card-hover"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src={src}
+                  alt={alt}
+                  fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <figcaption className="px-5 py-4 font-sans text-body-sm font-medium text-charcoal-700">
+                {caption}
+              </figcaption>
+            </ScrollReveal>
+          ))}
+        </div>
+      </SectionContainer>
 
       <SectionContainer size="wide" className="mt-16">
         <div className="mb-8 max-w-3xl">
@@ -197,6 +250,7 @@ export default function AboutPage() {
           ))}
         </div>
       </SectionContainer>
+      <BusinessFaq />
       <SectionContainer className="mt-16 text-center">
         <Button href="/contact" variant="primary" size="lg">
           Let&apos;s Talk

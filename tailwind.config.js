@@ -15,31 +15,31 @@ module.exports = {
           400: "#FDDC42",
         },
         cream: {
-          50: "rgb(var(--cream-50) / <alpha-value>)",
-          100: "rgb(var(--cream-100) / <alpha-value>)",
+          50: "rgb(var(--cream-50) / 1)",
+          100: "rgb(var(--cream-100) / 1)",
         },
         terracotta: {
-          500: "rgb(var(--terracotta-500) / <alpha-value>)",
-          600: "rgb(var(--terracotta-600) / <alpha-value>)",
-          700: "rgb(var(--terracotta-700) / <alpha-value>)",
+          500: "rgb(var(--terracotta-500) / 1)",
+          600: "rgb(var(--terracotta-600) / 1)",
+          700: "rgb(var(--terracotta-700) / 1)",
         },
         mango: {
-          400: "rgb(var(--mango-400) / <alpha-value>)",
-          500: "rgb(var(--mango-500) / <alpha-value>)",
+          400: "rgb(var(--mango-400) / 1)",
+          500: "rgb(var(--mango-500) / 1)",
         },
         earth: {
-          600: "rgb(var(--earth-600) / <alpha-value>)",
+          600: "rgb(var(--earth-600) / 1)",
         },
         forest: {
-          600: "rgb(var(--forest-600) / <alpha-value>)",
-          700: "rgb(var(--forest-700) / <alpha-value>)",
+          600: "rgb(var(--forest-600) / 1)",
+          700: "rgb(var(--forest-700) / 1)",
         },
         indigo: {
-          700: "rgb(var(--indigo-700) / <alpha-value>)",
+          700: "rgb(var(--indigo-700) / 1)",
         },
         charcoal: {
-          700: "rgb(var(--charcoal-700) / <alpha-value>)",
-          900: "rgb(var(--charcoal-900) / <alpha-value>)",
+          700: "rgb(var(--charcoal-700) / 1)",
+          900: "rgb(var(--charcoal-900) / 1)",
         },
       },
       fontFamily: {

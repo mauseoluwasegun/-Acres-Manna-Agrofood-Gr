@@ -16,26 +16,26 @@ const marketSteps = [
   {
     title: "Market development",
     description: "Consider demand, competition, regulation and distribution across regional and overseas markets.",
-    image: "/images/corporate/executive-consultation-showroom-office.jpg",
-    alt: "AcresxManna commercial consultation and product planning office",
+    image: "/images/corporate/acresxmanna-office-purple-logo-wall.jpg",
+    alt: "AcresxManna Ibadan headquarters office with branded purple logo wall",
   },
   {
     title: "Product readiness",
     description: "Confirm specifications, hermetic food packaging, and phytosanitary certificates for each trade lane.",
-    image: "/images/products/palm-oil-bottling-hall.jpg",
-    alt: "Inspecting and labeling packaged bottles of cooking oil",
+    image: "/images/processing/palm-oil-bottling-team.jpg",
+    alt: "Team arranging and inspecting bottled palm oil production run",
   },
   {
     title: "Commercial partnerships",
     description: "Build relationships with importers, bulk buyers, supermarket chains, and food service companies.",
-    image: "/images/logistics/loading-bottled-nuts-truck-supervision.jpg",
-    alt: "Supervising container freight dispatch for distributor fulfillment",
+    image: "/images/logistics/loading-bottled-nuts-container.jpg",
+    alt: "Team loading bottled peanut products into freight container for dispatch",
   },
   {
     title: "Supply reliability",
     description: "Develop scalable processing lines to supply recurring multi-container volume on strict schedules.",
-    image: "/images/logistics/container-loaded-plantain-chips.jpg",
-    alt: "Export container loaded to roof with cases of packaged plantain chips and snacks",
+    image: "/images/logistics/container-bottled-products-export.jpg",
+    alt: "Export container packed wall-to-wall with bottled product ready for international dispatch",
   },
 ];
 

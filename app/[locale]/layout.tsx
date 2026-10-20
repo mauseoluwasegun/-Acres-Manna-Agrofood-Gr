@@ -75,8 +75,7 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout({
-  children,
+export default async function LocaleLayout({  children,
   params
 }: {
   children: ReactNode;
@@ -92,6 +91,18 @@ export default async function LocaleLayout({
     >
       <head>
         <link rel="manifest" href="/manifest.json" />
+        {/* Hreflang links for multilingual SEO */}
+        {routing.locales.map((loc) => {
+          const localePath = loc === routing.defaultLocale ? "" : `/${loc}`;
+          return (
+            <link
+              key={loc}
+              rel="alternate"
+              href={`${SITE_URL}${localePath}`}
+              hrefLang={loc}
+            />
+          );
+        })}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -101,7 +112,7 @@ export default async function LocaleLayout({
               name: SITE_NAME,
               legalName: "AcresxManna Ltd",
               url: SITE_URL,
-              logo: `${SITE_URL}/brand/acres-manna-logo-purple.svg`,
+              logo: `${SITE_URL}/brand/acres-manna-logo-horizontal.svg`,
               email: CONTACT_EMAIL,
               telephone: CONTACT_PHONE,
               sameAs: [INSTAGRAM_URL],
@@ -113,8 +124,7 @@ export default async function LocaleLayout({
                 addressCountry: "NG",
               },
             }),
-          }}
-        />
+          }} />
       </head>
       <body className="bg-cream-100 text-charcoal-900 antialiased" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>

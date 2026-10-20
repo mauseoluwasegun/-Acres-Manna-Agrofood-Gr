@@ -336,7 +336,7 @@ Panel 1 🌱 AGRICULTURE → Panel 2 🌾 HARVEST → Panel 3 🏭 PROCESSING
 **Panel Structure (each identical framework)**:
 - Large pattern-framed feature image (left)
 - Stage number big in corner (Playfair Display Black, low opacity, huge size e.g. "01")
-- Eyebrow: "STAGE 01 · AGRICULTURE"
+- Eyebrow: "STAGE · AGRICULTURE"
 - Headline (Playfair Display) with one italic accent word
 - 2-line description
 - Custom hand-drawn icon (big)

@@ -19,6 +19,10 @@ export function ProductsSection() {
               <h2 className="font-display text-display-1 font-black">
                 African ingredients. Everyday food. Global opportunity.
               </h2>
+              <p className="mt-4 font-sans text-body-md text-charcoal-700">
+                Nigerian retail is planned. Pack sizes are client-specific; export
+                destinations are not published.
+              </p>
             </div>
             <Button href="/products" variant="secondary" size="lg">
               Full product range
@@ -73,10 +77,6 @@ export function ProductsSection() {
               </ScrollReveal>
             ))}
           </ul>
-          <p className="mt-7 font-sans text-body-md text-charcoal-700">
-            Nigerian retail is planned. Pack sizes are client-specific; export
-            destinations are not published.
-          </p>
         </SectionContainer>
       </section>
     </>

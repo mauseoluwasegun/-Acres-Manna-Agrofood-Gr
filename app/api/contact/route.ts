@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { resend } from "@/lib/resend";
+import { resend, isResendConfigured } from "@/lib/resend";
 import {
   buildEnquirySubject,
   buildEnquiryHtml,
@@ -92,6 +92,17 @@ export async function POST(request: Request) {
   };
 
   console.log("[contact] enquiry received:", submission);
+
+  if (!isResendConfigured()) {
+    console.error("[contact] RESEND_API_KEY is not configured on the server");
+    return NextResponse.json(
+      {
+        error:
+          "Email service is currently being configured. Please contact us directly at info@acresxmanna.com.",
+      },
+      { status: 503 },
+    );
+  }
 
   // ── 1. Send notification email to the team ────────────────────────
   try {

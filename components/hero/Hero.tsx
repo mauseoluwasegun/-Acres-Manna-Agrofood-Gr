@@ -63,8 +63,8 @@ function WordReveal({
       initial="hidden"
       animate="show"
       className={cn(
-        "inline-block align-bottom mr-[0.12em]",
-        isItalic && "italic text-yellow-400",
+        "inline-block align-bottom mr-[0.14em]",
+        isItalic ? "italic text-yellow-400 font-serif" : "text-white",
       )}
       dangerouslySetInnerHTML={{ __html: word }}
     />
@@ -77,7 +77,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100svh] overflow-hidden bg-purple-700 pb-24 pt-28 text-white sm:pt-32"
+      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden bg-purple-700 pb-16 pt-24 text-white sm:pt-28"
     >
       {/* Hero backdrop blobs + watermark */}
       <div aria-hidden className="absolute inset-0">
@@ -113,7 +113,7 @@ export function Hero() {
 
       <SectionContainer size="wide" className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* LEFT 60% - Copy */}
+          {/* LEFT - Copy */}
           <div className="lg:col-span-7 relative z-10">
             <motion.div
               initial={reduce ? {} : { opacity: 0, y: 20, filter: "blur(6px)" }}
@@ -126,7 +126,7 @@ export function Hero() {
               </Eyebrow>
             </motion.div>
 
-            <h1 className="font-display text-balance text-[clamp(2.75rem,14vw,3.5rem)] font-black leading-[0.92] tracking-tight text-white sm:text-display-hero">
+            <h1 className="font-display text-balance text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-black leading-[0.98] tracking-tight !text-white">
               <span className="block mb-2 sm:mb-3">
                 <WordReveal word="Africa&apos;s" i={0} />
                 <WordReveal word="food." i={1} isItalic />
@@ -145,7 +145,7 @@ export function Hero() {
               initial={reduce ? {} : { opacity: 0, y: 30, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.7, delay: 0.55 }}
-              className="mt-8 max-w-xl font-sans text-body-lg leading-relaxed text-white/90 sm:mt-10"
+              className="mt-6 max-w-xl font-sans text-body-lg leading-relaxed text-white/90 sm:mt-8"
             >
               <TypingText
                 text="We turn Africa's agricultural resources into quality food products through processing, manufacturing and market access."
@@ -158,13 +158,13 @@ export function Hero() {
               initial={reduce ? {} : { opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.75 }}
-              className="mt-10 flex flex-wrap gap-4 sm:gap-5"
+              className="mt-8 flex flex-wrap gap-4 sm:gap-5"
             >
               <Button
                 href="/products"
                 variant="primary"
                 size="lg"
-                className="!bg-yellow-400 !text-purple-700 !shadow-none hover:brightness-95"
+                className="!bg-yellow-400 !text-purple-700 !shadow-none hover:brightness-95 font-bold"
               >
                 Explore our products
               </Button>
@@ -180,127 +180,89 @@ export function Hero() {
 
           </div>
 
-          {/* RIGHT 40% - Collage */}
+          {/* RIGHT - Seamlessly Blended Hero Visual Showcase */}
           <motion.div
-            initial={reduce ? {} : { opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: "spring",
-              stiffness: 120,
-              damping: 24,
-              delay: 0.3,
-            } as any}
-            className="lg:col-span-5 relative"
+            initial={reduce ? {} : { opacity: 0, scale: 0.96, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="lg:col-span-5 relative flex items-center justify-center pt-4 lg:pt-0"
           >
-            <ParallaxSection speed={0.2} direction="up" rotate={true} rotateAmount={2}>
-              {/* Main thick-frame image */}
-              <div className="relative z-10">
-                <PatternFramedImage
-                  src="/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg"
-                  alt="AcresxManna agricultural team harvesting greenhouse tomatoes at our farm operations"
-                  width={900}
-                  height={760}
-                  sizes="(max-width: 639px) 85vw, (max-width: 1023px) 90vw, 42vw"
-                  thickness="bold"
-                  pattern="kente"
-                  cornerAccent="terracotta"
-                  priority
-                  className="aspect-[4/3] object-cover"
-                />
+            {/* Multi-layered Backlight Aura */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-6 sm:-inset-10 rounded-full bg-gradient-to-tr from-yellow-400/35 via-purple-500/30 to-purple-800/40 blur-3xl opacity-85"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -bottom-8 -right-4 h-56 w-56 rounded-full bg-yellow-400/30 blur-2xl"
+            />
+
+            {/* Main Visual Composition Container */}
+            <div className="relative w-full max-w-[440px] lg:max-w-[480px]">
+              
+              {/* Outer soft glowing frame with backdrop blur */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/15 to-purple-950/40 p-2.5 sm:p-3 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] backdrop-blur-md">
+                
+                {/* Main Photo with gradient fade into the purple theme */}
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-purple-950/60 shadow-inner">
+                  <img
+                    src="/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg"
+                    alt="African agricultural harvest and food processing"
+                    className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  />
+                  
+                  {/* Subtle edge-blend gradient overlay melting into background */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-purple-950/90 via-purple-900/30 to-transparent"
+                  />
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-r from-purple-950/40 via-transparent to-purple-950/20"
+                  />
+
+                  {/* Top-left Tag: 100% African Harvest */}
+                  <div className="absolute top-3 left-3 flex items-center gap-2 rounded-full bg-purple-950/85 px-3 py-1.5 text-xs font-semibold text-yellow-300 backdrop-blur-md border border-yellow-400/30 shadow-lg">
+                    <span className="inline-block h-2 w-2 rounded-full bg-yellow-400 animate-pulse" />
+                    100% African Harvest
+                  </div>
+
+                  {/* Top-right Tag: Export Ready */}
+                  <div className="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-purple-950 shadow-lg">
+                    <span>Export Ready</span>
+                  </div>
+
+                  {/* Bottom overlay info bar */}
+                  <div className="absolute bottom-3 left-3 right-3 flex items-center text-xs text-white/95">
+                    <span className="font-semibold drop-shadow tracking-wide bg-purple-950/70 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10">
+                      Value-Added Agro-Processing
+                    </span>
+                  </div>
+                </div>
+
+                {/* Sub-bar below photo inside frame */}
+                <div className="mt-3 flex items-center justify-between px-2 py-0.5 text-xs font-medium text-purple-200">
+                  <span className="flex items-center gap-1.5 text-white/90">
+                    <span className="text-yellow-400 font-bold">●</span> Farm to Global Shelf
+                  </span>
+                  <span className="text-yellow-400 font-semibold tracking-wide pr-14 sm:pr-16">AcresxManna Quality</span>
+                </div>
               </div>
 
-              {/* Overlap images */}
+              {/* Dynamic Floating Brand Mascot Accent */}
               <motion.div
-                initial={reduce ? {} : { opacity: 0, y: 40, rotate: -8 }}
-                animate={{ opacity: 1, y: 0, rotate: -4 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 160,
-                  damping: 22,
-                  delay: 0.75,
-                } as any}
-                className="absolute -top-6 -left-8 sm:-left-14 w-[46%] sm:w-[42%] z-20"
+                initial={reduce ? {} : { scale: 0.8, y: 15, opacity: 0 }}
+                animate={{ scale: 1, y: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.55 }}
+                className="absolute -bottom-6 -right-5 sm:-bottom-8 sm:-right-8 w-28 sm:w-36 pointer-events-none select-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.65)]"
               >
-                <PatternFramedImage
-                  src="/images/products/african-food-king-hibiscus-tea.jpg"
-                  alt="African Food King premium hibiscus tea retail pouches"
-                  width={420}
-                  height={520}
-                  sizes="(max-width: 639px) 40vw, (max-width: 1023px) 38vw, 18vw"
-                  thickness="medium"
-                  pattern="ankara"
-                  cornerAccent="mango"
-                  className="aspect-[4/5] object-cover"
+                <img
+                  src="/brand/acres-manna-mascot-character-yellow.svg"
+                  alt="AcresxManna mascot character"
+                  className="w-full h-auto filter drop-shadow-[0_4px_16px_rgba(253,220,66,0.4)]"
                 />
               </motion.div>
-
-              <motion.div
-                initial={reduce ? {} : { opacity: 0, y: 40, rotate: 8 }}
-                animate={{ opacity: 1, y: 0, rotate: 5 }}
-                transition={{
-                  type: "spring",
-                  stiffness: 160,
-                  damping: 22,
-                  delay: 0.9,
-                } as any}
-                className="absolute -bottom-8 -right-6 sm:-right-12 w-[50%] sm:w-[46%] z-20"
-              >
-                <PatternFramedImage
-                  src="/images/products/palm-oil-bottling-hall.jpg"
-                  alt="Quality assurance and bottling of AcresxManna pure palm oil"
-                  width={420}
-                  height={520}
-                  sizes="(max-width: 639px) 45vw, (max-width: 1023px) 42vw, 22vw"
-                  thickness="medium"
-                  pattern="mudcloth"
-                  cornerAccent="forest"
-                  className="aspect-[4/5] object-cover"
-                />
-              </motion.div>
-            </ParallaxSection>
-
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 180,
-                damping: 22,
-                delay: 1.05,
-              } as any}
-              className="absolute top-[38%] -right-4 sm:-right-8 w-[28%] sm:w-[24%] z-30"
-            >
-              <PatternFramedImage
-                src="/images/processing/bakery-deck-oven-fresh-bread.jpg"
-                alt="Freshly baked artisan bread from our commercial deck ovens"
-                width={260}
-                height={260}
-                sizes="(max-width: 639px) 25vw, (max-width: 1023px) 24vw, 12vw"
-                thickness="thin"
-                pattern="woven"
-                cornerAccent="indigo"
-                className="aspect-square object-cover"
-              />
-            </motion.div>
-
-            {/* Hand-drawn plant line accent */}
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, rotate: -30, y: 30 }}
-              animate={{ opacity: 1, rotate: -14, y: 0 }}
-              transition={{ duration: 1, delay: 1.15 }}
-              className="absolute -bottom-20 -left-8 text-yellow-400/80"
-            >
-              <HandDrawnPlantLine variant="maize" size={120} />
-            </motion.div>
-
-            <motion.div
-              initial={reduce ? {} : { opacity: 0, rotate: 30, y: -20 }}
-              animate={{ opacity: 1, rotate: 20, y: 0 }}
-              transition={{ duration: 1, delay: 1.25 }}
-              className="absolute -top-12 right-2 text-yellow-400/60"
-            >
-              <HandDrawnPlantLine variant="cocoa" size={96} />
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </SectionContainer>

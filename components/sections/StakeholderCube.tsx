@@ -145,7 +145,7 @@ export function StakeholderCube() {
               For Everyone We Serve
             </Eyebrow>
             <h2 className="font-display font-black text-display-1 leading-[0.98] text-balance">
-              Six faces. <em>One ecosystem.</em>
+              some of our client
             </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
               Explore product, supply, distribution and business enquiry
@@ -339,6 +339,9 @@ export function StakeholderCube() {
 
               {/* 6 face pill selector */}
               <div className="mt-4 sm:mt-8 max-w-2xl mx-auto">
+                <div className="flex justify-center mb-3">
+                  <HandDrawnIcon name="cart" size={32} color="terracotta" withFrame />
+                </div>
                 <p className="text-center font-mono text-micro uppercase tracking-[0.16em] text-charcoal-700/70 mb-4">
                   Â· Click cube faces, or pick directly Â·
                 </p>

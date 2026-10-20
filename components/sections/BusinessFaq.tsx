@@ -18,7 +18,7 @@ const FAQS = [
   {
     question: "Which products do you make?",
     answer:
-      "Garri (white, Ijebu and yellow), cassava flour, konkote, groundnuts and peanuts, cashew nuts, plantain chips, and hibiscus and teas are on sale now. Seasonings and spices are planned.",
+      "Garri (white, Ijebu and yellow), cassava flour, plantain flour, groundnuts and peanuts, cashew nuts, plantain chips, kuli kuli, pure palm oil, and hibiscus and teas are on sale now. Seasonings and spices are planned.",
   },
   {
     question: "Can I buy your products?",

@@ -90,14 +90,12 @@
 
 | Stage | Eyebrow | Headline | Description |
 |---|---|---|---|
-| 01 | STAGE 01 · AGRICULTURE | Seeds of *Africa*. | "Sourced from smallholder farms and cooperatives across Ghana, Côte d'Ivoire, and Nigeria — maize, cocoa, shea, and indigenous crops like fonio and tiger nuts." ⚠️ |
-| 02 | STAGE 02 · HARVEST | Golden *harvest*. | "Hand-picked and mechanically harvested at peak ripeness. Each batch undergoes farm-gate quality grading per Ghana Standards Authority (GSA) protocols." ⚠️ |
-| 03 | STAGE 03 · PROCESSING | Modern *transformation*. | "HACCP and ISO 22000-certified facilities in the Greater Accra region. Cleaning, sorting, milling, and blending — precision at every step." ⚠️ |
-| 04 | STAGE 04 · PACKAGING | Ready for *the shelf*. | "Shelf-stable packaging meeting EU, USFDA, and ECOWAS food-safety requirements. Every label tells the origin story of its contents." ⚠️ |
-| 05 | STAGE 05 · FOOD | Great *food*. | "From our kitchens to yours. Jollof spice blends, roasted cocoa nibs, cassava flour — nutritious, culturally rooted ingredients and ready meals." |
-| 06 | STAGE 06 · GLOBAL MARKETS | For *the world*. | "Distributed across 24+ markets through Africa Continental Free Trade Area (AfCFTA) corridors and partnerships with EU and North American importers." ⚠️ |
-
-> Note: Numeric prefixes "01"–"06" still present here (user previously requested removal of numeric labels).
+| 01 | STAGE · AGRICULTURE | Seeds of *Africa*. | "Sourced from smallholder farms and cooperatives across Ghana, Côte d'Ivoire, and Nigeria — maize, cocoa, shea, and indigenous crops like fonio and tiger nuts." ⚠️ |
+| 02 | STAGE · HARVEST | Golden *harvest*. | "Hand-picked and mechanically harvested at peak ripeness. Each batch undergoes farm-gate quality grading per Ghana Standards Authority (GSA) protocols." ⚠️ |
+| 03 | STAGE · PROCESSING | Modern *transformation*. | "HACCP and ISO 22000-certified facilities in the Greater Accra region. Cleaning, sorting, milling, and blending — precision at every step." ⚠️ |
+| 04 | STAGE · PACKAGING | Ready for *the shelf*. | "Shelf-stable packaging meeting EU, USFDA, and ECOWAS food-safety requirements. Every label tells the origin story of its contents." ⚠️ |
+| 05 | STAGE · FOOD | Great *food*. | "From our kitchens to yours. Jollof spice blends, roasted cocoa nibs, cassava flour — nutritious, culturally rooted ingredients and ready meals." |
+| 06 | STAGE · GLOBAL MARKETS | For *the world*. | "Distributed across 24+ markets through Africa Continental Free Trade Area (AfCFTA) corridors and partnerships with EU and North American importers." ⚠️ |
 
 ---
 

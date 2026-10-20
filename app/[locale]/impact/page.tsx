@@ -3,8 +3,10 @@ import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
+import { CountUp } from "@/components/ui/CountUp";
 import { IMPACT_METRICS, IMPACT_SCORECARD } from "@/lib/constants";
 import { ScrollReveal } from "@/components/animations/MotionSection";
+
 
 export const metadata = {
   title: "Impact",
@@ -127,26 +129,57 @@ export default function ImpactPage() {
       </SectionContainer>
 
       <SectionContainer size="wide" className="mt-20">
-        <div className="mb-8 max-w-3xl">
+        <div className="mb-12 max-w-3xl">
           <Eyebrow className="mb-4">Impact scorecard</Eyebrow>
           <h2 className="font-display text-display-2 font-black">
-            Coming soon: we only publish numbers we can stand behind.
+            Numbers we can stand behind.
           </h2>
+          <p className="mt-4 font-sans text-body-lg leading-relaxed text-charcoal-700">
+            We only publish verified data. The figures below will be updated as
+            we receive and confirm each metric from our operations team.
+          </p>
         </div>
+
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {IMPACT_SCORECARD.map((metric) => (
-            <article
-              key={metric}
-              className="rounded-3xl border border-cream-200 bg-cream-50 p-6"
+          {IMPACT_SCORECARD.map((metric, index) => (
+            <ScrollReveal
+              as="article"
+              key={metric.label}
+              delay={0.05 * index}
+              className="group relative overflow-hidden rounded-3xl border border-cream-200 bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover"
             >
-              <p className="font-display text-heading-2 font-black">{metric}</p>
-              <p className="mt-4 font-mono text-label font-bold uppercase tracking-[0.1em] text-purple-700">
-                Coming soon
+              {/* Subtle purple glow accent on hover */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-purple-100 opacity-0 transition-opacity duration-500 group-hover:opacity-60"
+              />
+
+              {metric.value > 0 ? (
+                <p className="font-display text-display-2 font-black text-purple-700">
+                  <CountUp
+                    to={metric.value}
+                    suffix={metric.suffix}
+                    duration={2000}
+                  />
+                </p>
+              ) : (
+                <p className="font-display text-heading-1 font-black text-charcoal-300">
+                  —
+                </p>
+              )}
+
+              <p className="mt-3 font-display text-heading-3 font-bold text-charcoal-900 leading-snug">
+                {metric.label}
               </p>
-            </article>
+
+              <p className="mt-2 font-mono text-label font-semibold uppercase tracking-[0.1em] text-purple-600">
+                {metric.value > 0 ? "Verified" : metric.note}
+              </p>
+            </ScrollReveal>
           ))}
         </div>
       </SectionContainer>
+
 
       <SectionContainer className="mt-20 text-center">
         <p className="mx-auto max-w-4xl font-display text-heading-1 font-bold leading-relaxed">

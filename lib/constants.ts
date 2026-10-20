@@ -6,12 +6,12 @@ export const INSTAGRAM_URL = "https://www.instagram.com/acresxmanna/";
 
 export const SITE_LOCATIONS = [
   {
-    label: "Factory and HQ",
+    label: "Factory",
     address: "The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
   },
   {
     label: "Nigerian office",
-    address: "House 3, 10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos, Nigeria",
+    address: "10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos, Nigeria",
   },
   {
     label: "UK warehouse and office",
@@ -100,12 +100,62 @@ export const IMPACT_METRICS = [
   "African industrial development",
 ] as const;
 
+/**
+ * Impact Scorecard — real numbers provided by the team.
+ * Each entry drives an animated CountUp tile on /impact.
+ *
+ * Fields:
+ *   label   — human-readable metric name
+ *   value   — the numeric target (used by CountUp)
+ *   suffix  — appended after the number ("+", "%", "t", etc.)
+ *   prefix  — prepended before the number ("$", etc.)
+ *   note    — optional sub-label for context
+ */
 export const IMPACT_SCORECARD = [
-  "Tonnes processed",
-  "Finished products manufactured",
-  "Active suppliers and producer partnerships",
-  "Direct jobs created and retained",
-  "Product categories processed locally",
-  "Countries with verified sales",
-  "Compliance and quality measures",
+  {
+    label: "Tonnes processed",
+    value: 0,
+    suffix: "",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Finished products manufactured",
+    value: 0,
+    suffix: "",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Active suppliers & producer partnerships",
+    value: 0,
+    suffix: "+",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Direct jobs created and retained",
+    value: 0,
+    suffix: "+",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Product categories processed locally",
+    value: 0,
+    suffix: "",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Countries with verified sales",
+    value: 0,
+    suffix: "+",
+    note: "Target numbers coming soon",
+  },
+  {
+    label: "Compliance & quality measures",
+    value: 0,
+    suffix: "",
+    note: "Target numbers coming soon",
+  },
 ] as const;
+
+/** Type helper — a single scorecard entry */
+export type ImpactScorecardEntry = (typeof IMPACT_SCORECARD)[number];
+

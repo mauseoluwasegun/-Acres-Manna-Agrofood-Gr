@@ -37,32 +37,32 @@
     "exploreProcess": "Explore The Full Process",
     "stages": {
       "s1": {
-        "eyebrow": "STAGE 01 · AGRICULTURE",
+        "eyebrow": "STAGE · AGRICULTURE",
         "headline": "Seeds of <em>Africa</em>.",
         "description": "Sourced from smallholder farms and cooperatives across Ghana, Côte d'Ivoire, and Nigeria — maize, cocoa, shea, and indigenous crops like fonio and tiger nuts."
       },
       "s2": {
-        "eyebrow": "STAGE 02 · HARVEST",
+        "eyebrow": "STAGE · HARVEST",
         "headline": "Golden <em>harvest</em>.",
         "description": "Hand-picked and mechanically harvested at peak ripeness. Each batch undergoes farm-gate quality grading per Ghana Standards Authority (GSA) protocols."
       },
       "s3": {
-        "eyebrow": "STAGE 03 · PROCESSING",
+        "eyebrow": "STAGE · PROCESSING",
         "headline": "Modern <em>transformation</em>.",
         "description": "HACCP and ISO 22000-certified facilities in the Greater Accra region. Cleaning, sorting, milling, and blending — precision at every step."
       },
       "s4": {
-        "eyebrow": "STAGE 04 · PACKAGING",
+        "eyebrow": "STAGE · PACKAGING",
         "headline": "Ready for <em>the shelf</em>.",
         "description": "Shelf-stable packaging meeting EU, USFDA, and ECOWAS food-safety requirements. Every label tells the origin story of its contents."
       },
       "s5": {
-        "eyebrow": "STAGE 05 · FOOD",
+        "eyebrow": "STAGE · FOOD",
         "headline": "Great <em>food</em>.",
         "description": "From our kitchens to yours. Jollof spice blends, roasted cocoa nibs, cassava flour — nutritious, culturally rooted ingredients and ready meals."
       },
       "s6": {
-        "eyebrow": "STAGE 06 · GLOBAL MARKETS",
+        "eyebrow": "STAGE · GLOBAL MARKETS",
         "headline": "For <em>the world</em>.",
         "description": "Distributed across 24+ markets through Africa Continental Free Trade Area (AfCFTA) corridors and partnerships with EU and North American importers."
       }

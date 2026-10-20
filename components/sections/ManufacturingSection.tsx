@@ -7,14 +7,14 @@ const capabilities = [
   {
     title: "Agricultural sourcing",
     description: "Build dependable relationships with suppliers and producers.",
-    image: "/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg",
-    alt: "AcresxManna farmers harvesting vine tomatoes in modern greenhouse shade structures",
+    image: "/images/farms/cassava.jpg",
+    alt: "Freshly harvested cassava roots piled together",
   },
   {
     title: "Aggregation",
     description: "Bring agricultural commodities together for consistent production.",
-    image: "/images/products/happyman-foods-commodity-sacks.jpg",
-    alt: "Aggregated commodities packaged in HappyMan Foods commercial sacks",
+    image: "/images/logistics/warehouse-racking-branded-sacks.jpg",
+    alt: "Warehouse racking with branded agricultural commodity sacks",
   },
   {
     title: "Processing",
@@ -25,20 +25,20 @@ const capabilities = [
   {
     title: "Manufacturing",
     description: "Produce and package food to defined specifications.",
-    image: "/images/processing/hygienic-nut-sorting-team.jpg",
-    alt: "Hygienic sorting and food manufacturing operations at our processing facility",
+    image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
+    alt: "Industrial mixing and sifter tanks in manufacturing facility",
   },
   {
     title: "Brand development",
     description: "Develop products and brands for consumer and business markets.",
-    image: "/images/products/african-food-king-hibiscus-tea.jpg",
-    alt: "African Food King premium herbal tea collection packaging",
+    image: "/images/farms/plantain-plantation-irrigation.jpg",
+    alt: "Plantain plantation with irrigation system",
   },
   {
     title: "Distribution and trade",
     description: "Build routes to market across Africa and internationally.",
-    image: "/images/logistics/freight-container-truck-dispatch.jpg",
-    alt: "Heavy-duty export shipping containers dispatched for regional and global trade",
+    image: "/images/logistics/container-bottled-products-export.jpg",
+    alt: "Stationary container with bottled products ready for export",
   },
 ];
 

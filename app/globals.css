@@ -82,7 +82,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display), "Times New Roman", serif;
-    color: rgb(var(--charcoal-900));
+    color: inherit;
     font-weight: 900;
   }
 

@@ -16,12 +16,12 @@ const facilityGallery = [
   {
     title: "Stainless Steel Mixing & Sifting",
     caption: "Food-grade industrial processing tanks, motorized blenders, and mechanical sifters operating at our central processing hub.",
-    image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
+    image: "/images/processing/large-stainless-mixing-vats.jpg",
   },
   {
     title: "Commercial Multi-Deck Bakery Ovens",
     caption: "Master bakers crafting golden loaves and baked items using high-capacity commercial digital deck ovens.",
-    image: "/images/processing/bakery-deck-oven-fresh-bread.jpg",
+    image: "/images/processing/bakery-staff-industrial-oven.jpg",
   },
   {
     title: "Hygienic Sorting & Quality Control",
@@ -29,9 +29,19 @@ const facilityGallery = [
     image: "/images/processing/full-facility-sorting-hall.jpg",
   },
   {
-    title: "Automated Bottling & Sealing",
-    caption: "Hygienic packaging operators sealing and inspecting thousands of bottles of pure AcresxManna cooking oils.",
-    image: "/images/products/palm-oil-bottling-hall.jpg",
+    title: "Palm Oil Bottling Line",
+    caption: "Hygienic bottling operators arranging and inspecting hundreds of palm oil bottles before packing for dispatch.",
+    image: "/images/processing/palm-oil-bottling-team.jpg",
+  },
+  {
+    title: "Nut Sorting — Long Table Operations",
+    caption: "A large team of skilled sorters separating roasted peanuts to premium grade across our extended sorting line.",
+    image: "/images/processing/nut-sorting-long-table-team.jpg",
+  },
+  {
+    title: "Industrial Rotary Cooker",
+    caption: "Operators running the motorised stainless rotary cooker used for even roasting across batch production runs.",
+    image: "/images/processing/rotary-cooker-operators.jpg",
   },
   {
     title: "High-Bay Pallet Logistics Racking",
@@ -41,7 +51,12 @@ const facilityGallery = [
   {
     title: "Container Loading & Dispatch",
     caption: "Supervised container loading operations ensuring safe transit for high-capacity regional and global export orders.",
-    image: "/images/logistics/loading-bottled-nuts-truck-supervision.jpg",
+    image: "/images/logistics/loading-bottled-nuts-container.jpg",
+  },
+  {
+    title: "Export-Ready Container Sealed",
+    caption: "A fully loaded freight container, sealed and prepared for customs clearance and international dispatch.",
+    image: "/images/logistics/sealed-container-gcnu-sacks.jpg",
   },
 ];
 
@@ -72,7 +87,7 @@ export default function InfrastructurePage() {
             {
               title: "Production and processing",
               status: "Operating today",
-              image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
+              image: "/images/processing/nut-sorting-wide-team.jpg",
               description:
                 "AcresxManna Ltd manufactures food products at its factory and headquarters in Moniya, Ibadan. Further production capacity and process improvements are part of our development ambitions.",
             },
@@ -86,7 +101,7 @@ export default function InfrastructurePage() {
             {
               title: "Supply chain and warehousing",
               status: "Operating today",
-              image: "/images/logistics/highbay-racking-warehouse-logistics.jpg",
+              image: "/images/logistics/warehouse-racking-branded-sacks.jpg",
               description:
                 "Our confirmed locations include the factory and headquarters in Moniya, the Nigerian office in Lagos, and the UK warehouse and office in Hertford.",
             },
@@ -142,7 +157,7 @@ export default function InfrastructurePage() {
             A glimpse into the daily operations that convert harvested commodities into market-ready, hygienically packaged food products.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="facility-gallery">
           {facilityGallery.map((item, index) => (
             <ScrollReveal
               as="figure"

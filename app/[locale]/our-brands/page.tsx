@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -6,27 +7,54 @@ import { Button } from "@/components/ui/Button";
 export const metadata = {
   title: "Our Brands",
   description:
-    "Meet HappyMan Foods, Maluza Foods Co. and UncleTobi, and learn each brand's role and status.",
+    "Meet HappyMan Foods, Maluza Foods Co., UncleTobi, and IJGB Foods, and learn each brand's role and status.",
 };
 
 const BRANDS = [
+  {
+    name: "African Food King",
+    status: "Active",
+    description:
+      "Authentic African food products bringing vibrant culinary traditions and premium tea lines to global consumers.",
+    image: "/images/brands/african-food-king-logo.png",
+    alt: "African Food King official brand logo",
+    fit: "contain",
+  },
   {
     name: "HappyMan Foods",
     status: "Active",
     description:
       "The brand AcresxManna uses to sell all of its products.",
+    image: "/images/products/happyman-foods-commodity-sacks.jpg",
+    alt: "HappyMan Foods 50kg agro-commodity sacks by AcresxManna Ltd.",
+    fit: "cover",
   },
   {
     name: "Maluza Foods Co.",
     status: "Live",
     description:
       "A bakery developing new products and opening new stalls in and around Ibadan.",
+    image: "/images/processing/bakery-deck-oven-fresh-bread.jpg",
+    alt: "Maluza Foods bakery master baker presenting freshly baked golden loaf from commercial deck ovens",
+    fit: "cover",
   },
   {
     name: "UncleTobi",
     status: "Coming soon",
     description:
       "An online grocery concept aggregating suppliers for retail. Launch date to be announced.",
+    image: "/images/brands/uncletobi-logo.png",
+    alt: "UncleTobi online grocery concept logo",
+    fit: "contain",
+  },
+  {
+    name: "IJGB Foods",
+    status: "Active",
+    description:
+      "African snacks with global swagger — facilitating trade and connecting quality commodities across markets.",
+    image: "/images/brands/ijgb-foods-logo.png",
+    alt: "IJGB Foods brand logo",
+    fit: "contain",
   },
 ];
 
@@ -50,19 +78,42 @@ export default function OurBrandsPage() {
       </div>
 
       <SectionContainer size="wide">
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {BRANDS.map((brand) => (
             <article
               key={brand.name}
-              className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
-              <Eyebrow className="mb-4">{brand.status}</Eyebrow>
-              <h2 className="font-display text-heading-1 font-black">
-                {brand.name}
-              </h2>
-              <p className="mt-4 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {brand.description}
-              </p>
+              <div
+                className={`relative aspect-[16/10] w-full overflow-hidden ${
+                  brand.fit === "contain" ? "bg-white" : "bg-cream-100"
+                }`}
+              >
+                <Image
+                  src={brand.image}
+                  alt={brand.alt}
+                  fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+                  className={`transition-transform duration-500 group-hover:scale-105 ${
+                    brand.fit === "contain"
+                      ? "object-contain p-6"
+                      : "object-cover"
+                  }`}
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
+                    {brand.status}
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="font-display text-heading-1 font-black">
+                  {brand.name}
+                </h2>
+                <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
+                  {brand.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
