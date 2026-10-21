@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -52,12 +52,13 @@ export default function ProductsPage() {
             >
               {product.image && (
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-cream-100">
-                  <Image
+                  <LazyImage
                     src={product.image}
                     alt={product.imageAlt || product.name}
                     fill
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    wrapperClassName="absolute inset-0"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">

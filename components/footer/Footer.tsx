@@ -21,6 +21,7 @@ export function Footer() {
               <img
                 src="/brand/acres-manna-wordmark-white.png"
                 alt="Acres & Manna"
+                loading="lazy"
                 className="h-10 sm:h-12 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90"
               />
             </Link>
@@ -105,6 +106,7 @@ export function Footer() {
               <img
                 src="/images/brands/brand-ribbon.png"
                 alt="Certified by NAFDAC, SON, MAN, HACCP, Non-GMO Project, Halal, ISO"
+                loading="lazy"
                 className="h-8 sm:h-9 w-auto max-w-full object-contain"
               />
             </div>

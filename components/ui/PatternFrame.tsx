@@ -1,6 +1,6 @@
-import type { ReactNode, ComponentPropsWithoutRef } from "react";
-import Image from "next/image";
+import type { ReactNode } from "react";
 import type { ImageProps } from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { cn } from "@/lib/utils";
 import type { PatternName, PatternThickness } from "@/lib/patterns";
 import { PATTERN_FRAME_WIDTHS } from "@/lib/patterns";
@@ -98,7 +98,7 @@ export function PatternFrame({
 }
 
 type PatternFramedImageProps = Omit<PatternFrameProps, "children"> &
-  Omit<ComponentPropsWithoutRef<typeof Image>, "src" | "alt"> & {
+  Omit<ImageProps, "src" | "alt"> & {
     src: ImageProps["src"];
     alt: string;
     imgClassName?: string;
@@ -124,7 +124,7 @@ export function PatternFramedImage({
       className={className}
       innerClassName={innerClassName}
     >
-      <Image
+      <LazyImage
         alt={alt}
         {...imageProps}
         className={cn(

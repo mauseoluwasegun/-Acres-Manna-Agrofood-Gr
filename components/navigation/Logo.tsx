@@ -30,6 +30,7 @@ export function Logo({
             : "/brand/acres-manna-logo-horizontal.svg"
         }
         alt="Acres & Manna"
+        loading="lazy"
         className={cn(
           "h-7 sm:h-8 lg:h-9 w-auto max-w-[120px] sm:max-w-[140px] lg:max-w-[155px] object-contain transition-all duration-300",
         )}

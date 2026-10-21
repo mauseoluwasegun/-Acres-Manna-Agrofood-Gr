@@ -19,7 +19,7 @@ const languages = [
   { code: "nl", name: "Nederlands", flag: "nl" },
 ];
 
-export function LanguageSwitcher({ isLight }: { isLight?: boolean }) {
+export function LanguageSwitcher({ isLight, dropUp }: { isLight?: boolean; dropUp?: boolean }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -69,12 +69,18 @@ export function LanguageSwitcher({ isLight }: { isLight?: boolean }) {
           alt=""
           aria-hidden="true"
           className="h-4 w-6 object-contain"
+          loading="lazy"
         />
         <span className="uppercase">{currentLang.code}</span>
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white border border-charcoal-900/10 rounded-soft-lg shadow-xl overflow-hidden z-50">
+        <div
+          className={cn(
+            "absolute right-0 w-48 bg-white border border-charcoal-900/10 rounded-soft-lg shadow-xl overflow-hidden z-50",
+            dropUp ? "bottom-full mb-2" : "mt-2"
+          )}
+        >
           <div className="py-2 max-h-64 overflow-y-auto">
             {languages.map((lang) => (
               <button

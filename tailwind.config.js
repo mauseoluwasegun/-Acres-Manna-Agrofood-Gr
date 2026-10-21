@@ -104,11 +104,15 @@ module.exports = {
           "0%": { backgroundPosition: "0 0" },
           "100%": { backgroundPosition: "64px 64px" },
         },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "pulse-slow": "pulse-slow 5s ease-in-out infinite",
         "blob-drift": "blob-drift 12s ease-in-out infinite",
         "pattern-flow": "pattern-flow 18s linear infinite",
+        shimmer: "shimmer 1.8s infinite",
       },
     },
   },

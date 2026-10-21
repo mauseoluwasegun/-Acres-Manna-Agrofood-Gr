@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -48,13 +48,14 @@ export function EnquiryLandingPage({
             <div className="lg:col-span-5">
               <figure className="overflow-hidden rounded-3xl border border-cream-200 bg-white p-3 shadow-card">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream-100">
-                  <Image
+                  <LazyImage
                     src={image}
                     alt={imageAlt || title}
                     fill
                     priority
                     sizes="(max-width: 1023px) 100vw, 42vw"
                     className="object-cover"
+                    wrapperClassName="absolute inset-0"
                   />
                 </div>
                 {imageCaption && (

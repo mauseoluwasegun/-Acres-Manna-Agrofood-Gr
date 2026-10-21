@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "@/components/layout/SectionContainer";
@@ -145,13 +145,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             <div className="lg:col-span-5">
               <figure className="overflow-hidden rounded-3xl border border-cream-200 bg-white p-3 shadow-card">
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream-100">
-                  <Image
+                  <LazyImage
                     src={product.image}
                     alt={product.imageAlt || product.name}
                     fill
                     priority
                     sizes="(max-width: 1023px) 100vw, 42vw"
                     className="object-cover"
+                    wrapperClassName="absolute inset-0"
                   />
                 </div>
                 {product.caption && (

@@ -179,6 +179,7 @@ export function ParallaxImage({
         ref={imageRef}
         src={src}
         alt={alt}
+        loading="lazy"
         className="w-full h-full object-cover"
       />
     </div>

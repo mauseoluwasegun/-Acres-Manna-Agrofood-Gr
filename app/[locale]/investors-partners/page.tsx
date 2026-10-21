@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { ScrollReveal } from "@/components/animations/MotionSection";
@@ -71,12 +71,13 @@ export default function InvestorsPartnersPage() {
       <SectionContainer size="wide" className="mt-12">
         <div className="overflow-hidden rounded-3xl bg-cream-50 shadow-card lg:grid lg:grid-cols-12">
           <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-5 bg-cream-200">
-            <Image
+            <LazyImage
               src="/images/corporate/acresxmanna-reception-brand-wall.jpg"
               alt="AcresxManna headquarters in Ibadan, Nigeria"
               fill
               className="object-cover"
               sizes="(max-width: 1023px) 100vw, 40vw"
+              wrapperClassName="absolute inset-0"
             />
           </div>
           <div className="p-8 sm:p-12 lg:col-span-7 flex flex-col justify-center">
@@ -106,12 +107,13 @@ export default function InvestorsPartnersPage() {
               className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-cream-100">
-                <Image
+                <LazyImage
                   src={item.image}
                   alt={item.alt}
                   fill
                   sizes="(max-width: 767px) 100vw, 50vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  wrapperClassName="absolute inset-0"
                 />
               </div>
               <div className="p-7">

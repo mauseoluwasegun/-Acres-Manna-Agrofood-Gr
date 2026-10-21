@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { MotionSection, ScrollReveal } from "@/components/animations/MotionSection";
@@ -67,12 +67,13 @@ export function ManufacturingSection() {
               className="group list-none overflow-hidden rounded-3xl border border-white/20 bg-white/5 transition duration-300 hover:border-yellow-400/50 hover:bg-white/10"
             >
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-purple-900/40">
-                <Image
+                <LazyImage
                   src={capability.image}
                   alt={capability.alt}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  wrapperClassName="absolute inset-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/70 via-transparent to-transparent" />
               </div>

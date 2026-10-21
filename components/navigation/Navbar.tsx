@@ -7,7 +7,21 @@ import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/navigation/Logo";
 import { Button } from "@/components/ui/Button";
-import { IconMenu, IconX } from "@/components/ui/icons";
+import {
+  IconBox,
+  IconCapacity,
+  IconCart,
+  IconFactory,
+  IconFarmers,
+  IconGlobe,
+  IconHandshake,
+  IconHome,
+  IconMail,
+  IconMenu,
+  IconNews,
+  IconWheat,
+  IconX,
+} from "@/components/ui/icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
@@ -30,6 +44,20 @@ const MORE_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
     "/news-insights",
   ].includes(href),
 );
+
+const NAV_ICONS: Record<string, typeof IconHome> = {
+  "/": IconHome,
+  "/about": IconFarmers,
+  "/what-we-do": IconFactory,
+  "/products": IconCart,
+  "/our-brands": IconBox,
+  "/infrastructure": IconCapacity,
+  "/impact": IconWheat,
+  "/global-markets": IconGlobe,
+  "/investors-partners": IconHandshake,
+  "/news-insights": IconNews,
+  "/contact": IconMail,
+};
 
 export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
   const pathname = usePathname();
@@ -182,6 +210,24 @@ export function MobileMenu({
   const reduce = useReducedMotion();
   const t = useTranslations("nav");
 
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [open, onClose]);
+
   const backdrop = {
     open: {
       opacity: 1,
@@ -193,22 +239,27 @@ export function MobileMenu({
     },
   };
 
-  const panel = {
-    open: {
-      clipPath: "circle(150% at 95% 5%)",
-      transition: {
-        type: "spring",
-        stiffness: 220,
-        damping: 26,
-        staggerChildren: 0.07,
-        delayChildren: 0.1,
-      } as any,
-    },
-    closed: {
-      clipPath: "circle(0% at 95% 5%)",
-      transition: { duration: 0.35, ease: "easeInOut" as any },
-    },
-  };
+  const panel = reduce
+    ? {
+        open: { opacity: 1, transition: { duration: 0.2 } as any },
+        closed: { opacity: 0, transition: { duration: 0.15 } as any },
+      }
+    : {
+        open: {
+          x: 0,
+          transition: {
+            type: "spring",
+            stiffness: 320,
+            damping: 34,
+            staggerChildren: 0.045,
+            delayChildren: 0.08,
+          } as any,
+        },
+        closed: {
+          x: "100%",
+          transition: { duration: 0.3, ease: "easeInOut" as any },
+        },
+      };
 
   const item = reduce
     ? {
@@ -218,11 +269,10 @@ export function MobileMenu({
     : {
         open: {
           opacity: 1,
-          y: 0,
-          rotate: 0,
-          transition: { type: "spring", stiffness: 200, damping: 22 } as any,
+          x: 0,
+          transition: { type: "spring", stiffness: 260, damping: 26 } as any,
         },
-        closed: { opacity: 0, y: 40, rotate: -2 },
+        closed: { opacity: 0, x: 28 },
       };
 
   return (
@@ -244,86 +294,84 @@ export function MobileMenu({
             animate="open"
             exit="closed"
             aria-label="Mobile"
-            className="fixed inset-0 z-[90] overflow-y-auto overscroll-contain bg-cream-100"
+            style={{
+              paddingTop: "env(safe-area-inset-top)",
+              paddingBottom: "env(safe-area-inset-bottom)",
+            }}
+            className="fixed inset-y-0 right-0 z-[90] flex w-[86%] max-w-[380px] flex-col overflow-hidden bg-cream-100 shadow-[-30px_0_70px_-35px_rgba(26,26,26,0.5)]"
           >
             <div
               aria-hidden
-              className="absolute inset-0 bg-ankara pattern-watermark opacity-[0.08]"
+              className="absolute inset-0 bg-ankara pattern-watermark opacity-[0.07]"
             />
-            <div aria-hidden className="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-terracotta-500/20 animate-blob-drift" />
-            <div aria-hidden className="absolute bottom-10 right-0 w-72 h-72 rounded-full bg-mango-400/25 animate-blob-drift" style={{ animationDelay: "2s" }} />
-            <div aria-hidden className="absolute top-1/3 left-10 w-40 h-40 rounded-full bg-forest-600/10 animate-blob-drift" style={{ animationDelay: "4s" }} />
 
-            <div
-              className="container-page relative flex min-h-[100svh] flex-col"
-              style={{
-                paddingTop: "env(safe-area-inset-top)",
-                paddingBottom: "env(safe-area-inset-bottom)",
-              }}
-            >
-              <div className="flex items-center justify-between h-20">
-                <Logo variant="dark" onClick={onClose} />
-                <button
-                  type="button"
-                  onClick={onClose}
-                  aria-label="Close menu"
-                  className="p-2.5 rounded-soft text-charcoal-900 hover:bg-charcoal-900/5 transition-colors"
-                >
-                  <IconX size={28} />
-                </button>
-              </div>
-
-              <div className="flex flex-1 flex-col justify-center gap-2 py-6 sm:gap-4">
-                {NAV_LINKS.map((link, i) => {
-                  const active =
-                    pathname === link.href ||
-                    (link.href !== "/" && pathname?.startsWith(link.href));
-                  const navKey = NAV_KEY_MAP[link.href];
-                  const label = navKey ? t(navKey as any) : link.label;
-
-                  return (
-                    <motion.div
-                      key={link.href}
-                      variants={item}
-                      custom={i}
-                    >
-                      <Link
-                        href={link.href}
-                        onClick={onClose}
-                        aria-current={active ? "page" : undefined}
-                        className={cn(
-                          "block break-words py-2 font-display font-black leading-[0.95] transition-colors",
-                          "text-[clamp(2rem,7vw,4.5rem)]",
-                          active
-                            ? "text-terracotta-600"
-                            : "text-charcoal-900 hover:text-terracotta-600",
-                        )}
-                      >
-                        {label}
-                      </Link>
-                    </motion.div>
-                  );
-                })}
-              </div>
-
-              <motion.div
-                variants={item}
-                className="pb-12 pt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+            <div className="relative flex h-16 shrink-0 items-center justify-between gap-2 border-b border-cream-50 px-3">
+              <Logo variant="light" onClick={onClose} />
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label="Close menu"
+                className="shrink-0 rounded-soft p-2.5 text-charcoal-900 transition-colors hover:bg-charcoal-900/5"
               >
-                <div className="flex justify-start">
-                  <LanguageSwitcher />
-                </div>
-                <Button
-                  href="/contact"
-                  variant="primary"
-                  size="lg"
-                  className="w-full"
-                  ariaLabel={t("contact")}
-                >
-                  Let&apos;s Talk
-                </Button>
-              </motion.div>
+                <IconX size={22} />
+              </button>
             </div>
+
+            <div className="relative flex-1 overflow-y-auto overscroll-contain px-2 py-2">
+              {NAV_LINKS.map((link) => {
+                const active =
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname?.startsWith(link.href));
+                const navKey = NAV_KEY_MAP[link.href];
+                const label = navKey ? t(navKey as any) : link.label;
+                const Icon = NAV_ICONS[link.href];
+
+                return (
+                  <motion.div key={link.href} variants={item}>
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "group flex items-center gap-3.5 rounded-soft px-3 py-3 font-sans text-[15px] font-bold transition-colors",
+                        active
+                          ? "bg-terracotta-500/10 text-terracotta-600"
+                          : "text-charcoal-900 hover:bg-charcoal-900/5 hover:text-terracotta-600",
+                      )}
+                    >
+                      {Icon ? (
+                        <Icon
+                          size={20}
+                          className={cn(
+                            "shrink-0 transition-colors",
+                            active
+                              ? "text-terracotta-600"
+                              : "text-charcoal-700 group-hover:text-terracotta-600",
+                          )}
+                        />
+                      ) : null}
+                      <span className="truncate">{label}</span>
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            <motion.div
+              variants={item}
+              className="relative flex shrink-0 flex-col gap-3 border-t border-cream-50 px-3 py-4"
+            >
+              <LanguageSwitcher dropUp />
+              <Button
+                href="/contact"
+                variant="primary"
+                size="lg"
+                className="w-full"
+                ariaLabel={t("contact")}
+              >
+                Let&apos;s Talk
+              </Button>
+            </motion.div>
           </motion.nav>
         </>
       )}

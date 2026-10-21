@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -83,12 +83,13 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative aspect-[4/3] lg:aspect-auto lg:col-span-5 bg-cream-200">
-            <Image
+            <LazyImage
               src="/images/corporate/acresxmanna-hq-showroom-desk.jpg"
               alt="AcresxManna headquarters showroom with purple geometric wall and branded products on desk"
               fill
               className="object-cover"
               sizes="(max-width: 1023px) 100vw, 40vw"
+              wrapperClassName="absolute inset-0"
             />
           </div>
         </div>
@@ -110,7 +111,7 @@ export default function AboutPage() {
                   item.fit === "contain" ? "bg-white" : "bg-cream-100"
                 }`}
               >
-                <Image
+                <LazyImage
                   src={item.image}
                   alt={item.alt}
                   fill
@@ -120,6 +121,7 @@ export default function AboutPage() {
                       ? "object-contain p-8"
                       : "object-cover"
                   }`}
+                  wrapperClassName="absolute inset-0"
                 />
               </div>
               <div className="p-7">
@@ -172,7 +174,7 @@ export default function AboutPage() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" id="about-gallery">
           {[
-            { src: "/images/farms/tomato-farm-team-branded-uniforms.jpg", alt: "AcresxManna team harvesting tomatoes in branded purple uniforms", caption: "Tomato greenhouse farming" },
+            { src: "/images/processing/palm-oil-bottling-wide.jpg", alt: "Palm oil bottling and production team at AcresxManna facility", caption: "Palm oil bottling" },
             { src: "/images/farms/shadehouse-tomato-seedling-nursery.jpg", alt: "Dense tomato seedlings in shadehouse nursery rows", caption: "Seedling nursery" },
             { src: "/images/farms/papaya-tree-greenhouse-harvest.jpg", alt: "Papaya tree laden with fruit inside greenhouse with farmer", caption: "Papaya growing" },
             { src: "/images/processing/nut-sorting-team-white-coats.jpg", alt: "Nut sorting team in white lab coats at long table", caption: "Peanut processing" },
@@ -186,12 +188,13 @@ export default function AboutPage() {
               className="group overflow-hidden rounded-3xl border border-cream-200 bg-cream-50 shadow-card transition hover:shadow-card-hover"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <Image
+                <LazyImage
                   src={src}
                   alt={alt}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  wrapperClassName="absolute inset-0"
                 />
               </div>
               <figcaption className="px-5 py-4 font-sans text-body-sm font-medium text-charcoal-700">

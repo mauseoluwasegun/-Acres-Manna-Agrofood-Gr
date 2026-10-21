@@ -9,6 +9,7 @@ import { DecorativeBlobSet } from "@/components/ui/DecorativeBlobs";
 import { FloatingPatternMotif, HandDrawnPlantLine } from "@/components/ui/DecorativePatterns";
 import { TypingText } from "@/components/animations/TypingText";
 import { ParallaxSection } from "@/components/animations/ParallaxSection";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { cn } from "@/lib/utils";
 
 const HERO_MAIN_PROMPT = encodeURIComponent(
@@ -84,14 +85,6 @@ export function Hero() {
         <div className="absolute inset-0 bg-woven opacity-[0.09]" />
       </div>
       <DecorativeBlobSet className="opacity-45" />
-      <FloatingPatternMotif
-        pattern="kente"
-        size={260}
-        top="8%"
-        right="-2%"
-        rotate={14}
-        className="hidden sm:block"
-      />
       <FloatingPatternMotif
         pattern="bogolan"
         size={170}
@@ -205,10 +198,13 @@ export function Hero() {
                 
                 {/* Main Photo with gradient fade into the purple theme */}
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-purple-950/60 shadow-inner">
-                  <img
-                    src="/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg"
-                    alt="African agricultural harvest and food processing"
-                    className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                  <LazyImage
+                    src="/images/processing/palm-oil-bottling-wide.jpg"
+                    alt="Palm oil bottling and production team at AcresxManna facility"
+                    fill
+                    sizes="(max-width: 640px) 100vw, 480px"
+                    className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                    wrapperClassName="h-full w-full"
                   />
                   
                   {/* Subtle edge-blend gradient overlay melting into background */}
@@ -259,6 +255,7 @@ export function Hero() {
                 <img
                   src="/brand/acres-manna-mascot-character-yellow.svg"
                   alt="AcresxManna mascot character"
+                  loading="lazy"
                   className="w-full h-auto filter drop-shadow-[0_4px_16px_rgba(253,220,66,0.4)]"
                 />
               </motion.div>

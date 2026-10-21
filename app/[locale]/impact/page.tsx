@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -18,7 +18,7 @@ const impactStories = [
   {
     title: "Agricultural value addition",
     caption: "Empowering smallholder farmers with modern shade house agriculture, drip irrigation and high-yield crop agronomy.",
-    image: "/images/farms/farmers-harvesting-shadehouse-tomatoes.jpg",
+    image: "/images/processing/palm-oil-bottling-wide.jpg",
   },
   {
     title: "Local production and employment",
@@ -67,12 +67,13 @@ export default function ImpactPage() {
               className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-100">
-                <Image
+                <LazyImage
                   src={item.image}
                   alt={item.title}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  wrapperClassName="absolute inset-0"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
@@ -97,12 +98,13 @@ export default function ImpactPage() {
       <SectionContainer size="wide" className="mt-20">
         <div className="overflow-hidden rounded-3xl bg-purple-700 text-white shadow-card lg:grid lg:grid-cols-12">
           <div className="relative aspect-[4/3] lg:aspect-auto lg:col-span-5">
-            <Image
+            <LazyImage
               src="/images/farms/farmer-papaya-cultivation.jpg"
               alt="Farmer inspecting high-yield dwarf hybrid papaya trees"
               fill
               className="object-cover"
               sizes="(max-width: 1023px) 100vw, 40vw"
+              wrapperClassName="absolute inset-0"
             />
           </div>
           <div className="p-8 sm:p-12 lg:col-span-7 flex flex-col justify-center">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { ScrollReveal } from "@/components/animations/MotionSection";
 import { PatternDivider } from "@/components/animations/PatternDivider";
@@ -78,7 +78,7 @@ export function BrandsSection() {
                     brand.fit === "contain" ? "bg-white" : "bg-cream-200"
                   }`}
                 >
-                  <Image
+                  <LazyImage
                     src={brand.image}
                     alt={brand.alt}
                     fill
@@ -88,6 +88,7 @@ export function BrandsSection() {
                         ? "object-contain p-6"
                         : "object-cover"
                     }`}
+                    wrapperClassName="absolute inset-0"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -89,7 +89,7 @@ export default function OurBrandsPage() {
                   brand.fit === "contain" ? "bg-white" : "bg-cream-100"
                 }`}
               >
-                <Image
+                <LazyImage
                   src={brand.image}
                   alt={brand.alt}
                   fill
@@ -99,6 +99,7 @@ export default function OurBrandsPage() {
                       ? "object-contain p-6"
                       : "object-cover"
                   }`}
+                  wrapperClassName="absolute inset-0"
                 />
                 <div className="absolute top-4 left-4">
                   <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
