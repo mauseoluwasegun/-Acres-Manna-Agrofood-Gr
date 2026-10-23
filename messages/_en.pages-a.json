@@ -163,6 +163,17 @@
           "imageAlt": "Bulk packaged groundnuts and peanuts in warehouse",
           "caption": "Meticulously roasted and sorted peanuts meeting export quality standards."
         },
+        "roasted-groundnuts": {
+          "name": "Roasted Groundnuts",
+          "description": "Roasted groundnuts and shelled peanuts for bulk wholesale supply, packed to your requirements.",
+          "highlights": [
+            "Roasted and shelled for bulk supply",
+            "Wholesale and export enquiries welcome",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "Pallets of bottled roasted groundnuts and shelled peanuts ready for bulk wholesale supply",
+          "caption": "Roasted groundnuts and shelled peanuts packed on pallets for bulk wholesale supply."
+        },
         "cashew-nuts": {
           "name": "Cashew Nuts",
           "description": "A snack and ingredient people love, packed to your requirements.",
@@ -193,8 +204,8 @@
             "For tea, infusion and beverage enquiries",
             "Packed to each client's requirements"
           ],
-          "imageAlt": "Branded bottled products packed on pallets and ready for distribution and trade",
-          "caption": "Branded product packed on pallets and ready for distribution and trade."
+          "imageAlt": "African Food King premium herbal tea collection featuring Hibiscus, Ginger, Clove & Cinnamon pyramid tea bags",
+          "caption": "African Food King herbal tea line, 100% natural and caffeine-free."
         },
         "kuli-kuli": {
           "name": "Kuli Kuli",

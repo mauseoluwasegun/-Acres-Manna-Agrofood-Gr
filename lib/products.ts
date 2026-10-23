@@ -78,6 +78,25 @@ export const PRODUCTS: Product[] = [
     caption: "Meticulously roasted and sorted peanuts meeting export quality standards.",
   },
   {
+    id: "roasted-groundnuts",
+    slug: "roasted-groundnuts",
+    name: "Roasted Groundnuts",
+    description:
+      "Roasted groundnuts and shelled peanuts for bulk wholesale supply, packed to your requirements.",
+    highlights: [
+      "Roasted and shelled for bulk supply",
+      "Wholesale and export enquiries welcome",
+      "Packed to each client's requirements",
+    ],
+    status: "Available now",
+    image:
+      "/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg",
+    imageAlt:
+      "Pallets of bottled roasted groundnuts and shelled peanuts ready for bulk wholesale supply",
+    caption:
+      "Roasted groundnuts and shelled peanuts packed on pallets for bulk wholesale supply.",
+  },
+  {
     id: "cashew-nuts",
     slug: "cashew-nuts",
     name: "Cashew Nuts",
@@ -121,9 +140,11 @@ export const PRODUCTS: Product[] = [
       "Packed to each client's requirements",
     ],
     status: "Available now",
-    image: "/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg",
-    imageAlt: "Branded bottled products packed on pallets and ready for distribution and trade",
-    caption: "Branded product packed on pallets and ready for distribution and trade.",
+    image: "/images/products/african-food-king-hibiscus-tea.jpg",
+    imageAlt:
+      "African Food King premium herbal tea collection featuring Hibiscus, Ginger, Clove & Cinnamon pyramid tea bags",
+    caption:
+      "African Food King herbal tea line, 100% natural and caffeine-free.",
   },
   {
     id: "kuli-kuli",

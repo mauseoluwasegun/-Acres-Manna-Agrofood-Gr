@@ -491,6 +491,11 @@
           "description": "A versatile agricultural product with potential as packaged food and as a raw material for further processing.",
           "imageAlt": "Bulk packaged groundnuts and peanuts in warehouse"
         },
+        "roasted-groundnuts": {
+          "name": "Roasted Groundnuts",
+          "description": "Roasted groundnuts and shelled peanuts for bulk wholesale supply, packed to your requirements.",
+          "imageAlt": "Pallets of bottled roasted groundnuts and shelled peanuts ready for bulk wholesale supply"
+        },
         "cashew-nuts": {
           "name": "Cashew Nuts",
           "description": "A snack and ingredient people love, packed to your requirements.",
