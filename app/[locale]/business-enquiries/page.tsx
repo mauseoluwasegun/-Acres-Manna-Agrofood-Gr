@@ -1,35 +1,40 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { EnquiryLandingPage } from "@/components/pages/EnquiryLandingPage";
 
-export const metadata: Metadata = {
-  title: "Business Enquiries",
-  description:
-    "Contact AcresxManna about manufacturing, partnerships, media and other business enquiries.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "pages.businessEnquiries",
+  });
 
-export default function BusinessEnquiriesPage() {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+export default async function BusinessEnquiriesPage() {
+  const t = await getTranslations("pages.businessEnquiries");
+
   return (
     <EnquiryLandingPage
-      eyebrow="Business enquiries"
-      title="Let’s talk business."
-      intro="For anything that isn’t a product, supply or distribution question, get in touch about manufacturing and private-label discussions, partnerships, media, or another idea."
-      whatToKnow={[
-        "Product enquiries: availability and product information.",
-        "Supply or farming partnerships: agricultural commodities and seasonal volumes.",
-        "Distribution or wholesale: channels, markets and products of interest.",
-        "Manufacturing partnerships, investment enquiries and other business topics.",
-      ]}
-      steps={[
-        "Introduce yourself or your organisation.",
-        "Tell us the kind of conversation you would like to have.",
-        "Our team will direct your enquiry to the right contact.",
-      ]}
+      eyebrow={t("eyebrow")}
+      title={t("title")}
+      intro={t("intro")}
+      whatToKnow={t.raw("whatToKnow") as string[]}
+      steps={t.raw("steps") as string[]}
       enquiryType="other"
-      submitLabel="Start the conversation"
-      formIntro="Tell us what's on your mind."
+      submitLabel={t("submitLabel")}
+      formIntro={t("formIntro")}
       image="/images/corporate/executive-consultation-showroom-office.jpg"
-      imageAlt="AcresxManna executive consultation and showroom office"
-      imageCaption="Strategic conversations at AcresxManna headquarters in Ibadan, Nigeria."
+      imageAlt={t("imageAlt")}
+      imageCaption={t("imageCaption")}
     />
   );
 }

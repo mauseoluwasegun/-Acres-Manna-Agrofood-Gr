@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/i18n/routing";
 
@@ -9,6 +10,7 @@ const STORAGE_KEY = "acresxmanna-cookie-consent";
 type Consent = "all" | "essential" | null;
 
 export function CookieConsent() {
+  const t = useTranslations("ui.cookieConsent");
   const [visible, setVisible] = useState(false);
   const [consent, setConsent] = useState<Consent>(null);
 
@@ -43,24 +45,25 @@ export function CookieConsent() {
     <div
       role="dialog"
       aria-live="polite"
-      aria-label="Cookie consent"
+      aria-label={t("dialogLabel")}
       className="fixed inset-x-0 bottom-0 z-[90] p-4 sm:p-6"
     >
       <div className="mx-auto flex max-w-5xl flex-col gap-5 rounded-3xl border border-cream-200 bg-white p-6 shadow-card-hover sm:flex-row sm:items-center sm:justify-between sm:p-7">
         <div className="flex-1">
           <p className="font-display text-heading-1 font-black text-charcoal-900">
-            We use cookies.
+            {t("title")}
           </p>
           <p className="mt-2 font-sans text-body-md leading-relaxed text-charcoal-700">
-            We use essential cookies to make the site work, and optional ones to
-            understand how it&apos;s used. You choose. See our{" "}
-            <Link
-              href="/cookies"
-              className="font-bold text-purple-700 underline underline-offset-4"
-            >
-              Cookie Policy
-            </Link>{" "}
-            for details.
+            {t.rich("description", {
+              link: (chunks) => (
+                <Link
+                  href="/cookies"
+                  className="font-bold text-purple-700 underline underline-offset-4"
+                >
+                  {chunks}
+                </Link>
+              ),
+            })}
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
@@ -70,7 +73,7 @@ export function CookieConsent() {
             icon="none"
             onClick={() => save("essential")}
           >
-            Essential only
+            {t("essentialOnly")}
           </Button>
           <Button
             variant="primary"
@@ -78,7 +81,7 @@ export function CookieConsent() {
             icon="none"
             onClick={() => save("all")}
           >
-            Accept all
+            {t("acceptAll")}
           </Button>
         </div>
       </div>

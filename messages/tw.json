@@ -1,18 +1,362 @@
 {
+  "meta": {
+    "siteTitle": "AcresxManna — Afrika Ahonya, Akyɛ Yɛ Aduane Pa",
+    "siteDescription": "Amanaman aduane, nnuane mu nneɛma ne dwadini kuw a ɛresesa Afrika dwuma wɔ Agrofood wiase guasoɔ so.",
+    "skipToContent": "Kɔ emu nsɛm so"
+  },
+  "layout": {
+    "title": "AcresxManna — Afrika Ahonya, Akyɛ Yɛ Aduane Pa",
+    "description": "Amanaman aduane, nnuane mu nneɛma ne dwadini kuw a ɛresesa Afrika dwuma wɔ Agrofood wiase guasoɔ so."
+  },
+  "nav": {
+    "home": "Fie",
+    "about": "Yɛn Ho",
+    "products": "Nneɛma",
+    "whatWeDo": "Deɛ Yɛyɛ",
+    "what-we-do": "Deɛ Yɛyɛ",
+    "impact": "Nsunsuɛ",
+    "contact": "Nkitahodi"
+  },
   "hero": {
-    "eyebrow": "AcresxManna · Ahenni Bɔ Finances Dwumadie",
+    "eyebrow": "AcresxManna · Agrofood Kuw",
     "headline": {
-      "africa": "Ahenni",
-      "richness": "wiase.",
-      "transformed": "Ahyɛ",
-      "into": "ase",
-      "great": "Bɔ",
-      "food": "duahodi."
+      "africa": "Yɛresesa",
+      "richness": "Afrika dwuma",
+      "transformed": "wɔ",
+      "into": "Agrofood",
+      "great": "wiase",
+      "food": "guasoɔ."
     },
-    "subheadline": "Wɔ aman a todo wɔ Africa so no, yɛ resesa ahenni wiase nkongua sɛ w'ahenni bɔ fince sika nnua anigye, na yɛde abused wɔ wiase fo.",
+    "subheadline": "Amanaman aduane, nnuane mu nneɛma ne dwadini kuw.",
     "cta": {
-      "explore": "Hwe Yɛn Nsrahwe",
-      "partner": "Yɛn Nkitahodi"
+      "explore": "Hwɛ Yɛn Nneɛma",
+      "partner": "Bɛyɛ Yɛn Nnamfo"
+    }
+  },
+  "farmToFood": {
+    "sectionEyebrow": "→ NE: FI AFUO SO KƆ ADUANE",
+    "eyebrow": "YƐN AKWANTU",
+    "headline": "Fi <em>Afuo</em> so kɔ <em>Aduane</em> — wɔ Anammɔn Asia Mu",
+    "description": "Hwɛ akwantuo no nyinaa ase ha. Aduaba biara, otwa biara, ne aduane biara yɛ Afrika anansesɛm baako fa.",
+    "exploreProcess": "Hwɛ Ɛkwan Nyinaa",
+    "stages": {
+      "s1": {
+        "eyebrow": "ANAMMƆN · KUAYƐ",
+        "headline": "<em>Afrika</em> Aba.",
+        "description": "Yɛnya fi smallholder afuo ne kuw mu wɔ Ghana, Côte d'Ivoire, ne Nigeria — aburoo, kookoo, nkuto, ne afifideɛ a ɛwɔ ha ankasa te sɛ fonio ne atɔɔ."
+      },
+      "s2": {
+        "eyebrow": "ANAMMƆN · OTWA",
+        "headline": "<em>Otwa</em> a Ɛyɛ Sika.",
+        "description": "Wɔde nsa twa, na wɔde mfidie nso twa, wɔ berɛ a ɛbereɛ paa. Batch biara fa farm-gate quality grading wɔ Ghana Standards Authority (GSA) nhyehyɛeɛ so."
+      },
+      "s3": {
+        "eyebrow": "ANAMMƆN · NSIESIE",
+        "headline": "<em>Nsakraeɛ</em> Foforɔ.",
+        "description": "HACCP ne ISO 22000 adansedie wɔ adwumayɛbea a ɛwɔ Greater Accra mantam mu. Yɛte, yɛpa, yɛwia, na yɛfra — pɛyɛ wɔ anammɔn biara mu."
+      },
+      "s4": {
+        "eyebrow": "ANAMMƆN · NTAKRA",
+        "headline": "Awie sɛ Wɔde Bɛto <em>shelf</em> so.",
+        "description": "Shelf-stable packaging a ɛhyɛ EU, USFDA, ne ECOWAS aduane ahobammɔ nhyehyɛeɛ so. Label biara ka nea ɛwɔ mu no fibea nsɛm."
+      },
+      "s5": {
+        "eyebrow": "ANAMMƆN · ADUANE",
+        "headline": "<em>Aduane</em> Pa.",
+        "description": "Fi yɛn gyaade mu kɔ w'adwuma mu. Jollof spice mfrafra, kookoo a wɔakɔ no, bankye muhumuhu — nnuane a ɛho hia, a ɛwɔ amammerɛ mu, ne aduane a wɔasiesie."
+      },
+      "s6": {
+        "eyebrow": "ANAMMƆN · WIASE GUASOƆ",
+        "headline": "Ma <em>wiase</em>.",
+        "description": "Yɛde distribution kɔ guasoɔ 24+ so wɔ Africa Continental Free Trade Area (AfCFTA) akwan mu, ne EU ne North America importers nkitahodi mu."
+      }
+    }
+  },
+  "about": {
+    "dividerEyebrow": "— YƐN NE HƐNA",
+    "headerEyebrow": "Yɛn Botaeɛ",
+    "headerText": "Wɔ AcresxManna, yɛabɔ yɛn ho ama wiase aduane. Yɛwɔ anim sɛ yɛsɔ aduane ahobammɔ ne pa a ɛho hia a ɛredɔɔso no ano.",
+    "originEyebrow": "Yɛn Fibea Nsɛm",
+    "originHeadlineL1": "Yɛwɔ Afrika mu.",
+    "originHeadlineL2": "Yɛrenyin ma",
+    "originHeadlineL3": "wiase.",
+    "originParagraph1": "AcresxManna Kuw no resesa sɛnea Afrika di aduane na ɛma wiase nso di. Yɛyɛ Afrika nyinaa agrofood kuw a yɛabɔ yɛn ho ama sɛ yɛbɛkyekye aduane daakye a ɛyɛ pɛpɛɛpɛ, a ɛkɔ so, na ɛyɛ pɛ ma obiara. Yɛn nhyehyɛeɛ ka kuayɛ, aduane siesie, sika, media, ne distribution bɔ mu—na ɛma aduane pa ne kwan wɔ agrofood value chain anammɔn biara mu. Yɛn adwumakuo no som akuraa adwumayɛfoɔ ne kurow mu atɔfoɔ nyinaa, na ɛde nneɛma foforɔ, nokorɛ, ne nkitahodi a ɛmu yɛ den wɔ mpɔtam mu ba. Yɛhwɛ sɛ yɛde ɛha nimdeɛ ne ɛnnɛ berɛ adwuma bɛka abɔ mu ama yɛahyɛ smallholder farmers den, ama aduane ahobammɔ ayɛ kɛse, na yɛde Afrika aduane ankasa nsɛm akɔ wiase nyinaa. Sɛ ɛyɛ afuo foforɔ, sika a obiara nya, logistics, anaa anansesɛm a wɔka kyerɛ, yɛn botaeɛ yɛ baako: sɛ yɛbɛbɔ nnipa nkwa, bɛkora agyanom amammerɛ so, na yɛbɛhyɛ sikasɛm den fi fapem so.",
+    "originParagraph2": "Fi West Africa afuo nketewa so kɔ wiase aduane guasoɔ, wɔwoo AcresxManna Kuw no fii gyidie a ɛyɛ sɛ Afrika bɛtumi adi aduane—na ɛma wiase nso adi—wɔ nidi ne pɛyɛ mu. Yɛfii aseɛ ne botaeɛ baako: sɛ yɛbɛbɔ Afrika kuayɛ a ɛdɔɔso ne guasoɔ kwan ntam kwan. Wɔ kwan no so, yɛhunuu sɛ ɛho hia adeɛ bɛboro kuayɛ so. Yɛhunuu sɛ ɛho hia nhyehyɛeɛ, mmoa, ne nhyehyɛeɛ a ɛyɛ adwuma—fi aba so kɔ shelf so. Ɛnnɛ, yɛn brands boa akuafoɔ wɔ kwan pa so, ma atɔfoɔ aduane pa, na wɔde Afrika amammerɛ anigyeɛ ba wiase nyinaa nkyɛn.",
+    "visionEyebrow": "Yɛn Anisoadehunu",
+    "visionText": "Sɛ yɛbɛboa kɛse ma wiase daakye a aduane wɔ mu na nnipa ahoɔden wɔ mu.",
+    "missionEyebrow": "Yɛn Adwuma",
+    "missionText": "Sɛ yɛbɛkyekye afuo ne adwumakuo a ɛyɛ nneɛma pii na ɛwɔ ahoɔden a ɛyɛ adwuma paa wɔ sɛ ɛde boɔ a ɛho hia bɛka agrofood value chain no nyinaa mu.",
+    "readStory": "Kenkan Nsɛm Nyinaa",
+    "seeImpact": "Hwɛ Yɛn Nsunsuɛ",
+    "focusEyebrow": "Deɛ Yɛde Yɛn Adwene Si So",
+    "focusHeadline": "Fi Dua So, Kɔ Boɔ a Wɔde Ka Ho, Kɔ Guasoɔ So: Yɛhwɛ sɛ Aduane Pa Wɔ Anammɔn Biara Mu",
+    "focus1": "Kuayɛ ne Afuo Adwuma",
+    "focus2": "Aduane Siesie ne Ntakra",
+    "focus3": "Sika Adwuma",
+    "focus4": "Distribution & Retail",
+    "focus5": "Nwomasua & Media",
+    "focus1Desc": "Yɛhyɛ Afrika akuafoɔ den wɔ kwan a ɛkɔ so ne mfidie a ɛkɔ anim a ɛma aduaba dɔɔso na asase yɛ den so. Yɛn botaeɛ ne sɛ yɛbɛsesa kuayɛ kwan wɔ Afrika nyinaa, na ɛno bue kwan ma kuayɛ export kɔ wiase nyinaa.",
+    "focus2Desc": "Yɛsesa kuayɛ nneɛma yɛ aduane a ɛwie — na yɛhwɛ sɛ aduane yɛ pa, yɛ ahobammɔ, na ɛkora so wɔ anammɔn biara mu.",
+    "focus3Desc": "Yɛma agro-entrepreneurs sika ne afotu ma wɔn tumi nyin na wɔn adwuma nkɔ so.",
+    "focus4Desc": "Yɛka ɛha nneɛma ne ɛha ne wiase guasoɔ bɔ mu.",
+    "focus5Desc": "Yɛka Afrika aduane nsɛm kyerɛ wiase wɔ content ne campaign so.",
+    "valueEyebrow": "Yɛbɔ Boɔ a Ɛtena Hɔ Kyɛ",
+    "value1": "Nneɛma Foforɔ a Wɔtɔ",
+    "value1Desc": "Yɛsesa nyin kwan sɛ yɛtɔ na yɛka adwuma bɔ mu a ɛhyɛ yɛn anisoadehunu ma agrofood nhyehyɛeɛ a ɛbɛyɛ yiye no den.",
+    "value2": "Nkitahodi a Ɛyɛ Pa",
+    "value2Desc": "Yɛne nnipa bom yɛ adwuma, na yɛbɔ nkitahodi a ɛbue boɔ a yɛn nyinaa nya na ɛma nsunsuɛ ba wiase nyinaa.",
+    "value3": "Yɛde Sika Si Ɔkyena",
+    "value3Desc": "Yɛn sika a yɛde si no hwɛ nneɛma foforɔ a ɛkɔ so a ɛkyekye kuayɛ ne aduane nhyehyɛeɛ daakye.",
+    "value4": "Adwumayɛ Nimdeɛ",
+    "value4Desc": "Wɔ adwene foforɔ ne akokoduru mu, yɛde nneɛma foforɔ ba, na yɛsesa ɔhaw yɛ kwan.",
+    "value5": "Adwuma a Ɛyɛ Nokorɛ na Ɛkɔ So",
+    "value5Desc": "Yɛboa adwuma a ɛnyɛ sɛ ɛma mfasoɔ nko, na mmom ɛwɔ nokorɛ ne asetena mu ahwɛyɛ mu.",
+    "value6": "Sikasɛm a Ɛyɛ Den",
+    "value6Desc": "Yɛn sikasɛm fapem a ɛyɛ den ma yɛtumi yɛ adwuma a nsunsuɛ wɔ mu na yɛkɔ so nyin kyɛ.",
+    "brandsEyebrow": "Yɛn Brands",
+    "brand1Name": "UncleTobi Farmers",
+    "brand1Desc": "Kuayɛ nneɛma a wɔtɔ ne afuo network fa, a ɛkyekye na ɛhwɛ nkitahodi a ɛwɔ akuafoɔ ne adwumayɛfoɔ ntam, na ɛma kuayɛ nneɛma ba berɛ biara.",
+    "brand2Name": "Maluza Foods Co.",
+    "brand2Desc": "AcresxManna bakery fa, a ɛyɛ bread foforɔ ne pastries. Ɛsesa kuayɛ nneɛma yɛ aduane a ɛwie.",
+    "brand3Name": "HappyMan Foods",
+    "brand3Desc": "Aduane brand ma atɔfoɔ a ɛyɛ na ɛde distribution kɔ aduane a wɔayɛ ma ɛyɛ boɔ, ɛyɛ mmerɛ, na wɔtaa di daa.",
+    "brand4Name": "African Food King",
+    "brand4Desc": "Wɔayɛ ma retail, distribution, ne export guasoɔ, na ɛyɛ AcresxManna brand a ɛdi kan, a ɛde Afrika aduane ba atɔfoɔ nkyɛn.",
+    "certificationsEyebrow": "Nhyehyɛeɛ & Adansedie",
+    "cert1Name": "NAFDAC",
+    "cert1Desc": "Ɛhwɛ sɛ aduane hyɛ ɔman ahobammɔ, pa, ne mmara nhyehyɛeɛ so.",
+    "cert2Name": "SON",
+    "cert2Desc": "Ɛhwɛ sɛ nneɛma hyɛ ɔman nhyehyɛeɛ a wɔagye atom so ma ahobammɔ, pa, ne atɔfoɔ ahobammɔ.",
+    "cert3Name": "MAN",
+    "cert3Desc": "Ɛhyɛ manufacturing nhyehyɛeɛ a ɛkorɔn ne industry nkɔsoɔ den.",
+    "cert4Name": "HACCP",
+    "cert4Desc": "Wiase nhyehyɛeɛ a ɛsiw, ɛhwɛ, na ɛsɔ aduane ahobammɔ ɔhaw ano.",
+    "cert5Name": "Nnyɛ GMO",
+    "cert5Desc": "Ɛsi so dua sɛ aduane fi abɔdeɛ mu na genetic modification biara nni mu.",
+    "cert6Name": "HALAL",
+    "cert6Desc": "Ɛhwɛ sɛ aduane ne nsa hyɛ Islam aduane mmara ne sɛnea wɔsiesie so.",
+    "pullquote": "Yɛnyɛ aduane nko na yɛde kɔ amanɔne — yɛde Afrika adwuma nidi, yɛn asase honhom, ne anigyeɛ a ɛwɔ yɛn nsa ano aduane so kɔ.",
+    "pullquoteName": "AcresxManna",
+    "pullquoteTitle": "Ahyɛaseɛ Akannifoɔ",
+    "workSpansEyebrow": "Yɛn Adwuma Trɛ Kɔ",
+    "workSpansHeadline": "Fi aba so kɔ shelf so, wɔ value chain nyinaa mu.",
+    "workSpan1Name": "Kuayɛ & Afuo Adwuma",
+    "workSpan1Desc": "Yɛhyɛ akuafoɔ den wɔ mfidie, nteteeɛ, ne kwan a ɛkɔ so so.",
+    "workSpan2Name": "Aduane Siesie & Nneɛma Foforɔ",
+    "workSpan2Desc": "Yɛhwɛ sɛ aduane yɛ pa, yɛ ahobammɔ, na ɛkora so.",
+    "workSpan3Name": "Sika Adwuma",
+    "workSpan3Desc": "Yɛma agro-entrepreneurs sika ne afotu.",
+    "workSpan4Name": "Distribution & Retail",
+    "workSpan4Desc": "Yɛka ɛha nneɛma ne ɛha ne wiase guasoɔ bɔ mu.",
+    "workSpan5Name": "Nwomasua & Media",
+    "workSpan5Desc": "Yɛka Afrika aduane nsɛm kyerɛ wiase wɔ content ne campaign so.",
+    "beyondHarvestEyebrow": "Otwa Akyi",
+    "beyondHarvestHeadline": "Hunu Pa No Kwan Pii",
+    "beyondHarvestCta": "Hwɛ Expressions Nyinaa"
+  },
+  "products": {
+    "dividerEyebrow": "— YƐN ADUANE PƆTEE",
+    "eyebrow": "Aduane Nnidisoɔ",
+    "headlineP1": "Hunu aduane a ɛde ",
+    "headlineEmphasis": "Afrika",
+    "headlineP2": " dɛ kɔ anim.",
+    "categories": {
+      "all": "Nyinaa",
+      "grains": "Aba & Muhumuhu",
+      "cocoa": "Kookoo & Chocolate",
+      "beverages": "Nsa",
+      "shea": "Nkuto & Ngo",
+      "meals": "Aduane Kits",
+      "teas": "Tii & Nsa a Wɔfra"
+    },
+    "noProducts": "Aduane biara nni kuo yi mu — catalog ankasa reba.",
+    "shelfEyebrow": "Hwɛ Shelf No",
+    "shelfHeadline": "Swipe kɔ <em>line no nyinaa</em> so.",
+    "showing": "Ɛrekyerɛ",
+    "of": "wɔ",
+    "placeholderProducts": "nneɛma",
+    "filters": "Paw",
+    "allOrigins": "Fibea nyinaa",
+    "allSizes": "Kɛseɛ nyinaa",
+    "priceAll": "Boɔ: Nyinaa",
+    "fullCatalog": "Catalog nyinaa →",
+    "viewAll": "Hwɛ Nneɛma Nyinaa",
+    "becomeDistributor": "Bɛyɛ Distributor"
+  },
+  "expressions": {
+    "dividerEyebrow": "— YƐN EXPRESSIONS",
+    "eyebrow": "Yɛn Expressions",
+    "headline": "Yɛn nyinaa <em>yɛ AcresxManna.</em>",
+    "description": "Yɛn expressions ne kwan a yɛfa so de yɛn botaeɛ ba — wɔ afuo, aduane, anansesɛm, ne asetena mu nsunsuɛ.",
+    "expr1Name": "UncleTobi Shop",
+    "expr1Tagline": "Tɔ Afrika Aduane a Ɛyɛ Soronko, Wɔde Ba Wo Nkyɛn.",
+    "expr1Desc": "W'adwadie online a ɛma aduane a ɛyɛ dɛ. Yɛka Afrika producers, akuafoɔ, ne aduane yɛfoɔ a wɔyɛ paa nyinaa bɔ mu.",
+    "expr2Name": "African Food King",
+    "expr2Tagline": "Afrika Aduane Ankasa",
+    "expr2Desc": "Wɔ African Food King, amammerɛ ne nneɛma foforɔ hyia ma Afrika aduane dɛ kɔ wiase.",
+    "expr3Name": "Aduane Nnyɛ Anigyeɛ Adeɛ",
+    "expr3Tagline": "Dɔ Adwene, Bɔ Daakye Nkwa.",
+    "expr3Desc": "Yɛn asetena mu nsunsuɛ fa — ɛfiri sɛ nokorɛ nsakraeɛ fi kwan bue so. Yɛgye di sɛ aduane yɛ ɛyɛ adeɛ, ɛnyɛ anigye adeɛ. Nanso ɛnyɛ akyɛdeɛ na yɛde ma, na mmom yɛboa nwomasua a ɛhyɛ mpɔtam den ma wɔtumi di wɔn ho aduane daa.",
+    "expr4Name": "HappyMan Foods",
+    "expr4Tagline": "Afrika Aduane a Ɛma Wo Ho Dɛ",
+    "expr4Desc": "Fi nnu aduane nketewa so kɔ dɛ aduane so, HappyMan de Afrika aduane a ɛma wo ho yɛ wo dɛ ba. Aduane a wɔasiesie deda — ɛyɛ ma fie, adwumayɛbea, ne kwan so.",
+    "expr5Name": "Panem Vitae",
+    "expr5Tagline": "Adwuma a Ɛma Nneɛma Nyin Yie",
+    "expr5Desc": "Panem Vitae ne yɛn kuayɛ tumi — ɛkyekye na ɛhwɛ afuo a ɛma aduane pa a nsunsuɛ wɔ mu. Fi asase so kɔ afifideɛ nhwɛsoɔ, yɛde agri-solutions a ɛfata ma mmeaeɛ nyinaa.",
+    "expr6Name": "IJGB Foods",
+    "expr6Tagline": "Afrika Snacks, Wiase Anigyeɛ",
+    "expr6Desc": "Yɛboa dwadini ne supply a ɛyɛ pa wɔ guasoɔ nyinaa. Sɛ woyɛ okuani, bulk buyer, anaa trader, yɛka wo ne kwan pa a ɛwɔ commodity dwuma mu bɔ mu.",
+    "cta": "Hwɛ Expressions Nyinaa"
+  },
+  "impact": {
+    "dividerEyebrow": "— NSUNSUƐ A YƐTE",
+    "eyebrow": "Wɔ Nɔma Mu",
+    "headlineP1": "Nsunsuɛ a wɔde susu wɔ ",
+    "headlineFarmers": "akuafoɔ",
+    "headlineFamilies": "abusua",
+    "headlineAnd": " ne ",
+    "headlineFutures": "daakye ankasa.",
+    "description": "Nɔma biara wɔ saa krataafa yi so yɛ nnipa, mpɔtam, anaa aduane a ɛwɔ ɛpono so a yɛaboa ma ɛkɔ hɔ.",
+    "metrics": {
+      "farmersSupported": "Akuafoɔ a wɔaboa wɔn",
+      "communitiesReached": "Mpɔtam a yɛaduru",
+      "productsDeveloped": "Nneɛma a wɔayɛ",
+      "marketsServed": "Guasoɔ a yɛsom",
+      "jobsCreated": "Adwuma a wɔabue",
+      "productionCapacity": "Production capacity"
+    },
+    "metricsValues": {
+      "farmers": "Ɛreba",
+      "communities": "Ɛreba",
+      "products": "Ɛreba",
+      "markets": "Ɛreba",
+      "jobs": "Ɛreba",
+      "capacity": "Ɛreba"
+    },
+    "storiesEyebrow": "Nnipa Nsɛm",
+    "storiesHeadline": "Metric biara akyi, <em>nsɛm ankasa.</em>"
+  },
+  "global": {
+    "dividerEyebrow": "— FI ƐHA KƆ WIASE",
+    "eyebrow": "Wiase Botaeɛ",
+    "headlineP1": "Wɔkyekye wɔ Afrika, ",
+    "headlineEmphasis": "wɔde kɔ wiase.",
+    "description": "Yɛn botaeɛ yɛ baako: ma Afrika aduane a wɔayɛ nyɛ adeɛ a efi fie biara mu wɔ asase biara so. Yeinom ne guasoɔ a yɛsom ɛnnɛ ne kwan a ɛwɔ anim.",
+    "hqEyebrow": "HQ · Ghana",
+    "hqHeadline": "Yɛn <em>fie guasoɔ</em> ne baabi a biribiara fi ase.",
+    "hqDescription": "West Africa ne yɛn akoma asase — Ghana yɛ HQ, Nigeria yɛ yɛn ɔman guasoɔ a ɛso paa, na kookoo belt kɛseɛ no yɛ yɛn raw material fibea a ɛdɔɔso paa.",
+    "hqGhana": "Ghana · HQ + milling + kookoo siesie",
+    "hqNigeria": "Nigeria · Jollof / aduane a wɔasiesie line",
+    "hqCoteDivoire": "Côte d'Ivoire · Kookoo supply network",
+    "hqKenya": "Kenya · East Africa distribution hub",
+    "hqSouthAfrica": "South Africa · Southern Africa retail",
+    "bringToRegion": "Fa Yɛn Bra Wo Mantam",
+    "legendHQ": "HQ & Siesie a Ɛdi Kan",
+    "legendMarket": "Guasoɔ a Ɛso Paa",
+    "legendCocoa": "Kookoo Belt",
+    "legendEastAfrica": "East Africa Hub",
+    "legendDistribution": "Mantam Distribution",
+    "legendExports": "Export Guasoɔ"
+  },
+  "cta": {
+    "dividerEyebrow": "— MA YƐN NKITAHODI",
+    "eyebrow": "Frɛ Yɛn",
+    "headline": "Yɛrekyekye <em>Aduane Daakye.</em> Ma yɛn ma daakye aduane.",
+    "description": "Wowɔ nsɛmmisa fa yɛn brands, strategy, anaa ecosystem ho? Ma yɛn nkitahodi, yɛbɔ boɔ, na yɛn nyinaa ma daakye aduane.",
+    "emailLabel": "Email: hello@aAcresxManna.com",
+    "phoneLabel": "Telefon: +234 804 700 0587",
+    "formEyebrow": "Nsɛmmisa Ntɛm",
+    "formHeadline": "Ka nea wohia kyerɛ yɛn — <em>yɛbɛtumi abua wɔ 48h mu.</em>",
+    "placeholderName": "Din nyinaa",
+    "placeholderEmail": "you@email.com",
+    "placeholderCompany": "Adwumakuo / Kuw / Afuo (sɛ wopɛ)",
+    "selectDefault": "Merebɛka me ho sɛ...",
+    "selectConsumer": "Atɔfoɔ",
+    "selectFarmer": "Okuani / Nea Ɔde Nneɛma Ba",
+    "selectDistributor": "Distributor / Retailer",
+    "selectPartner": "Adwuma Yɔnko",
+    "selectInvestor": "Investor",
+    "selectPress": "Press",
+    "selectJobSeeker": "Nea Ɔpɛ Adwuma",
+    "placeholderMessage": "Nsɛm kakra fa nea wohia ho...",
+    "sendInquiry": "Soma Nsɛmmisa",
+    "fullContactPage": "Nkitahodi Krataafa Nyinaa",
+    "trust48h": "48h mu bua",
+    "trustSecure": "Kwan a ɛyɛ ahobammɔ na ɛyɛ kokoam",
+    "trustFarmers": "Akuafoɔ a wɔdi kan",
+    "trustGlobal": "Wiase shipping + logistics"
+  },
+  "footer": {
+    "tagline": "Yɛsesa Afrika kuayɛ ahonya yɛ aduane pa ma ɛha mpɔtam ne wiase ɛpono nyinaa.",
+    "navigate": "Kwan",
+    "footerProducts": "Nneɛma",
+    "grainsFlours": "Aba & Muhumuhu",
+    "cocoaChocolate": "Kookoo & Chocolate",
+    "beveragesNectars": "Nsa & Nectar",
+    "sheaOils": "Nkuto & Ngo Ankasa",
+    "mealKits": "Aduane Kits & Aduane a Wɔasiesie",
+    "viewFullCatalog": "Hwɛ catalog nyinaa →",
+    "stayConnected": "Kɔ So Ka Yɛn Ho",
+    "newsletter": "Newsletter",
+    "newsletterDescription": "Bɛka AcresxManna ho ma yɛn nyinaa aduane — nsɛm foforɔ fi yɛn afuo, brands ne nsunsuɛ wɔ agrofood value chain so.",
+    "subscribe": "Nya Nsɛm",
+    "copyright": "© {year} AcresxManna. Hokwan nyinaa wɔ hɔ.",
+    "privacy": "Kokoam",
+    "terms": "Nhyehyɛeɛ",
+    "cookies": "Cookies"
+  },
+  "languageSwitcher": {
+    "label": "Kasa",
+    "en": "English",
+    "fr": "Français",
+    "tw": "Twi"
+  },
+  "sections": {
+    "ambition": {
+      "eyebrow": "Yɛn Nwuma",
+      "headline": "Yɛsesa Afrika Kuayɛ Ahonya",
+      "description": "Yɛbɔ aduane, nnuane mu nneɛma ne dwadini kuw a ɛresesa Afrika dwuma wɔ Agrofood wiase guasoɔ so."
+    },
+    "about": {
+      "dividerEyebrow": "— YƐN HO YƐ",
+      "eyebrow": "Yɛn Botae",
+      "headline": "Yɛde Ma Wiase No Aduane",
+      "description": "Wɔ AcresxManna, yɛka akuw a wɔhwehwɛ aduane a ɛyɛ pɛ no ho. Afiri aboɔ so kosi so, yɛbɔ value wɔ agrofood value chain nyinaa so.",
+      "cta": "Sɔ_hwɛ Kɛkɛ"
+    },
+    "manufacturing": {
+      "eyebrow": "Yɛn Adwuma no",
+      "headline": "Adwuma Beaeɛ",
+      "description": "Yɛn adwuma beaeɛ no yɛ pɛ na ɛma aduane no yɛ pɛ wɔ berɛ biara mu."
+    },
+    "products": {
+      "dividerEyebrow": "— YƐN NEƐMA",
+      "eyebrow": "Nneɛma",
+      "headline": "Afrika Aduane a Ɛyɛ Pɛ",
+      "description": "Afiri aba so kosi aduane a wɔayɛ no, yɛn nneɛma no kɔ wiase nyinaa."
+    },
+    "operatingModel": {
+      "dividerEyebrow": "— YƐN ADWUMA",
+      "eyebrow": "Yɛn Adwuma",
+      "headline": "Value Chain",
+      "description": "Yɛka kuayɛ, adwuma, sika ne distribution bom na yɛyɛ aduane."
+    },
+    "brands": {
+      "dividerEyebrow": "— YƐN BRANDS",
+      "eyebrow": "Yɛn Brands",
+      "headline": "Brands Bɛtɔ, Botae Koro",
+      "description": "Yɛn brands no boa akuafoɔ ne afoforɔ, na ɛyɛ pɛ."
+    },
+    "impact": {
+      "dividerEyebrow": "— YƐN IMPACT",
+      "eyebrow": "Wɔ Nsɛm Mu",
+      "headline": "Impact a Ɛyɛ Nokware",
+      "description": "Obiara yɛ kuayɛfoɔ anaasɛ ɔkuo a yɛaboa."
+    },
+    "finalCta": {
+      "eyebrow": "Nkitahodi",
+      "headline": "Partnerships",
+      "description": "Sɛ wo yɛ kuayɛfoɔ, distribuidor anaasɛ partner, ka yɛn ho bom."
     }
   }
 }

@@ -7,21 +7,7 @@ import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 import { Logo } from "@/components/navigation/Logo";
 import { Button } from "@/components/ui/Button";
-import {
-  IconBox,
-  IconCapacity,
-  IconCart,
-  IconFactory,
-  IconFarmers,
-  IconGlobe,
-  IconHandshake,
-  IconHome,
-  IconMail,
-  IconMenu,
-  IconNews,
-  IconWheat,
-  IconX,
-} from "@/components/ui/icons";
+import { IconChevronRight, IconMenu, IconX } from "@/components/ui/icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
@@ -45,19 +31,7 @@ const MORE_NAV_LINKS = NAV_LINKS.filter(({ href }) =>
   ].includes(href),
 );
 
-const NAV_ICONS: Record<string, typeof IconHome> = {
-  "/": IconHome,
-  "/about": IconFarmers,
-  "/what-we-do": IconFactory,
-  "/products": IconCart,
-  "/our-brands": IconBox,
-  "/infrastructure": IconCapacity,
-  "/impact": IconWheat,
-  "/global-markets": IconGlobe,
-  "/investors-partners": IconHandshake,
-  "/news-insights": IconNews,
-  "/contact": IconMail,
-};
+const REST_NAV_LINKS = NAV_LINKS.filter(({ href }) => href === "/contact");
 
 export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
   const pathname = usePathname();
@@ -96,7 +70,7 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
 
         <nav
           className="hidden lg:flex min-w-0 items-center gap-3 xl:gap-5"
-          aria-label="Primary"
+          aria-label={t("primaryAria")}
         >
           {PRIMARY_NAV_LINKS.map((link) => {
             const active =
@@ -140,7 +114,7 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
                 ) && "text-terracotta-600",
               )}
             >
-              More
+              {t("more")}
               <span
                 aria-hidden
                 className="ml-1 inline-block border-b-2 border-r-2 border-current p-[2px] align-[3px] rotate-45"
@@ -176,14 +150,14 @@ export function Navbar({ onOpenMenu }: { onOpenMenu: () => void }) {
               className="px-3 py-3 text-xs xl:px-6 xl:py-3.5 xl:text-sm"
               ariaLabel={t("contact")}
             >
-              Let&apos;s Talk
+              {t("letsTalk")}
             </Button>
           </div>
         </nav>
 
         <button
           type="button"
-          aria-label="Open menu"
+          aria-label={t("openMenu")}
           onClick={onOpenMenu}
           className={cn(
             "lg:hidden p-2.5 rounded-soft transition-colors",
@@ -209,6 +183,16 @@ export function MobileMenu({
   const pathname = usePathname();
   const reduce = useReducedMotion();
   const t = useTranslations("nav");
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    setMoreOpen(
+      MORE_NAV_LINKS.some(
+        ({ href }) => pathname === href || pathname?.startsWith(href),
+      ),
+    );
+  }, [open, pathname]);
 
   useEffect(() => {
     if (!open) return;
@@ -275,6 +259,43 @@ export function MobileMenu({
         closed: { opacity: 0, x: 28 },
       };
 
+  const moreActive = MORE_NAV_LINKS.some(
+    ({ href }) => pathname === href || pathname?.startsWith(href),
+  );
+
+  const renderNavLink = (link: (typeof NAV_LINKS)[number], compact = false) => {
+    const active =
+      pathname === link.href ||
+      (link.href !== "/" && pathname?.startsWith(link.href));
+    const navKey = NAV_KEY_MAP[link.href];
+    const label = navKey ? t(navKey as any) : link.label;
+
+    const row = (
+      <Link
+        href={link.href}
+        onClick={onClose}
+        aria-current={active ? "page" : undefined}
+        className={cn(
+          "flex items-center rounded-soft font-sans font-bold transition-colors",
+          compact ? "px-3 py-2.5 text-sm" : "px-3 py-3 text-[15px]",
+          active
+            ? "bg-terracotta-500/10 text-terracotta-600"
+            : "text-charcoal-900 hover:bg-charcoal-900/5 hover:text-terracotta-600",
+        )}
+      >
+        <span className="truncate">{label}</span>
+      </Link>
+    );
+
+    return compact ? (
+      <div key={link.href}>{row}</div>
+    ) : (
+      <motion.div key={link.href} variants={item}>
+        {row}
+      </motion.div>
+    );
+  };
+
   return (
     <AnimatePresence>
       {open && (
@@ -293,7 +314,7 @@ export function MobileMenu({
             initial="closed"
             animate="open"
             exit="closed"
-            aria-label="Mobile"
+            aria-label={t("mobileAria")}
             style={{
               paddingTop: "env(safe-area-inset-top)",
               paddingBottom: "env(safe-area-inset-bottom)",
@@ -310,7 +331,7 @@ export function MobileMenu({
               <button
                 type="button"
                 onClick={onClose}
-                aria-label="Close menu"
+                aria-label={t("closeMenu")}
                 className="shrink-0 rounded-soft p-2.5 text-charcoal-900 transition-colors hover:bg-charcoal-900/5"
               >
                 <IconX size={22} />
@@ -318,43 +339,48 @@ export function MobileMenu({
             </div>
 
             <div className="relative flex-1 overflow-y-auto overscroll-contain px-2 py-2">
-              {NAV_LINKS.map((link) => {
-                const active =
-                  pathname === link.href ||
-                  (link.href !== "/" && pathname?.startsWith(link.href));
-                const navKey = NAV_KEY_MAP[link.href];
-                const label = navKey ? t(navKey as any) : link.label;
-                const Icon = NAV_ICONS[link.href];
+              {PRIMARY_NAV_LINKS.map((link) => renderNavLink(link))}
 
-                return (
-                  <motion.div key={link.href} variants={item}>
-                    <Link
-                      href={link.href}
-                      onClick={onClose}
-                      aria-current={active ? "page" : undefined}
-                      className={cn(
-                        "group flex items-center gap-3.5 rounded-soft px-3 py-3 font-sans text-[15px] font-bold transition-colors",
-                        active
-                          ? "bg-terracotta-500/10 text-terracotta-600"
-                          : "text-charcoal-900 hover:bg-charcoal-900/5 hover:text-terracotta-600",
-                      )}
+              <motion.div variants={item}>
+                <button
+                  type="button"
+                  onClick={() => setMoreOpen((value) => !value)}
+                  aria-expanded={moreOpen}
+                  className={cn(
+                    "flex w-full items-center justify-between gap-3 px-3 py-3 font-sans text-xs font-bold uppercase tracking-[0.08em] transition-colors",
+                    moreActive
+                      ? "text-terracotta-600"
+                      : "text-charcoal-700 hover:text-terracotta-600",
+                  )}
+                >
+                  <span>{t("more")}</span>
+                  <IconChevronRight
+                    size={16}
+                    className={cn(
+                      "shrink-0 transition-transform duration-300",
+                      moreOpen && "rotate-90",
+                    )}
+                  />
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {moreOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.28, ease: "easeInOut" }}
+                      className="overflow-hidden"
                     >
-                      {Icon ? (
-                        <Icon
-                          size={20}
-                          className={cn(
-                            "shrink-0 transition-colors",
-                            active
-                              ? "text-terracotta-600"
-                              : "text-charcoal-700 group-hover:text-terracotta-600",
-                          )}
-                        />
-                      ) : null}
-                      <span className="truncate">{label}</span>
-                    </Link>
-                  </motion.div>
-                );
-              })}
+                      <div className="ml-5 border-l border-cream-50 pl-1">
+                        {MORE_NAV_LINKS.map((link) => renderNavLink(link, true))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+
+              {REST_NAV_LINKS.map((link) => renderNavLink(link))}
             </div>
 
             <motion.div
@@ -369,7 +395,7 @@ export function MobileMenu({
                 className="w-full"
                 ariaLabel={t("contact")}
               >
-                Let&apos;s Talk
+                {t("letsTalk")}
               </Button>
             </motion.div>
           </motion.nav>

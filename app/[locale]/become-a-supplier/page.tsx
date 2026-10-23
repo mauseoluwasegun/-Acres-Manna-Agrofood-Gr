@@ -1,35 +1,40 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { EnquiryLandingPage } from "@/components/pages/EnquiryLandingPage";
 
-export const metadata: Metadata = {
-  title: "Become a Supplier",
-  description:
-    "Tell AcresxManna about the agricultural commodities you grow, aggregate or trade.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "pages.becomeASupplier",
+  });
 
-export default function BecomeSupplierPage() {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+export default async function BecomeSupplierPage() {
+  const t = await getTranslations("pages.becomeASupplier");
+
   return (
     <EnquiryLandingPage
-      eyebrow="Grow with us"
-      title="Let’s source Africa’s harvest together."
-      intro="A dependable processing business needs dependable agricultural supply. If you grow, aggregate or trade agricultural commodities, we’d love to hear from you."
-      whatToKnow={[
-        "We are interested in cassava, plantain, groundnuts and peanuts, hibiscus, and spice and seasoning ingredients.",
-        "Tell us about quality, origin, handling and the volumes you can supply through the season.",
-        "Prices, guaranteed volumes and payment terms are agreed only after we review the opportunity.",
-      ]}
-      steps={[
-        "Tell us what you supply.",
-        "We review quality, volume and timing.",
-        "We agree specifications and terms.",
-        "We build the supply relationship step by step.",
-      ]}
+      eyebrow={t("eyebrow")}
+      title={t("title")}
+      intro={t("intro")}
+      whatToKnow={t.raw("whatToKnow") as string[]}
+      steps={t.raw("steps") as string[]}
       enquiryType="supplier"
-      submitLabel="Apply to become a supplier"
-      formIntro="Tell us what you grow or trade."
+      submitLabel={t("submitLabel")}
+      formIntro={t("formIntro")}
       image="/images/farms/plantain-plantation-irrigation.jpg"
-      imageAlt="AcresxManna commercial plantain groves with drip irrigation"
-      imageCaption="Sustainable sourcing and off-take partnerships with local growers."
+      imageAlt={t("imageAlt")}
+      imageCaption={t("imageCaption")}
     />
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion, useReducedMotion } from "framer-motion";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternFramedImage } from "@/components/ui/PatternFrame";
@@ -73,6 +74,7 @@ function WordReveal({
 }
 
 export function Hero() {
+  const t = useTranslations("sections.hero");
   const reduce = useReducedMotion();
 
   return (
@@ -115,22 +117,22 @@ export function Hero() {
               className="mb-6 sm:mb-8"
             >
               <Eyebrow accent="mango">
-                AcresxManna · Redefining the African Agro-food Market Globally
+                {t("eyebrow")}
               </Eyebrow>
             </motion.div>
 
             <h1 className="font-display text-balance text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-black leading-[0.98] tracking-tight !text-white">
               <span className="block mb-2 sm:mb-3">
-                <WordReveal word="Africa&apos;s" i={0} />
-                <WordReveal word="food." i={1} isItalic />
+                <WordReveal word={t("word0")} i={0} />
+                <WordReveal word={t("word1")} i={1} isItalic />
               </span>
               <span className="block mb-2 sm:mb-3">
-                <WordReveal word="Processed" i={2} />
-                <WordReveal word="for" i={3} isItalic />
+                <WordReveal word={t("word2")} i={2} />
+                <WordReveal word={t("word3")} i={3} isItalic />
               </span>
               <span className="block">
-                <WordReveal word="the" i={4} />
-                <WordReveal word="World." i={5} isItalic />
+                <WordReveal word={t("word4")} i={4} />
+                <WordReveal word={t("word5")} i={5} isItalic />
               </span>
             </h1>
 
@@ -141,7 +143,7 @@ export function Hero() {
               className="mt-6 max-w-xl font-sans text-body-lg leading-relaxed text-white/90 sm:mt-8"
             >
               <TypingText
-                text="We turn Africa's agricultural resources into quality food products through processing, manufacturing and market access."
+                text={t("typingText")}
                 delay={0.8}
                 speed={20}
               />
@@ -159,7 +161,7 @@ export function Hero() {
                 size="lg"
                 className="!bg-yellow-400 !text-purple-700 !shadow-none hover:brightness-95 font-bold"
               >
-                Explore our products
+                {t("exploreProducts")}
               </Button>
               <Button
                 href="/contact"
@@ -167,7 +169,7 @@ export function Hero() {
                 size="lg"
                 className="!border-white !text-white hover:!bg-white/10"
               >
-                Let&apos;s Talk
+                {t("letsTalk")}
               </Button>
             </motion.div>
 
@@ -200,7 +202,7 @@ export function Hero() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-purple-950/60 shadow-inner">
                   <LazyImage
                     src="/images/processing/palm-oil-bottling-wide.jpg"
-                    alt="Palm oil bottling and production team at AcresxManna facility"
+                    alt={t("heroImageAlt")}
                     fill
                     sizes="(max-width: 640px) 100vw, 480px"
                     className="object-cover object-center transition-transform duration-700 hover:scale-105"
@@ -220,18 +222,18 @@ export function Hero() {
                   {/* Top-left Tag: 100% African Harvest */}
                   <div className="absolute top-3 left-3 flex items-center gap-2 rounded-full bg-purple-950/85 px-3 py-1.5 text-xs font-semibold text-yellow-300 backdrop-blur-md border border-yellow-400/30 shadow-lg">
                     <span className="inline-block h-2 w-2 rounded-full bg-yellow-400 animate-pulse" />
-                    100% African Harvest
+                    {t("tagAfricanHarvest")}
                   </div>
 
                   {/* Top-right Tag: Export Ready */}
                   <div className="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-yellow-400 px-3 py-1 text-xs font-bold text-purple-950 shadow-lg">
-                    <span>Export Ready</span>
+                    <span>{t("tagExportReady")}</span>
                   </div>
 
                   {/* Bottom overlay info bar */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center text-xs text-white/95">
                     <span className="font-semibold drop-shadow tracking-wide bg-purple-950/70 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-white/10">
-                      Value-Added Agro-Processing
+                      {t("tagValueAdded")}
                     </span>
                   </div>
                 </div>
@@ -239,9 +241,9 @@ export function Hero() {
                 {/* Sub-bar below photo inside frame */}
                 <div className="mt-3 flex items-center justify-between px-2 py-0.5 text-xs font-medium text-purple-200">
                   <span className="flex items-center gap-1.5 text-white/90">
-                    <span className="text-yellow-400 font-bold">●</span> Farm to Global Shelf
+                    <span className="text-yellow-400 font-bold">●</span> {t("tagFarmToGlobal")}
                   </span>
-                  <span className="text-yellow-400 font-semibold tracking-wide pr-14 sm:pr-16">AcresxManna Quality</span>
+                  <span className="text-yellow-400 font-semibold tracking-wide pr-14 sm:pr-16">{t("tagQuality")}</span>
                 </div>
               </div>
 
@@ -254,7 +256,7 @@ export function Hero() {
               >
                 <img
                   src="/brand/acres-manna-mascot-character-yellow.svg"
-                  alt="AcresxManna mascot character"
+                  alt={t("mascotAlt")}
                   loading="lazy"
                   className="w-full h-auto filter drop-shadow-[0_4px_16px_rgba(253,220,66,0.4)]"
                 />

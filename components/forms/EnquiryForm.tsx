@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/routing";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -26,25 +27,26 @@ export type EnquiryFormProps = {
   className?: string;
 };
 
-const ENQUIRY_OPTIONS: { value: EnquiryType; label: string }[] = [
-  { value: "product", label: "Product enquiry" },
-  { value: "supply", label: "Supply or farming partnership" },
-  { value: "distribution", label: "Distribution or wholesale" },
-  { value: "manufacturing", label: "Manufacturing partnership" },
-  { value: "investment", label: "Investment enquiry" },
-  { value: "other", label: "Other business enquiry" },
+const ENQUIRY_OPTIONS: { value: EnquiryType; key: string }[] = [
+  { value: "product", key: "options.product" },
+  { value: "supply", key: "options.supply" },
+  { value: "distribution", key: "options.distribution" },
+  { value: "manufacturing", key: "options.manufacturing" },
+  { value: "investment", key: "options.investment" },
+  { value: "other", key: "options.other" },
 ];
 
 export function EnquiryForm({
   enquiryType,
   product,
-  submitLabel = "Send message",
+  submitLabel,
   showCompany = true,
   showProduct = false,
   showEnquiryType = false,
   className,
 }: EnquiryFormProps) {
   const router = useRouter();
+  const t = useTranslations("forms");
   const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
@@ -61,12 +63,12 @@ export function EnquiryForm({
     const message = String(formData.get("message") || "").trim();
 
     const errors: Record<string, string> = {};
-    if (!name) errors.name = "Please enter your name.";
-    if (!email) errors.email = "Please enter your email.";
+    if (!name) errors.name = t("errorName");
+    if (!email) errors.email = t("errorEmail");
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
-      errors.email = "That email doesn't look right. Could you check it?";
+      errors.email = t("errorEmailFormat");
     if (!message || message.length < 10)
-      errors.message = "Please tell us a little about what you need.";
+      errors.message = t("errorMessage");
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
@@ -110,14 +112,14 @@ export function EnquiryForm({
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
-          label="Full name"
+          label={t("nameLabel")}
           name="name"
           error={fieldErrors.name}
           autoComplete="name"
           required
         />
         <Field
-          label="Business email"
+          label={t("emailLabel")}
           name="email"
           type="email"
           error={fieldErrors.email}
@@ -128,7 +130,7 @@ export function EnquiryForm({
 
       {showCompany && (
         <Field
-          label="Company or organisation"
+          label={t("companyLabel")}
           name="company"
           autoComplete="organization"
         />
@@ -140,7 +142,7 @@ export function EnquiryForm({
             htmlFor="enquiryType"
             className="mb-2 block font-sans text-sm font-bold text-charcoal-900"
           >
-            Enquiry type
+            {t("enquiryTypeLabel")}
           </label>
           <select
             id="enquiryType"
@@ -150,7 +152,7 @@ export function EnquiryForm({
           >
             {ENQUIRY_OPTIONS.map((option) => (
               <option key={option.value} value={option.value}>
-                {option.label}
+                {t(option.key as any)}
               </option>
             ))}
           </select>
@@ -159,7 +161,7 @@ export function EnquiryForm({
 
       {showProduct && (
         <Field
-          label="Product(s) of interest"
+          label={t("productLabel")}
           name="product"
           defaultValue={product}
         />
@@ -170,7 +172,7 @@ export function EnquiryForm({
           htmlFor="message"
           className="mb-2 block font-sans text-sm font-bold text-charcoal-900"
         >
-          Message
+          {t("messageLabel")}
         </label>
         <textarea
           id="message"
@@ -182,7 +184,7 @@ export function EnquiryForm({
               ? "border-red-500 focus:border-red-500"
               : "border-cream-200 focus:border-terracotta-500",
           )}
-          placeholder="Tell us about your enquiry..."
+          placeholder={t("messagePlaceholder")}
         />
         {fieldErrors.message && (
           <p className="mt-2 text-sm text-red-600">{fieldErrors.message}</p>
@@ -191,26 +193,27 @@ export function EnquiryForm({
 
       <div aria-hidden="true" className="hidden">
         <label htmlFor="website">
-          Leave this field empty if you&apos;re human
+          {t("honeypotLabel")}
         </label>
         <input id="website" name="website" type="text" tabIndex={-1} />
       </div>
 
       <p className="text-sm text-charcoal-700">
-        By sending this form you agree to us using your details to reply, as
-        explained in our{" "}
-        <a
-          href="/privacy"
-          className="font-bold text-purple-700 underline underline-offset-4"
-        >
-          Privacy Policy
-        </a>
-        .
+        {t.rich("privacyConsent", {
+          privacy: (chunks) => (
+            <a
+              href="/privacy"
+              className="font-bold text-purple-700 underline underline-offset-4"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
       </p>
 
       {status === "error" && (
         <p role="alert" className="rounded-2xl bg-red-50 p-4 text-red-700">
-          Oops, that didn&apos;t send. Please try again or email us directly.
+          {t("errorSend")}
         </p>
       )}
 
@@ -221,7 +224,7 @@ export function EnquiryForm({
         disabled={status === "sending"}
         className="w-full sm:w-auto"
       >
-        {status === "sending" ? "Sending…" : submitLabel}
+        {status === "sending" ? t("sending") : (submitLabel ?? t("sendMessage"))}
       </Button>
     </form>
   );

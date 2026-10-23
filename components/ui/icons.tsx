@@ -207,27 +207,6 @@ export function IconProductsIcon({ size = 24, ...rest }: IconProps) {
   );
 }
 
-export function IconHome({ size = 24, ...rest }: IconProps) {
-  return (
-    <svg {...baseProps(size)} {...rest}>
-      <path d="M3.5 10.8 12 4l8.5 6.8" />
-      <path d="M6 10v10h12V10" />
-      <path d="M10 20v-5.5h4V20" />
-    </svg>
-  );
-}
-
-export function IconNews({ size = 24, ...rest }: IconProps) {
-  return (
-    <svg {...baseProps(size)} {...rest}>
-      <rect x="4" y="5" width="16" height="14" rx="2.5" />
-      <path d="M8 9.5h8" />
-      <path d="M8 13h5" />
-      <path d="M8 16.5h8" />
-    </svg>
-  );
-}
-
 /* ====== Hand-drawn Social icons (custom, matches brand style) ====== */
 
 export function IconInstagram(props: IconProps) {

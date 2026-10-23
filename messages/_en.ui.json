@@ -1,0 +1,11 @@
+{
+  "ui": {
+    "cookieConsent": {
+      "dialogLabel": "Cookie consent",
+      "title": "We use cookies.",
+      "description": "We use essential cookies to make the site work, and optional ones to understand how it's used. You choose. See our <link>Cookie Policy</link> for details.",
+      "essentialOnly": "Essential only",
+      "acceptAll": "Accept all"
+    }
+  }
+}

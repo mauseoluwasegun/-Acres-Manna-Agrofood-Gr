@@ -1,10 +1,19 @@
+import { getTranslations } from "next-intl/server";
 import { ContactPageContent } from "./ContactPageContent";
 
-export const metadata = {
-  title: "Contact",
-  description:
-    "Get in touch about products, supply, distribution, manufacturing partnerships or investment. AcresxManna replies within two working days.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.contact" });
+
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
 
 export default function ContactPage() {
   return <ContactPageContent />;

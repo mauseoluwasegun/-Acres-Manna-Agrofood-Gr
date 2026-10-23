@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState, useMemo, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import { motion, useMotionValue, useTransform, useReducedMotion } from "framer-motion";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -15,12 +16,12 @@ import { cn } from "@/lib/utils";
 import type { IconName } from "@/components/ui/HandDrawnIcon";
 
 const FACE_LABELS = [
-  { id: "consumer", title: "Customers", accent: "terracotta" as const, icon: "cart" as IconName },
-  { id: "farmer", title: "Farmers", accent: "forest" as const, icon: "farmer" as IconName },
-  { id: "distributor", title: "Distribution", accent: "mango" as const, icon: "truck" as IconName },
-  { id: "partner", title: "Partners", accent: "indigo" as const, icon: "handshake" as IconName },
-  { id: "investor", title: "Investors", accent: "earth" as const, icon: "briefcase" as IconName },
-  { id: "employee", title: "Team", accent: "terracotta" as const, icon: "user" as IconName },
+  { id: "consumer", accent: "terracotta" as const, icon: "cart" as IconName },
+  { id: "farmer", accent: "forest" as const, icon: "farmer" as IconName },
+  { id: "distributor", accent: "mango" as const, icon: "truck" as IconName },
+  { id: "partner", accent: "indigo" as const, icon: "handshake" as IconName },
+  { id: "investor", accent: "earth" as const, icon: "briefcase" as IconName },
+  { id: "employee", accent: "terracotta" as const, icon: "user" as IconName },
 ];
 
 /* Face index mapping (each cube face â†’ stakeholder idx)
@@ -37,6 +38,7 @@ function accentColor(id: string) {
 }
 
 export function StakeholderCube() {
+  const t = useTranslations("sections.stakeholderCube");
   const reduce = useReducedMotion();
   const [activeIdx, setActiveIdx] = useState(0);
   const active = STAKEHOLDERS[activeIdx];
@@ -126,7 +128,7 @@ export function StakeholderCube() {
       <PatternDivider
         pattern="mudcloth"
         thickness="medium"
-        eyebrow="â€” PICK YOUR ROLE"
+        eyebrow={t("dividerEyebrow")}
         eyebrowAccent="terracotta"
       />
 
@@ -142,14 +144,13 @@ export function StakeholderCube() {
           {/* ====== Intro ====== */}
           <div className="text-center mb-14 sm:mb-18 max-w-3xl mx-auto">
             <Eyebrow accent="indigo" className="mb-5">
-              For Everyone We Serve
+              {t("eyebrow")}
             </Eyebrow>
             <h2 className="font-display font-black text-display-1 leading-[0.98] text-balance">
-              some of our client
+              {t("heading")}
             </h2>
             <p className="mt-6 font-sans text-body-lg text-charcoal-700">
-              Explore product, supply, distribution and business enquiry
-              pathways. Choose the topic that fits your conversation.
+              {t("description")}
             </p>
           </div>
 
@@ -159,7 +160,7 @@ export function StakeholderCube() {
               <div
                 aria-hidden={false}
                 role="img"
-                aria-label={`Interactive stakeholder cube. Active face: ${active.label}.`}
+                aria-label={t("cubeAriaLabel", { face: t(`stakeholders.${activeId}.label`) })}
                 className="relative mx-auto flex h-[420px] w-full select-none items-center justify-center touch-pan-y sm:h-[560px]"
                 style={{ perspective: reduce ? "none" : "1600px" }}
                 onPointerMove={reduce ? undefined : onBoxPointerMove}
@@ -196,7 +197,6 @@ export function StakeholderCube() {
                   }}
                 >
                   {FACE_ORDER.map((faceId, i) => {
-                    const stake = STAKEHOLDERS[i];
                     const accent = accentColor(faceId);
                     const isActive = i === activeIdx;
 
@@ -219,7 +219,7 @@ export function StakeholderCube() {
                         type="button"
                         key={faceId}
                         onClick={() => setActiveIdx(i)}
-                        aria-label={`Show ${stake.label} panel`}
+                        aria-label={t("faceAriaLabel", { label: t(`stakeholders.${faceId}.label`) })}
                         aria-pressed={isActive}
                         className={cn(
                           "absolute inset-0 flex flex-col items-center justify-center p-8 rounded-soft-lg",
@@ -302,20 +302,20 @@ export function StakeholderCube() {
                               accentText,
                             )}
                           >
-                            {stake.label}
+                            {t(`stakeholders.${faceId}.label`)}
                           </p>
                           <h3 className="font-display font-black text-heading-2 leading-[1.05] mb-2">
-                            {FACE_LABELS[i].title}
+                            {t(`faces.${FACE_LABELS[i].id}`)}
                           </h3>
                           <p className="font-sans text-body-sm text-charcoal-700 leading-relaxed max-w-[220px]">
-                            {stake.description}
+                            {t(`stakeholders.${faceId}.description`)}
                           </p>
                           <p
                             aria-hidden
                             className="mt-4 inline-flex items-center font-mono text-micro uppercase tracking-[0.16em] text-charcoal-700/70"
                           >
                             <span className={cn("mr-2 w-5 h-[2px]", accentBg)} />
-                            Face
+                            {t("face")}
                           </p>
                         </div>
                       </button>
@@ -343,7 +343,7 @@ export function StakeholderCube() {
                   <HandDrawnIcon name="cart" size={32} color="terracotta" withFrame />
                 </div>
                 <p className="text-center font-mono text-micro uppercase tracking-[0.16em] text-charcoal-700/70 mb-4">
-                  Â· Click cube faces, or pick directly Â·
+                  {t("hint")}
                 </p>
                 <div className="flex flex-wrap justify-center gap-2.5">
                   {STAKEHOLDERS.map((s, i) => {
@@ -376,7 +376,7 @@ export function StakeholderCube() {
                           withFrame={false}
                           className={activeNow ? "!text-current" : ""}
                         />
-                        {s.label}
+                        {t(`stakeholders.${s.id}.label`)}
                       </button>
                     );
                   })}
@@ -424,7 +424,7 @@ export function StakeholderCube() {
                       />
                     </div>
                     <p className="font-mono text-label uppercase tracking-[0.16em] text-charcoal-700/60">
-                      Panel
+                      {t("panel")}
                     </p>
                   </div>
 
@@ -440,17 +440,17 @@ export function StakeholderCube() {
                     }
                     className="mb-3"
                   >
-                    {active.label}
+                    {t(`stakeholders.${activeId}.label`)}
                   </Eyebrow>
 
                   <h3
                     className="font-display font-black text-heading-hero leading-tight mb-5"
-                    dangerouslySetInnerHTML={{ __html: active.headline }}
+                    dangerouslySetInnerHTML={{ __html: t(`stakeholders.${activeId}.headline`) }}
                   />
 
                   <p
                     className="font-sans text-body-lg text-charcoal-700 leading-relaxed mb-8"
-                    dangerouslySetInnerHTML={{ __html: active.description }}
+                    dangerouslySetInnerHTML={{ __html: t(`stakeholders.${activeId}.description`) }}
                   />
 
                   <div className="flex flex-wrap gap-3.5">
@@ -458,17 +458,17 @@ export function StakeholderCube() {
                       href={active.ctaHref}
                       variant={activeIdx === 0 ? "primary" : activeIdx === 4 ? "dark" : "secondary"}
                       size="lg"
-                      ariaLabel={active.ctaLabel}
+                      ariaLabel={t(`stakeholders.${activeId}.ctaLabel`)}
                     >
-                      {active.ctaLabel}
+                      {t(`stakeholders.${activeId}.ctaLabel`)}
                     </Button>
                     <Button
                       href="/contact"
                       variant="ghost"
                       size="lg"
-                      ariaLabel="Talk to our team"
+                      ariaLabel={t("talkToTeam")}
                     >
-                      Talk to our team
+                      {t("talkToTeam")}
                     </Button>
                   </div>
                 </div>

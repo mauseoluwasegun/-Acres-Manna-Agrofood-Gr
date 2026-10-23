@@ -1,25 +1,35 @@
+import { getTranslations } from "next-intl/server";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PatternDivider } from "@/components/animations/PatternDivider";
 import { CONTACT_EMAIL } from "@/lib/constants";
 
-export const metadata = {
-  title: "Cookie Policy",
-  description:
-    "Information about the cookies and similar technologies used on the AcresxManna website and how to manage them.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.cookies" });
 
-export default function CookiesPage() {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+export default async function CookiesPage() {
+  const t = await getTranslations("pages.cookies");
+
   return (
     <main id="main" className="pb-24 pt-32">
       <SectionContainer size="wide" className="max-w-3xl">
-        <Eyebrow className="mb-5">Cookie Policy</Eyebrow>
+        <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
         <h1 className="font-display text-display-1 font-black">
-          Cookies and similar technologies.
+          {t("heading")}
         </h1>
         <p className="mt-6 font-sans text-body-md leading-relaxed text-charcoal-700">
-          Last updated: October 2026. This policy explains what cookies are,
-          which ones we use and how you can manage them.
+          {t("intro")}
         </p>
 
         <div className="my-16">
@@ -29,61 +39,53 @@ export default function CookiesPage() {
         <div className="space-y-12 font-sans text-body-md leading-relaxed text-charcoal-700">
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              What are cookies?
+              {t("whatAreCookiesHeading")}
             </h2>
-            <p>
-              Cookies are small text files stored on your device when you visit
-              a website. They help the website remember your preferences and
-              understand how the site is used. Similar technologies include
-              local storage and pixel tags.
-            </p>
+            <p>{t("whatAreCookiesBody")}</p>
           </section>
 
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              The cookies we use
+              {t("tableHeading")}
             </h2>
             <div className="mt-4 overflow-x-auto">
               <table className="w-full text-left text-sm">
                 <thead>
                   <tr className="border-b border-cream-200">
                     <th className="py-3 pr-4 font-bold text-charcoal-900">
-                      Name
+                      {t("tableName")}
                     </th>
                     <th className="py-3 pr-4 font-bold text-charcoal-900">
-                      Purpose
+                      {t("tablePurpose")}
                     </th>
                     <th className="py-3 pr-4 font-bold text-charcoal-900">
-                      Type
+                      {t("tableType")}
                     </th>
                     <th className="py-3 pr-4 font-bold text-charcoal-900">
-                      Duration
+                      {t("tableDuration")}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-cream-200">
                   <tr>
                     <td className="py-3 pr-4 align-top">
-                      Essential cookies
+                      {t("essentialName")}
                     </td>
                     <td className="py-3 pr-4 align-top">
-                      Required for the site to function, such as remembering
-                      your cookie consent choice and locale.
+                      {t("essentialPurpose")}
                     </td>
-                    <td className="py-3 pr-4 align-top">Essential</td>
-                    <td className="py-3 pr-4 align-top">1 year</td>
+                    <td className="py-3 pr-4 align-top">{t("essentialType")}</td>
+                    <td className="py-3 pr-4 align-top">{t("essentialDuration")}</td>
                   </tr>
                   <tr>
                     <td className="py-3 pr-4 align-top">
-                      Analytics cookies
+                      {t("analyticsName")}
                     </td>
                     <td className="py-3 pr-4 align-top">
-                      Used to understand how visitors use the site, including
-                      pages visited and traffic sources. Only set after you
-                      consent.
+                      {t("analyticsPurpose")}
                     </td>
-                    <td className="py-3 pr-4 align-top">Analytics</td>
-                    <td className="py-3 pr-4 align-top">Varies</td>
+                    <td className="py-3 pr-4 align-top">{t("analyticsType")}</td>
+                    <td className="py-3 pr-4 align-top">{t("analyticsDuration")}</td>
                   </tr>
                 </tbody>
               </table>
@@ -92,51 +94,40 @@ export default function CookiesPage() {
 
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              Essential vs optional cookies
+              {t("essentialVsOptionalHeading")}
             </h2>
-            <p>
-              Essential cookies are required for the website to work and cannot
-              be switched off. Optional analytics cookies are only used when you
-              give consent through our cookie banner.
-            </p>
+            <p>{t("essentialVsOptionalBody")}</p>
           </section>
 
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              How we handle consent
+              {t("consentHeading")}
             </h2>
-            <p>
-              When you first visit the site, you will see a cookie banner. You
-              can choose to accept all cookies, accept only essential cookies,
-              or manage your settings. You can change your choice at any time
-              using the Cookie settings link in the footer.
-            </p>
+            <p>{t("consentBody")}</p>
           </section>
 
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              How to block or delete cookies
+              {t("blockDeleteHeading")}
             </h2>
-            <p>
-              You can block or delete cookies through your browser settings.
-              Please note that blocking essential cookies may affect the
-              functionality of the website.
-            </p>
+            <p>{t("blockDeleteBody")}</p>
           </section>
 
           <section>
             <h2 className="font-display text-heading-1 font-black text-charcoal-900">
-              Contact
+              {t("contactHeading")}
             </h2>
             <p>
-              For questions about this Cookie Policy, contact us at{" "}
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="font-bold text-purple-700 underline underline-offset-4"
-              >
-                {CONTACT_EMAIL}
-              </a>
-              .
+              {t.rich("contactBody", {
+                link: (chunks) => (
+                  <a
+                    href={`mailto:${CONTACT_EMAIL}`}
+                    className="font-bold text-purple-700 underline underline-offset-4"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
             </p>
           </section>
         </div>

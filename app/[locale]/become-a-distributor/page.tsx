@@ -1,35 +1,40 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { EnquiryLandingPage } from "@/components/pages/EnquiryLandingPage";
 
-export const metadata: Metadata = {
-  title: "Become a Distributor",
-  description:
-    "Discuss distribution of AcresxManna food products with our team.",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({
+    locale,
+    namespace: "pages.becomeADistributor",
+  });
 
-export default function BecomeDistributorPage() {
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  };
+}
+
+export default async function BecomeDistributorPage() {
+  const t = await getTranslations("pages.becomeADistributor");
+
   return (
     <EnquiryLandingPage
-      eyebrow="Stock the flavour"
-      title="Bring African-made food to your shelves."
-      intro="We welcome enquiries from retailers, wholesalers, distributors and importers interested in African food products and long-term commercial partnerships."
-      whatToKnow={[
-        "Tell us who you serve, where you operate and the channels you sell through.",
-        "Let us know which products interest you and your expected order sizes.",
-        "Product information, availability, logistics and any sampling are confirmed individually.",
-      ]}
-      steps={[
-        "Introduce yourself and your business.",
-        "We share product information.",
-        "We discuss fit, volumes and logistics.",
-        "We agree a way to work together.",
-      ]}
+      eyebrow={t("eyebrow")}
+      title={t("title")}
+      intro={t("intro")}
+      whatToKnow={t.raw("whatToKnow") as string[]}
+      steps={t.raw("steps") as string[]}
       enquiryType="distributor"
-      submitLabel="Apply to become a distributor"
-      formIntro="Tell us about your business."
+      submitLabel={t("submitLabel")}
+      formIntro={t("formIntro")}
       image="/images/logistics/distribution-depot-pallets-peanuts.jpg"
-      imageAlt="Pallets of packaged snacks and food items in dispatch depot"
-      imageCaption="Palletized inventory and wholesale fulfillment for distribution partners."
+      imageAlt={t("imageAlt")}
+      imageCaption={t("imageCaption")}
     />
   );
 }

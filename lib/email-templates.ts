@@ -290,9 +290,6 @@ export function buildAutoReplyHtml(data: EnquiryEmailData): string {
                 &nbsp;·&nbsp;
                 <a href="https://www.instagram.com/acresxmanna/" style="color:rgba(255,255,255,0.85);text-decoration:none;">@acresxmanna</a>
               </p>
-              <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.5);">
-                AcresxManna HQ, The Goodland, Off Apapa Road, Moniya, Ibadan, Nigeria
-              </p>
             </td>
           </tr>
 

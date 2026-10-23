@@ -6,17 +6,17 @@ import { useState, useRef, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 const languages = [
-  { code: "en", name: "English", flag: "gb" },
-  { code: "fr", name: "Français", flag: "fr" },
-  { code: "tw", name: "Twi", flag: "gh" },
-  { code: "es", name: "Español", flag: "es" },
-  { code: "ru", name: "Русский", flag: "ru" },
-  { code: "pt", name: "Português", flag: "pt" },
-  { code: "de", name: "Deutsch", flag: "de" },
-  { code: "it", name: "Italiano", flag: "it" },
-  { code: "ar", name: "العربية", flag: "ae" },
-  { code: "zh-CN", name: "简体中文", flag: "cn" },
-  { code: "nl", name: "Nederlands", flag: "nl" },
+  { code: "en", flag: "gb" },
+  { code: "fr", flag: "fr" },
+  { code: "tw", flag: "gh" },
+  { code: "es", flag: "es" },
+  { code: "ru", flag: "ru" },
+  { code: "pt", flag: "pt" },
+  { code: "de", flag: "de" },
+  { code: "it", flag: "it" },
+  { code: "ar", flag: "ae" },
+  { code: "zh-CN", flag: "cn" },
+  { code: "nl", flag: "nl" },
 ];
 
 export function LanguageSwitcher({ isLight, dropUp }: { isLight?: boolean; dropUp?: boolean }) {
@@ -24,6 +24,7 @@ export function LanguageSwitcher({ isLight, dropUp }: { isLight?: boolean; dropU
   const router = useRouter();
   const pathname = usePathname();
   const t = useTranslations("languageSwitcher");
+  const tc = useTranslations("chrome");
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -100,7 +101,7 @@ export function LanguageSwitcher({ isLight, dropUp }: { isLight?: boolean; dropU
                   className="h-4 w-6 object-contain"
                   loading="lazy"
                 />
-                <span>{lang.name}</span>
+                <span>{tc(`languages.${lang.code}` as any) || lang.code}</span>
               </button>
             ))}
           </div>

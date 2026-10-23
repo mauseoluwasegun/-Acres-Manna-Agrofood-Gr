@@ -1,0 +1,614 @@
+{
+  "pages": {
+    "about": {
+      "eyebrow": "About AcresxManna",
+      "heading": "We believe Africa should capture more value from its agriculture.",
+      "intro": "AcresxManna is an export-focused agro-processing and food manufacturing business. We connect agricultural sourcing with processing, product development and market access. Local retail in Nigeria is planned through shops and the UncleTobi online grocery concept.",
+      "storyEyebrow": "Our story",
+      "storyHeading": "More value can be created after harvest.",
+      "storyParagraph1": "Africa has significant agricultural resources, yet much of the value in the food economy sits in what happens after harvest. We believe more of that value can be captured through processing, manufacturing, packaging, quality control and competitive food brands.",
+      "storyParagraph2": "Through our Nigerian operations and UK-facing business, we're building the foundations for a stronger link between African food production and international markets. We understand both sides: the realities of sourcing and processing in Africa, and the quality, consistency and commercial needs of the markets we want to serve.",
+      "storyImageAlt": "AcresxManna showroom with purple geometric wall and branded products on desk",
+      "entities": {
+        "acresxmannaLtd": {
+          "title": "AcresxManna Ltd",
+          "alt": "AcresxManna corporate reception wall in Ibadan, Nigeria",
+          "description": "The Nigerian entity manufactures, signs customer contracts and exports from our Moniya processing facility."
+        },
+        "uncleTobiShop": {
+          "title": "UncleTobi.Shop",
+          "alt": "UncleTobi.Shop official brand identity",
+          "description": "The UK-facing entity invoices buyers and operates a warehouse and office in Hertford, United Kingdom."
+        }
+      },
+      "companyStructureEyebrow": "Company structure",
+      "visionEyebrow": "Our vision",
+      "visionText": "To become Africa's leading agro-processing and food manufacturing company, recognised globally for scale, quality, innovation and the value we create from African agriculture.",
+      "missionEyebrow": "Our mission",
+      "missionText": "To transform African agricultural resources into competitive food products through processing, manufacturing, quality control, brand development and access to markets.",
+      "fieldToFactoryEyebrow": "From field to factory",
+      "fieldToFactoryHeading": "Agricultural roots, industrial ambition.",
+      "fieldToFactoryText": "Our operations span greenhouse farming, commodity aggregation, processing and packaged food—all built on African soil.",
+      "gallery": {
+        "palmOilBottling": {
+          "alt": "Palm oil bottling and production team at AcresxManna facility",
+          "caption": "Palm oil bottling"
+        },
+        "seedlingNursery": {
+          "alt": "Dense tomato seedlings in shadehouse nursery rows",
+          "caption": "Seedling nursery"
+        },
+        "papayaGrowing": {
+          "alt": "Papaya tree laden with fruit inside greenhouse with farmer",
+          "caption": "Papaya growing"
+        },
+        "peanutProcessing": {
+          "alt": "Nut sorting team in white lab coats at long table",
+          "caption": "Peanut processing"
+        },
+        "bottlingLine": {
+          "alt": "Workers labelling rows of palm oil bottles on production floor",
+          "caption": "Palm oil bottling"
+        },
+        "finishedProductStock": {
+          "alt": "Stacked coated peanut jars and snack jars in warehouse",
+          "caption": "Finished product stock"
+        }
+      },
+      "valuesEyebrow": "What guides us",
+      "valuesHeading": "Values that shape how we build.",
+      "values": {
+        "qualityAndExcellence": {
+          "title": "Quality and excellence",
+          "description": "Standards, discipline and consistency that earn confidence."
+        },
+        "community": {
+          "title": "Community",
+          "description": "Growth that creates opportunity for suppliers, workers, producers and communities."
+        },
+        "innovation": {
+          "title": "Innovation",
+          "description": "Better ways to process, package and deliver African food."
+        },
+        "collaboration": {
+          "title": "Collaboration",
+          "description": "Partnerships, shared expertise and strong commercial relationships."
+        },
+        "dedicationAndHeart": {
+          "title": "Dedication and heart",
+          "description": "Responsibility, resilience and commitment to people."
+        },
+        "capacityBuilding": {
+          "title": "Capacity building",
+          "description": "Investing in people, processes, partnerships and infrastructure."
+        }
+      },
+      "quote": "Africa's agricultural wealth should create African industrial value: more commodities turned into finished products, more production capability built within African economies, and more African food businesses competing confidently worldwide.",
+      "locationsEyebrow": "Our locations",
+      "locations": {
+        "factory": {
+          "label": "Factory",
+          "address": "The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria"
+        },
+        "nigerianOffice": {
+          "label": "Nigerian office",
+          "address": "10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos, Nigeria"
+        },
+        "ukWarehouse": {
+          "label": "UK warehouse and office",
+          "address": "Orland House, Unit 1, Mead Lane, Hertford SG13 7AT, United Kingdom"
+        }
+      },
+      "cta": "Let's Talk"
+    },
+    "products": {
+      "eyebrow": "Our products",
+      "heading": "African agricultural products, transformed into everyday food.",
+      "intro": "From traditional staples to snacks, ingredients and beverages, we're developing products that connect Africa's agricultural resources with evolving consumer needs. Export is our focus today, with Nigerian retail planned.",
+      "onSaleBadge": "On sale now · Export",
+      "varieties": "Varieties: {varieties}",
+      "requestProductInformation": "Request product information",
+      "plannedEyebrow": "Planned",
+      "comingSoon": "Coming soon",
+      "notifyMe": "Notify me",
+      "exportNote": "Export destinations and standard pack sizes are not published. Contact us to discuss your requirements.",
+      "requestProductInfo": "Request product info",
+      "items": {
+        "garri": {
+          "name": "Garri",
+          "varieties": [
+            "White",
+            "Ijebu",
+            "Yellow"
+          ],
+          "description": "An important staple in many African communities, with opportunities across retail, food service and international African food markets. We process it in white, Ijebu and yellow varieties.",
+          "highlights": [
+            "Three varieties: white, Ijebu and yellow",
+            "Available for export",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "Garri sacks stored in warehouse for storage and distribution",
+          "caption": "Bulk packaged commodities under the HappyMan Foods brand at our central processing hub."
+        },
+        "cassava-flour": {
+          "name": "Cassava Flour",
+          "description": "A cassava-based flour for home cooking, bakers and food businesses, packed to your requirements.",
+          "highlights": [
+            "Cassava-based flour",
+            "For home cooking and food businesses",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "Branded cassava flour sacks packaged for distribution",
+          "caption": "Export-grade flour loaded directly into containers for international dispatch."
+        },
+        "plantain-flour": {
+          "name": "Plantain Flour",
+          "description": "A plantain-based flour for home cooking, bakers and food businesses, packed to your requirements.",
+          "highlights": [
+            "Plantain-based flour",
+            "For home cooking and food businesses",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "Close-up of plantain flour with scoop",
+          "caption": "Plantain flour processed from fresh plantains at our facility."
+        },
+        "groundnuts-peanuts": {
+          "name": "Groundnuts and Peanuts",
+          "description": "A versatile agricultural product with potential as packaged food and as a raw material for further processing. We do not list products such as peanut butter unless commercially available.",
+          "highlights": [
+            "Available for export",
+            "Packed to each client's requirements",
+            "No unlaunched product extensions are listed"
+          ],
+          "imageAlt": "Bulk packaged groundnuts and peanuts in warehouse",
+          "caption": "Meticulously roasted and sorted peanuts meeting export quality standards."
+        },
+        "cashew-nuts": {
+          "name": "Cashew Nuts",
+          "description": "A snack and ingredient people love, packed to your requirements.",
+          "highlights": [
+            "Available for export",
+            "Suitable for food retail and business enquiries",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "Cashew nuts and cashew apples harvested from orchard to table",
+          "caption": "Hand-graded quality assurance to ensure zero impurities."
+        },
+        "plantain-chips": {
+          "name": "Plantain Chips",
+          "description": "A familiar, convenient African snack for people looking for enjoyable food. Product enquiries can discuss packaging and distribution requirements.",
+          "highlights": [
+            "Ready-to-eat snack",
+            "Retail and wholesale enquiries welcome",
+            "Custom packing can be discussed"
+          ],
+          "imageAlt": "HappyMan Plantain Chips packaged in clear plastic bag",
+          "caption": "Freshly sliced, crispy plantain chips packed for retail shelves and export."
+        },
+        "hibiscus-teas": {
+          "name": "Hibiscus and Teas",
+          "description": "A recognisable African botanical for teas, infusions and beverages. Contact us to discuss available products and requirements.",
+          "highlights": [
+            "Hibiscus and tea products available for export",
+            "For tea, infusion and beverage enquiries",
+            "Packed to each client's requirements"
+          ],
+          "imageAlt": "African Food King premium herbal tea collection featuring Hibiscus, Ginger, Clove & Cinnamon pyramid tea bags",
+          "caption": "African Food King herbal tea line, 100% natural and caffeine-free."
+        },
+        "kuli-kuli": {
+          "name": "Kuli Kuli",
+          "varieties": [
+            "Crunchy Strips",
+            "Spiced Bites"
+          ],
+          "description": "An iconic West African crunchy snack crafted from roasted groundnuts, seasoned and crisped to perfection. High in plant protein and packed for retail freshness and export.",
+          "highlights": [
+            "100% premium roasted groundnuts",
+            "Available for export",
+            "Packed to client requirements in tamper-evident jars"
+          ],
+          "imageAlt": "Authentic crunchy Kuli Kuli snack packaged in tamper-evident retail jars with green lids",
+          "caption": "Freshly roasted, seasoned peanut Kuli Kuli packed in retail-ready jars and wholesale cartons."
+        },
+        "palm-oil": {
+          "name": "Pure Palm Oil",
+          "varieties": [
+            "Grade A Culinary",
+            "Bulk Processing Grade"
+          ],
+          "description": "Sustainably sourced, pure unrefined red palm oil processed under strict hygienic conditions. Essential for authentic African cooking, food service, and commercial manufacturing.",
+          "highlights": [
+            "Naturally rich in carotenoids and nutrients",
+            "Hygienically bottled and sealed for export",
+            "Available in retail bottles and bulk industrial packaging"
+          ],
+          "imageAlt": "Overhead view of sealed pure red palm oil bottles ready for distribution and export",
+          "caption": "Premium pure red palm oil, hygienically bottled and quality-graded for international markets."
+        },
+        "seasonings-spices": {
+          "name": "Seasonings and Spices",
+          "description": "A planned range connecting agricultural ingredients with everyday cooking, with a focus on flavour, convenience and consistency. Not yet available.",
+          "imageAlt": "Rustic spice still life with garlic, chili peppers, peppercorns, curry powder, and fresh herbs on wooden surface",
+          "caption": "Coming soon: A curated range of premium seasonings and spices connecting agricultural ingredients with everyday cooking."
+        }
+      }
+    },
+    "productDetail": {
+      "backToProducts": "Back to products",
+      "onSaleBadge": "On sale now · Export",
+      "plannedBadge": "Planned · Not yet available",
+      "varieties": "Varieties: {varieties}",
+      "productHighlights": "Product highlights",
+      "enquiryWelcome": "We welcome enquiries from retailers, wholesalers, food service businesses, importers and distributors.",
+      "packSizesNote": "Pack sizes are set to each client's requirements. Product specifications, ingredients, origin, storage, shelf life, allergens and compliance information must be confirmed for the specific product and are not published here.",
+      "requestInformationEyebrow": "Request information",
+      "requestInformationHeading": "Tell us about your requirements.",
+      "requestInformationText": "Send us your enquiry and our team will get back to you with product information, availability and next steps.",
+      "requestProductInformation": "Request product information",
+      "moreProducts": "More products",
+      "viewProduct": "View product"
+    },
+    "infrastructure": {
+      "eyebrow": "Our operations",
+      "heading": "Building the capacity behind African food.",
+      "intro": "Our ambition needs more than agricultural supply. It needs production infrastructure, people, systems and partnerships to turn raw materials into consistent, market-ready food. AcresxManna Ltd manufactures and exports from Nigeria; we are building further capability as demand, investment and readiness allow.",
+      "cards": {
+        "production": {
+          "title": "Production and processing",
+          "status": "Operating today",
+          "description": "AcresxManna Ltd manufactures food products at its factory in Moniya, Ibadan. Further production capacity and process improvements are part of our development ambitions."
+        },
+        "quality": {
+          "title": "Quality information",
+          "status": "Built into the work",
+          "description": "Quality requirements are product- and market-specific. We confirm specifications and compliance details for each enquiry, and do not publish unverified certification claims."
+        },
+        "supplyChain": {
+          "title": "Supply chain and warehousing",
+          "status": "Operating today",
+          "description": "Our confirmed locations include the factory in Moniya, Ibadan, the Nigerian office in Lagos, and the UK warehouse and office in Hertford."
+        },
+        "growth": {
+          "title": "Infrastructure for growth",
+          "status": "Building next",
+          "description": "Planned development includes additional production capacity, more efficient processing and packaging, improved storage and inventory control, and wider product capability."
+        }
+      },
+      "insideFacilityEyebrow": "Inside the facility",
+      "insideFacilityHeading": "Active processing, testing and packaging in Moniya, Ibadan.",
+      "insideFacilityText": "A glimpse into the daily operations that convert harvested commodities into market-ready, hygienically packaged food products.",
+      "gallery": {
+        "mixingSifting": {
+          "title": "Stainless Steel Mixing & Sifting",
+          "caption": "Food-grade industrial processing tanks, motorized blenders, and mechanical sifters operating at our central processing hub."
+        },
+        "bakeryOvens": {
+          "title": "Commercial Multi-Deck Bakery Ovens",
+          "caption": "Master bakers crafting golden loaves and baked items using high-capacity commercial digital deck ovens."
+        },
+        "sortingQualityControl": {
+          "title": "Hygienic Sorting & Quality Control",
+          "caption": "Skilled quality assurance personnel in sterile protective gear meticulously hand-sorting produce to export grade."
+        },
+        "palmOilBottlingLine": {
+          "title": "Palm Oil Bottling Line",
+          "caption": "Hygienic bottling operators arranging and inspecting hundreds of palm oil bottles before packing for dispatch."
+        },
+        "nutSortingLongTable": {
+          "title": "Nut Sorting — Long Table Operations",
+          "caption": "A large team of skilled sorters separating roasted peanuts to premium grade across our extended sorting line."
+        },
+        "rotaryCooker": {
+          "title": "Industrial Rotary Cooker",
+          "caption": "Operators running the motorised stainless rotary cooker used for even roasting across batch production runs."
+        },
+        "palletRacking": {
+          "title": "High-Bay Pallet Logistics Racking",
+          "caption": "State-of-the-art warehouse racking system with computerized barcode tracking at our central agro-logistics hub."
+        },
+        "containerLoading": {
+          "title": "Container Loading & Dispatch",
+          "caption": "Supervised container loading operations ensuring safe transit for high-capacity regional and global export orders."
+        },
+        "sealedContainer": {
+          "title": "Export-Ready Container Sealed",
+          "caption": "A fully loaded freight container, sealed and prepared for customs clearance and international dispatch."
+        }
+      },
+      "locations": {
+        "factory": {
+          "label": "Factory",
+          "address": "The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria"
+        },
+        "nigerianOffice": {
+          "label": "Nigerian office",
+          "address": "10 Adeniyi Coker, Dideolu Estate, Victoria Island, Lagos, Nigeria"
+        },
+        "ukWarehouse": {
+          "label": "UK warehouse and office",
+          "address": "Orland House, Unit 1, Mead Lane, Hertford SG13 7AT, United Kingdom"
+        }
+      },
+      "cta": "Enquire about visiting"
+    },
+    "impact": {
+      "eyebrow": "Our focus",
+      "heading": "Processing creates value. Value creates opportunity.",
+      "intro": "AcresxManna is building its business around agricultural value-addition, local production and access to markets. We will publish measurable impact information when verified data is available.",
+      "stories": {
+        "valueAddition": {
+          "title": "Agricultural value addition",
+          "caption": "Empowering smallholder farmers with modern shade house agriculture, drip irrigation and high-yield crop agronomy."
+        },
+        "localProduction": {
+          "title": "Local production and employment",
+          "caption": "Creating sustainable jobs and technical training in quality sorting, hygienic food handling, and manufacturing."
+        },
+        "supplyChains": {
+          "title": "Stronger supply chains",
+          "caption": "Bridging the gap between rural smallholder growers and industrial-scale agro-processing facilities."
+        },
+        "globalMarkets": {
+          "title": "African food in global markets",
+          "caption": "Scaling containerized export pathways so high-grade African food items compete with distinction globally."
+        }
+      },
+      "spotlightImageAlt": "Farmer inspecting high-yield dwarf hybrid papaya trees",
+      "spotlightEyebrow": "Community & Agronomy",
+      "spotlightHeading": "Championing farmers with resilient agronomy.",
+      "spotlightText": "Through partnerships with local growers, we introduce dwarf hybrid crop varieties, pest-resistant seed stock, and protected shade structures. This boosts harvest volume per hectare and shields farming families from climate volatility.",
+      "spotlightTagSeedlings": "Seedling Nurturing",
+      "spotlightTagContracts": "Direct Offtake Contracts",
+      "spotlightTagWorkforce": "Female Workforce Empowerment",
+      "scorecardEyebrow": "Impact scorecard",
+      "scorecardHeading": "Numbers we can stand behind.",
+      "scorecardText": "We only publish verified data. The figures below will be updated as we receive and confirm each metric from our operations team.",
+      "verified": "Verified",
+      "scorecard": {
+        "tonnesProcessed": {
+          "label": "Tonnes processed",
+          "note": "Target numbers coming soon"
+        },
+        "finishedProducts": {
+          "label": "Finished products manufactured",
+          "note": "Target numbers coming soon"
+        },
+        "activeSuppliers": {
+          "label": "Active suppliers & producer partnerships",
+          "note": "Target numbers coming soon"
+        },
+        "directJobs": {
+          "label": "Direct jobs created and retained",
+          "note": "Target numbers coming soon"
+        },
+        "productCategories": {
+          "label": "Product categories processed locally",
+          "note": "Target numbers coming soon"
+        },
+        "countriesWithVerifiedSales": {
+          "label": "Countries with verified sales",
+          "note": "Target numbers coming soon"
+        },
+        "complianceQualityMeasures": {
+          "label": "Compliance & quality measures",
+          "note": "Target numbers coming soon"
+        }
+      },
+      "closing": "We want our growth measured not only by the products we sell, but by the productive capacity and economic opportunities we help create.",
+      "cta": "Talk to our team"
+    },
+    "globalMarkets": {
+      "eyebrow": "Global markets",
+      "heading": "From African agricultural resources to global food markets.",
+      "intro": "We're building a business that connects African food production with customers, businesses and opportunities in international markets. Export is our current focus; specific destinations are not published.",
+      "routes": {
+        "currentRoute": {
+          "label": "Current route",
+          "value": "Export today"
+        },
+        "nigerianRetail": {
+          "label": "Nigerian retail",
+          "value": "Planned through shops and UncleTobi"
+        },
+        "packSizes": {
+          "label": "Pack sizes",
+          "value": "Set to each client's requirements"
+        }
+      },
+      "destinationsNote": "No specific export destinations or standard pack sizes are published.",
+      "freightImageAlt": "28-tonne freight container loaded for export delivery",
+      "freightEyebrow": "Containerized Export",
+      "freightHeading": "Direct container dispatch from factory to port.",
+      "freightText": "Our Moniya processing facility is strategically positioned for containerized transport. Standard 20ft and 40ft freight containers (holding up to 28+ tonnes of packaged food items and commodities) are stuffed and sealed on-site for direct dispatch.",
+      "accessEyebrow": "How we build market access",
+      "accessHeading": "Reliable trade takes more than shipping.",
+      "accessText": "We are building an approach around market requirements, product readiness, commercial partnerships and reliable supply.",
+      "steps": {
+        "marketDevelopment": {
+          "title": "Market development",
+          "description": "Consider demand, competition, regulation and distribution across regional and overseas markets.",
+          "alt": "AcresxManna Ibadan office with branded purple logo wall"
+        },
+        "productReadiness": {
+          "title": "Product readiness",
+          "description": "Confirm specifications, hermetic food packaging, and phytosanitary certificates for each trade lane.",
+          "alt": "Team arranging and inspecting bottled palm oil production run"
+        },
+        "commercialPartnerships": {
+          "title": "Commercial partnerships",
+          "description": "Build relationships with importers, bulk buyers, supermarket chains, and food service companies.",
+          "alt": "Team loading bottled peanut products into freight container for dispatch"
+        },
+        "supplyReliability": {
+          "title": "Supply reliability",
+          "description": "Develop scalable processing lines to supply recurring multi-container volume on strict schedules.",
+          "alt": "Export container packed wall-to-wall with bottled product ready for international dispatch"
+        }
+      },
+      "ukOperationsEyebrow": "UK-facing operations",
+      "ukOperationsHeading": "UncleTobi.Shop",
+      "ukOperationsText": "AcresxManna Ltd manufactures products, signs customer contracts and exports from Nigeria. UncleTobi.Shop invoices buyers and operates a warehouse and office in Hertford, United Kingdom.",
+      "ukOperationsNote": "Export destinations are not published, so no country is presented here as an established or target market.",
+      "cta": "International Trade Enquiries"
+    },
+    "investorsPartners": {
+      "eyebrow": "Investors and partners",
+      "heading": "Building Africa's next generation of agro-processing capacity.",
+      "intro": "AcresxManna is focused on transforming African agricultural resources into competitive food through processing, manufacturing and market development. Growth depends on production capacity, working capital, supply relationships, market access and operational systems.",
+      "spotlightImageAlt": "AcresxManna office in Ibadan, Nigeria",
+      "spotlightEyebrow": "Our Base of Operations",
+      "spotlightHeading": "Grounded in Nigeria. Scaled for Global Markets.",
+      "spotlightText": "Our central processing facility, storage infrastructure, and administrative headquarters are located in Moniya, Ibadan, Oyo State — within reach of major agricultural cultivation belts and direct logistics corridors to port.",
+      "buildingEyebrow": "What we're building",
+      "building": {
+        "productionCapacity": {
+          "title": "Production capacity",
+          "description": "Building the production capability behind African agro-processing and food manufacturing.",
+          "alt": "Industrial stainless steel cooking and mixing station"
+        },
+        "workingCapital": {
+          "title": "Working capital & Inventory",
+          "description": "The resources needed for raw materials, production cycles, packaging, inventory and fulfilment.",
+          "alt": "Palletized finished food stock in warehouse storage"
+        },
+        "productDevelopment": {
+          "title": "Product development",
+          "description": "Developing food products that connect African agricultural resources with buyer needs.",
+          "alt": "Packaged retail agro-food snacks in branded jars"
+        },
+        "marketDevelopment": {
+          "title": "Market development",
+          "description": "Building commercial relationships and routes to market in Africa and internationally.",
+          "alt": "Export freight container prepared for international shipping"
+        }
+      },
+      "meetEyebrow": "Who we'd love to meet",
+      "people": {
+        "investors": {
+          "title": "Investors",
+          "description": "Long-term interest in African agro-processing, food manufacturing and value addition."
+        },
+        "agriculturalSuppliers": {
+          "title": "Agricultural suppliers",
+          "description": "Suitable raw materials and a willingness to work to agreed specifications."
+        },
+        "distributors": {
+          "title": "Distributors",
+          "description": "Retailers, wholesalers, distributors and importers interested in African food products."
+        },
+        "buyers": {
+          "title": "Buyers",
+          "description": "Food businesses and buyers interested in product or supply discussions."
+        },
+        "strategicPartners": {
+          "title": "Industrial and strategic partners",
+          "description": "Processing, packaging, logistics, technology or market-access capabilities."
+        }
+      },
+      "conversationEyebrow": "Start a conversation",
+      "conversationHeading": "Let's build African food capacity together.",
+      "conversationText": "We welcome people and organisations who can contribute capital, capabilities, supply, technology or market access. Fundraising amounts, valuations, equity terms and financial projections are not published.",
+      "conversationSubmitLabel": "Start a partnership conversation"
+    },
+    "ourBrands": {
+      "eyebrow": "Our brands",
+      "heading": "One platform. Different ways to bring African food to market.",
+      "intro": "AcresxManna's wider ecosystem includes food brands, a bakery and an online grocery concept, each with a distinct purpose in the food value chain.",
+      "brands": {
+        "africanFoodKing": {
+          "name": "African Food King",
+          "status": "Active",
+          "description": "Authentic African food products bringing vibrant culinary traditions and premium tea lines to global consumers.",
+          "alt": "African Food King official brand logo"
+        },
+        "happyManFoods": {
+          "name": "HappyMan Foods",
+          "status": "Active",
+          "description": "The brand AcresxManna uses to sell all of its products.",
+          "alt": "HappyMan Foods 50kg agro-commodity sacks by AcresxManna Ltd."
+        },
+        "maluzaFoods": {
+          "name": "Maluza Foods Co.",
+          "status": "Live",
+          "description": "A bakery developing new products and opening new stalls in and around Ibadan.",
+          "alt": "Maluza Foods bakery master baker presenting freshly baked golden loaf from commercial deck ovens"
+        },
+        "uncleTobi": {
+          "name": "UncleTobi",
+          "status": "Coming soon",
+          "description": "An online grocery concept aggregating suppliers for retail. Launch date to be announced.",
+          "alt": "UncleTobi online grocery concept logo"
+        },
+        "ijgbFoods": {
+          "name": "IJGB Foods",
+          "status": "Active",
+          "description": "African snacks with global swagger — facilitating trade and connecting quality commodities across markets.",
+          "alt": "IJGB Foods brand logo"
+        }
+      },
+      "rolesEyebrow": "How the roles fit",
+      "rolesHeading": "Different roles across the food value chain.",
+      "rolesText": "HappyMan Foods is the brand AcresxManna uses to sell its products. Maluza Foods Co. is a bakery developing products and stalls in and around Ibadan. UncleTobi is an online grocery concept that will aggregate suppliers for retail and is coming soon.",
+      "ctaText": "Interested in our products, brands or a commercial partnership? We'd love to hear from you.",
+      "cta": "Contact Our Team"
+    },
+    "whatWeDo": {
+      "eyebrow": "What we do",
+      "heading": "We turn agricultural potential into food products and commercial value.",
+      "intro": "We connect agricultural supply with processing, manufacturing, product development and market access.",
+      "capabilities": {
+        "agriculturalSourcing": {
+          "title": "Agricultural sourcing",
+          "description": "Dependable supply relationships start with understanding raw material quality, availability and seasonality."
+        },
+        "aggregationAndSupply": {
+          "title": "Aggregation and supply management",
+          "description": "Coordinating suppliers and incoming materials helps align supply with production needs."
+        },
+        "agroProcessing": {
+          "title": "Agro-processing",
+          "description": "Transforming commodities into food products with more utility, convenience and value."
+        },
+        "foodManufacturing": {
+          "title": "Food manufacturing",
+          "description": "AcresxManna Ltd manufactures food products in Nigeria for export markets."
+        },
+        "qualityAssurance": {
+          "title": "Quality assurance",
+          "description": "We are building quality assurance into production. We do not publish unverified certification claims."
+        },
+        "productAndBrandDevelopment": {
+          "title": "Product and brand development",
+          "description": "AcresxManna sells its products under HappyMan Foods; Maluza Foods Co. is developing bakery products."
+        },
+        "distributionAndInternationalTrade": {
+          "title": "Distribution and international trade",
+          "description": "Export is our current route to market. Specific export destinations are not published."
+        },
+        "contractManufacturing": {
+          "title": "Contract manufacturing and partnerships",
+          "description": "Contact us to discuss potential partnerships. Capabilities, minimum order quantities and lead times are confirmed case by case."
+        }
+      },
+      "closing": "We're building one integrated African food business, not a pile of disconnected parts.",
+      "cta": "Discuss a Commercial Partnership"
+    },
+    "newsInsights": {
+      "eyebrow": "News & insights",
+      "heading": "Ideas, progress and perspectives shaping African food.",
+      "intro": "Follow the developments, partnerships and thinking behind our work in agro-processing, food manufacturing and agricultural value addition.",
+      "categories": {
+        "companyNews": "Company News",
+        "productsAndInnovation": "Products & Innovation",
+        "industryInsights": "Industry Insights",
+        "supplyChain": "Supply Chain",
+        "globalTrade": "Global Trade"
+      },
+      "comingSoonEyebrow": "Coming soon",
+      "comingSoonText": "Our first stories are coming soon.",
+      "meantimeText": "In the meantime, explore our products or get in touch with our team.",
+      "cta": "Contact Our Team"
+    }
+  }
+}

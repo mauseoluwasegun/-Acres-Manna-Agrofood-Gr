@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { fontDisplay, fontSans, fontMono, fontLogo } from "@/lib/fonts";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { Footer } from "@/components/footer/Footer";
@@ -14,16 +14,21 @@ const isIndexable = process.env.VERCEL_ENV
   ? process.env.VERCEL_ENV === "production"
   : process.env.SITE_INDEXABLE === "true";
 
-export async function generateMetadata() {
-  const title = "AcresxManna | African Agro-Processing and Food";
-  const description =
-    "AcresxManna transforms Africa’s agricultural resources into quality food products through processing, manufacturing and market access.";
-  
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "layout" });
+  const title = t("title");
+  const description = t("description");
+
   return {
     metadataBase: new URL(SITE_URL),
     title: {
       default: title,
-      template: "%s | AcresxManna",
+      template: t("titleTemplate"),
     },
     description,
     robots: {
@@ -48,7 +53,7 @@ export async function generateMetadata() {
           url: '/brand/acres-manna-social.png',
           width: 1200,
           height: 630,
-          alt: 'AcresxManna — African agro-processing and food manufacturing',
+          alt: t("ogImageAlt"),
         },
       ],
     },
@@ -83,6 +88,7 @@ export default async function LocaleLayout({  children,
 }) {
   const { locale } = await params;
   const messages = await getMessages();
+  const t = await getTranslations("layout");
 
   return (
     <html
@@ -110,7 +116,7 @@ export default async function LocaleLayout({  children,
               "@context": "https://schema.org",
               "@type": "Organization",
               name: SITE_NAME,
-              legalName: "AcresxManna Ltd",
+              legalName: t("legalName"),
               url: SITE_URL,
               logo: `${SITE_URL}/brand/acres-manna-logo-horizontal.svg`,
               email: CONTACT_EMAIL,
@@ -118,10 +124,10 @@ export default async function LocaleLayout({  children,
               sameAs: [INSTAGRAM_URL],
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "The Goodland, Off Apapa Road, Moniya",
-                addressLocality: "Ibadan",
-                addressRegion: "Oyo State",
-                addressCountry: "NG",
+                streetAddress: t("streetAddress"),
+                addressLocality: t("addressLocality"),
+                addressRegion: t("addressRegion"),
+                addressCountry: t("addressCountry"),
               },
             }),
           }} />
@@ -132,7 +138,7 @@ export default async function LocaleLayout({  children,
             href="#main"
             className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-soft focus:bg-terracotta-500 focus:px-5 focus:py-3 focus:font-sans focus:font-bold focus:text-white"
           >
-            Skip to content
+            {t("skipToContent")}
           </a>
           <SiteHeader />
           {children}

@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { LazyImage } from "@/components/ui/LazyImage";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -40,6 +41,17 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   if (!product) {
     notFound();
   }
+
+  const t = await getTranslations("pages.productDetail");
+  const tProducts = await getTranslations("pages.products.items");
+  const name = tProducts(`${product.id}.name`);
+  const varieties = product.varieties
+    ? (tProducts.raw(`${product.id}.varieties`) as string[])
+    : undefined;
+  const highlights = product.highlights
+    ? (tProducts.raw(`${product.id}.highlights`) as string[])
+    : undefined;
+  const caption = tProducts(`${product.id}.caption`);
 
   const available = product.status === "Available now";
   const relatedProducts = PRODUCTS.filter(
@@ -93,30 +105,30 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           href="/products"
           className="mb-8 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
         >
-          Back to products
+          {t("backToProducts")}
         </Link>
 
         <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
           <div className="lg:col-span-7">
             <Eyebrow className="mb-5">
-              {available ? "On sale now · Export" : "Planned · Not yet available"}
+              {available ? t("onSaleBadge") : t("plannedBadge")}
             </Eyebrow>
             <h1 className="max-w-4xl font-display text-display-1 font-black">
-              {product.name}
+              {name}
             </h1>
             <p className="mt-8 max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
-              {product.description}
+              {tProducts(`${product.id}.description`)}
             </p>
-            {product.varieties && (
+            {varieties && (
               <p className="mt-5 font-sans text-body-md text-charcoal-700">
-                Varieties: {product.varieties.join(", ")}
+                {t("varieties", { varieties: varieties.join(", ") })}
               </p>
             )}
-            {product.highlights && (
+            {highlights && (
               <section className="mt-8 max-w-2xl">
-                <Eyebrow className="mb-4">Product highlights</Eyebrow>
+                <Eyebrow className="mb-4">{t("productHighlights")}</Eyebrow>
                 <ul className="grid gap-3 sm:grid-cols-2">
-                  {product.highlights.map((highlight) => (
+                  {highlights.map((highlight) => (
                     <li
                       key={highlight}
                       className="rounded-2xl border border-cream-200 bg-white p-4 font-sans text-body-md leading-relaxed text-charcoal-700"
@@ -129,15 +141,11 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             )}
             {available && (
               <p className="mt-8 max-w-2xl font-sans text-body-md leading-relaxed text-charcoal-700">
-                We welcome enquiries from retailers, wholesalers, food service
-                businesses, importers and distributors.
+                {t("enquiryWelcome")}
               </p>
             )}
             <p className="mt-6 max-w-2xl font-sans text-body-sm leading-relaxed text-charcoal-500">
-              Pack sizes are set to each client&apos;s requirements. Product
-              specifications, ingredients, origin, storage, shelf life, allergens
-              and compliance information must be confirmed for the specific
-              product and are not published here.
+              {t("packSizesNote")}
             </p>
           </div>
 
@@ -147,7 +155,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-cream-100">
                   <LazyImage
                     src={product.image}
-                    alt={product.imageAlt || product.name}
+                    alt={tProducts(`${product.id}.imageAlt`) || name}
                     fill
                     priority
                     sizes="(max-width: 1023px) 100vw, 42vw"
@@ -157,7 +165,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
                 {product.caption && (
                   <figcaption className="p-4 text-center font-sans text-body-sm text-charcoal-600">
-                    {product.caption}
+                    {caption}
                   </figcaption>
                 )}
               </figure>
@@ -174,20 +182,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           <SectionContainer size="wide">
             <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
               <div>
-                <Eyebrow className="mb-5">Request information</Eyebrow>
+                <Eyebrow className="mb-5">{t("requestInformationEyebrow")}</Eyebrow>
                 <h2 className="font-display text-display-2 font-black">
-                  Tell us about your requirements.
+                  {t("requestInformationHeading")}
                 </h2>
                 <p className="mt-6 font-sans text-body-md leading-relaxed text-charcoal-700">
-                  Send us your enquiry and our team will get back to you with
-                  product information, availability and next steps.
+                  {t("requestInformationText")}
                 </p>
               </div>
               <div className="rounded-3xl border border-cream-200 bg-white p-7 shadow-card">
                 <EnquiryForm
                   enquiryType="product"
-                  product={product.name}
-                  submitLabel="Request product information"
+                  product={name}
+                  submitLabel={t("requestProductInformation")}
                   showCompany
                   showProduct
                 />
@@ -202,7 +209,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       </div>
 
       <SectionContainer size="wide">
-        <Eyebrow className="mb-5">More products</Eyebrow>
+        <Eyebrow className="mb-5">{t("moreProducts")}</Eyebrow>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {relatedProducts.map((item) => (
             <article
@@ -210,16 +217,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               className="rounded-3xl border border-cream-200 bg-white p-6 shadow-card"
             >
               <h2 className="font-display text-heading-2 font-black">
-                {item.name}
+                {tProducts(`${item.id}.name`)}
               </h2>
               <p className="mt-3 font-sans text-body-md leading-relaxed text-charcoal-700">
-                {item.description}
+                {tProducts(`${item.id}.description`)}
               </p>
               <Link
                 href={`/products/${item.slug}`}
                 className="mt-5 inline-flex min-h-11 items-center font-sans font-bold text-purple-700 underline underline-offset-4"
               >
-                View product
+                {t("viewProduct")}
               </Link>
             </article>
           ))}

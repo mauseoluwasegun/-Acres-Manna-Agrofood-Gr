@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "more": "More",
+    "letsTalk": "Let's Talk",
+    "primaryAria": "Primary",
+    "openMenu": "Open menu",
+    "mobileAria": "Mobile",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "brandHomeAria": "AcresxManna — Home",
+    "brandLogoAlt": "Acres & Manna",
+    "taglineText": "An integrated agrofood company connecting farmers, food production, and branded food products into a scalable ecosystem.",
+    "exploreHeading": "Explore",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "brandsHeading": "Our Brands",
+    "brand1Label": "UncleTobi's Farmers",
+    "brand2Label": "Maluaza Foods Co.",
+    "brand3Label": "HappyMan Foods",
+    "brand4Label": "African Food King",
+    "certifiedBy": "Certified By",
+    "certifiedByAlt": "Certified by NAFDAC, SON, MAN, HACCP, Non-GMO Project, Halal, ISO",
+    "copyrightLine": "© {year} AcresxManna. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "cookiePolicy": "Cookie Policy"
+  },
+  "forms": {
+    "sendMessage": "Send message",
+    "sending": "Sending…",
+    "nameLabel": "Full name",
+    "emailLabel": "Business email",
+    "companyLabel": "Company or organisation",
+    "enquiryTypeLabel": "Enquiry type",
+    "productLabel": "Product(s) of interest",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Tell us about your enquiry...",
+    "honeypotLabel": "Leave this field empty if you're human",
+    "privacyConsent": "By sending this form you agree to us using your details to reply, as explained in our <privacy>Privacy Policy</privacy>.",
+    "errorSend": "Oops, that didn't send. Please try again or email us directly.",
+    "errorName": "Please enter your name.",
+    "errorEmail": "Please enter your email.",
+    "errorEmailFormat": "That email doesn't look right. Could you check it?",
+    "errorMessage": "Please tell us a little about what you need.",
+    "options": {
+      "product": "Product enquiry",
+      "supply": "Supply or farming partnership",
+      "distribution": "Distribution or wholesale",
+      "manufacturing": "Manufacturing partnership",
+      "investment": "Investment enquiry",
+      "other": "Other business enquiry"
+    }
+  },
+  "enquiry": {
+    "whatToInclude": "What to include",
+    "howItWorks": "How it works",
+    "apply": "Apply",
+    "startConversation": "Start a conversation",
+    "formIntroBody": "Share a little about your enquiry and our team will direct it to the right person. We do not promise prices, order volumes, minimums or terms before confirming them with you."
+  },
+  "chrome": {
+    "logoAria": "AcresxManna — Home",
+    "logoAlt": "Acres & Manna",
+    "languages": {
+      "en": "English",
+      "fr": "Français",
+      "tw": "Twi",
+      "es": "Español",
+      "ru": "Русский",
+      "pt": "Português",
+      "de": "Deutsch",
+      "it": "Italiano",
+      "ar": "العربية",
+      "zh-CN": "简体中文",
+      "nl": "Nederlands"
+    }
+  }
+}

@@ -1,25 +1,22 @@
+import { getTranslations } from "next-intl/server";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
-export const metadata = {
-  title: "Thank you",
-  description:
-    "Thanks for reaching out to AcresxManna. A member of our team will read your message and reply.",
-  robots: { index: false, follow: false },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pages.thankYou" });
 
-const TYPE_LABELS: Record<string, string> = {
-  product: "product enquiry",
-  supply: "supply or farming partnership",
-  distribution: "distribution or wholesale enquiry",
-  manufacturing: "manufacturing partnership enquiry",
-  investment: "investment enquiry",
-  other: "business enquiry",
-  supplier: "supplier application",
-  distributor: "distributor application",
-  investor: "investor enquiry",
-};
+  return {
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function ThankYouPage({
   searchParams,
@@ -27,29 +24,43 @@ export default async function ThankYouPage({
   searchParams: Promise<{ type?: string; product?: string }>;
 }) {
   const { type, product } = await searchParams;
-  const typeLabel = TYPE_LABELS[type || ""] || "enquiry";
+  const t = await getTranslations("pages.thankYou");
+
+  const TYPE_LABELS: Record<string, string> = {
+    product: t("typeLabels.product"),
+    supply: t("typeLabels.supply"),
+    distribution: t("typeLabels.distribution"),
+    manufacturing: t("typeLabels.manufacturing"),
+    investment: t("typeLabels.investment"),
+    other: t("typeLabels.other"),
+    supplier: t("typeLabels.supplier"),
+    distributor: t("typeLabels.distributor"),
+    investor: t("typeLabels.investor"),
+  };
+  const typeLabel = TYPE_LABELS[type || ""] || t("typeLabels.fallback");
+  const body = product
+    ? t("bodyWithProduct", { type: typeLabel, product })
+    : t("body", { type: typeLabel });
 
   return (
     <main id="main" className="py-32">
       <SectionContainer className="text-center">
-        <Eyebrow className="mb-5">Message received</Eyebrow>
+        <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
         <h1 className="mx-auto max-w-3xl font-display text-display-1 font-black">
-          Yay, message received!
+          {t("heading")}
         </h1>
         <p className="mx-auto mt-6 max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
-          Thanks for reaching out to AcresxManna about your {typeLabel}
-          {product ? ` (${product})` : ""}. A member of our team will read your
-          message and reply.
+          {body}
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button href="/products" variant="primary" size="lg">
-            Browse our products
+            {t("browseProducts")}
           </Button>
           <Button href="/about" variant="secondary" size="lg">
-            Read our story
+            {t("readOurStory")}
           </Button>
           <Button href="/news-insights" variant="ghost" size="lg">
-            Follow our news
+            {t("followOurNews")}
           </Button>
         </div>
       </SectionContainer>

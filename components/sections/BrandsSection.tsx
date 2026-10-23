@@ -38,18 +38,18 @@ const brands = [
     status: "Active",
     description:
       "The flagship brand AcresxManna uses to sell and distribute all of its products.",
-    image: "/images/products/happyman-foods-commodity-sacks.jpg",
-    alt: "HappyMan Foods 50kg agro-commodity sacks by AcresxManna Ltd.",
-    fit: "cover",
+    image: "/images/brands/happyman-foods-logo.svg",
+    alt: "HappyMan Foods logo",
+    fit: "contain",
   },
   {
     name: "Maluza Foods Co.",
     status: "Live",
     description:
       "A commercial bakery developing new products and opening retail stalls in and around Ibadan.",
-    image: "/images/processing/bakery-deck-oven-fresh-bread.jpg",
-    alt: "Maluza Foods bakery master baker presenting freshly baked golden loaf from commercial deck ovens",
-    fit: "cover",
+    image: "/images/brands/maluza-foods-logo.svg",
+    alt: "Maluza Foods Co. logo",
+    fit: "contain",
   },
 ];
 
@@ -60,9 +60,9 @@ export function BrandsSection() {
       <section className="bg-white py-16 sm:py-24">
         <SectionContainer size="wide">
           <div className="mb-10 max-w-3xl">
-            <Eyebrow className="mb-5">Our clients</Eyebrow>
+            <Eyebrow className="mb-5">Our brands</Eyebrow>
             <h2 className="font-display text-display-1 font-black">
-              Some of our clients.
+              Some of our brands.
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -82,6 +82,7 @@ export function BrandsSection() {
                     src={brand.image}
                     alt={brand.alt}
                     fill
+                    unoptimized={brand.image.endsWith(".svg")}
                     sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
                     className={`transition-transform duration-500 group-hover:scale-105 ${
                       brand.fit === "contain"

@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import { LazyImage } from "@/components/ui/LazyImage";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { PatternDivider } from "@/components/animations/PatternDivider";
@@ -16,40 +17,45 @@ export const metadata = {
 
 const impactStories = [
   {
-    title: "Agricultural value addition",
-    caption: "Empowering smallholder farmers with modern shade house agriculture, drip irrigation and high-yield crop agronomy.",
+    id: "valueAddition",
     image: "/images/processing/palm-oil-bottling-wide.jpg",
   },
   {
-    title: "Local production and employment",
-    caption: "Creating sustainable jobs and technical training in quality sorting, hygienic food handling, and manufacturing.",
+    id: "localProduction",
     image: "/images/processing/full-facility-sorting-hall.jpg",
   },
   {
-    title: "Stronger supply chains",
-    caption: "Bridging the gap between rural smallholder growers and industrial-scale agro-processing facilities.",
+    id: "supplyChains",
     image: "/images/farms/plantain-plantation-irrigation.jpg",
   },
   {
-    title: "African food in global markets",
-    caption: "Scaling containerized export pathways so high-grade African food items compete with distinction globally.",
+    id: "globalMarkets",
     image: "/images/logistics/shipping-container-export-ready.jpg",
   },
 ];
 
-export default function ImpactPage() {
+const SCORECARD_IDS = [
+  "tonnesProcessed",
+  "finishedProducts",
+  "activeSuppliers",
+  "directJobs",
+  "productCategories",
+  "countriesWithVerifiedSales",
+  "complianceQualityMeasures",
+];
+
+export default async function ImpactPage() {
+  const t = await getTranslations("pages.impact");
+
   return (
     <main id="main" className="pb-24 pt-32">
       <SectionContainer size="wide" className="text-center">
-        <Eyebrow className="mb-5">Our focus</Eyebrow>
+        <Eyebrow className="mb-5">{t("eyebrow")}</Eyebrow>
         <h1 className="mx-auto max-w-5xl font-display text-display-1 font-black">
-          Processing creates value. Value creates opportunity.
+          {t("heading")}
         </h1>
         <p className="mx-auto mt-8 max-w-2xl font-sans text-body-lg leading-relaxed text-charcoal-700">
-          AcresxManna is building its business around agricultural
-          value-addition, local production and access to markets. We will
-          publish measurable impact information when verified data is
-          available.
+          {t("intro")}
         </p>
       </SectionContainer>
 
@@ -59,38 +65,37 @@ export default function ImpactPage() {
 
       <SectionContainer size="wide">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {impactStories.map((item, index) => (
-            <ScrollReveal
-              as="article"
-              key={item.title}
-              delay={0.04 * index}
-              className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
-            >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-100">
-                <LazyImage
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  wrapperClassName="absolute inset-0"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="rounded-full bg-white/90 px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-purple-700 shadow-sm backdrop-blur-sm">
-                    Focus {String(index + 1).padStart(2, "0")}
-                  </span>
+          {impactStories.map((item, index) => {
+            const title = t(`stories.${item.id}.title`);
+
+            return (
+              <ScrollReveal
+                as="article"
+                key={title}
+                delay={0.04 * index}
+                className="group overflow-hidden rounded-3xl border border-cream-200 bg-white shadow-card transition duration-300 hover:shadow-card-hover"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream-100">
+                  <LazyImage
+                    src={item.image}
+                    alt={title}
+                    fill
+                    sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    wrapperClassName="absolute inset-0"
+                  />
                 </div>
-              </div>
-              <div className="p-6">
-                <h2 className="font-display text-heading-2 font-black text-charcoal-900">
-                  {item.title}
-                </h2>
-                <p className="mt-2 font-sans text-body-sm leading-relaxed text-charcoal-600">
-                  {item.caption}
-                </p>
-              </div>
-            </ScrollReveal>
-          ))}
+                <div className="p-6">
+                  <h2 className="font-display text-heading-2 font-black text-charcoal-900">
+                    {title}
+                  </h2>
+                  <p className="mt-2 font-sans text-body-sm leading-relaxed text-charcoal-600">
+                    {t(`stories.${item.id}.caption`)}
+                  </p>
+                </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </SectionContainer>
 
@@ -100,7 +105,7 @@ export default function ImpactPage() {
           <div className="relative aspect-[4/3] lg:aspect-auto lg:col-span-5">
             <LazyImage
               src="/images/farms/farmer-papaya-cultivation.jpg"
-              alt="Farmer inspecting high-yield dwarf hybrid papaya trees"
+              alt={t("spotlightImageAlt")}
               fill
               className="object-cover"
               sizes="(max-width: 1023px) 100vw, 40vw"
@@ -108,22 +113,22 @@ export default function ImpactPage() {
             />
           </div>
           <div className="p-8 sm:p-12 lg:col-span-7 flex flex-col justify-center">
-            <Eyebrow className="mb-4 text-yellow-400">Community & Agronomy</Eyebrow>
+            <Eyebrow className="mb-4 text-yellow-400">{t("spotlightEyebrow")}</Eyebrow>
             <h2 className="font-display text-display-2 font-black leading-tight">
-              Championing farmers with resilient agronomy.
+              {t("spotlightHeading")}
             </h2>
             <p className="mt-4 font-sans text-body-lg leading-relaxed text-white/90">
-              Through partnerships with local growers, we introduce dwarf hybrid crop varieties, pest-resistant seed stock, and protected shade structures. This boosts harvest volume per hectare and shields farming families from climate volatility.
+              {t("spotlightText")}
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <span className="rounded-full bg-white/10 px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-yellow-300 border border-white/15">
-                Seedling Nurturing
+                {t("spotlightTagSeedlings")}
               </span>
               <span className="rounded-full bg-white/10 px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-yellow-300 border border-white/15">
-                Direct Offtake Contracts
+                {t("spotlightTagContracts")}
               </span>
               <span className="rounded-full bg-white/10 px-4 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-yellow-300 border border-white/15">
-                Female Workforce Empowerment
+                {t("spotlightTagWorkforce")}
               </span>
             </div>
           </div>
@@ -132,64 +137,68 @@ export default function ImpactPage() {
 
       <SectionContainer size="wide" className="mt-20">
         <div className="mb-12 max-w-3xl">
-          <Eyebrow className="mb-4">Impact scorecard</Eyebrow>
+          <Eyebrow className="mb-4">{t("scorecardEyebrow")}</Eyebrow>
           <h2 className="font-display text-display-2 font-black">
-            Numbers we can stand behind.
+            {t("scorecardHeading")}
           </h2>
           <p className="mt-4 font-sans text-body-lg leading-relaxed text-charcoal-700">
-            We only publish verified data. The figures below will be updated as
-            we receive and confirm each metric from our operations team.
+            {t("scorecardText")}
           </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {IMPACT_SCORECARD.map((metric, index) => (
-            <ScrollReveal
-              as="article"
-              key={metric.label}
-              delay={0.05 * index}
-              className="group relative overflow-hidden rounded-3xl border border-cream-200 bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover"
-            >
-              {/* Subtle purple glow accent on hover */}
-              <span
-                aria-hidden
-                className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-purple-100 opacity-0 transition-opacity duration-500 group-hover:opacity-60"
-              />
+          {IMPACT_SCORECARD.map((metric, index) => {
+            const label = t(`scorecard.${SCORECARD_IDS[index]}.label`);
 
-              {metric.value > 0 ? (
-                <p className="font-display text-display-2 font-black text-purple-700">
-                  <CountUp
-                    to={metric.value}
-                    suffix={metric.suffix}
-                    duration={2000}
-                  />
+            return (
+              <ScrollReveal
+                as="article"
+                key={label}
+                delay={0.05 * index}
+                className="group relative overflow-hidden rounded-3xl border border-cream-200 bg-white p-6 shadow-card transition-shadow duration-300 hover:shadow-card-hover"
+              >
+                {/* Subtle purple glow accent on hover */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-purple-100 opacity-0 transition-opacity duration-500 group-hover:opacity-60"
+                />
+
+                {metric.value > 0 ? (
+                  <p className="font-display text-display-2 font-black text-purple-700">
+                    <CountUp
+                      to={metric.value}
+                      suffix={metric.suffix}
+                      duration={2000}
+                    />
+                  </p>
+                ) : (
+                  <p className="font-display text-heading-1 font-black text-charcoal-300">
+                    —
+                  </p>
+                )}
+
+                <p className="mt-3 font-display text-heading-3 font-bold text-charcoal-900 leading-snug">
+                  {label}
                 </p>
-              ) : (
-                <p className="font-display text-heading-1 font-black text-charcoal-300">
-                  —
+
+                <p className="mt-2 font-mono text-label font-semibold uppercase tracking-[0.1em] text-purple-600">
+                  {metric.value > 0
+                    ? t("verified")
+                    : t(`scorecard.${SCORECARD_IDS[index]}.note`)}
                 </p>
-              )}
-
-              <p className="mt-3 font-display text-heading-3 font-bold text-charcoal-900 leading-snug">
-                {metric.label}
-              </p>
-
-              <p className="mt-2 font-mono text-label font-semibold uppercase tracking-[0.1em] text-purple-600">
-                {metric.value > 0 ? "Verified" : metric.note}
-              </p>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </SectionContainer>
 
 
       <SectionContainer className="mt-20 text-center">
         <p className="mx-auto max-w-4xl font-display text-heading-1 font-bold leading-relaxed">
-          We want our growth measured not only by the products we sell, but by
-          the productive capacity and economic opportunities we help create.
+          {t("closing")}
         </p>
         <Button href="/contact" variant="primary" size="lg">
-          Talk to our team
+          {t("cta")}
         </Button>
       </SectionContainer>
     </main>

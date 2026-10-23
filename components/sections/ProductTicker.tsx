@@ -1,13 +1,17 @@
+import { getTranslations } from "next-intl/server";
 import { PRODUCTS } from "@/lib/products";
 
-const items = PRODUCTS.filter((product) => product.status === "Available now").map(
-  (product) => product.name,
-);
+const PRODUCT_IDS = PRODUCTS.filter(
+  (product) => product.status === "Available now",
+).map((product) => product.id);
 
-export function ProductTicker() {
+export async function ProductTicker() {
+  const t = await getTranslations("sections.productTicker");
+  const tp = await getTranslations("sections.products");
+  const items = PRODUCT_IDS.map((id) => tp(`items.${id}.name`));
   return (
     <div
-      aria-label={`Products: ${items.join(", ")}`}
+      aria-label={t("ariaLabel", { products: items.join(", ") })}
         role="region"
       className="overflow-hidden border-y border-purple-700/10 bg-purple-700 py-4 text-yellow-400"
     >

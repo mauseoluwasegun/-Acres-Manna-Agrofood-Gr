@@ -4,6 +4,18 @@
     "siteDescription": "A diversified international food, ingredients and retail group redefining Africa's role in the Agrofood global market.",
     "skipToContent": "Skip to content"
   },
+  "layout": {
+    "title": "AcresxManna — Africa's Richness, Transformed Into Great Food",
+    "description": "A diversified international food, ingredients and retail group redefining Africa's role in the Agrofood global market.",
+    "titleTemplate": "%s | AcresxManna",
+    "ogImageAlt": "AcresxManna — African Agrofood Group",
+    "legalName": "AcresxManna Group",
+    "streetAddress": "The Goodland, Off Apapa Road, Moniya",
+    "addressLocality": "Ibadan",
+    "addressRegion": "Oyo State",
+    "addressCountry": "Nigeria",
+    "skipToContent": "Skip to content"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -11,7 +23,30 @@
     "whatWeDo": "What We Do",
     "what-we-do": "What We Do",
     "impact": "Impact",
-    "contact": "Contact"
+    "contact": "Contact",
+    "primaryAria": "Primary navigation",
+    "more": "More",
+    "letsTalk": "Let's Talk",
+    "openMenu": "Open menu",
+    "mobileAria": "Mobile navigation",
+    "closeMenu": "Close menu"
+  },
+  "chrome": {
+    "logoAria": "AcresxManna Home",
+    "logoAlt": "AcresxManna Logo",
+    "languages": {
+      "en": "English",
+      "fr": "Français",
+      "tw": "Twi",
+      "es": "Español",
+      "ru": "Русский",
+      "pt": "Português",
+      "de": "Deutsch",
+      "it": "Italiano",
+      "ar": "العربية",
+      "zh-CN": "",
+      "nl": "Nederlands"
+    }
   },
   "hero": {
     "eyebrow": "AcresxManna · Agrofood Group",
@@ -238,7 +273,7 @@
     "headlineP1": "Built in Africa, ",
     "headlineEmphasis": "shipped to the world.",
     "description": "Our ambition is simple: make African-made food a household category on every continent. These are the markets we serve today and the roadmap ahead.",
-    "hqEyebrow": "HQ · Nigeria",
+    "hqEyebrow": "HQ · Ghana",
     "hqHeadline": "Our <em>home market</em> is where it all starts.",
     "hqDescription": "West Africa is our heartland — Ghana as HQ, Nigeria as our biggest national market, and the broader cocoa belt our richest source of raw material.",
     "hqGhana": "Ghana · HQ + milling + cocoa processing",
@@ -261,7 +296,6 @@
     "description": "Got a question about our brands, strategy, or ecosystem? Let's connect, create value, and feed the future together.",
     "emailLabel": "Email: hello@aAcresxManna.com",
     "phoneLabel": "Phone: +234 804 700 0587",
-    "hqLabel": "HQ: The Goodland, Off Apapa Road, Moniya, Ibadan, Oyo State, Nigeria",
     "formEyebrow": "Quick Inquiry",
     "formHeadline": "Tell us what you need — <em>we'll reply in 48h.</em>",
     "placeholderName": "Full name",
@@ -294,19 +328,372 @@
     "mealKits": "Meal Kits & Ready Meals",
     "viewFullCatalog": "View full catalog →",
     "stayConnected": "Stay Connected",
-    "location": "Moniya, Ibadan, Nigeria",
     "newsletter": "Newsletter",
     "newsletterDescription": "Join AcresxManna in feeding the world — updates from our farms, brands and impact across the agrofood value chain.",
     "subscribe": "Subscribe",
     "copyright": "© {year} AcresxManna. All rights reserved.",
     "privacy": "Privacy",
     "terms": "Terms",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "brandHomeAria": "AcresxManna Home",
+    "brandLogoAlt": "AcresxManna Logo",
+    "taglineText": "Turning Africa's agricultural richness into great food for local communities and global tables alike.",
+    "exploreHeading": "Explore",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "brandsHeading": "Our Brands",
+    "brand1Label": "UncleTobi Farmers",
+    "brand2Label": "Maluza Foods Co.",
+    "brand3Label": "HappyMan Foods",
+    "brand4Label": "African Food King",
+    "certifiedBy": "Certified By",
+    "certifiedByAlt": "Quality certification badge",
+    "copyrightLine": "© {year} AcresxManna. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use",
+    "cookiePolicy": "Cookie Policy",
+    "whatWeDo": "What We Do",
+    "impact": "Impact",
+    "globalMarkets": "Global Markets",
+    "instagramAria": "AcresxManna on Instagram",
+    "certifiedByNote": "Food safety and quality standards we work to across our facilities."
   },
   "languageSwitcher": {
     "label": "Language",
     "en": "English",
     "fr": "Français",
     "tw": "Twi"
+  },
+  "forms": {
+    "nameLabel": "Full Name",
+    "emailLabel": "Email Address",
+    "companyLabel": "Company Name (optional)",
+    "enquiryTypeLabel": "Enquiry Type",
+    "productLabel": "Product Name",
+    "messageLabel": "Your Message",
+    "messagePlaceholder": "Tell us about your requirements...",
+    "honeypotLabel": "Website (leave blank)",
+    "privacyConsent": "By submitting this form, you agree to our {privacy} policy.",
+    "errorName": "Please enter your name",
+    "errorEmail": "Please enter your email",
+    "errorEmailFormat": "Please enter a valid email address",
+    "errorMessage": "Please enter a message (at least 10 characters)",
+    "errorSend": "Something went wrong. Please try again.",
+    "sending": "Sending...",
+    "sendMessage": "Send Message",
+    "options": {
+      "product": "Product Enquiry",
+      "supply": "Supply Partnership",
+      "distribution": "Distribution",
+      "manufacturing": "Manufacturing",
+      "investment": "Investment",
+      "other": "Other"
+    }
+  },
+  "enquiry": {
+    "whatToInclude": "What to Include",
+    "howItWorks": "How It Works",
+    "apply": "Apply Now",
+    "startConversation": "Start a Conversation",
+    "formIntroBody": "Fill out the form and our team will get back to you within 48 hours."
+  },
+  "ui": {
+    "cookieConsent": {
+      "title": "We Value Your Privacy",
+      "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+      "accept": "Accept",
+      "decline": "Decline",
+      "settings": "Cookie Settings"
+    }
+  },
+  "sections": {
+    "hero": {
+      "eyebrow": "AcresxManna · Agrofood Group",
+      "word0": "Redefining",
+      "word1": "Africa's",
+      "word2": "role",
+      "word3": "in the",
+      "word4": "global",
+      "word5": "market",
+      "typingText": "A diversified international food, ingredients and retail group.",
+      "exploreProducts": "Explore Our Products",
+      "letsTalk": "Let's Talk",
+      "heroImageAlt": "Palm oil bottling production line at AcresxManna processing facility",
+      "tagAfricanHarvest": "100% African Harvest",
+      "tagExportReady": "Export Ready",
+      "tagValueAdded": "Value-Added Processing",
+      "tagFarmToGlobal": "Farm to Global",
+      "tagQuality": "Premium Quality",
+      "mascotAlt": "AcresxManna brand mascot character"
+    },
+    "ambition": {
+      "eyebrow": "Our Ambition",
+      "headline": "Transforming Africa's Agricultural Richness",
+      "description": "Building a diversified international food, ingredients and retail group that redefines Africa's role in the global agrofood market."
+    },
+    "about": {
+      "dividerEyebrow": "— WHO WE ARE",
+      "eyebrow": "Our Purpose",
+      "headline": "Dedicated to Feeding the World",
+      "description": "At AcresxManna, we are at the forefront of satisfying the increasing need for safe and wholesome food. From seed to shelf, we build value across the entire agrofood value chain.",
+      "cta": "Learn More About Us"
+    },
+    "manufacturing": {
+      "eyebrow": "Manufacturing Excellence",
+      "headline": "Modern Processing Facilities",
+      "description": "Our state-of-the-art processing facilities ensure quality, safety, and preservation at every stage of food production.",
+      "cap0Alt": "Cassava farming field with green plants",
+      "cap0Title": "Sourcing",
+      "cap0Description": "We source raw materials directly from trusted farmers and cooperatives across West Africa.",
+      "cap1Alt": "Warehouse with branded product sacks stacked on racking",
+      "cap1Title": "Storage",
+      "cap1Description": "Our warehousing facilities maintain optimal conditions for quality preservation.",
+      "cap2Alt": "Peanuts processing on deskinning and grading table",
+      "cap2Title": "Processing",
+      "cap2Description": "Advanced processing equipment for cleaning, sorting, and preparation.",
+      "cap3Alt": "Industrial mixing and sifter tanks in processing facility",
+      "cap3Title": "Quality Control",
+      "cap3Description": "Rigorous quality testing ensures every product meets international standards.",
+      "cap4Alt": "Plantain plantation with irrigation system",
+      "cap4Title": "Agriculture",
+      "cap4Description": "Modern farming practices with sustainable techniques and irrigation.",
+      "cap5Alt": "Container loading with bottled products for export",
+      "cap5Title": "Distribution",
+      "cap5Description": "Efficient logistics network connecting our products to global markets."
+    },
+    "products": {
+      "dividerEyebrow": "— SIGNATURE PRODUCTS",
+      "eyebrow": "Product Showcase",
+      "headline": "Quality African Food Products",
+      "description": "From grains and flours to ready meals, our products carry the authentic taste of Africa to markets worldwide.",
+      "statusAvailable": "Available Now",
+      "statusComingSoon": "Coming Soon",
+      "requestInfo": "Request Information",
+      "cta": "View All Products",
+      "items": {
+        "garri": {
+          "name": "Garri",
+          "description": "An important staple in many African communities, with opportunities across retail, food service and international African food markets. We process it in white, Ijebu and yellow varieties.",
+          "imageAlt": "Garri sacks stored in warehouse for storage and distribution"
+        },
+        "cassava-flour": {
+          "name": "Cassava Flour",
+          "description": "A cassava-based flour for home cooking, bakers and food businesses, packed to your requirements.",
+          "imageAlt": "Branded cassava flour sacks packaged for distribution"
+        },
+        "plantain-flour": {
+          "name": "Plantain Flour",
+          "description": "A plantain-based flour for home cooking, bakers and food businesses, packed to your requirements.",
+          "imageAlt": "Close-up of plantain flour with scoop"
+        },
+        "groundnuts-peanuts": {
+          "name": "Groundnuts and Peanuts",
+          "description": "A versatile agricultural product with potential as packaged food and as a raw material for further processing.",
+          "imageAlt": "Bulk packaged groundnuts and peanuts in warehouse"
+        },
+        "cashew-nuts": {
+          "name": "Cashew Nuts",
+          "description": "A snack and ingredient people love, packed to your requirements.",
+          "imageAlt": "Cashew nuts and cashew apples harvested from orchard to table"
+        },
+        "plantain-chips": {
+          "name": "Plantain Chips",
+          "description": "A familiar, convenient African snack for people looking for enjoyable food. Product enquiries can discuss packaging and distribution requirements.",
+          "imageAlt": "HappyMan Plantain Chips packaged in clear plastic bag"
+        },
+        "hibiscus-teas": {
+          "name": "Hibiscus and Teas",
+          "description": "A recognisable African botanical for teas, infusions and beverages. Contact us to discuss available products and requirements.",
+          "imageAlt": "African Food King premium herbal tea collection featuring Hibiscus, Ginger, Clove & Cinnamon pyramid tea bags"
+        },
+        "kuli-kuli": {
+          "name": "Kuli Kuli",
+          "description": "An iconic West African crunchy snack crafted from roasted groundnuts, seasoned and crisped to perfection. High in plant protein and packed for retail freshness and export.",
+          "imageAlt": "Authentic crunchy Kuli Kuli snack packaged in tamper-evident retail jars with green lids"
+        },
+        "palm-oil": {
+          "name": "Pure Palm Oil",
+          "description": "Sustainably sourced, pure unrefined red palm oil processed under strict hygienic conditions. Essential for authentic African cooking, food service, and commercial manufacturing.",
+          "imageAlt": "Overhead view of sealed pure red palm oil bottles ready for distribution and export"
+        },
+        "seasonings-spices": {
+          "name": "Seasonings and Spices",
+          "description": "A planned range connecting agricultural ingredients with everyday cooking, with a focus on flavour, convenience and consistency. Not yet available.",
+          "imageAlt": "Rustic spice still life with garlic, chili peppers, peppercorns, curry powder, and fresh herbs on wooden surface"
+        }
+      }
+    },
+    "operatingModel": {
+      "dividerEyebrow": "— HOW WE WORK",
+      "eyebrow": "Our Operating Model",
+      "headline": "Integrated Value Chain",
+      "description": "We connect agriculture, processing, financing, and distribution to create sustainable food systems.",
+      "steps": {
+        "source": {
+          "title": "Source",
+          "description": "Direct from farmers across Ghana, Nigeria, and Côte d'Ivoire."
+        },
+        "processAndManufacture": {
+          "title": "Process & Manufacture",
+          "description": "HACCP and ISO 22000 certified facilities ensure quality."
+        },
+        "packageAndBuildBrands": {
+          "title": "Package & Build Brands",
+          "description": "Creating brands that tell authentic African food stories."
+        },
+        "connectToMarkets": {
+          "title": "Connect to Markets",
+          "description": "Distribution across 24+ markets through AfCFTA corridors."
+        }
+      }
+    },
+    "brands": {
+      "dividerEyebrow": "— OUR BRANDS",
+      "eyebrow": "Our Brand Portfolio",
+      "heading": "Diverse Brands, One Mission",
+      "description": "Our collective of brands serves both rural producers and urban consumers, creating value through innovation and integrity.",
+      "brand0Alt": "African Food King logo",
+      "brand0Status": "Active",
+      "brand0Name": "African Food King",
+      "brand0Description": "Authentic African food products for retail and export markets.",
+      "brand1Alt": "HappyMan Foods branded commodity sacks",
+      "brand1Status": "Active",
+      "brand1Name": "HappyMan Foods",
+      "brand1Description": "Our consumer food brand producing affordable everyday products.",
+      "brand2Alt": "Fresh bread from the Maluza Foods bakery",
+      "brand2Status": "Active",
+      "brand2Name": "Maluza Foods",
+      "brand2Description": "Our bakery producing fresh bread and pastries.",
+      "brand3Alt": "UncleTobi logo",
+      "brand3Status": "Coming soon",
+      "brand3Name": "UncleTobi",
+      "brand3Description": "An online grocery concept bringing suppliers together for retail.",
+      "cta": "View All Brands"
+    },
+    "clients": {
+      "heading": "Our Clients"
+    },
+    "impact": {
+      "dividerEyebrow": "— IMPACT WE CAN FEEL",
+      "eyebrow": "By The Numbers",
+      "headline": "Real Impact, Real Stories",
+      "description": "Every metric represents a person, a community, or a meal on a table we helped reach.",
+      "chip0": "Farmers Empowered",
+      "chip1": "Communities Reached",
+      "chip2": "Jobs Created",
+      "chip3": "Markets Served",
+      "cta": "View Full Impact"
+    },
+    "finalCta": {
+      "eyebrow": "Let's Connect",
+      "headline": "Partner With Us",
+      "description": "Whether you're a farmer, distributor, investor, or partner, let's build the future of African food together.",
+      "partnerWithUs": "Partner With Us",
+      "becomeSupplier": "Become a Supplier",
+      "exploreProducts": "Explore Products"
+    },
+    "productTicker": {
+      "ariaLabel": "Scrolling product ticker featuring: {products}"
+    },
+    "globalAmbition": {
+      "eyebrow": "Global Ambition",
+      "headline": "Building Across Borders",
+      "description": "From West Africa to global markets, we're expanding our reach while staying rooted in our mission."
+    },
+    "stakeholderCube": {
+      "dividerEyebrow": "— OUR STAKEHOLDERS",
+      "eyebrow": "Who We Serve",
+      "heading": "Six Faces of Value",
+      "description": "Every stakeholder in our ecosystem matters. Explore how we create value across the entire agrofood value chain.",
+      "cubeAriaLabel": "Interactive cube showing {face}",
+      "faceAriaLabel": "View {label} stakeholder perspective",
+      "face": "Rotate cube",
+      "hint": "Tap to rotate",
+      "panel": "Details",
+      "talkToTeam": "Talk to Our Team",
+      "faces": {
+        "consumer": "Consumer",
+        "farmer": "Farmer",
+        "distributor": "Distributor",
+        "partner": "Partner",
+        "investor": "Investor",
+        "employee": "Employee"
+      },
+      "stakeholders": {
+        "consumer": {
+          "label": "CONSUMER",
+          "headline": "Quality & Trust",
+          "description": "Consumers deserve safe, nutritious, and authentic African food products. We ensure every product meets international standards while preserving cultural heritage.",
+          "ctaLabel": "Shop Products"
+        },
+        "farmer": {
+          "label": "FARMER",
+          "headline": "Growth & Dignity",
+          "description": "Smallholder farmers are the backbone of our ecosystem. We provide fair prices, sustainable practices training, and direct market access to transform livelihoods.",
+          "ctaLabel": "Partner With Us"
+        },
+        "distributor": {
+          "label": "DISTRIBUTOR",
+          "headline": "Reliability & Reach",
+          "description": "Distributors connect our products to markets worldwide. We offer consistent supply, competitive pricing, and logistics support for seamless operations.",
+          "ctaLabel": "Join Network"
+        },
+        "partner": {
+          "label": "PARTNER",
+          "headline": "Collaboration & Impact",
+          "description": "Strategic partners amplify our mission. From NGOs to government agencies, we build alliances that strengthen Africa's food security and economic growth.",
+          "ctaLabel": "Explore Partnership"
+        },
+        "investor": {
+          "label": "INVESTOR",
+          "headline": "Returns & Scale",
+          "description": "Investors fuel our expansion across the value chain. We offer transparent operations, proven business models, and significant growth potential in African agrofood markets.",
+          "ctaLabel": "Investment Opportunities"
+        },
+        "employee": {
+          "label": "EMPLOYEE",
+          "headline": "Purpose & Development",
+          "description": "Our team drives our mission forward. We provide meaningful work, skill development, and a culture of excellence across farms, factories, and offices.",
+          "ctaLabel": "Join Our Team"
+        }
+      }
+    },
+    "businessFaq": {
+      "eyebrow": "FAQ",
+      "heading": "Frequently Asked Questions",
+      "faq0Question": "What types of partnerships do you offer?",
+      "faq0Answer": "We offer various partnership opportunities including supplier partnerships, distribution agreements, manufacturing collaborations, and investment opportunities. Each is tailored to the specific needs and scale of the partner.",
+      "faq1Question": "What is your minimum order quantity?",
+      "faq1Answer": "Minimum order quantities vary by product and market. For retail products, we typically start from 500 units. For bulk commodities and exports, minimum quantities are negotiated based on container capacity and product type.",
+      "faq2Question": "Do you export internationally?",
+      "faq2Answer": "Yes, we export to over 24 markets globally through Africa Continental Free Trade Area (AfCFTA) corridors and direct partnerships with EU and North American importers. Our products meet international food safety standards.",
+      "faq3Question": "What certifications do you hold?",
+      "faq3Answer": "We hold multiple certifications including HACCP, ISO 22000, NAFDAC, SON, and MAN. These certifications ensure our products meet the highest food safety, quality, and regulatory standards across markets.",
+      "faq4Question": "How do I become a supplier?",
+      "faq4Answer": "To become a supplier, complete our supplier enquiry form with details about your products, capacity, and certifications. Our procurement team will review your application and contact you within 5 business days for the next steps.",
+      "faq5Question": "What payment terms do you offer?",
+      "faq5Answer": "We offer flexible payment terms based on partnership type and order size. Common terms include 30-60 day net payment for established partners, advance payment for new partnerships, and letter of credit for international exports.",
+      "faq6Question": "Do you provide private label services?",
+      "faq6Answer": "Yes, we offer private label and white label manufacturing services for select partners. This includes custom formulation, packaging design, and production under your brand name with our quality assurance.",
+      "faq7Question": "What is your lead time for orders?",
+      "faq7Answer": "Lead times vary by product: ready products ship within 3-5 business days, custom orders take 2-4 weeks, and large export orders may require 4-8 weeks depending on production scheduling and logistics.",
+      "faq8Question": "Do you offer samples?",
+      "faq8Answer": "Yes, we provide product samples for qualified business enquiries. Sample requests can be made through our contact form, and shipping costs may apply depending on location and sample quantity.",
+      "faq9Question": "What quality control measures do you have?",
+      "faq9Answer": "We implement rigorous quality control at every stage: farm-gate grading, in-process testing, final product inspection, and pre-shipment verification. Our facilities are equipped with modern testing equipment and follow GMP standards.",
+      "faq10Question": "Can you handle large volume orders?",
+      "faq10Answer": "Yes, our facilities are designed for large-scale production with multiple processing lines and ample storage capacity. We can scale production to meet significant volume requirements while maintaining quality standards.",
+      "faq11Question": "Do you support sustainable farming practices?",
+      "faq11Answer": "Absolutely. We work closely with farmers to promote sustainable practices including soil conservation, water management, reduced chemical inputs, and biodiversity preservation. Our farming programs include training and certification support.",
+      "faq12Question": "How do you ensure product safety?",
+      "faq12Answer": "Product safety is ensured through HACCP-certified processes, regular microbiological testing, proper storage and handling protocols, traceability systems, and compliance with international food safety regulations including USFDA and EU standards."
+    },
+    "pages": {
+      "notFound": {
+        "title": "Page Not Found",
+        "description": "The page you're looking for doesn't exist or has been moved.",
+        "backToHome": "Back to Home"
+      }
+    }
   }
 }
