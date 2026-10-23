@@ -122,17 +122,26 @@ export default function OurBrandsPage() {
       </SectionContainer>
 
       <SectionContainer size="wide" className="mt-16">
-        <div className="rounded-3xl bg-purple-700 p-8 text-white sm:p-10">
-          <Eyebrow className="mb-4 text-yellow-400">How the roles fit</Eyebrow>
-          <h2 className="font-display text-display-2 font-black">
-            Different roles across the food value chain.
-          </h2>
-          <p className="mt-5 max-w-3xl font-sans text-body-lg leading-relaxed text-white/90">
-            HappyMan Foods is the brand AcresxManna uses to sell its products.
-            Maluza Foods Co. is a bakery developing products and stalls in and
-            around Ibadan. UncleTobi is an online grocery concept that will
-            aggregate suppliers for retail and is coming soon.
-          </p>
+        <div className="overflow-hidden rounded-3xl bg-purple-700 text-white lg:grid lg:grid-cols-12">
+          <div className="relative aspect-[16/10] lg:aspect-auto lg:col-span-5 bg-purple-900">
+            <LazyImage
+              src="/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg"
+              alt="Pallets of bottled peanuts packaged under our brands and ready for distribution and trade"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1023px) 100vw, 40vw"
+              wrapperClassName="absolute inset-0"
+            />
+          </div>
+          <div className="p-8 sm:p-10 lg:col-span-7 flex flex-col justify-center">
+            <h2 className="font-display text-display-2 font-black">
+              Distribution and trade
+            </h2>
+            <p className="mt-5 font-sans text-body-lg leading-relaxed text-white/90">
+              HappyMan Foods is the brand AcresxManna uses to sell and
+              distribute its products to retail and trade partners.
+            </p>
+          </div>
         </div>
       </SectionContainer>
 

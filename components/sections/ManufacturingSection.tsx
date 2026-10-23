@@ -4,7 +4,12 @@ import { SectionContainer } from "@/components/layout/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { MotionSection, ScrollReveal } from "@/components/animations/MotionSection";
 
-const capabilities = [
+type ManufacturingCapability = {
+  image: string;
+  position?: string;
+};
+
+const capabilities: ManufacturingCapability[] = [
   {
     image: "/images/farms/cassava.jpg",
   },
@@ -12,7 +17,8 @@ const capabilities = [
     image: "/images/logistics/warehouse-racking-branded-sacks.jpg",
   },
   {
-    image: "/images/processing/peanuts-deskinning-grading-table.jpg",
+    image: "/images/processing/manufacturing-kettle-operator.jpg",
+    position: "object-[center_20%]",
   },
   {
     image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
@@ -21,7 +27,7 @@ const capabilities = [
     image: "/images/farms/plantain-plantation-irrigation.jpg",
   },
   {
-    image: "/images/logistics/container-bottled-products-export.jpg",
+    image: "/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg",
   },
 ];
 
@@ -53,7 +59,7 @@ export async function ManufacturingSection() {
                   alt={t(`cap${index}Alt`)}
                   fill
                   sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`object-cover transition-transform duration-500 group-hover:scale-105 ${capability.position ?? ""}`}
                   wrapperClassName="absolute inset-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/70 via-transparent to-transparent" />

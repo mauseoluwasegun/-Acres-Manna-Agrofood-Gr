@@ -121,9 +121,9 @@ export const PRODUCTS: Product[] = [
       "Packed to each client's requirements",
     ],
     status: "Available now",
-    image: "/images/products/african-food-king-hibiscus-tea.jpg",
-    imageAlt: "African Food King premium herbal tea collection featuring Hibiscus, Ginger, Clove & Cinnamon pyramid tea bags",
-    caption: "African Food King herbal tea line, 100% natural and caffeine-free.",
+    image: "/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg",
+    imageAlt: "Branded bottled products packed on pallets and ready for distribution and trade",
+    caption: "Branded product packed on pallets and ready for distribution and trade.",
   },
   {
     id: "kuli-kuli",
