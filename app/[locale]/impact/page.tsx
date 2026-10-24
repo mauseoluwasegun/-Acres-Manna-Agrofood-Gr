@@ -26,7 +26,7 @@ const impactStories = [
   },
   {
     id: "supplyChains",
-    image: "/images/farms/plantain-plantation-irrigation.jpg",
+    image: "/images/farms/greenhouse-tomato-rows.jpg",
   },
   {
     id: "globalMarkets",

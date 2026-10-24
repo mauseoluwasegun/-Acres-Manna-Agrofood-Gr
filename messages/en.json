@@ -445,7 +445,7 @@
       "cap0Alt": "Cassava farming field with green plants",
       "cap0Title": "Sourcing",
       "cap0Description": "We source raw materials directly from trusted farmers and cooperatives across West Africa.",
-      "cap1Alt": "Warehouse with branded product sacks stacked on racking",
+      "cap1Alt": "Palletised jars of packaged coated peanuts in finished-product storage",
       "cap1Title": "Storage",
       "cap1Description": "Our warehousing facilities maintain optimal conditions for quality preservation.",
       "cap2Alt": "Food production operator in protective clothing monitoring a stainless steel processing kettle",
@@ -454,10 +454,10 @@
       "cap3Alt": "Industrial mixing and sifter tanks in processing facility",
       "cap3Title": "Quality Control",
       "cap3Description": "Rigorous quality testing ensures every product meets international standards.",
-      "cap4Alt": "Plantain plantation with irrigation system",
+      "cap4Alt": "Farm team harvesting tomatoes in branded uniforms inside a greenhouse",
       "cap4Title": "Agriculture",
       "cap4Description": "Modern farming practices with sustainable techniques and irrigation.",
-      "cap5Alt": "Pallets of bottled peanuts packaged and ready for distribution",
+      "cap5Alt": "Export container loaded with bottled products ready for dispatch",
       "cap5Title": "Distribution",
       "cap5Description": "Efficient logistics network connecting our products to global markets."
     },
@@ -520,6 +520,11 @@
           "name": "Pure Palm Oil",
           "description": "Sustainably sourced, pure unrefined red palm oil processed under strict hygienic conditions. Essential for authentic African cooking, food service, and commercial manufacturing.",
           "imageAlt": "Overhead view of sealed pure red palm oil bottles ready for distribution and export"
+        },
+        "ayamase-sauce": {
+          "name": "Ayamase Sauce",
+          "description": "A rich West African pepper sauce, also known as Ofada sauce, prepared for everyday cooking and packed in 250g pouches.",
+          "imageAlt": "HappyMan Ayamase Sauce retail pouch with Ofada sauce label"
         },
         "seasonings-spices": {
           "name": "Seasonings and Spices",

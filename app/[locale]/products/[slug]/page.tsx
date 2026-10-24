@@ -159,7 +159,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     fill
                     priority
                     sizes="(max-width: 1023px) 100vw, 42vw"
-                    className="object-cover"
+                    className={product.imageFit === "contain" ? "object-contain" : "object-cover"}
                     wrapperClassName="absolute inset-0"
                   />
                 </div>

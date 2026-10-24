@@ -54,7 +54,7 @@ export async function ProductsSection() {
                         }
                         fill
                         sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        className={`${product.imageFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
                         wrapperClassName="absolute inset-0"
                       />
                       <div className="absolute top-4 left-4">

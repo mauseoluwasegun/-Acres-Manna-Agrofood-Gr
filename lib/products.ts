@@ -9,6 +9,7 @@ export interface Product {
   image?: string;
   imageAlt?: string;
   caption?: string;
+  imageFit?: "cover" | "contain";
 }
 
 export const PRODUCTS: Product[] = [
@@ -179,6 +180,25 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/palm-oil-bottles-overhead-view.jpg",
     imageAlt: "Overhead view of sealed pure red palm oil bottles ready for distribution and export",
     caption: "Premium pure red palm oil, hygienically bottled and quality-graded for international markets.",
+  },
+  {
+    id: "ayamase-sauce",
+    slug: "ayamase-sauce",
+    name: "Ayamase Sauce",
+    description:
+      "A rich West African pepper sauce, also known as Ofada sauce, prepared for everyday cooking and packed in 250g pouches.",
+    highlights: [
+      "Available in 250g retail pouches",
+      "Available for export",
+      "Packed to each client's requirements",
+    ],
+    status: "Available now",
+    image: "/images/products/happyman-ayamase-sauce-pouch.jpg",
+    imageAlt:
+      "HappyMan Ayamase Sauce retail pouch with Ofada sauce label",
+    caption:
+      "HappyMan Ayamase (Ofada) sauce in a 250g retail pouch.",
+    imageFit: "contain",
   },
   {
     id: "seasonings-spices",

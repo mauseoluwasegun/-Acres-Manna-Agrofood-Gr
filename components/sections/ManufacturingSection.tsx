@@ -14,7 +14,8 @@ const capabilities: ManufacturingCapability[] = [
     image: "/images/farms/cassava.jpg",
   },
   {
-    image: "/images/logistics/warehouse-racking-branded-sacks.jpg",
+    image: "/images/products/coated-peanut-jars-snack-warehouse.jpg",
+    position: "object-[center_60%]",
   },
   {
     image: "/images/processing/manufacturing-kettle-operator.jpg",
@@ -24,10 +25,11 @@ const capabilities: ManufacturingCapability[] = [
     image: "/images/processing/industrial-mixing-sifter-tanks.jpg",
   },
   {
-    image: "/images/farms/plantain-plantation-irrigation.jpg",
+    image: "/images/farms/tomato-farm-team-branded-uniforms.jpg",
   },
   {
-    image: "/images/logistics/palletised-bottled-peanuts-ready-for-distribution.jpg",
+    image: "/images/logistics/container-full-bottled-cooking-oil.jpg",
+    position: "object-[center_45%]",
   },
 ];
 

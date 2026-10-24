@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { SectionContainer } from "@/components/layout/SectionContainer";
 import { MotionSection } from "@/components/animations/MotionSection";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { SITE_LOCATIONS } from "@/lib/constants";
 
 export async function GlobalAmbitionSection() {
   const t = await getTranslations("sections.globalAmbition");
@@ -16,6 +17,16 @@ export async function GlobalAmbitionSection() {
           <p className="mt-6 font-sans text-body-lg leading-relaxed text-charcoal-700">
             {t("description")}
           </p>
+        </div>
+        <div className="mt-12 grid gap-8 border-t border-cream-200 pt-10 sm:grid-cols-3">
+          {SITE_LOCATIONS.map(({ label, address }) => (
+            <address key={label} className="not-italic">
+              <Eyebrow className="mb-3">{label}</Eyebrow>
+              <p className="font-sans text-body-md leading-relaxed text-charcoal-700">
+                {address}
+              </p>
+            </address>
+          ))}
         </div>
       </SectionContainer>
     </MotionSection>
